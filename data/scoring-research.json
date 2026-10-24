@@ -1,0 +1,4938 @@
+{
+  "schemaVersion": 1,
+  "methodVersion": "0.10",
+  "scoringAttribution": "GPT6協助評分",
+  "publishedAt": "2026-10-23",
+  "scope": "本網站的政見進度計分方法與本輪複查紀錄；不是政治人物整體能力或支持度評分。",
+  "methodResearch": {
+    "schemaVersion": 1,
+    "researchedAt": "2026-10-23",
+    "title": "台灣縣市首長政見進度的中立評估依據",
+    "status": "已採用承諾對照、權責分離、證據與成效分開呈現等原則；既有保守階段估分不宣稱有外部研究背書。",
+    "scope": "2022年當選縣市首長的公報政見。評估承諾內容與可核對進度，不評判政治人物整體好壞。",
+    "keyConclusion": "維持全部適用分項等權平均。把政見履行、政策效果、預算、權責及證據完整度分開呈現，避免一個百分比暗示它同時代表這些不同概念。",
+    "proposedPublicCopy": {
+      "short": "依公報承諾逐項查核，所有適用分項等權平均。缺乏確切比例時採保守估分並註明理由；政黨與人物爭議不加減分。",
+      "limitation": "分數表示承諾進度，不等於政策效果、滿意度或政治人物整體評價。查不到證據，也不等於確認沒有做。",
+      "evidence": "公報證明當時承諾；執行機關資料說明辦理情形，另以審計、議會紀錄及統計交叉核對。"
+    },
+    "sources": [
+      {
+        "id": "cec-taipei-bulletin-2022",
+        "title": "2022臺北市第8屆市長選舉公報",
+        "publisher": "臺北市選舉委員會／中央選舉委員會公報網站",
+        "sourceRole": "原始承諾與選舉當時身分",
+        "url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/111%E5%B9%B4/%E8%87%BA%E5%8C%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf",
+        "sourceDate": "2022",
+        "sourceDateType": "選舉年度，公報載投票日期2022-11-26",
+        "readAt": "2026-10-23",
+        "readScope": "PDF第1頁公報頁首及候選人資料、政見欄；不是對整份政見重新逐條完成查核。",
+        "directlySupports": [
+          "公報刊載候選人所填的政見及個人資料，包含推薦政黨。",
+          "頁首明示候選人個人資料依填列刊登，不實由候選人負責。"
+        ],
+        "doesNotSupport": [
+          "公報刊載不是政見已實施或完成的證明。",
+          "公報推薦政黨不能證明目前黨籍。"
+        ]
+      },
+      {
+        "id": "cec-bulletin-rules",
+        "title": "公職人員選舉選舉公報編製辦法",
+        "publisher": "中央選舉委員會主管法規共用系統",
+        "sourceRole": "法規",
+        "url": "https://law.cec.gov.tw/LawContent.aspx?id=GL000409",
+        "sourceDate": "2023-07-07",
+        "sourceDateType": "網頁所列最近修正日期；屬現行查詢版",
+        "readAt": "2026-10-23",
+        "readScope": "第2、4、6、10、11、12條",
+        "directlySupports": [
+          "地方選舉公報由地方選舉委員會編印，內容含候選人政見與推薦政黨。",
+          "登記截止後政見不得更換；刊登審議與候選人自負內容責任有明文規範。"
+        ],
+        "inferenceForProject": "公報是承諾原件，不能把選委會編印或審議當成政策可行性、真實性或後續履行的全面認證。",
+        "historicalLimit": "本次讀的是2023修正版。若要主張2022當時的法規細節，應再查當時有效版本；本研究以2022原公報直接確認當時承諾。"
+      },
+      {
+        "id": "local-government-act",
+        "title": "地方制度法第2、18、19條",
+        "publisher": "法務部全國法規資料庫",
+        "sourceRole": "中央地方權責法規",
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0040003",
+        "relatedUrls": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=18&pcode=A0040003",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=19&pcode=A0040003"
+        ],
+        "sourceDate": "2025-12-03",
+        "sourceDateType": "整部法律最近修正日期；不表示所引用各條同日修正",
+        "readAt": "2026-10-23",
+        "readScope": "第2條自治與委辦定義；第18、19條自治事項清單",
+        "directlySupports": [
+          "自治事項的政策規劃及行政執行責任，與受上級指揮監督的委辦事項不同。",
+          "地方自治涵蓋福利、教育、住宅、環境、道路、交通等，但實際權限仍須搭配個別法律。"
+        ],
+        "inferenceForProject": "逐項列出地方主責、共同辦理、中央核定或其他協力關係；不能只因工程在某縣市，就把全部成果或延誤歸給首長。",
+        "doesNotSupport": [
+          "此法沒有規定網站應採何種百分比或加減分權重。",
+          "權限受限不是自動加分或刪除未完成承諾的理由。"
+        ]
+      },
+      {
+        "id": "final-accounts-act-23",
+        "title": "決算法第23條",
+        "publisher": "法務部全國法規資料庫",
+        "sourceRole": "決算審核法規",
+        "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=23&pcode=T0020005",
+        "sourceDate": "2011-05-25",
+        "sourceDateType": "整部法律最近修正日期，已由全文頁核對",
+        "readAt": "2026-10-23",
+        "readScope": "第23條六款；全文頁的修正日期",
+        "directlySupports": [
+          "預算超支或剩餘、計畫完成程度、經濟性與施政效能，是條文分別列出的審核面向。"
+        ],
+        "inferenceForProject": "預算執行率與政策完成度不可互換，應分欄說明各自分母；預算全數支用不自動給政見100%。",
+        "doesNotSupport": [
+          "條文未提供把這些面向合成政治人物總分的公式。"
+        ]
+      },
+      {
+        "id": "audit-taipei-2024-labour",
+        "title": "113年度臺北市總決算審核報告：勞政相關審核意見",
+        "publisher": "審計部總決算審核報告查詢平臺",
+        "sourceRole": "審計機關查核",
+        "url": "https://auditreport.audit.gov.tw/Book/ChapterOpinion/6388905949754001837f06469c55bd4254b3d6c1570d6bdd0e",
+        "sourceDate": null,
+        "sourceDateType": "頁面未列確切發布日；113年度即2024年度",
+        "evidencePeriod": "2024年度及報告所述後續查核期間",
+        "readAt": "2026-10-23",
+        "readScope": "審核意見標題（一）至（五），不是全書或所有改善答覆",
+        "directlySupports": [
+          "報告分別記載已有措施，以及仍存在的追蹤、參與或持續營運問題。",
+          "XR職安訓練場域曾建置提供訓練，之後因租賃設備撤離發生閒置及訓練中斷。"
+        ],
+        "inferenceForProject": "曾開辦和持續提供不同；需要最新營運資料才能把歷史成果當成現在仍在運作。審計發現應連同後續改善一起查。",
+        "doesNotSupport": [
+          "這是歷史查核，不證明2026-10-23仍未改善。",
+          "本例尚未逐字對應網站某條2022政見，不據此直接改任何分數。"
+        ]
+      },
+      {
+        "id": "poltext-polimeters-method",
+        "title": "Methodology for Polimeters",
+        "publisher": "Université Laval／POLTEXT",
+        "sourceRole": "政見追蹤研究者自述方法",
+        "url": "https://www.poltext.org/en/donnees-et-analyses/les-polimetres/methodology-polimeters/",
+        "sourceDate": null,
+        "sourceDateType": "頁面未標發布或修訂日期，不以頁尾版權年份代替",
+        "readAt": "2026-10-23",
+        "readScope": "方法正文第1至11段",
+        "directlySupports": [
+          "先辨識可客觀查證的行動或目標承諾，再區分完成、部分完成或進行中、未履行、尚未評定。",
+          "承諾內容、期限、正式政府行動及持續更新都影響判定。"
+        ],
+        "inferenceForProject": "原文的『規劃』、『興建』、『完工』及『營運』應有不同達標條件。",
+        "transferLimit": "其加拿大議會任期與分類規則不能原封移植到台灣地方首長；本文借用承諾對照與分類思想，不宣稱其支持本網站0/10/25/50/75估分。"
+      },
+      {
+        "id": "cpp-comparative-pledges",
+        "title": "The Fulfillment of Parties’ Election Pledges: A Comparative Study on the Impact of Power Sharing",
+        "publisher": "Robert Thomson等作者／University of Strathclyde典藏",
+        "sourceRole": "比較政見履行研究",
+        "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/63411753/Thomson_etal_AJPS_2016_The_fulfillment_of_parties_election_pledges.pdf",
+        "sourceDate": "2016",
+        "sourceDateType": "此典藏為檔名標示2016的作者稿；期刊正式出版為2017，兩版樣本數不混用",
+        "publicationMetadataUrl": "https://novaresearch.unl.pt/en/publications/the-fulfillment-of-parties-election-pledges-a-comparative-study-o/",
+        "readAt": "2026-10-23",
+        "readScope": "作者稿摘要與方法的編碼一致性段落；方法段落由同一作者稿的搜尋全文擷取核讀，後續直接開啟替代典藏網址遭403。",
+        "directlySupports": [
+          "研究用相同定義比較政見履行，按承諾內容查法律、命令、預算等不同證據。",
+          "方法安排研究者在不知道原判定的情況下獨立判斷完成程度，檢查編碼一致性。"
+        ],
+        "inferenceForProject": "高影響分數及100%判定宜交叉覆核，保存不同判斷與最後採用理由。",
+        "doesNotSupport": [
+          "研究不包含台灣地方首長，不能用它推定任一台灣政黨或人物的表現。",
+          "未用其跨國履行比例作為本網站預設分數。"
+        ]
+      },
+      {
+        "id": "oecd-evaluation-2021",
+        "title": "Applying Evaluation Criteria Thoughtfully",
+        "publisher": "OECD",
+        "sourceRole": "政策評估方法",
+        "url": "https://www.oecd.org/en/publications/applying-evaluation-criteria-thoughtfully_543e84ed-en.html",
+        "relatedUrls": [
+          "https://www.oecd.org/en/publications/applying-evaluation-criteria-thoughtfully_543e84ed-en/full-report/understanding-the-six-criteria-definitions-elements-for-analysis-and-key-challenges_2843ff7d.html"
+        ],
+        "sourceDate": "2021-03-15",
+        "sourceDateType": "官方出版日期",
+        "readAt": "2026-10-23",
+        "readScope": "摘要、六項準則的定義、effectiveness及impact相關正文",
+        "directlySupports": [
+          "相關性、一致性、有效性、效率、影響與持續性是互補的評估視角，應依目的及情境使用。",
+          "投入、產出、結果和更高層次影響應區分；成效歸因還須考慮其他因素與資料限制。"
+        ],
+        "inferenceForProject": "建成設施、服務人數和社會問題改善，不能當成同一種百分比。人口、景氣、中央政策等背景應保留。",
+        "doesNotSupport": [
+          "OECD未為台灣政治人物提出本網站的綜合分數或特定權重。"
+        ]
+      },
+      {
+        "id": "jrc-sensitivity-2020",
+        "title": "Step 8: Sensitivity analysis",
+        "publisher": "European Commission Joint Research Centre／Knowledge4Policy",
+        "sourceRole": "綜合指標方法",
+        "url": "https://knowledge-for-policy.ec.europa.eu/composite-indicators/toolkit_en/navigation-page/10-step-guide_en/step-8-sensitivity-analysis_en",
+        "sourceDate": "2020-12-01",
+        "sourceDateType": "官方頁面最近更新日期；首次發布2018-04-21",
+        "readAt": "2026-10-23",
+        "readScope": "正文的假設清單及不確定性、敏感度分析說明",
+        "directlySupports": [
+          "缺值處理、指標取捨、權重和合成方式，都可能影響綜合指標及排名。",
+          "公開假設並檢驗敏感度，有助判斷結果是否穩健。"
+        ],
+        "inferenceForProject": "缺證估0是網站的保守假設而非事實；資料較少的縣市可能因此受影響，應公開估分數並檢查分母拆分與估值敏感性。",
+        "doesNotSupport": [
+          "此來源未主張缺證必須估0，也沒有證明本網站估分是無偏的統計估計。"
+        ]
+      }
+    ],
+    "sourceRoles": [
+      {
+        "role": "承諾者／公報",
+        "use": "確認原話、當時身分、目標與期限",
+        "limit": "不是履行證明",
+        "basis": [
+          "cec-taipei-bulletin-2022",
+          "cec-bulletin-rules"
+        ]
+      },
+      {
+        "role": "執行機關自述",
+        "use": "確認公告、法規、受理、工程月報、成果與原始統計",
+        "limit": "政府來源仍可能只呈現行政活動；需核對承諾範圍，重要結論交叉查核",
+        "basis": [
+          "audit-taipei-2024-labour",
+          "oecd-evaluation-2021"
+        ],
+        "basisType": "本專案根據已核讀來源提出的證據使用規則"
+      },
+      {
+        "role": "審計",
+        "use": "核對計畫、預算、成效缺失與改善情形",
+        "limit": "一份報告有查核期間，歷史缺失不是最新結論",
+        "basis": [
+          "audit-taipei-2024-labour",
+          "final-accounts-act-23"
+        ]
+      },
+      {
+        "role": "議會",
+        "use": "讀質詢、機關書面答覆、預算決議及附帶條件",
+        "limit": "議員主張與機關承認分開；質詢發言不自動等於已證實",
+        "basis": [],
+        "basisType": "方法草案；本輪未另外核讀議會議事規則或特定議事錄"
+      },
+      {
+        "role": "獨立或有明確方法的統計",
+        "use": "檢查結果趨勢、樣本、分母、基準期及修訂",
+        "limit": "政府統計不因由政府發布就視為無效，也不因結果變好就直接歸功首長",
+        "basis": [
+          "oecd-evaluation-2021"
+        ],
+        "basisType": "評估方法的專案應用"
+      },
+      {
+        "role": "媒體／查核組織／利害關係人",
+        "use": "發現爭點、取得相反證據、追溯原件",
+        "limit": "新聞篇數、聲量及立場不進公式；原件可得時優先回查",
+        "basis": [],
+        "basisType": "方法草案；非已核讀法律或研究的直接命題"
+      }
+    ],
+    "rubricDraft": {
+      "label": "中立查核規則草案；保留使用者既有等權平均",
+      "formula": "縣市分數＝所有適用分項的分數總和 ÷ 適用分項數；每個分項只計一次。原始可核對比例與編輯估分分開保存。",
+      "noNewWeights": true,
+      "meaning": "含估分的平均進度是編輯性資訊摘要，不是統計估計、民調、政策淨效益或人物品德分數。",
+      "rules": [
+        {
+          "id": "original_scope",
+          "rule": "先鎖定公報原文、對象、數量、期限與承諾動詞；新增任內政策可另列，不挪來替代原承諾。",
+          "basis": [
+            "cec-taipei-bulletin-2022",
+            "poltext-polimeters-method"
+          ]
+        },
+        {
+          "id": "stable_units",
+          "rule": "按可獨立驗證的承諾拆分，保留原條目及分項對照。不得為提高平均而把完成事項拆細、未完成事項合併。",
+          "basis": [
+            "jrc-sensitivity-2020"
+          ],
+          "basisType": "避免指標選擇偏差的專案規則"
+        },
+        {
+          "id": "actual_progress",
+          "rule": "有同範圍、同分母的可核對比例優先使用；只給一部分工程的比例時，不能冒充整項或整條路線比例。",
+          "basis": [
+            "poltext-polimeters-method",
+            "oecd-evaluation-2021"
+          ]
+        },
+        {
+          "id": "completed",
+          "rule": "100%只用於有證據符合原承諾全部達標條件；宣布、編預算、簽約或剪綵不自動代表所有條件完成。",
+          "basis": [
+            "poltext-polimeters-method",
+            "final-accounts-act-23"
+          ],
+          "basisType": "本專案採比單純正式行動更嚴格的完成判準"
+        },
+        {
+          "id": "confirmed_zero",
+          "rule": "0%事實值須有直接證據確認指定措施尚未啟動或承諾成果為零；查不到、連結失效或新聞少，不足以確認沒做。",
+          "basis": [
+            "poltext-polimeters-method",
+            "jrc-sensitivity-2020"
+          ],
+          "basisType": "本專案證據門檻"
+        },
+        {
+          "id": "estimated_zero",
+          "rule": "證據不足仍須顯示數字時，可保留既有保守估0，但必須寫『缺乏證明，暫估0』，原始事實狀態仍為未知。",
+          "basis": [
+            "jrc-sensitivity-2020"
+          ],
+          "basisType": "沿用使用者授權的編輯估分，不是來源建議的統計插補法"
+        },
+        {
+          "id": "stage_estimate",
+          "rule": "規劃10、核定或簽約25、執行中50、近完成75沿用既有估分規則；必須有對應階段證據，不能只靠關鍵字。",
+          "basis": [],
+          "basisType": "本網站既有編輯規則，沒有外部研究證明這些數字是真實工程比例"
+        },
+        {
+          "id": "recurring_service",
+          "rule": "承諾『開辦』且實際開辦可完成該動作；承諾『持續』、『每年』或全市覆蓋，則核對最新服務、期別與覆蓋範圍。",
+          "basis": [
+            "audit-taipei-2024-labour",
+            "oecd-evaluation-2021"
+          ]
+        },
+        {
+          "id": "dated_record",
+          "rule": "證據日期、發布日期、查核日期分開。歷史紀錄保留原時點；更新查核日不會把舊進度變成最新。",
+          "basis": [
+            "audit-taipei-2024-labour"
+          ],
+          "basisType": "時間範圍一致性的專案規則"
+        },
+        {
+          "id": "responsibility",
+          "rule": "列出主責、協力、出資及核定者；中央協力或地方無權決定不自動加減分，仍按當時承諾的『爭取』或『完成』評估。",
+          "basis": [
+            "local-government-act",
+            "poltext-polimeters-method"
+          ]
+        },
+        {
+          "id": "neutral_people",
+          "rule": "政黨、性別、人物好惡、聲量、支持度不進進度公式。爭議僅在有證據直接改變這項政策狀態時更新該項；不連帶扣其他政策。",
+          "basis": [],
+          "basisType": "依使用者中立資訊目標設計的編輯原則，非任何來源所訂政治人物評分法"
+        },
+        {
+          "id": "review_conflicts",
+          "rule": "保留執行機關說法與相反證據；依日期、範圍、原件與方法判斷，不按正反報導篇數投票。重要100%與大幅變動交叉覆核。",
+          "basis": [
+            "cpp-comparative-pledges"
+          ]
+        },
+        {
+          "id": "uncertainty",
+          "rule": "維持單一平均顯示，但公開估分數與方法；內部檢查估值及分項拆分對平均的影響，不把小差距直接解讀為表現高下。",
+          "basis": [
+            "jrc-sensitivity-2020"
+          ]
+        }
+      ]
+    },
+    "separateIndicators": [
+      {
+        "name": "政見履行進度",
+        "meaning": "承諾的行動或目標做到哪裡",
+        "format": "既有分項等權平均；估分保留『約』",
+        "inCompletionAverage": true
+      },
+      {
+        "name": "政策效果",
+        "meaning": "有沒有改善交通、負擔、環境或其他原定問題",
+        "format": "同定義時間序列、基準、目標與限制；無可比較資料就不給效果百分比",
+        "inCompletionAverage": false
+      },
+      {
+        "name": "預算與成本",
+        "meaning": "核定、執行、實支、保留與單位成本",
+        "format": "金額及明確分母，必要時註明追加預算",
+        "inCompletionAverage": false
+      },
+      {
+        "name": "證據完整度",
+        "meaning": "多少分項可直接核對、多少含估分、資料新舊",
+        "format": "件數、比例及最後證據日；不稱人物誠信分",
+        "inCompletionAverage": false
+      },
+      {
+        "name": "權責與任期",
+        "meaning": "主責機關、中央地方協力、代理或前後任接續",
+        "format": "有來源的時間軸與角色，不加權",
+        "inCompletionAverage": false
+      },
+      {
+        "name": "爭議及司法程序",
+        "meaning": "已證實的事件、程序狀態、當事方回應及政策關聯",
+        "format": "事件事實與時間；調查、起訴、判決及確定不可混稱",
+        "inCompletionAverage": false
+      }
+    ],
+    "uniformExamples": [
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "新建100公里人行道",
+        "evidence": "同範圍資料確認新增完成40公里",
+        "treatment": "進度40%；不能拿同年預算執行95%代替。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "完成某建設",
+        "evidence": "僅完成可行性研究或核定",
+        "treatment": "尚非100%；若缺實際工程比例，依有據階段估分並標示。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "完成某建設的可行性研究",
+        "evidence": "報告完成且達到原定驗收要求",
+        "treatment": "該研究承諾可100%；同樣證據不能證明建設完成。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "每年提供某項津貼",
+        "evidence": "只有2023年實際發放紀錄",
+        "treatment": "可確認2023年有做，須查其他期別；不能直接寫目前整任期100%。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "提供青年就業媒合",
+        "evidence": "服務已按承諾實施，但青年失業率未下降",
+        "treatment": "服務履行與就業結果分列；若承諾本身另有失業率目標，該目標獨立核對。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "成立城市投資公司",
+        "evidence": "僅找到創業補助及貸款方案",
+        "treatment": "補助不能替代成立公司。缺設立證明維持未知；若顯示保守估0，說明是缺證估分。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "爭取中央核定某建設",
+        "evidence": "有送件與協商，但尚未核定",
+        "treatment": "先確認原文是否承諾『送件爭取』或『爭取核定成功』，不能任意縮小達標條件。"
+      },
+      {
+        "type": "假設案例，不代表任何縣市現況",
+        "promise": "同一政策，由不同政黨首長承諾",
+        "evidence": "範圍、期限及證據相同",
+        "treatment": "給相同進度；人物爭議另列，不能改變這項政策的完成條件。"
+      }
+    ],
+    "issueResearchTemplate": [
+      {
+        "issue": "交通與人行安全",
+        "delivery": "路段、長度、運量或改善點位",
+        "outcomes": "同口徑傷亡率、旅行時間、可及性",
+        "pitfall": "事故總數受運量與統計口徑影響；不能只比新聞數量。"
+      },
+      {
+        "issue": "住宅與都市更新",
+        "delivery": "完工、招租、入住、都更核定分列",
+        "outcomes": "實際入住、負擔、等待期",
+        "pitfall": "規劃戶數、開工戶數、完工戶數及中央供給不可混加。"
+      },
+      {
+        "issue": "育兒與教育",
+        "delivery": "名額、實際收托、補助發放與服務範圍",
+        "outcomes": "負擔、可及性、等待期",
+        "pitfall": "開班或補助不直接代表生育率改善。"
+      },
+      {
+        "issue": "醫療與長照",
+        "delivery": "據點、實際服務量、人力及持續營運",
+        "outcomes": "使用率、等候、可及性",
+        "pitfall": "掛牌據點不等於穩定服務，中央與地方投入分列。"
+      },
+      {
+        "issue": "產業與就業",
+        "delivery": "投資、培訓、媒合或貸款實際辦理",
+        "outcomes": "就業、薪資、企業存續",
+        "pitfall": "招商意向不是已落地投資；景氣變化不能全部歸因首長。"
+      },
+      {
+        "issue": "環境與防災",
+        "delivery": "設施、維護、污染治理及防洪範圍",
+        "outcomes": "同口徑污染或災損指標",
+        "pitfall": "天候、上游與跨縣市因素須交代。"
+      },
+      {
+        "issue": "治理與資訊公開",
+        "delivery": "資料公布、程序、回應機制及實際運作",
+        "outcomes": "完整度、時效、使用情形",
+        "pitfall": "公布資料不等於全部事實已經獨立驗證。"
+      }
+    ],
+    "politicianResearchBoundary": {
+      "include": [
+        "選舉當時身分與原承諾",
+        "實際在職與代理期間",
+        "法定職責和政策參與角色",
+        "直接相關的決策、預算、審計及改善紀錄"
+      ],
+      "excludeFromFormula": [
+        "政黨及意識形態",
+        "民調或網路好感度",
+        "新聞聲量",
+        "未核實指控",
+        "與該政策無關的個人生活"
+      ],
+      "attributionRule": "研究人物是為釐清承諾者、決策者與執行責任，不製造人物品德總分。事件需原件、程序狀態、日期及相關回應；無法確認則不作確定陳述。"
+    },
+    "implementationNotes": [
+      "本研究只建立依據與方法草案，不宣稱目前710個直接計分項都已通過本輪重新查核。",
+      "優先覆核所有100%是否真的符合原文，其次查估分項、歷史項、持續服務與同項相反證據；每縣市採相同檢索清單。",
+      "保留現有完整公報原文、分項對照、來源及數值歷史；評分更動要可追溯。",
+      "UI主層保持簡潔；完整方法、來源角色、估分假設及研究限制放在方法或收合區。",
+      "本文件不提供投票推薦，也沒有新增任一政治人物評價或加權綜合總分。"
+    ]
+  },
+  "projectClarifications": [
+    {
+      "id": "one-off-completion",
+      "rule": "原承諾為一次性建置或研議，且有同一範圍的交付或研議完成證據，可認列100%；完成日期與任期保留，後續停用或用途變更另記。歷史施工比例、年度服務與未達標紀錄仍不能自動當作現在狀態。",
+      "cases": [
+        "bulletin_2022_tainan_3_3/p3",
+        "bulletin_2022_penghu_5_2/p1"
+      ],
+      "reason": "衡量承諾履行，不把本任新增功勞當成完成度的額外門檻。"
+    }
+  ],
+  "followup": {
+    "batchId": "neutral-followup-2026-10-23",
+    "checkedAt": "2026-10-23",
+    "scoringAttribution": "GPT6協助評分",
+    "scope": "本輪實際複查44個分項，含43個地區分項與1個跨項一致性複查；並非全體1065分項同日重查。保留原文、前後判讀及來源日期，一次性完成與後續營運分開。",
+    "items": [
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p1",
+        "county": "臺中市",
+        "label": "捷運藍線動工",
+        "quoteAnchor": "捷運藍線動工",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09-30",
+          "basis": "milestone",
+          "reason": "BM01已於2025-06-26動工，後續施工監測記錄2026-09實際進度6.973%；原承諾是動工，這個里程碑已實現。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "捷運藍線動工",
+          "fulfillmentCriterion": "至少有藍線實體工程開始施工，並有後續施工紀錄；不要求藍線完工通車。"
+        },
+        "beforeEstimate": null,
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09-30",
+          "basis": "milestone",
+          "reason": "藍線BM01已在2025年6月開工，2026年9月底仍有實際施工進度。這項承諾是「動工」，所以給100%，不代表全線已通車。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "捷運藍線動工",
+          "fulfillmentCriterion": "原文只承諾藍線動工；須有實體工程開工及後續施工紀錄。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 100,
+        "afterScore": 100,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,46",
+            "title": "臺中捷運藍線辦理情形",
+            "publishedAt": null,
+            "asOf": "2025-06-26",
+            "checkedAt": "2026-10-23",
+            "evidence": "BM01標2025-06-26舉行開工典禮；本輪另核讀所附施工期間環境監測報告，確認非只有典禮。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-14"
+          },
+          {
+            "url": "https://tcrt.taichung.gov.tw/df_ufiles/046/20261013152046.pdf",
+            "title": "臺中捷運藍線施工期間環境監測報告115年7至9月",
+            "publishedAt": null,
+            "asOf": "2026-09-30",
+            "checkedAt": "2026-10-23",
+            "evidence": "報告第1-3頁表1.1.2-1：BM01正式開工2025-06-26，截至2026年9月底實際6.973%、預定6.753%；其他標案設計或未開工，不是全線6.973%。",
+            "readScope": "直接下載官方PDF，以pypdfium2渲染並目視核讀PDF實體第3頁右上第1-3頁表格及相鄰說明；該掃描PDF無可抽取文字",
+            "verifiedThisRound": true,
+            "sha256": "ae3ee3419d346a69387e49877efaca806aae99fa3b2414499ae2221befde80d9"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p2",
+        "county": "臺中市",
+        "label": "推動已通車之綠線及藍線延伸",
+        "quoteAnchor": "推動已通車之綠線及藍線延伸",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "綠線延伸大坑及彰化綜合規劃已提送中央，2026-09-11收到審查意見後修正；藍線延伸太平可行性研究仍送審。可確認有推動，但未取得兩延伸線共同可比較的整體工程百分比。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "推動已通車之綠線及藍線延伸",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p2",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：綠線延伸正在綜合規劃修正、藍線延伸仍為可行性審議，屬規劃階段。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-06",
+          "basis": "unquantified",
+          "reason": "綠線延伸已進入綜合規劃與環評，藍線延伸太平在2026年10月6日再次送審。兩線都還有核定程序，不能當作已施工。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "推動已通車之綠線及藍線延伸",
+          "fulfillmentCriterion": "兩個延伸計畫均須對照各自實際階段；目前只確認規劃審查，未確認整體建設完成。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "綠線延伸已進入綜合規劃與環評，藍線延伸太平在2026年10月6日再次送審。兩線都還有核定程序，不能當作已施工。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p2"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "evidence_updated",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,100",
+            "title": "捷運綠線延伸大坑、彰化：辦理歷程與最新進度",
+            "publishedAt": null,
+            "asOf": "2026-10-02",
+            "checkedAt": "2026-10-23",
+            "evidence": "2024-01-31可行性研究核定、2024-06-28綜規服務採購；2026-09-11綜規審查意見待修正，2026-10-02環評初審。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-08"
+          },
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,141",
+            "title": "捷運藍線延伸太平：辦理歷程與最新進度",
+            "publishedAt": null,
+            "asOf": "2026-10-06",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-08-06收到審查意見；2026-10-06再提可行性修正報告，尚爭取核定。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p3",
+        "county": "臺中市",
+        "label": "發展機場橘線",
+        "quoteAnchor": "發展機場橘線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-08",
+          "basis": "unquantified",
+          "reason": "橘線可行性研究於2026-08-18獲行政院核定，綜合規劃採購於09-29決標。現階段是規劃作業，不能把可行性研究核定當整條捷運完成，也沒有全案工程百分比。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "發展機場橘線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p3",
+          "percent": 25,
+          "stage": "committed",
+          "reason": "依現有證據估分25%：橘線可行性研究已核定、綜合規劃已決標，已有正式核定及採購，尚無全線施作證據。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-29",
+          "basis": "unquantified",
+          "reason": "橘線可行性研究已在2026年8月獲准，9月開始綜合規劃。已跨過核定階段，但還沒有全線施工完成率。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "發展機場橘線",
+          "fulfillmentCriterion": "按橘線整項推進判斷；可研核定和綜規啟動不是全線建成。"
+        },
+        "afterEstimate": {
+          "percent": 25,
+          "stage": "committed",
+          "reason": "橘線可行性研究已在2026年8月獲准，9月開始綜合規劃。已跨過核定階段，但還沒有全線施工完成率。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p3"
+        },
+        "beforeScore": 25,
+        "afterScore": 25,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,99",
+            "title": "機場捷運橘線：辦理歷程",
+            "publishedAt": null,
+            "asOf": "2026-09-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-08-18可行性研究獲行政院核定；2026-09-29啟動綜合規劃。",
+            "readScope": "核讀計畫內容及近年辦理歷程表；第二次續讀最新進度區逾時，不宣稱核讀附件",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p4",
+        "county": "臺中市",
+        "label": "屯區紫線",
+        "quoteAnchor": "屯區紫線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-07",
+          "basis": "unquantified",
+          "reason": "屯區紫線可行性研究2026-01-07再送交通部，07-27收到審查意見後正在修正報告。已有行政推動，未核定、未取得實際全線工程百分比。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "屯區紫線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p4",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：屯區紫線可行性研究仍依交通部意見修正，尚在規劃審議。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07-27",
+          "basis": "unquantified",
+          "reason": "紫線可行性研究仍依2026年7月的中央意見修改。已有規劃工作，尚未核定或進入工程施工。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "屯區紫線",
+          "fulfillmentCriterion": "評估紫線本身；不得以綠線或藍線的施工替代。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "紫線可行性研究仍依2026年7月的中央意見修改。已有規劃工作，尚未核定或進入工程施工。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p4"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,142",
+            "title": "屯區捷運環狀線紫線：辦理歷程與最新進度",
+            "publishedAt": null,
+            "asOf": "2026-07-27",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-01-07再送可行性研究，2026-07-27收到意見；目前修正後再送，尚爭取核定。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-08-07"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p5",
+        "county": "臺中市",
+        "label": "崇德豐原紅線",
+        "quoteAnchor": "崇德豐原紅線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-08",
+          "basis": "unquantified",
+          "reason": "崇德豐原紅線可行性研究2025-12-12核定期中報告；2026-09-29已提送期末報告，目前審查中。採購工作進度不能當全線建設完成率，維持待量化。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "崇德豐原紅線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p5",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：紅線已提出可行性研究期末報告，仍待審查；報告進度不是捷運工程進度。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-29",
+          "basis": "unquantified",
+          "reason": "紅線在2026年9月送出可行性研究期末報告，目前由市府審查。接著還要送中央，研究報告完成不等於捷運完成。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "崇德豐原紅線",
+          "fulfillmentCriterion": "紅線可行性研究、中央核定、建設須分開；不得以研究案採購完成當全線完成。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "紅線在2026年9月送出可行性研究期末報告，目前由市府審查。接著還要送中央，研究報告完成不等於捷運完成。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p5"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,137",
+            "title": "崇德豐原紅線：最新進度",
+            "publishedAt": null,
+            "asOf": "2026-09-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "2025-12-12核定可行性研究期中報告；2026-09-29期末報告送市府審查，之後才送中央。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p6",
+        "county": "臺中市",
+        "label": "科工綠粉線",
+        "quoteAnchor": "科工綠粉線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "市府2026-10-15整體路網頁將科工軸線列為遠期路網，依發展需求分階段推動；本輪未取得獨立計畫的實際執行成果或整體百分比，仍待查，不由遠期規劃文字推定0%或完成。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "科工綠粉線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p6",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：科工軸線已列入官方遠期路網，僅確認規劃方向，沒有獨立工程施作紀錄。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "科工軸線已列入遠期路網，目前只核實到規劃方向。還沒有獨立核定或施工成果可加分。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "科工綠粉線",
+          "fulfillmentCriterion": "原文科工綠粉線按現行科工軸線範圍追蹤，須有該線直接進度。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "科工軸線已列入遠期路網，目前只核實到規劃方向。還沒有獨立核定或施工成果可加分。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p6"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,44",
+            "title": "臺中捷運整體軌道路網",
+            "publishedAt": null,
+            "asOf": "2026-10-15",
+            "checkedAt": "2026-10-23",
+            "evidence": "近期與中期路網分列可行性研究、綜合規劃；科工及豐科軸線列遠期路網。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-15"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p7",
+        "county": "臺中市",
+        "label": "豐科黃線",
+        "quoteAnchor": "豐科黃線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "市府2026-10-15整體路網頁將豐科軸線列為遠期路網，依發展需求分階段推動；本輪未取得獨立計畫的實際執行成果或整體百分比，仍待查，不由遠期規劃文字推定0%或完成。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "豐科黃線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p7",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：豐科軸線已列入官方遠期路網，僅確認規劃方向，沒有獨立工程施作紀錄。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "豐科軸線仍列為遠期路網，紅線也預留未來銜接。預留接點不等於豐科線已核定或開工。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "豐科黃線",
+          "fulfillmentCriterion": "豐科黃線按現行豐科軸線追蹤；不將紅線延伸或預留銜接計成豐科線實施。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "豐科軸線仍列為遠期路網，紅線也預留未來銜接。預留接點不等於豐科線已核定或開工。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p7"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,44",
+            "title": "臺中捷運整體軌道路網",
+            "publishedAt": null,
+            "asOf": "2026-10-15",
+            "checkedAt": "2026-10-23",
+            "evidence": "近期與中期路網分列可行性研究、綜合規劃；科工及豐科軸線列遠期路網。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-15"
+          },
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,137",
+            "title": "崇德豐原紅線：最新進度",
+            "publishedAt": null,
+            "asOf": "2026-09-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "2025-12-12核定可行性研究期中報告；2026-09-29期末報告送市府審查，之後才送中央。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-08"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_1",
+        "partId": "p8",
+        "county": "臺中市",
+        "label": "山海環線",
+        "quoteAnchor": "山海環線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-07",
+          "basis": "unquantified",
+          "reason": "山海環線拆分山線、海線與甲后線；山海線於2026-03-31再送修正報告，08-03交通部再函復意見，市府續修正。已進入可行性審議，沒有整體施工進度可換算。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "山海環線",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p8",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：山海環線相關路線仍在可行性研究修正與審議，尚未取得整體施作證據。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-03",
+          "basis": "unquantified",
+          "reason": "山海環線已拆成山線、海線及甲后線分別研究。山海線收到2026年8月審查意見後仍在修改，還沒有整體施工比例。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "山海環線",
+          "fulfillmentCriterion": "三條子計畫均屬原承諾範圍；個別報告進度不得當整體工程完成率。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "山海環線已拆成山線、海線及甲后線分別研究。山海線收到2026年8月審查意見後仍在修改，還沒有整體施工比例。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_1",
+          "partId": "p8"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://tcrt.taichung.gov.tw/content/index?Parser=1,6,102",
+            "title": "鐵路山海環線：辦理歷程與最新進度",
+            "publishedAt": null,
+            "asOf": "2026-08-03",
+            "checkedAt": "2026-10-23",
+            "evidence": "山海環線拆為山、海、甲后線；山海線2026-03-31再送報告，2026-08-03中央回覆意見，仍修正審查。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-08-07"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_5",
+        "partId": "p1",
+        "county": "臺中市",
+        "label": "公托收托數倍倍增",
+        "quoteAnchor": "公托收托數倍倍增",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-14",
+          "basis": "unquantified",
+          "reason": "已找到收托實數1539人與2018基期163人；尚缺公報所指基期和倍增目標的直接定義。不得用據點數替代。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "公托收托數倍倍增",
+          "fulfillmentCriterion": "須核對原文範圍的完成、營運或同口徑目標資料。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_5",
+          "partId": "p1",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "依現有證據估分50%：公托已有實際收托及擴充成果，惟原承諾倍增基期與目標未明，依已有實做估分，不自行推算倍增達標率。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "現行頁2026-10-13更新；統計截止日未另載",
+          "basis": "unquantified",
+          "reason": "公托目前已開辦55處，可提供1,771個名額。確實有擴充，但名額不等於實際收托人數，原承諾的倍增目標也還缺一致定義。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "公托收托數倍倍增",
+          "fulfillmentCriterion": "以可比基期和現期收托量評估倍增；不得用據點數或容量直接替代實際收托數。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "公托目前已開辦55處，可提供1,771個名額。確實有擴充，但名額不等於實際收托人數，原承諾的倍增目標也還缺一致定義。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_taichung_5",
+          "partId": "p1"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "evidence_updated",
+        "sources": [
+          {
+            "url": "https://www.society.taichung.gov.tw/13710/13735/13738/13753/134501",
+            "title": "臺中市公設民營托嬰中心及社區公共托育家園",
+            "publishedAt": "2014-05-07",
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "現行正文列55處已開辦（含2處府內員工子女中心）、可提供1771名額；這是容量，不是逐日實際收托人數。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-10-13"
+          },
+          {
+            "url": "https://www.dbas.taichung.gov.tw/media/975043/112%E5%B9%B4-%E8%87%BA%E4%B8%AD%E5%B8%82%E6%89%98%E8%82%B2%E5%85%AC%E5%85%B1%E5%8C%96%E4%B9%8B%E5%9F%B7%E8%A1%8C%E6%95%88%E7%AD%96%E9%80%B2%E8%88%87%E5%9B%9E%E9%A5%8B.pdf",
+            "title": "臺中市主計處：托育公共化之執行成效策進與回饋",
+            "publishedAt": "2023-08",
+            "asOf": "2023-08",
+            "checkedAt": "2026-10-23",
+            "evidence": "2023年8月報告第6頁於公托收托數倍倍增標題下，列163增至914名及5增至34所；未定義2022公報本任承諾的確切倍增終點。",
+            "readScope": "直接下載官方PDF；pypdf抽取相關段落，pypdfium2渲染並目視核讀完整PDF第6頁",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_5",
+        "partId": "p3",
+        "county": "臺中市",
+        "label": "推動區區有親子館",
+        "quoteAnchor": "推動區區有親子館",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07",
+          "basis": "unquantified",
+          "reason": "區區是完整地理覆蓋目標；已核第22座不等於22個不同區，也不能以年底預計完成認列。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "推動區區有親子館",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_5",
+          "partId": "p3",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "依現有證據估分50%：已有22座親子館的實際建置紀錄，但據點數不能直接等於各區覆蓋，按部分實施估分。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": 89.65517241379311,
+          "asOf": "2026-08名冊；2026-09-21公告覆核",
+          "basis": "ratio",
+          "reason": "已開辦27間親子館，按地址去重後涵蓋26個行政區，所以用26除以29，約90%。東區、梧棲及北屯在這份名冊仍未開辦。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "推動區區有親子館",
+          "fulfillmentCriterion": "區區有館以29行政區的實際營運覆蓋計；同區兩館不重複加分。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 50,
+        "afterScore": 89.65517241379311,
+        "decision": "replace_estimate_with_ratio",
+        "sources": [
+          {
+            "url": "https://www.society.taichung.gov.tw/13710/13735/13738/13753/2348092",
+            "title": "臺中市親子館暨Mini親子館布建",
+            "publishedAt": "2023-05-05",
+            "asOf": "2026-08",
+            "checkedAt": "2026-10-23",
+            "evidence": "名冊列27館已開辦，其中坪林與太平都在太平區，合計26個不同區；東區、梧棲、北屯仍列預計完工。西區Mini館與西區館同區不重複計。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-08-06"
+          },
+          {
+            "url": "https://www.society.taichung.gov.tw/14168/13753/461416/post",
+            "title": "臺中市親子館暨Mini親子館地址與服務",
+            "publishedAt": "2016-08-15",
+            "asOf": "2026-08",
+            "checkedAt": "2026-10-23",
+            "evidence": "逐一核對27館地址及Mini館地址；地理分母為29行政區，地址去重後26區。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-08-03"
+          },
+          {
+            "url": "https://cleaner.epb.taichung.gov.tw/newsmain.aspx?n_id=25452",
+            "title": "嚴謹管考兌現承諾：市府研考會市政進度",
+            "publishedAt": "2026-09-21",
+            "asOf": "2026-08",
+            "checkedAt": "2026-10-23",
+            "evidence": "9月21日市府新聞確認西區館8月試營運後，全市27間親子館；不能把27館直接當27區。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_9",
+        "partId": "p1",
+        "county": "臺中市",
+        "label": "台中自辦1萬戶",
+        "quoteAnchor": "台中自辦1萬戶",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-07",
+          "basis": "milestone",
+          "reason": "2026-07施政報告列市府自辦好宅興辦10,450戶，已超過原文自辦10,000戶的興辦分項。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "台中自辦1萬戶",
+          "fulfillmentCriterion": "以原文接續興辦口徑，市府自辦興辦數達10,000戶；不表示完工或入住。"
+        },
+        "beforeEstimate": null,
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09-30",
+          "basis": "ratio",
+          "reason": "市府自辦社宅已興辦10,716戶，超過承諾的1萬戶，因此這個興辦目標給100%。其中4,849戶已完工，其餘在建或已決標，不是全部都能入住。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "台中自辦1萬戶",
+          "fulfillmentCriterion": "依完整原文「接續興辦」採已完工、興建中及已決標待開工戶數；排除規劃中，與中央分項使用同一口徑。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 100,
+        "afterScore": 100,
+        "decision": "evidence_updated",
+        "sources": [
+          {
+            "url": "https://pip.moi.gov.tw/Publicize/Info/B5010?mode=7",
+            "title": "內政部不動產資訊平台：全國社會住宅興辦進度統計表",
+            "publishedAt": null,
+            "asOf": "2026-09-30",
+            "checkedAt": "2026-10-23",
+            "evidence": "直接HTML表頭為截至115年9月30日：臺中中央完工268、興建4967、決標待開工115、興辦小計5350、另規劃405；地方完工4849、興建5648、決標待開工219、小計10716。",
+            "readScope": "web搜尋快取僅到8月，web open遭拒；改直接讀取官方HTML成功，核讀表頭、臺中中央/地方列及各欄，不採舊搜尋摘要數字",
+            "verifiedThisRound": true,
+            "sha256": "01016b0d4742a1fe5bca1b490fc7f75d8a7ed9aab10d12f51c31fdac828ae5e4",
+            "structuredExtract": {
+              "asOf": "2026-09-30",
+              "county": "臺中市",
+              "central": {
+                "completed": 268,
+                "underConstruction": 4967,
+                "awarded": 115,
+                "initiated": 5350,
+                "planning": 405
+              },
+              "local": {
+                "completed": 4849,
+                "underConstruction": 5648,
+                "awarded": 219,
+                "initiated": 10716,
+                "planning": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_taichung_9",
+        "partId": "p2",
+        "county": "臺中市",
+        "label": "併計中央興建8千戶",
+        "quoteAnchor": "併計中央興建8千戶",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07",
+          "basis": "unquantified",
+          "reason": "核讀社宅總量與完成/在建混合口徑；不能以興辦戶數等同已興建交付8,000戶。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "併計中央興建8千戶",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_taichung_9",
+          "partId": "p2",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "依現有證據估分0%：現有社宅總量混合市府與中央、規劃與在建；無法對應中央8千戶的已施作範圍，暫不借市府工程加分。這是證據不足的保守估值，不表示已確認未實施。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": 66.875,
+          "asOf": "2026-09-30",
+          "basis": "ratio",
+          "reason": "中央在台中已興辦5,350戶，對照8,000戶目標是66.9%。其中268戶完工，4,967戶施工、115戶已決標待開工，不能把興辦當成入住。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "併計中央興建8千戶",
+          "fulfillmentCriterion": "完整公報以1萬8千戶「接續興辦」為目標，中央8千戶與地方1萬戶均採已完工、在建及已決標待開工；規劃中不計。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 0,
+        "afterScore": 66.875,
+        "decision": "replace_estimate_with_ratio",
+        "sources": [
+          {
+            "url": "https://pip.moi.gov.tw/Publicize/Info/B5010?mode=7",
+            "title": "內政部不動產資訊平台：全國社會住宅興辦進度統計表",
+            "publishedAt": null,
+            "asOf": "2026-09-30",
+            "checkedAt": "2026-10-23",
+            "evidence": "直接HTML表頭為截至115年9月30日：臺中中央完工268、興建4967、決標待開工115、興辦小計5350、另規劃405；地方完工4849、興建5648、決標待開工219、小計10716。",
+            "readScope": "web搜尋快取僅到8月，web open遭拒；改直接讀取官方HTML成功，核讀表頭、臺中中央/地方列及各欄，不採舊搜尋摘要數字",
+            "verifiedThisRound": true,
+            "sha256": "01016b0d4742a1fe5bca1b490fc7f75d8a7ed9aab10d12f51c31fdac828ae5e4",
+            "structuredExtract": {
+              "asOf": "2026-09-30",
+              "county": "臺中市",
+              "central": {
+                "completed": 268,
+                "underConstruction": 4967,
+                "awarded": 115,
+                "initiated": 5350,
+                "planning": 405
+              },
+              "local": {
+                "completed": 4849,
+                "underConstruction": 5648,
+                "awarded": 219,
+                "initiated": 10716,
+                "planning": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_changhua_1",
+        "partId": "p2",
+        "county": "彰化縣",
+        "label": "成立「彰化縣都市及住宅更新中心」",
+        "quoteAnchor": "成立「彰化縣都市及住宅更新中心」",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-22",
+          "basis": "unquantified",
+          "reason": "2024年5月成果頁仍將都市及住宅更新專責機構列為中長期籌擬；本輪再查2026年9月都更報告與中心全名，未取得實際成立公告。無法據搜尋缺漏斷言2026年仍未成立，保留待量化。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "成立「彰化縣都市及住宅更新中心」",
+          "fulfillmentCriterion": "須核對原文範圍的完成、營運或同口徑目標資料。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_changhua_1",
+          "partId": "p2",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "依現有證據估分10%：既有官方成果將更新專責機構列為籌擬，尚未核實成立公告；按最新可得的籌備階段估分並保留證據日期。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2024-05-07",
+          "basis": "unquantified",
+          "reason": "查到的官方進度仍是2024年籌備專責機構、研擬都更法規。尚未找到中心正式成立的文件，不能把法規發布算成中心成立。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "成立「彰化縣都市及住宅更新中心」",
+          "fulfillmentCriterion": "須有中心設立法源、成立公告或實際組織運作證明；一般都更業務或法規不是設立機構。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "查到的官方進度仍是2024年籌備專責機構、研擬都更法規。尚未找到中心正式成立的文件，不能把法規發布算成中心成立。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_changhua_1",
+          "partId": "p2"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "reviewed_no_change",
+        "sources": [
+          {
+            "url": "https://ctrl.chcg.gov.tw/main/main_act3/main.aspx?act_id=408&main_id=46674",
+            "title": "彰化縣：成立都市及住宅更新中心進度",
+            "publishedAt": null,
+            "asOf": "2024-05-07",
+            "checkedAt": "2026-10-23",
+            "evidence": "2024-05-07頁面僅列中長期籌擬機構、研擬法規與可行性；成果是更新單元劃定基準，並非中心成立。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2024-05-07"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_changhua_2",
+        "partId": "p4",
+        "county": "彰化縣",
+        "label": "提供青年住宅2.0，平價住宅輕鬆購",
+        "quoteAnchor": "提供青年住宅2.0，平價住宅輕鬆購",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-31",
+          "basis": "unquantified",
+          "reason": "2026年9月報告頁31：員林42戶2026年5月竣工，伸港100戶及溪湖76戶施工、和美59戶設計。原文含平價住宅購買，竣工戶數不等於平價購屋交付；尚缺銷售交屋及各案實際比例，保留null。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "提供青年住宅2.0，平價住宅輕鬆購",
+          "fulfillmentCriterion": "須核對原文範圍的完成、營運或同口徑目標資料。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_changhua_2",
+          "partId": "p4",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "依現有證據估分50%：青年住宅已有個別竣工及在建案件，平價購屋交付尚未完整核實，按部分實體建置估分。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-17",
+          "basis": "unquantified",
+          "reason": "員林青年住宅已完工並辦理抽籤；伸港、溪湖在施工，和美仍在設計。還缺實際交屋及各案完成比例，維持部分完成的估分。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "提供青年住宅2.0，平價住宅輕鬆購",
+          "fulfillmentCriterion": "承諾包含提供平價可購住宅；施工、完工、抽籤、過戶交屋分開，不將任一小案替代整個青年住宅政策。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "員林青年住宅已完工並辦理抽籤；伸港、溪湖在施工，和美仍在設計。還缺實際交屋及各案完成比例，維持部分完成的估分。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_changhua_2",
+          "partId": "p4"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "evidence_updated",
+        "sources": [
+          {
+            "url": "https://youth.chcg.gov.tw/resource/wS2QuxmxxEhbwx-yBlZWOcF8z6w_-4",
+            "title": "彰化青年發展處：員林市青年住宅",
+            "publishedAt": null,
+            "asOf": "2026-07-30",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-05-13完工，頁面連結2026-07-30抽籤結果；選屋、簽約、繳款、過戶列後續出售程序，未見交屋完成證明。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-07-31"
+          },
+          {
+            "url": "https://youth.chcg.gov.tw/resource/PcfOh1XUCzNpZNg-IA9cyjNoUHYnOg",
+            "title": "彰化青年發展處：伸港鄉青年住宅",
+            "publishedAt": null,
+            "asOf": "2026-09-17",
+            "checkedAt": "2026-10-23",
+            "evidence": "2025-06開工、預計2027-08完工，2027下半年才受理申購；100單元中7個為店鋪及青創空間，住宅實為93戶，不把100全部當住宅。",
+            "readScope": "web click可開但續讀逾時；直接讀取官方HTML正文，核對工程、出售期程及房型Q&A",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-09-17"
+          },
+          {
+            "url": "https://youth.chcg.gov.tw/resource/8xIv8R7qDsBJzoNltbQoV-a45PY42Q",
+            "title": "彰化青年發展處：溪湖鎮青年住宅",
+            "publishedAt": null,
+            "asOf": "2026-06-18",
+            "checkedAt": "2026-10-23",
+            "evidence": "76戶，2026-06-18開工，預計2028下半年完工。",
+            "readScope": "直接核讀官方HTML之最新進度與計畫內容",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-09-17"
+          },
+          {
+            "url": "https://youth.chcg.gov.tw/resource/ugEaGVOhXTkseYd0uXimxs8H0Fu_ne",
+            "title": "彰化青年發展處：和美鎮青年住宅",
+            "publishedAt": null,
+            "asOf": "2026-09-17",
+            "checkedAt": "2026-10-23",
+            "evidence": "59戶，現為設計階段，預計2028下半年完工。",
+            "readScope": "直接核讀官方HTML之最新進度與計畫內容",
+            "verifiedThisRound": true,
+            "updatedAt": "2026-09-17"
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_changhua_3",
+        "partId": "p2",
+        "county": "彰化縣",
+        "label": "免費坐月子到宅服務",
+        "quoteAnchor": "免費坐月子到宅服務",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": "2026-09-22",
+          "basis": "unquantified",
+          "reason": "本輪核讀2026年9月婦幼施政內容及衛福部2025年6月各縣市到宅坐月子資料，定向搜尋彰化免費到宅坐月子；查到到宅育兒指導與營養/生育補助，未取得免費月嫂坐月子服務的實際辦理或明確未辦證據。不同服務不能替代，維持null。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "免費坐月子到宅服務",
+          "fulfillmentCriterion": "取得符合原文動詞及適用範圍的直接履行證據。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_changhua_3",
+          "partId": "p2",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "依現有證據估分0%：到宅育兒指導及生育補助不是免費坐月子到宅服務，尚無同一服務的執行證據。這是證據不足的保守估值，不表示已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": "2026-06-24（執行狀態未核實）",
+          "basis": "unquantified",
+          "reason": "已找到的是免費到宅育兒指導，還沒核實免費月嫂坐月子的服務辦法或成果。暫估0%，是證據不足，不能說已確認完全沒做。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "免費坐月子到宅服務",
+          "fulfillmentCriterion": "原承諾須有免費到宅坐月子服務直接辦法及執行證據；現金生育補助、育兒指導及參選人說法皆不能替代。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "已找到的是免費到宅育兒指導，還沒核實免費月嫂坐月子的服務辦法或成果。暫估0%，是證據不足，不能說已確認完全沒做。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_changhua_3",
+          "partId": "p2"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "insufficient_evidence",
+        "sources": [
+          {
+            "url": "https://www.gov.tw/News_Content_26_761449",
+            "title": "我的E政府：各縣市到宅坐月子服務及母嬰營養補助",
+            "publishedAt": null,
+            "asOf": "2025-10-30",
+            "checkedAt": "2026-10-23",
+            "evidence": "2025-10-30彙整列有到宅月嫂的10縣市未含彰化；彰化列在嬰兒營養補助，兩者不能互換；舊名單未列入並不能證明2026年仍未辦。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2025-10-30"
+          },
+          {
+            "url": "https://news.immigration.gov.tw/NewsSection/Detail/03ea50a9-33dd-4704-940a-f29c430eec4c?category=0&lang=TW",
+            "title": "移民署：彰化免費到宅育兒指導",
+            "publishedAt": "2026-05-10",
+            "asOf": "2026-05-10",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-05-10所述服務是針對6歲以下家庭或孕7個月以上的育兒作息、洗澡、副食品及親職示範，未證明免費月嫂或產婦坐月子服務。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.cna.com.tw/news/aipl/202606240182.aspx",
+            "title": "中央社：陳素月坐月子補助政策主張",
+            "publishedAt": "2026-06-24",
+            "asOf": "2026-06-24",
+            "checkedAt": "2026-10-23",
+            "evidence": "報導轉述另一參選人提及月嫂鐘點核銷制度；未附彰化縣政府服務辦法、受理窗口或成果，僅作需追查線索，不能單據此認定原政見完成或未做。",
+            "readScope": "核讀完整報導，明確辨認為參選人政見主張的轉述，不是執行證據",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_changhua_3",
+        "partId": "p3",
+        "county": "彰化縣",
+        "label": "0至2歲公托倍增計劃",
+        "quoteAnchor": "0至2歲公托倍增計劃",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-31",
+          "basis": "unquantified",
+          "reason": "2026年9月報告頁65列公設民營托嬰2023年1月由零開始、截至8月10處，既有10月21日埤頭開幕證據再增服務據點。倍增須同口徑基期托育量與現期量；不能以零據點作分母或以單一新中心當全部倍增。缺可比基期，維持null。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "0至2歲公托倍增計劃",
+          "fulfillmentCriterion": "須核對原文範圍的完成、營運或同口徑目標資料。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_changhua_3",
+          "partId": "p3",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "依現有證據估分50%：公設托嬰已增設且提供服務，但倍增的可比基期與收托量不完整，按已有實做估分。這是階段估值，不是官方實測完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-21",
+          "basis": "unquantified",
+          "reason": "埤頭公托在2026年10月啟用，全縣已布建12處，確實有新增服務。原承諾的倍增基期和收托量仍未對齊，暫按已實施估50%。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "0至2歲公托倍增計劃",
+          "fulfillmentCriterion": "公托倍增需同範圍的基期及現期收托量或明訂據點目標，不能以零作分母或任選2022年年底新中心為基期。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "埤頭公托在2026年10月啟用，全縣已布建12處，確實有新增服務。原承諾的倍增基期和收托量仍未對齊，暫按已實施估50%。 此為依證據作的階段估分，不是官方工程完成率。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_changhua_3",
+          "partId": "p3"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "evidence_updated",
+        "sources": [
+          {
+            "url": "https://ctrl.chcg.gov.tw/main/main_act3/main.aspx?act_id=408&main_id=41716",
+            "title": "彰化縣：新建公設民營托嬰中心",
+            "publishedAt": null,
+            "asOf": "2023-05",
+            "checkedAt": "2026-10-23",
+            "evidence": "2024年成果頁記和美於2022年12月營運40名，2023年二林32名、社頭20名及彰化醫院員工子女44名；當時28處是未來規劃，不是已營運。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true,
+            "updatedAt": "2024-05-16"
+          },
+          {
+            "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=440103",
+            "title": "彰化埤頭綜合式長照服務暨衛生所新建大樓啟用",
+            "publishedAt": "2026-10-21",
+            "asOf": "2026-10-21",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026-10-21開幕，1至3樓優先啟用，含可收60名公托；縣府列全縣已布建12處公托，40處為後續目標，未公布倍增計畫一致基期收托量。",
+            "readScope": "核讀官方頁面相關正文及日期欄；未將搜尋摘要視為全文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p1",
+        "county": "高雄市",
+        "label": "國道7號",
+        "quoteAnchor": "國7",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-05",
+          "basis": "unquantified",
+          "reason": "高公局8月5日仍載國7工程發包中，交通部視察亦要求儘早決標開工；缺全線實際工程比例，不能把招標當完成或未做。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "國道7號",
+          "fulfillmentCriterion": "核對原文「國7」所要求的國道7號；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p1",
+          "percent": 25,
+          "stage": "committed",
+          "reason": "保守估分25分：國7仍發包並要求儘早決標開工，按工程招標階段評估。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-15",
+          "basis": "unquantified",
+          "reason": "國7小港段已在9月8日決標，其他標段仍設計或招標。還沒有全線施工百分比，先按發包階段估分。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "國道7號",
+          "fulfillmentCriterion": "依「加速闢建新聯外道路」中的國7，區分核定、發包、施工及整體通車，不以一標決標當全線完成。"
+        },
+        "afterEstimate": {
+          "percent": 25,
+          "stage": "committed",
+          "reason": "小港段已決標，其他標段設計或招標中，採發包階段25分；不是官方施工率。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p1",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 25,
+        "afterScore": 25,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.freeway.gov.tw/Print.aspx?cnid=3722&p=39816",
+            "title": "國道7號工程資訊",
+            "publishedAt": null,
+            "asOf": "2026-10-15",
+            "checkedAt": "2026-10-23",
+            "evidence": "工程表列小港段於2026年9月8日決標；仁武、大寮仍設計，其他標段仍列招標。",
+            "readScope": "已核讀工程採購表及更新資訊；未據未讀圖表推定施工率",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p2",
+        "county": "高雄市",
+        "label": "國道10號延伸線",
+        "quoteAnchor": "國10延伸線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-06-30",
+          "basis": "unquantified",
+          "reason": "公路局台27甲延伸專頁提供115年6月工程檢核月報，證明延伸工程在執行；本次未取得涵蓋全延伸路段的統一工程百分比。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "國道10號延伸線",
+          "fulfillmentCriterion": "核對原文「國10延伸線」所要求的國道10號延伸線；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p2",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：官方工程檢核月報證明延伸工程執行中，尚無全線統一工進。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": 30,
+          "asOf": "2026-04-29",
+          "basis": "reported",
+          "reason": "交通部公布全線截至4月29日施工30%，9月兩個標段仍在施工。還沒有更新的全線合計比例，先採這筆官方數字。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "國道10號延伸線",
+          "fulfillmentCriterion": "依國10延伸線對應的台27甲新威大橋至國10里港交流道全案施工進度評估；分標數據不得代替全案合計。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 50,
+        "afterScore": 30,
+        "decision": "updated",
+        "sources": [
+          {
+            "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=ada6b308-8362-4b24-b829-80d1ba6e7cc1",
+            "title": "立法院交通委員會考察高屏地區交通建設 交通部積極推動海陸空交通建設 強化區域運輸及產業發展",
+            "publishedAt": "2026-04-29",
+            "asOf": "2026-04-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "公路局在會議說明台27甲延伸國10里港工程施工30%；另列橋科工程進行中、楠梓匝道3月動工、高科聯絡道東延仍規劃。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://thbwcs.thb.gov.tw/cp.aspx?n=5665",
+            "title": "台27甲線新威大橋延伸至國道10號里港交流道工程：計畫執行概述",
+            "publishedAt": null,
+            "asOf": "2026-09",
+            "checkedAt": "2026-10-23",
+            "evidence": "截至2026年9月，里港至美濃標段42.02%，六龜至美濃標段26.62%；頁面沒有同月份全案合計率。",
+            "readScope": "已核讀兩個標段正文進度及各自資料月份；未以頁首舊建頁日期或頁尾更新日期當進度日",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.motc.gov.tw/ch/app/data/doc?aplistdn=&detailNo=1488795645681602560&id=812&module=policy&preview=&serno=ac2167a8-13ef-4a20-92a9-2de9f4129bcd&type=s",
+            "title": "115年立法院第11屆第5會期交通委員會交通部業務概況報告（書面）",
+            "publishedAt": null,
+            "asOf": "2026-02-28",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第17頁（書面頁13）列台27甲延伸國10全長18.1公里、兩施工標，2026年2月底整體26.16%。",
+            "readScope": "已下載PDF、抽取文字並目視核對第17頁；未將前一工程37.70%誤套本案",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p3",
+        "county": "高雄市",
+        "label": "岡山第二及橋頭交流道",
+        "quoteAnchor": "岡山第二及橋頭交流道",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-05",
+          "basis": "unquantified",
+          "reason": "橋科匝道8月5日已動土，岡山第二交流道在同源當時預定9月開工；兩工程合併分項缺統一實際完成率。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "岡山第二及橋頭交流道",
+          "fulfillmentCriterion": "核對原文「岡山第二及橋頭交流道」所要求的岡山第二及橋頭交流道；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p3",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：橋科匝道已動土，岡山第二交流道也列開工安排，合併工程屬部分實施。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-01",
+          "basis": "unquantified",
+          "reason": "橋科匝道已在8月動土，岡山第二交流道也於10月1日動土。兩處仍施工，沒有合併的官方完成率。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "岡山第二及橋頭交流道",
+          "fulfillmentCriterion": "依岡山第二及橋頭交流道兩處工程，均需實際建成才可判定整個分項完成。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "兩處都已有動土、工程實施證據，維持施工階段50分；不是兩案合計施工率。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p3",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.freeway.gov.tw/Publish.aspx?cnid=195&p=44789",
+            "title": "國道1號增設岡山第二交流道工程祈福動土 啟動北岡山關鍵工程，串聯科技新都心",
+            "publishedAt": "2026-10-01",
+            "asOf": "2026-10-01",
+            "checkedAt": "2026-10-23",
+            "evidence": "岡山第二交流道於2026年10月1日舉辦動土，完工期程仍預計2030年10月；不是只停在預定開工。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.freeway.gov.tw/Print.aspx?cnid=195&p=44287",
+            "title": "國道1號增設橋科匝道及集散道路工程今日動土，打造大南方新矽谷健全聯外路網",
+            "publishedAt": "2026-08-05",
+            "asOf": "2026-08-05",
+            "checkedAt": "2026-10-23",
+            "evidence": "橋科匝道及集散道路2026年8月5日動土；國道穿越橋涵第一期預計2027年底、第二期匝道預計2029年7月完成。",
+            "readScope": "已核讀官方新聞正文；預定完工日及預期旅行時間改善不當作實績",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p4",
+        "county": "高雄市",
+        "label": "新台17線南段",
+        "quoteAnchor": "新台17線南段",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-22",
+          "basis": "unquantified",
+          "reason": "新工處確認新台17南段一期審計缺失已改善，但通車仍排115年10月底；該文未報全南段實際工程百分比。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "新台17線南段",
+          "fulfillmentCriterion": "核對原文「新台17線南段」所要求的新台17線南段；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p4",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：南段一期已有缺失改善與預定通車安排，但只確認局部一期進展，尚無全南段主要工程完成證明。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-13",
+          "basis": "unquantified",
+          "reason": "南段工程持續施作，市府10月13日說替代路線預計月底通車。這仍是預定日期，還不能算整個南段完工。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "新台17線南段",
+          "fulfillmentCriterion": "依新台17線南段整體闢建範圍核對，南段一期替代路線或缺失改善不能等同全南段通車。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "已有工程施作，但僅確認一期及替代路線進展，維持施工階段50分；不是全南段實測完成率。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p4",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://dpr.kcg.gov.tw/News_Content.aspx?n=7580C25246137820&s=6925124FC6CCBF81&sms=F81737F73703616E",
+            "title": "針對近期媒體報導新台17南段一期工程審計報告缺失均已改善完成 替代路線如期10月底通車",
+            "publishedAt": "2026-10-13",
+            "asOf": "2026-10-13",
+            "checkedAt": "2026-10-23",
+            "evidence": "工務局說南段一期審計缺失已改善，替代路線仍預計2026年10月底開放；未提供整個南段施工率或實際通車確認。",
+            "readScope": "已核讀高雄市政府發布之工務局回應；缺失改善為市府說明，未另核原審計驗證",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=ada6b308-8362-4b24-b829-80d1ba6e7cc1",
+            "title": "立法院交通委員會考察高屏地區交通建設 交通部積極推動海陸空交通建設 強化區域運輸及產業發展",
+            "publishedAt": "2026-04-29",
+            "asOf": "2026-04-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "公路局在會議說明台27甲延伸國10里港工程施工30%；另列橋科工程進行中、楠梓匝道3月動工、高科聯絡道東延仍規劃。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p5",
+        "county": "高雄市",
+        "label": "台86延伸線",
+        "quoteAnchor": "台86延伸線",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-12",
+          "basis": "unquantified",
+          "reason": "公路局8月12日核定台86跨台19甲銜接國3工程，仍辦設計發包；這一核定路線位於臺南，亦不能代替更遠高雄延伸線完成。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "台86延伸線",
+          "fulfillmentCriterion": "核對原文「台86延伸線」所要求的台86延伸線；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p5",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：核定工程在臺南，無法直接對應所承諾的高雄延伸範圍。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-06-23",
+          "basis": "unquantified",
+          "reason": "往台3線的延伸案已完成綜合規劃報告並通過環評。還沒找到這段開始施工的證據，先按規劃階段估10分。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "台86延伸線",
+          "fulfillmentCriterion": "依台86線向東延伸至台3線、涉及臺南與高雄的同一新闢道路案判斷；不能用跨台19甲銜接國3的另一工程替代。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "同案綜合規劃及環評已有成果，未核得開工，採規劃階段10分；不是官方施工率。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p5",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 0,
+        "afterScore": 10,
+        "decision": "updated",
+        "sources": [
+          {
+            "url": "https://thbwcs.thb.gov.tw/cp.aspx?n=5606",
+            "title": "台86線向東延伸至台3線：計畫執行概述",
+            "publishedAt": null,
+            "asOf": "2026-05-04",
+            "checkedAt": "2026-10-23",
+            "evidence": "同案可行性評估於2020年核定、綜合規劃期末報告於2024年8月同意辦理；頁面列環評程序，未見開工證據。",
+            "readScope": "已核讀官方計畫執行概述正文；頁面更新日2026年5月4日與內文各里程碑日期分列",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://gazette.nat.gov.tw/egFront/eguploadpubWrapper?file=%2FEG_FileManager%2Feguploadpub%2Feg032114%2Fch07%2Ftype3%2Fgov60%2Fnum28%2FEg.htm&metaid=166479",
+            "title": "環境部公告台86線向東延伸至台3線新闢道路工程環境影響說明書審查結論",
+            "publishedAt": "2026-06-23",
+            "asOf": "2026-06-23",
+            "checkedAt": "2026-10-23",
+            "evidence": "環部保字第1151039057號公告同案通過環評、不必第二階段；路線位於臺南及高雄，定稿備查後始得動工。另列跨台19甲銜接國3為附近相關計畫，兩案有別。",
+            "readScope": "web讀取曾403，後以curl取得官方公開HTML並完整核讀公告正文及條件；不是僅採搜尋摘要",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p6",
+        "county": "高雄市",
+        "label": "橋科聯外道路",
+        "quoteAnchor": "橋科聯外道路",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-04-30",
+          "basis": "unquantified",
+          "reason": "交通局4月30日指出台39橋科優先段施工中，只有高34至1-2號道路局部開通，其他橋涵、匝道至116至118年；缺全路網統一實際比例。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "橋科聯外道路",
+          "fulfillmentCriterion": "核對原文「橋科聯外道路」所要求的橋科聯外道路；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p6",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：優先段施工且部分道路開通，其餘橋涵與匝道仍待完成。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-05",
+          "basis": "unquantified",
+          "reason": "橋科聯外道路正在分期施作，穿越國道的橋涵及匝道還沒完成。尚未取得整個聯外路網的完成比例。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "橋科聯外道路",
+          "fulfillmentCriterion": "依橋科聯外道路整體路網判斷，穿越橋涵、集散道路及匝道分期進度不能任選一段代表全案。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "聯外工程分期實施，橋涵及匝道仍待完成，維持施工階段50分；不是路網實測比例。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p6",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.freeway.gov.tw/Print.aspx?cnid=195&p=44287",
+            "title": "國道1號增設橋科匝道及集散道路工程今日動土，打造大南方新矽谷健全聯外路網",
+            "publishedAt": "2026-08-05",
+            "asOf": "2026-08-05",
+            "checkedAt": "2026-10-23",
+            "evidence": "橋科匝道及集散道路2026年8月5日動土；國道穿越橋涵第一期預計2027年底、第二期匝道預計2029年7月完成。",
+            "readScope": "已核讀官方新聞正文；預定完工日及預期旅行時間改善不當作實績",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=ada6b308-8362-4b24-b829-80d1ba6e7cc1",
+            "title": "立法院交通委員會考察高屏地區交通建設 交通部積極推動海陸空交通建設 強化區域運輸及產業發展",
+            "publishedAt": "2026-04-29",
+            "asOf": "2026-04-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "公路局在會議說明台27甲延伸國10里港工程施工30%；另列橋科工程進行中、楠梓匝道3月動工、高科聯絡道東延仍規劃。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p7",
+        "county": "高雄市",
+        "label": "其餘承諾聯外道路範圍",
+        "quoteAnchor": "等",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-06-30",
+          "basis": "unquantified",
+          "reason": "工務報告列多條道路分別設計、施工與完成；原文「等」未限定其餘路網清單，缺同範圍分母，保留個案資訊而不編總百分比。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "其餘承諾聯外道路範圍",
+          "fulfillmentCriterion": "核對原文「等」所要求的其餘承諾聯外道路範圍；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p7",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：已有多條聯外道路設計、施工與完成紀錄，按路網部分實施評估。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-04-29",
+          "basis": "unquantified",
+          "reason": "楠梓園區匝道已動工，高科聯絡道東延仍在規劃。原文沒有列出「等」包含哪些道路，無法算出整個範圍的確切比例。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "其餘承諾聯外道路範圍",
+          "fulfillmentCriterion": "僅依原文「等」涵蓋的其他聯外道路有實施證據作階段估分，不能自行新增承諾清單或把已列道路重複算成果。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "其他聯外道路有已動工與仍規劃的不同階段，維持部分實施50分；範圍不明，不能當實測路網完成率。",
+          "id": "bulletin_2022_kaohsiung_8",
+          "partId": "p7",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=ada6b308-8362-4b24-b829-80d1ba6e7cc1",
+            "title": "立法院交通委員會考察高屏地區交通建設 交通部積極推動海陸空交通建設 強化區域運輸及產業發展",
+            "publishedAt": "2026-04-29",
+            "asOf": "2026-04-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "公路局在會議說明台27甲延伸國10里港工程施工30%；另列橋科工程進行中、楠梓匝道3月動工、高科聯絡道東延仍規劃。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_5_1",
+        "partId": "p1",
+        "county": "臺南市",
+        "label": "七股科工區開發",
+        "quoteAnchor": "穩健開發七股科工區",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-08-07",
+          "basis": "unquantified",
+          "reason": "新核讀115年8月公開表，截至8月7日整地97.90%、排水83.38%、道路30.81%、機電22.35%等8個實際進度；文件沒有全園區合計權重，不能將分工程直接平均為園區完成率，保留局部數據。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "七股科工區開發",
+          "fulfillmentCriterion": "核對原文「穩健開發七股科工區」所要求的七股科工區開發；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_5_1",
+          "partId": "p1",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：整地、排水、道路及機電各工程已有施作；不以個別標段百分比或平均代替全園區。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": 46,
+          "asOf": "2025-12-31",
+          "basis": "reported",
+          "reason": "經發局公布全園區截至2025年底開發46%。2026年8月道路、機電等工程仍在做，但沒有更新的全園區合計比例。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "七股科工區開發",
+          "fulfillmentCriterion": "依七股科技工業區整體開發進度判斷；不同分工程、土地出售率及廠商建廠數不能直接替代園區開發率。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 50,
+        "afterScore": 46,
+        "decision": "updated",
+        "sources": [
+          {
+            "url": "https://w3fs.tainan.gov.tw/001/Upload/22/relfile/8883/15862/6b30acbb-a6b0-4dde-b92b-fa64410a2fab.pdf",
+            "title": "臺南市政府經濟發展局114年度施政成果報告",
+            "publishedAt": null,
+            "asOf": "2025-12-31",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第1頁七股科技工業區開發計畫明列截至2025年12月31日整體開發進度46%。",
+            "readScope": "已下載PDF、抽取文字並目視核對第1頁；文件未提供可核實的單獨發布日",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://w3fs.tainan.gov.tw/Download.ashx?u=LzAwMi9GUzAxLzIyL3JlbGZpbGUvODg4My8xNzkxNy8yMzA5MWQ2Yi1lZmJjLTQ5MTQtOTRiMy0wNGI2NjRiMmIxMjYucGRm&n=MTE15bm0IOiHuuWNl%2bS4g%2biCoeenkeaKgOW3pealreWNgCA45pyILeizh%2bioiuWFrOmWiy5wZGY%3d",
+            "title": "115年臺南市七股科技工業區8月資訊公開",
+            "publishedAt": null,
+            "asOf": "2026-08-07",
+            "checkedAt": "2026-10-23",
+            "evidence": "單頁公開表有8項分工程進度，包括整地97.90%、道路30.81%、機電22.35%；沒有全園區總百分比或工程權重。",
+            "readScope": "從經發局工程公開頁取得PDF，已抽取並目視核對整頁；表內填報資料日期8月7日，非另行確認發布日",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_5_1",
+        "partId": "p2",
+        "county": "臺南市",
+        "label": "柳營科工區第三期擴編",
+        "quoteAnchor": "推動柳營科工區第三期擴編",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-01",
+          "basis": "unquantified",
+          "reason": "市府2026年9月1日回覆議會，第三期仍預計年底取得開發許可、2027年才啟動開發招商；一期二期96%建廠率不能移植第三期，保留規劃中待量化。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "柳營科工區第三期擴編",
+          "fulfillmentCriterion": "核對原文「推動柳營科工區第三期擴編」所要求的柳營科工區第三期擴編；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_5_1",
+          "partId": "p2",
+          "percent": 10,
+          "stage": "planning",
+          "reason": "保守估分10分：第三期仍申請開發許可、預計翌年招商開發，屬規劃許可階段。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-01",
+          "basis": "unquantified",
+          "reason": "第三期仍在辦開發許可，市府預計2027年才開始工程與招商。一、二期的建廠成果不能算成第三期完成。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "柳營科工區第三期擴編",
+          "fulfillmentCriterion": "依柳營科工區第三期擴編範圍核對開發許可、開發與實施，不挪用一期二期的進駐率。"
+        },
+        "afterEstimate": {
+          "percent": 10,
+          "stage": "planning",
+          "reason": "第三期仍申請開發許可，採規劃階段10分；不是第三期實測工程率。",
+          "id": "bulletin_2022_tainan_5_1",
+          "partId": "p2",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 10,
+        "afterScore": 10,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://info.tainan.gov.tw/News_Content.aspx?n=25742&s=8833998&sms=9748",
+            "title": "回應今（01）日議員總質詢議題",
+            "publishedAt": "2026-09-01",
+            "asOf": "2026-09-01",
+            "checkedAt": "2026-10-23",
+            "evidence": "柳營第三期仍預計2026年底取得開發許可，2027年啟動開發與招商。麻豆工業區自2023年起已陸續辦理土地標售招商。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_5_1",
+        "partId": "p3",
+        "county": "臺南市",
+        "label": "麻豆工業區招商行動",
+        "quoteAnchor": "麻豆工業區加速招商",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-05-31",
+          "basis": "milestone",
+          "reason": "2023至2026年已完成7次土地標售，確認實際招商措施。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "麻豆工業區招商行動",
+          "fulfillmentCriterion": "依原文「麻豆工業區加速招商」核對本分項；完成須有實際履行證據，規劃或公告不等同已提供服務或建設完工。"
+        },
+        "beforeEstimate": null,
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09-01",
+          "basis": "milestone",
+          "reason": "市府從2023年起已實際辦理工業用地標售與招商。這項評的是招商措施已執行，不代表園區土地已全部賣出。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "麻豆工業區招商行動",
+          "fulfillmentCriterion": "依原文「麻豆工業區加速招商」核對實際招商措施；未承諾全部土地售罄，不以售罄為完成門檻。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 100,
+        "afterScore": 100,
+        "decision": "rechecked_completed",
+        "sources": [
+          {
+            "url": "https://info.tainan.gov.tw/News_Content.aspx?n=25742&s=8833998&sms=9748",
+            "title": "回應今（01）日議員總質詢議題",
+            "publishedAt": "2026-09-01",
+            "asOf": "2026-09-01",
+            "checkedAt": "2026-10-23",
+            "evidence": "柳營第三期仍預計2026年底取得開發許可，2027年啟動開發與招商。麻豆工業區自2023年起已陸續辦理土地標售招商。",
+            "readScope": "已核讀官方頁面正文",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_5_2",
+        "partId": "p1",
+        "county": "臺南市",
+        "label": "南科三期開發",
+        "quoteAnchor": "南科三期開發",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-22",
+          "basis": "unquantified",
+          "reason": "南科管理局簡介確認三期85公頃已於2023年6月供廠商建廠，2025年報仍列南基地土開工程；核讀市府2026報告仍協助設廠，未取得南北基地全區實際工程百分比。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "南科三期開發",
+          "fulfillmentCriterion": "核對原文「南科三期開發」所要求的南科三期開發；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_5_2",
+          "partId": "p1",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：三期已有土地供廠商建廠、基地工程持續執行，但南北基地全區仍未完成。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2025",
+          "basis": "unquantified",
+          "reason": "南科三期已釋出30.5公頃土地供廠商建廠，公共工程仍在進行。還沒找到南北基地合計的最新施工百分比。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "南科三期開發",
+          "fulfillmentCriterion": "依南科三期整個開發工程範圍判斷，不以全臺南園區租地率或已釋出土地面積當作三期完工率。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "三期已有土地釋出與公共工程實施，維持施工階段50分；沒有全區實測施工率。",
+          "id": "bulletin_2022_tainan_5_2",
+          "partId": "p1",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.stsp.gov.tw/STSIPA_UPLOAD/eBook/2025/index.html",
+            "title": "南部科學園區2025年年報",
+            "publishedAt": "2026-03",
+            "asOf": "2025",
+            "checkedAt": "2026-10-23",
+            "evidence": "三期公共工程仍進行，建廠用地38.9公頃中已提前釋出30.5公頃供同步建廠；年報的臺南園區99.2%租地率不是三期工程完成率。",
+            "readScope": "已核讀年報HTML全文對應書面第9頁及局長序2026年3月；未推定2025年度數字為2026現況",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_5_5",
+        "partId": "p2",
+        "county": "臺南市",
+        "label": "玉井冷鏈物流中心",
+        "quoteAnchor": "玉井設置冷鏈物流中心",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-13",
+          "basis": "unquantified",
+          "reason": "10月13日市府確認一期已驗收、二期9月底竣工，設備與二期驗收及OT營運仍待後續；本輪重讀未見整個中心同範圍加權百分比，保留既有設備30%局部指標，不以建築竣工判中心100。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "玉井冷鏈物流中心",
+          "fulfillmentCriterion": "核對原文「玉井設置冷鏈物流中心」所要求的玉井冷鏈物流中心；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_5_5",
+          "partId": "p2",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：一期已驗收、二期建築已竣工，但加工設備、二期驗收及營運仍未完成；設備採購進度僅能作局部證據，不將建築完成視為全中心接近交付。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-10-13",
+          "basis": "unquantified",
+          "reason": "一、二期建築已完工，但加工設備截至10月1日只完成30%。二期驗收、設備交付及正式營運還沒完成。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "玉井冷鏈物流中心",
+          "fulfillmentCriterion": "依玉井冷鏈物流中心完整設置與可使用功能判斷；只完成建築、尚缺加工設備與交付時，不能判全中心完成。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "建築已竣工但設備僅30%、驗收交付仍待完成，維持實施階段50分；不是官方全中心完成率。",
+          "id": "bulletin_2022_tainan_5_5",
+          "partId": "p2",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "rechecked",
+        "sources": [
+          {
+            "url": "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8841251&sms=9748",
+            "title": "玉井冷鏈物流中心工程進入最後階段 青果年處理量可達8,500公噸",
+            "publishedAt": "2026-10-13",
+            "asOf": "2026-10-13",
+            "checkedAt": "2026-10-23",
+            "evidence": "一期已驗收，二期9月底竣工；二期驗收點交及加工設備仍有後續期程，正式營運預定點交後3個月內。",
+            "readScope": "已核讀市府新聞正文；預估年處理量與預定驗收、營運日期未當作既成績效",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://w3fs.tainan.gov.tw/Download.ashx?u=LzAwMi9GUzAxLzEvcmVsZmlsZS8yMDg2Ni84ODQxNzk0LzU0NzMxZDM0LTE1ZmItNDcxOS04ZTBlLTMzOTBkZmVhMDk0Ni5wZGY%3d&n=MTE15bm0MTDmnIgxM%2baXpeesrDc3MOasoeW4guaUv%2bacg%2bitsOWwiOahiOewoeWgsS3njonkupXlhrfpj4jpgLLluqbloLHlkYoucGRm&icon=..pdf",
+            "title": "115年10月13日第770次市政會議專案簡報：玉井冷鏈進度報告",
+            "publishedAt": "2026-10-13",
+            "asOf": "2026-10-01",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第10頁（簡報頁9）設備採購工程表截至10月1日進度30%；第8頁列二期9月28日竣工，驗收仍排後續。",
+            "readScope": "已下載13頁PDF並抽取相關頁，目視核對第10頁進度表與日期；30%只代表加工設備採購",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_tainan_3_3",
+        "partId": "p3",
+        "county": "臺南市",
+        "label": "虎頭埤全齡式地景園區",
+        "quoteAnchor": "虎頭埤全齡式地景",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2023-02-08",
+          "basis": "milestone",
+          "reason": "台南旅遊網2023年2月8日文章確認虎頭埤全齡式遊憩場已於2022年11月24日開放、12月24日完工剪綵，指定地景設施已有交付。完工在本任期開始前，屬既有已完成狀態；園方2026年9月29日另公告全齡遊憩場因邊坡災修暫不開放，故不表示現在全區可使用。",
+          "historical": true,
+          "lowerBound": null,
+          "label": "虎頭埤全齡式地景園區",
+          "fulfillmentCriterion": "原文為措施型承諾；核對對應措施已實際實施，不另加未承諾的全面覆蓋或永久成效門檻。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_3_3",
+          "partId": "p3",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：既有完工屬任前歷史，2026年又因災修暫停開放；歷史完成值不作當期完成證明。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2022-12-24",
+          "basis": "milestone",
+          "reason": "全齡遊憩場已於2022年12月24日落成，完成原承諾的建置，所以給100%。這是本任期前交付；2026年9月起部分設施因災修停用，不能解讀為目前全區開放。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "虎頭埤全齡式地景園區",
+          "fulfillmentCriterion": "原文「打造虎頭埤全齡式地景」為一次性建置承諾；具名設施交付即達標，完工任期與後續營運狀態另記，不要求本任再建一次。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 0,
+        "afterScore": 100,
+        "decision": "one_off_completion_scope_corrected",
+        "sources": [
+          {
+            "url": "https://www.twtainan.net/zh-tw/event/newsdetail/5486/",
+            "title": "2023虎頭埤全齡式遊憩場，全新親子遊玩的好地方",
+            "publishedAt": "2023-02-08",
+            "asOf": "2022-12-24",
+            "checkedAt": "2026-10-23",
+            "evidence": "旅遊網記錄全齡式遊憩場於2022年11月24日開放、12月24日完工剪綵。",
+            "readScope": "已核讀官方旅遊網正文；區分2023刊登日和2022完工日",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://htp.tainan.gov.tw/zh-tw/event/news/8080",
+            "title": "全齡遊憩場進行邊坡災修工程，暫不開放",
+            "publishedAt": "2026-09-29",
+            "asOf": "2026-09-29",
+            "checkedAt": "2026-10-23",
+            "evidence": "園方公告兒童遊憩區、滑草區及網繩攀爬區自2026年9月29日起因邊坡災修暫不開放。",
+            "readScope": "已核讀園方公告正文；未將全站頁尾更新日當作公告日期",
+            "verifiedThisRound": true
+          }
+        ],
+        "reviewResolution": {
+          "initialProposal": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2022-12-24",
+            "basis": "milestone",
+            "reason": "全齡遊憩場在2022年任期開始前已完工，歷史完成度為100%，不能算成本任成果。2026年部分遊區因災修暫停開放；本任新成果尚缺證據，當期估0分。",
+            "historical": true,
+            "lowerBound": null,
+            "label": "虎頭埤全齡式地景園區",
+            "fulfillmentCriterion": "依虎頭埤全齡式地景園區的建置交付里程碑判斷；完成歷史與現在可使用狀態須分開呈現。"
+          },
+          "initialEstimate": {
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "全齡遊憩場於本任期開始前完工，且2026年部分區域災修停用；未核得可計入本任的新建置成果，保留當期缺證估0分，不代表確認本任完全沒做。",
+            "id": "bulletin_2022_tainan_3_3",
+            "partId": "p3",
+            "assessedAt": "2026-10-23"
+          },
+          "reason": "一次性建置已有具名交付證據，不因跨任期或後續維修而抹除完成；完成日期、功勞歸屬及目前開放狀態分開。"
+        }
+      },
+      {
+        "id": "bulletin_2022_tainan_2_6",
+        "partId": "p3",
+        "county": "臺南市",
+        "label": "第三處市立醫院規劃",
+        "quoteAnchor": "規劃第三處市立醫院",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": "2024-06-07",
+          "basis": "unquantified",
+          "reason": "本輪核讀議會2024年6月7日質詢，記錄2020年已有可行性評估、議員稱後續因量能充足作罷；但2026沙崙案仍是成大醫院，缺市府第三座市醫本任規劃完稿或正式取消文件，不以議員疑問當確定0。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "第三處市立醫院規劃",
+          "fulfillmentCriterion": "核對原文「規劃第三處市立醫院」所要求的第三處市立醫院規劃；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_tainan_2_6",
+          "partId": "p3",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：只有2020年可行性評估及後續質詢，未核得本任第三座市醫規劃成果或現況。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": "2024-06-07",
+          "basis": "unquantified",
+          "reason": "找到2020年的選址評估安排與2024年的議會追問，還沒找到本任第三座市立醫院的規劃成果。先保留缺證估0分，並不是確認完全沒做。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "第三處市立醫院規劃",
+          "fulfillmentCriterion": "依原文「規劃第三處市立醫院」評估同一第三處市立醫院的規劃成果；不要求醫院先建成才算完成規劃，但也不能拿其他醫院擴建替代。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "沒有核得本任第三處市立醫院規劃成果，保留缺證估0分；不是已確認未實施。",
+          "id": "bulletin_2022_tainan_2_6",
+          "partId": "p3",
+          "assessedAt": "2026-10-23"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "insufficient_evidence",
+        "sources": [
+          {
+            "url": "https://www.tainan.gov.tw/news_content.aspx?n=13370&s=7720158",
+            "title": "南市府回應議員吳禹寰關心台南市第三座市立醫院設置進度及流浪犬貓管理等議題",
+            "publishedAt": "2020-10-28",
+            "asOf": "2020-10-28",
+            "checkedAt": "2026-10-23",
+            "evidence": "衛生局表示正在選址評估、預計2020年12月18日結案後提市府決策；是本任之前的評估安排，沒有附最後定案或本任新規劃。",
+            "readScope": "已核讀市府原稿第三座醫院段落；頁尾2026全站更新日未當作證據時點",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=6EA47644-9037-45FC-A12C-7C97D416840D",
+            "title": "臺南市議會：郭鴻儀市政總質詢（2024年6月7日）",
+            "publishedAt": null,
+            "asOf": "2024-06-07",
+            "checkedAt": "2026-10-23",
+            "evidence": "議員追問第三座市立醫院，提及2020年有可行性評估及後續未落實的質疑；這不是市府正式取消或未實施確認文件。",
+            "readScope": "已核讀議會新聞正文；事件日6月7日，頁面更新6月11日；議員說法與行政決策分列",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kinmen_2_2",
+        "partId": "p1",
+        "county": "金門縣",
+        "label": "年金福利維持",
+        "quoteAnchor": "年金福利不縮水",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "10月官方公告索引顯示老人福利持續；已檢索感恩釀與感恩券調整，但缺2022與2026各資格群體同口徑實領價值比較，不能僅憑政策自述認定「不縮水」。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "年金福利維持",
+          "fulfillmentCriterion": "核對原文「年金福利不縮水」所要求的年金福利維持；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kinmen_2_2",
+          "partId": "p1",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：缺不同資格群體前後實領價值對照，無法核對年金福利是否不縮水。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026年春節至秋節制度；入帳明細未取得",
+          "basis": "unquantified",
+          "reason": "55至64歲的慰助仍有發放，2026秋節又從感恩券改回每節1萬2千元現金。酒、券、現金的使用價值不同，還不能說整段任期的年金都沒有縮水。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "年金福利維持",
+          "fulfillmentCriterion": "核對原文年金福利不縮水：比較同資格群體在任期前後的給付金額、形式、實領與使用限制；有給付不直接等於不縮水。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "同一55–64歲慰助制度有實際券使用及恢復現金措施；跨年實領等值仍未證實，保守估50%。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_kinmen_2_2",
+          "partId": "p1"
+        },
+        "beforeScore": 0,
+        "afterScore": 50,
+        "decision": "replace_evidence_gap_with_partial_implementation",
+        "sources": [
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=77984BBC144F318A&sms=BF7D6D478B935644",
+            "title": "感恩釀轉型感恩券，115年春節起開始發放",
+            "publishedAt": "2025-10-10",
+            "asOf": "2026年春節制度",
+            "checkedAt": "2026-10-23",
+            "evidence": "55–64歲符合戰地政務資格者2026春節改12,000元限地感恩券；不得換現、找零、儲值。",
+            "readScope": "本輪直接取得官方轉載金門日報完整正文；不是2026秋節現行給付方式",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=C32587865D8631E8&sms=BF7D6D478B935644",
+            "title": "金門縣議會定期會：感恩券與托育業務質詢及答覆",
+            "publishedAt": "2026-03-31",
+            "asOf": "2026-03-30會議",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026年3月31日報導確認感恩券已使用，民政處回覆通路配套；議員指出換現折價與使用不便，屬質詢主張，不當成所有領取者價值損失。",
+            "readScope": "本輪直接讀取官方轉載正文；區分議員質詢與主管答覆，不把政治評語視為定量審計結論",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content.aspx?n=1BC6B0D9638A6EE2&s=B6CE73F931DCE517&sms=A2C62D68901B977C",
+            "title": "歷經戰地政務時期55–64歲115年秋節慰助申請",
+            "publishedAt": "2026-06-25",
+            "asOf": "2026年秋節制度",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026秋節每人12,000元，6月30日至9月11日申請，核撥本人銀行帳戶；公告不能替代逐戶實際入帳清冊。",
+            "readScope": "本輪直接讀取民政處公告正文；未取得全體入帳完成明細",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=401B6F79B769EE3E&sms=BF7D6D478B935644",
+            "title": "戰地政務55至64歲115年秋節慰助金申請至9/11止",
+            "publishedAt": "2026-08-29",
+            "asOf": "2026-08月底申請狀況",
+            "checkedAt": "2026-10-23",
+            "evidence": "明列秋節恢復現金匯款，仍有531名首次申請者待補帳戶；尚須完成申領程序。",
+            "readScope": "本輪直接讀取官方轉載正文；未以9月25日預定撥款日冒充實付驗證",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.audit.gov.tw/p/405-1000-11956,c103.php?Lang=zh-tw",
+            "title": "審計部：金門慰助金發放規範已修正並廢止過時條例",
+            "publishedAt": "2026-10-16",
+            "asOf": "2025-09及2026-05法規改善",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026年10月追蹤確認基金適用對象2025年9月修正、2026年5月廢止早已執行完畢的臨時人員規範；並非停掉仍在發給的全部福利。",
+            "readScope": "本輪核讀審計部全文；僅認列制度修正，未把法規修正視為實領價值不縮水的證據",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_kinmen_2_2",
+        "partId": "p2",
+        "county": "金門縣",
+        "label": "不同性別年齡福利保障",
+        "quoteAnchor": "男女老幼一樣好",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "已檢索115年度55至64歲慰助及10月老人照顧公告；皆只涵蓋特定資格群體，缺不同性別與各年齡福利待遇比較，不能推定「男女老幼一樣好」已全面實現。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "不同性別年齡福利保障",
+          "fulfillmentCriterion": "核對原文「男女老幼一樣好」所要求的不同性別年齡福利保障；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_kinmen_2_2",
+          "partId": "p2",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：特定年齡福利公告無法證明不同性別及所有年齡待遇均有保障。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "已能確認年長者慰助與育兒服務分別推動。還沒有不同性別、年齡的完整受益比較，不能說各群體都一樣受照顧。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "不同性別年齡福利保障",
+          "fulfillmentCriterion": "依原文男女老幼一樣好核對各性別與年齡的福利可近性和保障；不要求各人領取相同金額，也不以特定群體活動代替全面保障。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "已有個別福利措施，仍缺原文不同群體保障的完整證據；0分不代表確認未實施。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_kinmen_2_2",
+          "partId": "p2"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "retain_score_clarify_non_discrimination_criterion",
+        "sources": [
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=C32587865D8631E8&sms=BF7D6D478B935644",
+            "title": "金門縣議會定期會：感恩券與托育業務質詢及答覆",
+            "publishedAt": "2026-03-31",
+            "asOf": "2026-03-30會議",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026年3月31日報導確認感恩券已使用，民政處回覆通路配套；議員指出換現折價與使用不便，屬質詢主張，不當成所有領取者價值損失。",
+            "readScope": "本輪直接讀取官方轉載正文；區分議員質詢與主管答覆，不把政治評語視為定量審計結論",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=401B6F79B769EE3E&sms=BF7D6D478B935644",
+            "title": "戰地政務55至64歲115年秋節慰助金申請至9/11止",
+            "publishedAt": "2026-08-29",
+            "asOf": "2026-08月底申請狀況",
+            "checkedAt": "2026-10-23",
+            "evidence": "明列秋節恢復現金匯款，仍有531名首次申請者待補帳戶；尚須完成申領程序。",
+            "readScope": "本輪直接讀取官方轉載正文；未以9月25日預定撥款日冒充實付驗證",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.audit.gov.tw/p/405-1000-11956,c103.php?Lang=zh-tw",
+            "title": "審計部：金門慰助金發放規範已修正並廢止過時條例",
+            "publishedAt": "2026-10-16",
+            "asOf": "2025-09及2026-05法規改善",
+            "checkedAt": "2026-10-23",
+            "evidence": "2026年10月追蹤確認基金適用對象2025年9月修正、2026年5月廢止早已執行完畢的臨時人員規範；並非停掉仍在發給的全部福利。",
+            "readScope": "本輪核讀審計部全文；僅認列制度修正，未把法規修正視為實領價值不縮水的證據",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_2_3",
+        "partId": "p2",
+        "county": "澎湖縣",
+        "label": "文學好室及其餘社宅",
+        "quoteAnchor": "建造社會住宅",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-09",
+          "basis": "unquantified",
+          "reason": "更新9月報告：文學好室進入外牆與室內裝修，預計2027年5月；其餘案山70戶亦裝修中。報告未提供各案實際工進百分比，不把結構完成當全案100%。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "文學好室及其餘社宅",
+          "fulfillmentCriterion": "核對原文「建造社會住宅」所要求的文學好室及其餘社宅；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p2",
+          "percent": 75,
+          "stage": "near_complete",
+          "reason": "保守估分75分：主要結構已完成、住宅進入內外裝修，仍待竣工交付。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "現行文學好室頁未標工進統計日",
+          "basis": "unquantified",
+          "reason": "文學好室官網目前列工程83.78%，還在興建。這是單案數字，其餘社宅沒有同日完整比例，所以本分項仍保留75%估分。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "文學好室及其餘社宅",
+          "fulfillmentCriterion": "原文建造社會住宅；本分項既有範圍含文學好室及其餘社宅，單案工進只作輔助，不冒充整個範圍。"
+        },
+        "afterEstimate": {
+          "percent": 75,
+          "stage": "near_complete",
+          "reason": "文學好室83.78%仍施工中；其餘範圍無同日工進，維持主要工程完成仍收尾的75%估分。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p2"
+        },
+        "beforeScore": 75,
+        "afterScore": 75,
+        "decision": "retain_broad_score_add_actual_project_metric",
+        "sources": [
+          {
+            "url": "https://sh.hurc.org.tw/X/X-880-001",
+            "title": "國家住都中心文學好室工程頁",
+            "publishedAt": null,
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "直接取得現行HTML：施工進度83.78%、預估進度86.12%、78戶，狀態興建中；原頁未列進度統計日。",
+            "readScope": "本輪直接讀取官網HTML；搜尋快取另為78.64%，已排除快取值；未以查閱日當工進統計日",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_2_3",
+        "partId": "p3",
+        "county": "澎湖縣",
+        "label": "補助老屋整建",
+        "quoteAnchor": "補助老屋整建",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07-31",
+          "basis": "unquantified",
+          "reason": "9月報告再確認住宅修繕利息補貼持續辦理；既有2025核准3戶可證補助已執行，但仍無建物屋齡與公報老屋整建的直接對照，因此保留措施實績而不硬填完成度。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "住宅修繕利息補助",
+          "fulfillmentCriterion": "依原文「補助老屋整建」核對本分項；完成須有實際履行證據，規劃或公告不等同已提供服務或建設完工。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p3",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：修繕利息補貼已受理核准，與公報老屋條件的完整對照仍不足。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2025年度古厝獎助；2026-09-21老宅補助受理",
+          "basis": "unquantified",
+          "reason": "已有古厝修繕獎助案件，2026年也開始受理30年以上住宅的修繕補助。部分案件仍待改善或審查，還沒有全面完成的證據。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "補助老屋整建",
+          "fulfillmentCriterion": "核對補助老屋整建的實際受助和整建階段；一般住宅利息補貼、文化古厝個案與老宅延壽不同制度分別列示。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "已有傳統古厝實作獎助及新老宅申請措施，仍有待改善審查與受助範圍限制，估50%。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p3"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "retain_50_add_direct_old_building_evidence",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin42%2F202604241108410.pdf&filedisplay=17.114年度施政績效報告-文化局.pdf&flag=doc",
+            "title": "澎湖縣文化局114年度施政績效報告",
+            "publishedAt": "2026-04-24（檔名）",
+            "asOf": "2025年度",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第21頁列古厝保存獎助；池西41號已於114年8月29日現勘，仍待改善送審，成功蕭克讓古宅待竣工報告。",
+            "readScope": "本輪下載官方PDF文字核讀第21頁；只證傳統古厝個案，非一般青年住宅全面整建",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.phnes.com/公告115年度澎湖縣辦理老宅延壽機能復新補助申請",
+            "title": "公告115年度澎湖縣辦理老宅延壽機能復新補助申請等相關事項",
+            "publishedAt": null,
+            "asOf": "2026-09-21起受理",
+            "checkedAt": "2026-10-23",
+            "evidence": "報導引述建設處：2026年9月21日至12月21日受理屋齡30年以上住宅修繕補助；尚非核定或完工紀錄。",
+            "readScope": "本輪閱讀新聞全文；屬媒體轉述官方公告，未獨立取得縣府原始公告附件",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ],
+        "scopeCorrection": {
+          "reason": "公報原文為補助老屋整建，未限於貸款利息；分項名稱回復原文，既有修繕證據及估50不變。",
+          "beforeLabel": "住宅修繕利息補助",
+          "afterLabel": "補助老屋整建",
+          "beforeCriterion": "依原文「補助老屋整建」核對本分項；完成須有實際履行證據，規劃或公告不等同已提供服務或建設完工。",
+          "afterCriterion": "核對補助老屋整建的實際受助和整建階段；一般住宅利息補貼、文化古厝個案與老宅延壽不同制度分別列示。"
+        }
+      },
+      {
+        "id": "bulletin_2022_penghu_2_3",
+        "partId": "p4",
+        "county": "澎湖縣",
+        "label": "購屋與租屋補助措施",
+        "quoteAnchor": "售屋、租屋",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07-31",
+          "basis": "unquantified",
+          "reason": "9月報告明列購屋貸款利息及租金補貼實施，租補累計逾4,500件。原文同時含售屋、租屋供給，補助實績可更新，但不能代替未完工社宅與出售住宅供給。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "購屋與租屋補助措施",
+          "fulfillmentCriterion": "依原文「售屋、租屋」核對本分項；完成須有實際履行證據，規劃或公告不等同已提供服務或建設完工。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p4",
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "保守估分50分：購屋及租金補貼已實施，出售及出租住宅供給仍有未完成範圍。此為階段估分，並非官方或實測整項完成率。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07-31",
+          "basis": "unquantified",
+          "reason": "租金補貼累計核准超過4,500件，也持續辦理購屋貸款利息補貼。社宅仍在施工，這些補助不能算成住宅已經出售或出租完成。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "購屋與租屋補助措施",
+          "fulfillmentCriterion": "核對原文售屋、租屋多管齊下；補助執行屬部分手段，不以核准件數代替可入住供給。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "購屋及租金補貼有實績，但售屋與出租供給範圍尚未完整，維持50%。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p4"
+        },
+        "beforeScore": 50,
+        "afterScore": 50,
+        "decision": "retain_partial_scope",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://sh.hurc.org.tw/X/X-880-001",
+            "title": "國家住都中心文學好室工程頁",
+            "publishedAt": null,
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "直接取得現行HTML：施工進度83.78%、預估進度86.12%、78戶，狀態興建中；原頁未列進度統計日。",
+            "readScope": "本輪直接讀取官網HTML；搜尋快取另為78.64%，已排除快取值；未以查閱日當工進統計日",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_2_3",
+        "partId": "p5",
+        "county": "澎湖縣",
+        "label": "包租代管服務",
+        "quoteAnchor": "包租代管",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "已讀在地業者完整服務說明：私人包租代管有營業，政府333計畫則稱尚未加入。該頁未標日期，且未取得縣府承辦／媒合量，不能將私人服務算縣府完成或以此推定目前0%。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "包租代管服務",
+          "fulfillmentCriterion": "核對原文「包租代管」所要求的包租代管服務；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p5",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：私人業者服務不能證明縣府包租代管計畫的執行。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "還沒查到縣府包租代管計畫的契約或媒合成果。社宅興建與私人業者的介紹，都不能證明縣府這項承諾已做到。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "包租代管服務",
+          "fulfillmentCriterion": "核對縣府推動包租代管服務的委辦、媒合或受益實績，不把私人自行營業算政府承諾完成。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "未核得縣府執行的包租代管實績；私人業者及社宅興建不能替代，仍估0分而非確認沒做。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_2_3",
+          "partId": "p5"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "retain_0_reject_cross_column_misattribution",
+        "sources": [
+          {
+            "url": "https://www.hurc.org.tw/FileUploads/docatt/0b4af91e-7a56-11ef-b947-0050569555f6.pdf",
+            "title": "國家住都中心簡介：社宅數據與地圖",
+            "publishedAt": null,
+            "asOf": "2023-01月底",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第22–23頁的20縣市含澎湖是社宅興建範圍，不是澎湖包租代管實績；澎湖列文學好室78戶。",
+            "readScope": "本輪下載官方PDF並核讀第22–23頁；拒絕跨欄把社宅興建範圍誤認為包租代管執行縣市",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_3_1",
+        "partId": "p3",
+        "county": "澎湖縣",
+        "label": "國小校外教學費用補助",
+        "quoteAnchor": "校外教學費用",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "已查9月教育補助章及115年校外教學搜尋，找到國立科博館偏鄉補助公告，未找到縣府對公報所指國小學童費用的核發實績；中央單一場館方案不直接代替縣級承諾。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "國小校外教學費用補助",
+          "fulfillmentCriterion": "核對原文「校外教學費用」所要求的國小校外教學費用補助；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_3_1",
+          "partId": "p3",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：中央單一場館補助未能替代縣府國小校外教學費用補助。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "2023年曾提出校外教學補助規劃。後續仍未找到核發或持續辦理紀錄，不能把舊規劃當成現在已經有補助。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "國小校外教學費用補助",
+          "fulfillmentCriterion": "補助國小學童校外教學費用需有縣府補助核定、核撥或學校受助證明；施政展望只算規劃。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "只有2023年度展望，未核得後續實付或持續有效證據；保留估0，不等於確認沒做。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_3_1",
+          "partId": "p3"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "retain_0_keep_historical_planning_separate",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=govpaper%2F202303131251490.pdf&filedisplay=澎湖縣政府公報112年第3期.pdf&flag=pdf",
+            "title": "澎湖縣政府公報112年第3期：施政展望報告",
+            "publishedAt": "2023-03-16",
+            "asOf": "2023年施政展望",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第7頁列成立離島醫療救護基金為未來規劃；第11頁列將編列國小校外教學補助經費，未列核發成果。",
+            "readScope": "本輪下載官方PDF，文字核讀第5、7、11頁；未把展望當作執行成果",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：教育照顧",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "112–114學年度；115學年度幼教現況",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第23頁列公幼寒暑假加托及弱勢全額補助；第25頁列一年級制服每人2,000元、全縣國小文具每年200元，112–114學年度合計受惠10,603人次。",
+            "readScope": "本輪重讀既有官方PDF第23–25頁、114–117頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_3_3",
+        "partId": "p1",
+        "county": "澎湖縣",
+        "label": "非營利幼兒園",
+        "quoteAnchor": "推動非營利幼兒園",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "已查115學年度招生與9月幼教章；報告列公立、準公共幼兒園，未列非營利園成立。第三方名冊顯示0家，但未取得教育部原始名冊核對，仍不足確認0%。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "非營利幼兒園",
+          "fulfillmentCriterion": "核對原文「推動非營利幼兒園」所要求的非營利幼兒園；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_3_3",
+          "partId": "p1",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：未核得非營利幼兒園設置原始證據，第三方零家名冊尚未確認。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "not_implemented",
+          "percent": 0,
+          "asOf": "114學年度",
+          "basis": "reported",
+          "reason": "教育部114學年度原始統計列澎湖非營利幼兒園0所。最新學年度是否已新增，還缺官方更新；公立和準公共幼兒園不算非營利園。",
+          "historical": true,
+          "lowerBound": null,
+          "label": "非營利幼兒園",
+          "fulfillmentCriterion": "核對推動非營利幼兒園的具體設立、委辦與服務；官方統計0所只證該學年度尚無園所，不推定所有籌備工作都沒有。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "官方114學年度確認非營利園0所；當期新增／籌備證據未取得，保留歷史0與估分0的區別。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_3_3",
+          "partId": "p1"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "replace_third_party_gap_with_dated_official_zero",
+        "sources": [
+          {
+            "url": "https://stats.moe.gov.tw/files/city/114/114cityk.xlsx",
+            "title": "教育部114學年度幼兒園概況統計—按縣市別分",
+            "publishedAt": "2026-05-29（資料發布頁）",
+            "asOf": "114學年度／114年",
+            "checkedAt": "2026-10-23",
+            "evidence": "k工作表第22列：澎湖本園23所、非營利幼兒園0所；另一表114年公幼延長照顧平均開辦率67.56%。",
+            "readScope": "本輪下載官方XLSX，核對k表第2–4列欄名與I22=0；延長照顧表A21/B21=澎湖縣/67.56，兩者統計口徑分開",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://stats.moe.gov.tw/files/opendata/k1_new.json",
+            "title": "教育部幼兒園名錄（114學年度澎湖資料）",
+            "publishedAt": "2026-08-14（資料集詮釋更新，非全園設立日）",
+            "asOf": "114學年度",
+            "checkedAt": "2026-10-23",
+            "evidence": "114學年度澎湖25筆含2分班，23本園；名稱中無非營利園，與官方縣市統計0所交叉一致。",
+            "readScope": "本輪下載官方JSON，按學年度114、縣市澎湖篩選全部25筆；非營利分類以XLSX專欄為準",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：教育照顧",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "112–114學年度；115學年度幼教現況",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第23頁列公幼寒暑假加托及弱勢全額補助；第25頁列一年級制服每人2,000元、全縣國小文具每年200元，112–114學年度合計受惠10,603人次。",
+            "readScope": "本輪重讀既有官方PDF第23–25頁、114–117頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_5_3",
+        "partId": "p1",
+        "county": "澎湖縣",
+        "label": "招商服務平台",
+        "quoteAnchor": "建立招商",
+        "before": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-09-09",
+          "basis": "unquantified",
+          "reason": "重查招商章，縣府完成多案招商與跨機關協調，但未找到整合招商平台啟用或服務內容；招商個案不等同平台建置完成。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "招商服務平台",
+          "fulfillmentCriterion": "核對原文「建立招商」所要求的招商服務平台；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_5_3",
+          "partId": "p1",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：招商個案與協調尚不能證明整合招商服務平台已建置。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2023-10-16入口發布；現行平台未標資料截止日",
+          "basis": "milestone",
+          "reason": "官方招商及輔導入口已整合土地、建管等6筆資源，也能連到縣有土地開發平台。建立資訊平台這一步已做到，不代表招商成效達100%。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "招商服務平台",
+          "fulfillmentCriterion": "原文建立招商及產創輔導多元平台，本分項以政府已公開可使用的招商資訊與資源整合入口為完成；不額外要求原文未承諾的交易系統或所有案件招商成功。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 0,
+        "afterScore": 100,
+        "decision": "recognize_actual_published_platform",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/economic/home.jsp?id=211",
+            "title": "澎湖縣政府建設處：招商及輔導資源平台",
+            "publishedAt": "2023-10-16",
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "官方頁列6筆資源，包含農漁輔導、土地圖資、建管、縣有土地開發；各筆發布於2023年10月16日。",
+            "readScope": "本輪直接讀取官方HTML完整列表及6筆總數；頁尾更新日期未視為6項資料更新",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/economic/home.jsp?id=211&act=view&dataserno=202310160014",
+            "title": "澎湖縣有土地開發平台（建設處連結頁）",
+            "publishedAt": "2023-10-16",
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "官方整合入口於2023年10月16日發布，連結至縣府促參及土地開發平台。",
+            "readScope": "本輪直接讀取連結頁正文與href，確認官方整合入口",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://invest.penghu.gov.tw/index.php",
+            "title": "澎湖縣政府促參及土地開發平台招商",
+            "publishedAt": null,
+            "asOf": null,
+            "checkedAt": "2026-10-23",
+            "evidence": "現行官網提供促參與土地開發分類、行政區地圖查詢入口、聯絡資訊；只能證平台提供資訊，不能證招商效益。",
+            "readScope": "本輪讀取官網首頁HTML與可見導航；未逐一驗證每筆土地資料及動態地圖查詢",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_1_4",
+        "partId": "p1",
+        "county": "澎湖縣",
+        "label": "具名離島醫療救護基金成立",
+        "quoteAnchor": "成立澎湖離島醫療救護基金",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "重查9月醫療與補助章及「醫療救護基金」搜尋，只有後送制度與承諾資訊，未取得該具名基金設立／專戶文件。服務已執行不等同基金已成立。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "具名離島醫療救護基金成立",
+          "fulfillmentCriterion": "核對原文「成立澎湖離島醫療救護基金」所要求的具名離島醫療救護基金成立；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_1_4",
+          "partId": "p1",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：後送服務不能證明指定離島醫療救護基金成立。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "緊急後送與救護車補助有在做，但還沒找到「離島醫療救護基金」的設立或專戶文件。不能用其他醫療服務代替基金成立。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "具名離島醫療救護基金成立",
+          "fulfillmentCriterion": "原文成立澎湖離島醫療救護基金，須有本縣具名基金設立規章、專戶或收支文件；中央醫療發展基金不是同一基金。"
+        },
+        "afterEstimate": {
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "未取得公報具名基金成立文件；其他後送服務不替代，估0分並保留未知。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_1_4",
+          "partId": "p1"
+        },
+        "beforeScore": 0,
+        "afterScore": 0,
+        "decision": "retain_specific_entity_evidence_gap",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=govpaper%2F202303131251490.pdf&filedisplay=澎湖縣政府公報112年第3期.pdf&flag=pdf",
+            "title": "澎湖縣政府公報112年第3期：施政展望報告",
+            "publishedAt": "2023-03-16",
+            "asOf": "2023年施政展望",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第7頁列成立離島醫療救護基金為未來規劃；第11頁列將編列國小校外教學補助經費，未列核發成果。",
+            "readScope": "本輪下載官方PDF，文字核讀第5、7、11頁；未把展望當作執行成果",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=56225&pid=257536",
+            "title": "立法院預算中心：115年度離島急重症轉診後送精進計畫評估",
+            "publishedAt": "2025-11",
+            "asOf": "2024-08以前成效；2025-09核定",
+            "checkedAt": "2026-10-23",
+            "evidence": "報告載中央計畫2025年9月17日核定；前期澎湖轉診時間仍有未達目標情形。此為中央計畫及歷史服務品質分析，不能證縣府具名基金成立。",
+            "readScope": "本輪核讀官方全文，含2024年8月以前的三離島時效比較；未當成2026年最新服務時效",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_1_4",
+        "partId": "p2",
+        "county": "澎湖縣",
+        "label": "解決緊急交通與醫療後送需求",
+        "quoteAnchor": "解決緊急交通與醫療後送需求",
+        "before": {
+          "status": "unknown",
+          "percent": null,
+          "asOf": null,
+          "basis": "unquantified",
+          "reason": "9月報告確認後送補助199人次，但未指出款項來自公報指定基金；因此更新實際服務紀錄，基金支應比例仍無法計算。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "透過指定基金支應緊急後送",
+          "fulfillmentCriterion": "核對原文「解決緊急交通與醫療後送需求」所要求的透過指定基金支應緊急後送；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_1_4",
+          "partId": "p2",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：後送補助有實績，仍未確認款項來自承諾的指定基金。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "in_progress",
+          "percent": null,
+          "asOf": "2026-07累計",
+          "basis": "unquantified",
+          "reason": "已提高赴臺救護車補助，2023年至2026年7月共補助199人次。後送服務有實績，但基金是否成立、需求是否都解決仍不清楚。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "解決緊急交通與醫療後送需求",
+          "fulfillmentCriterion": "回到原文「解決緊急交通與醫療後送需求」，核對轉診與後送支援的實際實施；基金成立由p1另行查證，p2不額外限定只有指定基金支出才算服務。"
+        },
+        "afterEstimate": {
+          "percent": 50,
+          "stage": "implementing",
+          "reason": "原文後送需求已有具體補助實績，未確認全部需求滿足及基金成立，僅估50%。",
+          "assessedAt": "2026-10-23",
+          "id": "bulletin_2022_penghu_1_4",
+          "partId": "p2"
+        },
+        "beforeScore": 0,
+        "afterScore": 50,
+        "decision": "criterion_correction_recommended_partial_service",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：住宅及後送補助",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "2026-07-31（累計補助）",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第26–27頁記載文學好室、案山70戶均裝修中；租補於112至115年7月底累計核准逾4,500件；後送救護車補助累計199人次。",
+            "readScope": "本輪重讀既有官方PDF原檔第26–27頁；正文文字核讀",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=56225&pid=257536",
+            "title": "立法院預算中心：115年度離島急重症轉診後送精進計畫評估",
+            "publishedAt": "2025-11",
+            "asOf": "2024-08以前成效；2025-09核定",
+            "checkedAt": "2026-10-23",
+            "evidence": "報告載中央計畫2025年9月17日核定；前期澎湖轉診時間仍有未達目標情形。此為中央計畫及歷史服務品質分析，不能證縣府具名基金成立。",
+            "readScope": "本輪核讀官方全文，含2024年8月以前的三離島時效比較；未當成2026年最新服務時效",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=govpaper%2F202303131251490.pdf&filedisplay=澎湖縣政府公報112年第3期.pdf&flag=pdf",
+            "title": "澎湖縣政府公報112年第3期：施政展望報告",
+            "publishedAt": "2023-03-16",
+            "asOf": "2023年施政展望",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第7頁列成立離島醫療救護基金為未來規劃；第11頁列將編列國小校外教學補助經費，未列核發成果。",
+            "readScope": "本輪下載官方PDF，文字核讀第5、7、11頁；未把展望當作執行成果",
+            "verifiedThisRound": true
+          }
+        ],
+        "scopeCorrection": {
+          "reason": "原文未把後送支援限定為指定基金付款；基金成立在p1獨立計分，本分項回到原文需求且只認列部分實施。",
+          "beforeLabel": "透過指定基金支應緊急後送",
+          "afterLabel": "解決緊急交通與醫療後送需求",
+          "beforeCriterion": "核對原文「解決緊急交通與醫療後送需求」所要求的透過指定基金支應緊急後送；目前僅有部分措施或欠缺直接證據，未把既有存量、規劃程序或局部工程視為整個分項已完成。",
+          "afterCriterion": "回到原文「解決緊急交通與醫療後送需求」，核對轉診與後送支援的實際實施；基金成立由p1另行查證，p2不額外限定只有指定基金支出才算服務。"
+        }
+      },
+      {
+        "id": "bulletin_2022_penghu_3_1",
+        "partId": "p1",
+        "county": "澎湖縣",
+        "label": "國小制服補助",
+        "quoteAnchor": "補助國小學童制服",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-03-31",
+          "basis": "milestone",
+          "reason": "114學年度制服及文具補助1733300元、3435學童受惠，確認制度實際執行。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "國小制服補助",
+          "fulfillmentCriterion": "依原文「補助國小學童制服」核對本分項；完成須有實際履行證據，規劃或公告不等同已提供服務或建設完工。"
+        },
+        "beforeEstimate": null,
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "112–114學年度",
+          "basis": "milestone",
+          "reason": "國小一年級新生制服補助每人2,000元，已有實際核發。補助限一年級，不是所有年級每年都能領制服費。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "國小制服補助",
+          "fulfillmentCriterion": "補助國小學童制服採制度已實施里程碑，受益資格公開為一年級新生；不虛稱全體年級每年領取。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 100,
+        "afterScore": 100,
+        "decision": "recheck_100_keep_actual_beneficiary_scope",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：教育照顧",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "112–114學年度；115學年度幼教現況",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第23頁列公幼寒暑假加托及弱勢全額補助；第25頁列一年級制服每人2,000元、全縣國小文具每年200元，112–114學年度合計受惠10,603人次。",
+            "readScope": "本輪重讀既有官方PDF第23–25頁、114–117頁；正文文字核讀",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_3_3",
+        "partId": "p3",
+        "county": "澎湖縣",
+        "label": "寒暑假幼兒照顧",
+        "quoteAnchor": "寒暑假也照顧的到",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09-09",
+          "basis": "milestone",
+          "reason": "9月報告明列公幼寒暑假加托及課後延長照顧持續實施，弱勢家庭全額補助；按服務實施里程碑記100%。",
+          "historical": false,
+          "lowerBound": null,
+          "label": "寒暑假幼兒照顧",
+          "fulfillmentCriterion": "依原文動詞及範圍認列已完成或實際提供的措施：9月報告明列公幼寒暑假加托及課後延長照顧持續實施，弱勢家庭全額補助；按服務實施里程碑記100%。"
+        },
+        "beforeEstimate": null,
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2026-09報告；延長照顧覆蓋另為2025年",
+          "basis": "milestone",
+          "reason": "公立幼兒園寒暑假加托已辦理，弱勢家庭可全額補助。100%代表服務已開辦，不表示每一所園、每個家庭都有名額。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "寒暑假幼兒照顧",
+          "fulfillmentCriterion": "原文寒暑假也照顧得到，以已實施寒暑假照顧服務為措施里程碑；受理園所、弱勢補助資格與覆蓋另列，不用平均開辦率替代政見完成率。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 100,
+        "afterScore": 100,
+        "decision": "recheck_100_keep_service_milestone_not_universal_coverage",
+        "sources": [
+          {
+            "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=第20屆第8次定期會施政報告(final).pdf&flag=doc",
+            "title": "澎湖縣第20屆第8次定期會施政報告：教育照顧",
+            "publishedAt": "2026-09-09（檔名）",
+            "asOf": "112–114學年度；115學年度幼教現況",
+            "checkedAt": "2026-10-23",
+            "evidence": "PDF第23頁列公幼寒暑假加托及弱勢全額補助；第25頁列一年級制服每人2,000元、全縣國小文具每年200元，112–114學年度合計受惠10,603人次。",
+            "readScope": "本輪重讀既有官方PDF第23–25頁、114–117頁；正文文字核讀",
+            "verifiedThisRound": true
+          },
+          {
+            "url": "https://stats.moe.gov.tw/files/city/114/114cityk.xlsx",
+            "title": "教育部114學年度幼兒園概況統計—按縣市別分",
+            "publishedAt": "2026-05-29（資料發布頁）",
+            "asOf": "114學年度／114年",
+            "checkedAt": "2026-10-23",
+            "evidence": "k工作表第22列：澎湖本園23所、非營利幼兒園0所；另一表114年公幼延長照顧平均開辦率67.56%。",
+            "readScope": "本輪下載官方XLSX，核對k表第2–4列欄名與I22=0；延長照顧表A21/B21=澎湖縣/67.56，兩者統計口徑分開",
+            "verifiedThisRound": true
+          }
+        ]
+      },
+      {
+        "id": "bulletin_2022_penghu_5_2",
+        "partId": "p1",
+        "county": "澎湖縣",
+        "label": "歷史建築文創會展用途研議",
+        "quoteAnchor": "研議縣府歷史建築轉型為文創會展場域",
+        "before": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2024-04",
+          "basis": "milestone",
+          "reason": "重查9月產創與文化場館章，未找到指定縣府歷史建築用途的新決定；保留審計確認曾研議的歷史100%，不將其他青創場地當該建築後續。",
+          "historical": true,
+          "lowerBound": null,
+          "label": "歷史建築文創會展用途研議",
+          "fulfillmentCriterion": "原文動詞為研議，只認曾完成用途研議；不宣稱文創會展場域設置完成。"
+        },
+        "beforeEstimate": {
+          "id": "bulletin_2022_penghu_5_2",
+          "partId": "p1",
+          "percent": 0,
+          "stage": "evidence_gap",
+          "reason": "保守估分0分：歷史研議曾完成，但指定建築用途尚無當期新決定。此為證據不足的估分，不代表已確認未實施。"
+        },
+        "after": {
+          "status": "completed",
+          "percent": 100,
+          "asOf": "2024-04",
+          "basis": "milestone",
+          "reason": "審計紀錄確認縣府曾研擬文創會展用途，之後改為辦公大樓遷建。原文只承諾「研議」的這一項給100%；不代表青創空間已提供。",
+          "historical": null,
+          "lowerBound": null,
+          "label": "歷史建築文創會展用途研議",
+          "fulfillmentCriterion": "原文動詞為研議，只認曾完成用途研議；不宣稱文創會展場域設置完成。"
+        },
+        "afterEstimate": null,
+        "beforeScore": 0,
+        "afterScore": 100,
+        "decision": "one_off_completion_scope_corrected",
+        "sources": [
+          {
+            "url": "https://auditreport.audit.gov.tw/ServerFile/Get/63857525602317752906344f601ca847878a82938ced769986",
+            "title": "112年度澎湖縣總決算審核報告：縣政府主管，乙35–37頁",
+            "publishedAt": "2024年審核報告",
+            "asOf": "2024-04",
+            "checkedAt": "2026-10-23",
+            "evidence": "正文載縣府曾研擬歷史建築轉型為文創會展及青年創業空間的計畫，後調整主軸為辦公大樓遷建，當時未提供青年創業空間。只認曾完成研議，不認場域已建置。",
+            "readScope": "直接讀取原PDF全文乙35–37頁與表18相關正文；本次未重新調查該建物2026年使用狀態。",
+            "verifiedThisRound": true
+          }
+        ],
+        "reviewResolution": {
+          "reason": "與虎頭埤使用相同原文動詞判準；完成一次性研議不需每年再完成，不能混為後續場域建置。"
+        }
+      }
+    ],
+    "reviewedParts": 44,
+    "scoreChanges": [
+      {
+        "id": "bulletin_2022_taichung_5",
+        "partId": "p3",
+        "before": 50,
+        "after": 89.65517241379311
+      },
+      {
+        "id": "bulletin_2022_taichung_9",
+        "partId": "p2",
+        "before": 0,
+        "after": 66.875
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p2",
+        "before": 50,
+        "after": 30
+      },
+      {
+        "id": "bulletin_2022_kaohsiung_8",
+        "partId": "p5",
+        "before": 0,
+        "after": 10
+      },
+      {
+        "id": "bulletin_2022_tainan_5_1",
+        "partId": "p1",
+        "before": 50,
+        "after": 46
+      },
+      {
+        "id": "bulletin_2022_tainan_3_3",
+        "partId": "p3",
+        "before": 0,
+        "after": 100
+      },
+      {
+        "id": "bulletin_2022_kinmen_2_2",
+        "partId": "p1",
+        "before": 0,
+        "after": 50
+      },
+      {
+        "id": "bulletin_2022_penghu_5_3",
+        "partId": "p1",
+        "before": 0,
+        "after": 100
+      },
+      {
+        "id": "bulletin_2022_penghu_1_4",
+        "partId": "p2",
+        "before": 0,
+        "after": 50
+      },
+      {
+        "id": "bulletin_2022_penghu_5_2",
+        "partId": "p1",
+        "before": 0,
+        "after": 100
+      }
+    ],
+    "uniqueSourceUrls": 62
+  },
+  "priorFollowups": [
+    {
+      "batchId": "deep-research-2026-10-23",
+      "checkedAt": "2026-10-23",
+      "scope": "本輪實際複查25分項；不代表全體1065分項均於本日重新查核。",
+      "items": [
+        {
+          "id": "bulletin_2022_taipei_1_2",
+          "partId": "p1",
+          "county": "臺北市",
+          "label": "成立城市級投資公司",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "補助制度不能替代「成立城市級投資公司」。已檢索白皮書資金政策及官方同詞搜尋，尚欠公司成立文件。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_1_2",
+            "partId": "p1",
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "保守估分0%：白皮書僅有補助與融資，欠城市級投資公司的設立、登記或營運證據；此分數表示尚無可認列的當期進展證據，不是確認未實施。"
+          },
+          "after": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "本輪找到的是新創加速器補助、基地與創投媒合，仍沒有對應投資公司的設立或營運文件。保留未知；估0表示未能認列，非確認未設立。"
+          },
+          "afterEstimate": {
+            "percent": 0,
+            "stage": "evidence_gap",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_1_2",
+            "partId": "p1",
+            "reason": "本輪找到的是新創加速器補助、基地與創投媒合，仍沒有對應投資公司的設立或營運文件。保留未知；估0表示未能認列，非確認未設立。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "retain_unknown",
+          "sources": [
+            {
+              "id": "startup-grants",
+              "url": "https://english.udd.gov.taipei/News_Content.aspx?n=DD9CEC17A97FBC64&s=E4276E38D2AFE1F0&sms=72544237BBE4C5F6",
+              "title": "臺北新創旗艦基地新創加速器補助計畫正式開跑",
+              "publishedAt": "2026-03-05",
+              "asOf": "2026-03-05",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "產發局公開招募一般型及企業垂直加速器，每案最高700萬元，並要求實際進駐基地；文內描述補助與創投媒合，未提供市府投資公司設立或市民認股制度。",
+              "locator": "本文第1–4段",
+              "sourceType": "official_news",
+              "limitations": "此新聞未提及不能作為公司未成立的反證。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_1_2",
+          "partId": "p2",
+          "county": "臺北市",
+          "label": "讓市民一起當新創公司股東",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "已核讀新創資金政策，仍欠市民可投資入股的正式機制及執行證據，不能把市府補助當成市民當股東。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_1_2",
+            "partId": "p2",
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "保守估分0%：白皮書未列市民入股機制或實際股東，市府創業補助與貸款不能替代市民當股東；此分數表示尚無可認列的當期進展證據，不是確認未實施。"
+          },
+          "after": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "仍沒有查到市民認股規則或已執行個案；加速器補助與創投媒合不等同市民當股東。"
+          },
+          "afterEstimate": {
+            "percent": 0,
+            "stage": "evidence_gap",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_1_2",
+            "partId": "p2",
+            "reason": "仍沒有查到市民認股規則或已執行個案；加速器補助與創投媒合不等同市民當股東。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "retain_unknown",
+          "sources": [
+            {
+              "id": "startup-grants",
+              "url": "https://english.udd.gov.taipei/News_Content.aspx?n=DD9CEC17A97FBC64&s=E4276E38D2AFE1F0&sms=72544237BBE4C5F6",
+              "title": "臺北新創旗艦基地新創加速器補助計畫正式開跑",
+              "publishedAt": "2026-03-05",
+              "asOf": "2026-03-05",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "產發局公開招募一般型及企業垂直加速器，每案最高700萬元，並要求實際進駐基地；文內描述補助與創投媒合，未提供市府投資公司設立或市民認股制度。",
+              "locator": "本文第1–4段",
+              "sourceType": "official_news",
+              "limitations": "此新聞未提及不能作為公司未成立的反證。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_1_2",
+          "partId": "p3",
+          "county": "臺北市",
+          "label": "盤點市府資源擘劃沙盒專區，快速驗證新創商業模式",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-06-30",
+            "basis": "milestone",
+            "reason": "市府已盤點並開放實證空間、實際辦理新創驗證與媒合活動，符合擘劃沙盒及驗證服務里程碑；不等於每家新創商業模式成功。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-06-30",
+            "basis": "milestone",
+            "reason": "已開放賦能台北實證場域，基金會成果報告也記錄AI、XR與運動科技實驗應用。可維持場域與驗證服務已落實的認定，不代表新創普遍成功。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "sandbox-opening",
+              "url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=74241FA27327996A&sms=72544237BBE4C5F6",
+              "title": "IP Empower Taipei賦能台北正式啟動",
+              "publishedAt": "2023-08-18",
+              "asOf": "2023-08-18",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "原台北時尚新創中心空間改為賦能台北基地並正式開放，作新創實證、展示、實驗及發表場所。",
+              "locator": "基地開放及策展說明",
+              "sourceType": "official_news",
+              "limitations": "不能以開放場地等同所有新創商業模式驗證成功。",
+              "verifiedThisRound": true
+            },
+            {
+              "id": "sandbox-results",
+              "url": "https://ws.expopark.taipei/Download.ashx?icon=.pdf&n=MTEz5bm05bqm5oiQ5p6c5aCx5ZGKLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvOTA3My80MDUwLzcwZmFmOWM3LTM0YTUtNDU2Yy1iM2M5LTkwZjkzMWNlNjRkMC5wZGY%3D",
+              "title": "財團法人臺北市會展產業發展基金會113年度成果報告",
+              "publishedAt": null,
+              "asOf": "2024-12-31",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "基金會記錄提供賦能台北作新創實證場域，與XR及運動文創團體合作，已有AI/XR及運動科技的實驗測試與應用。",
+              "locator": "PDF第17–19頁，推動新創產業發展",
+              "sourceType": "public_foundation_report",
+              "limitations": "本輪補核的是2024歷史成果，沒有以此聲稱2026新增成果。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_1_2",
+          "partId": "p4",
+          "county": "臺北市",
+          "label": "提供見習津貼讓北市青年到合格新創企業實習",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-07-09（報告資料多截至5月）",
+            "basis": "milestone",
+            "reason": "2026年青年實習津貼及創新職場實習補助實際受理，16家企業提供48名額；限定津貼方案開辦。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026年度方案；2026-02-11發布",
+            "basis": "milestone",
+            "reason": "實習津貼已有申請者與辦理紀錄，115年仍提供實習及交通津貼，也持續補助新創公司提供職缺。可維持100，僅表示方案已落實。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "internship",
+              "url": "https://youth.gov.taipei/announcement/news/1ab97b78-132b-4106-889d-1a76740ac214",
+              "title": "青年實習津貼馬年雙加碼：放寬至35歲、交通補助一次到位",
+              "publishedAt": "2026-02-11",
+              "asOf": "2026-08-20",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "青年實習津貼自113年8月已推動，文內有去年申請者回饋；115年滿60或90日可申請1萬或1.5萬元及交通津貼。另持續補助新創、社會企業及公益團體提供實習職缺。",
+              "locator": "本文第1–4段",
+              "sourceType": "official_news",
+              "limitations": "2026-08-20為頁面更新日，原發布日2026-02-11；未把指導費直接當青年領取的津貼。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_1_2",
+          "partId": "p5",
+          "county": "臺北市",
+          "label": "推動「2025世界人才首都 計畫」吸引海外創業家無痛移居台北",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2025",
+            "basis": "milestone",
+            "reason": "世界人才首都計畫已提供落地及簽證協助並有實際人才成果；按推動計畫及吸引移居的服務里程碑認定。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2025",
+            "basis": "milestone",
+            "reason": "審計報告確認計畫有執行及新創落地成果，可維持服務實施100。審計同時指出人才需求匹配掌握不足、落地成果集中單一年度，不能宣稱政策成效也100。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_add_outcome_caveat",
+          "sources": [
+            {
+              "id": "talent-audit",
+              "url": "https://auditreport.audit.gov.tw/Book/ChapterOpinion/d6a755e1-0c0e-4728-a264-ce932a848472",
+              "title": "114年度臺北市總決算審核報告：產業發展審核意見",
+              "publishedAt": null,
+              "asOf": "2025年度",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "第（三）項確認已推動世界人才首都計畫、延攬人才及協助新創團隊落地；同時指出金卡人才與產業需求契合度掌握不足、落地成果集中單一年度。",
+              "locator": "審核意見第（三）項",
+              "sourceType": "independent_public_audit",
+              "limitations": "本輪核讀公開意見摘要，未宣稱已讀該項完整PDF或核實個別人數。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p1",
+          "county": "臺北市",
+          "label": "打造適合青少年練舞的據點",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-08-12",
+            "basis": "milestone",
+            "reason": "青年局地下二樓鏡牆與空調練舞場於2026年8月免費開放。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-08-12",
+            "basis": "milestone",
+            "reason": "青年局已開放有鏡牆和空調的免費練舞空間，田徑場也提供鏡面木地板舞蹈教室。設置據點的承諾已有直接服務證據。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "dance-current",
+              "url": "https://youth.gov.taipei/announcement/news/4fecf170-52c5-47b2-ba89-a7a53335c853",
+              "title": "想跳就來青年局跳！北市「舞聚計畫」推免費空調鏡牆練舞間",
+              "publishedAt": "2026-08-12",
+              "asOf": "2026-08-12",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "青年局地下2樓增設鏡牆、空調後免費開放；不限年齡，週一至四17:31–21:30，自由入場，不須預約，至116年6月30日。",
+              "locator": "本文第1、3段",
+              "sourceType": "official",
+              "limitations": "",
+              "verifiedThisRound": true
+            },
+            {
+              "id": "dance-stadium",
+              "url": "https://service.gov.taipei/rental/VenueDetail/9c646c85c608",
+              "title": "臺北市公有場地租用：臺北田徑場舞蹈教室",
+              "publishedAt": null,
+              "asOf": null,
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "現行頁列鏡面木地板教室，自115年7月1日至116年6月30日非營利練舞免費；租用導向體育局場地租借網站。",
+              "locator": "收費及繳費方式、租用及使用規範",
+              "sourceType": "official_service",
+              "limitations": "現行頁核讀日不是發布日期；未登入或提交實際預約。",
+              "verifiedThisRound": true,
+              "dateNote": "現行服務頁未標統計或更新日；checkedAt僅為查閱日"
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p2",
+          "county": "臺北市",
+          "label": "鼓勵民間進駐以課程擴展使用年齡層",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-05",
+            "basis": "unquantified",
+            "reason": "已查活動中心與青年空間章節，現有公辦課程未證實民間進駐及擴大年齡範圍。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p2",
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "保守估分0%：現有證據僅見公辦課程、修繕與場地開放，沒有民間進駐並擴展年齡層的對應成果；此分數表示尚無可認列的當期進展證據，不是確認未實施。"
+          },
+          "after": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-05",
+            "basis": "unquantified",
+            "reason": "青年局空間雖不限年齡，但本輪仍未核得民間進駐開課的對應成果，不能以自由入場替代原承諾。"
+          },
+          "afterEstimate": {
+            "percent": 0,
+            "stage": "evidence_gap",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p2",
+            "reason": "青年局空間雖不限年齡，但本輪仍未核得民間進駐開課的對應成果，不能以自由入場替代原承諾。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "retain_unknown",
+          "sources": [
+            {
+              "id": "dance-current",
+              "url": "https://youth.gov.taipei/announcement/news/4fecf170-52c5-47b2-ba89-a7a53335c853",
+              "title": "想跳就來青年局跳！北市「舞聚計畫」推免費空調鏡牆練舞間",
+              "publishedAt": "2026-08-12",
+              "asOf": "2026-08-12",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "青年局地下2樓增設鏡牆、空調後免費開放；不限年齡，週一至四17:31–21:30，自由入場，不須預約，至116年6月30日。",
+              "locator": "本文第1、3段",
+              "sourceType": "official",
+              "limitations": "",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p3",
+          "county": "臺北市",
+          "label": "加速釋出閒置公有空間、提供青少年課餘活動進修",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-08-12",
+            "basis": "milestone",
+            "reason": "青年局2026年8月12日起將地下2樓空間設鏡牆與冷氣，免費開放週一至四17:30–21:30練舞至2027年6月。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-08-12",
+            "basis": "milestone",
+            "reason": "既有青年局地下空間已增設鏡牆、空調並開放免費練舞，可維持公有空間釋出措施100。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "dance-current",
+              "url": "https://youth.gov.taipei/announcement/news/4fecf170-52c5-47b2-ba89-a7a53335c853",
+              "title": "想跳就來青年局跳！北市「舞聚計畫」推免費空調鏡牆練舞間",
+              "publishedAt": "2026-08-12",
+              "asOf": "2026-08-12",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "青年局地下2樓增設鏡牆、空調後免費開放；不限年齡，週一至四17:31–21:30，自由入場，不須預約，至116年6月30日。",
+              "locator": "本文第1、3段",
+              "sourceType": "official",
+              "limitations": "",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p4",
+          "county": "臺北市",
+          "label": "補助鼓勵民間共同投入",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-08-12",
+            "basis": "unquantified",
+            "reason": "公有空間免費開放不等同補助民間投入；尚欠補助要點與實際受補助對象。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p4",
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "保守估分0%：青年局公有練舞空間免費開放不等於補助民間投入，欠補助要點與受補助案件；此分數表示尚無可認列的當期進展證據，不是確認未實施。"
+          },
+          "after": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-08-12",
+            "basis": "unquantified",
+            "reason": "目前核得公有空間免費開放，仍未找到補助民間投入練舞據點的辦法或受補助紀錄。"
+          },
+          "afterEstimate": {
+            "percent": 0,
+            "stage": "evidence_gap",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p4",
+            "reason": "目前核得公有空間免費開放，仍未找到補助民間投入練舞據點的辦法或受補助紀錄。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "retain_unknown",
+          "sources": [
+            {
+              "id": "dance-current",
+              "url": "https://youth.gov.taipei/announcement/news/4fecf170-52c5-47b2-ba89-a7a53335c853",
+              "title": "想跳就來青年局跳！北市「舞聚計畫」推免費空調鏡牆練舞間",
+              "publishedAt": "2026-08-12",
+              "asOf": "2026-08-12",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "青年局地下2樓增設鏡牆、空調後免費開放；不限年齡，週一至四17:31–21:30，自由入場，不須預約，至116年6月30日。",
+              "locator": "本文第1、3段",
+              "sourceType": "official",
+              "limitations": "",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p5",
+          "county": "臺北市",
+          "label": "以台北通app打造預約平台",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-07-01",
+            "basis": "unquantified",
+            "reason": "核讀現行租借規則，已知網頁租借及免預約模式，但台北通預約整合仍未證實。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p5",
+            "percent": 0,
+            "stage": "evidence_gap",
+            "reason": "保守估分0%：網站租借及免預約服務均未證實台北通預約整合，欠承諾平台本體的可用功能證據；此分數表示尚無可認列的當期進展證據，不是確認未實施。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2024-09-05介接完成；現行租借頁未標更新日",
+            "basis": "unquantified",
+            "reason": "2024年9月5日已完成租借系統介接台北通；現行部分據點仍需電話確認時段，尚未取得整體線上預約功能完整可用的證據，按部分實施估50%。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_1",
+            "partId": "p5",
+            "reason": "2024年9月5日已完成租借系統介接台北通；現行部分據點仍需電話確認時段，尚未取得整體線上預約功能完整可用的證據，按部分實施估50%。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "revise_evidence_and_estimate",
+          "sources": [
+            {
+              "id": "dance-report",
+              "url": "https://www-ws.gov.taipei/Download.ashx?icon=..pdf&n=6Ie65YyX5biC5pS%2F5bqc6auU6IKy5bGAMTE05bm05LiK5Y2K5bm05pa95pS%2F5aCx5ZGKLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzQwL3JlbGZpbGUvNTMwNDkvOTM5ODIyMS9jNjE2ZGZmNi1mZmE5LTQyNDUtOWI0My0wZTZkOTdkM2UwYzkucGRm",
+              "title": "臺北市政府體育局114年上半年施政報告",
+              "publishedAt": null,
+              "asOf": "2024-12-31",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "113年新增5處青年練舞據點、共31處；113年9月5日完成租借系統介接台北通APP。",
+              "locator": "PDF第30頁，打造適切青年練舞據點",
+              "sourceType": "official_report",
+              "limitations": "報告未在該段逐項證明每處即時線上預約流程。發布日未核得，不能用搜尋引擎相對日期當發布日。",
+              "verifiedThisRound": true
+            },
+            {
+              "id": "dance-stadium",
+              "url": "https://service.gov.taipei/rental/VenueDetail/9c646c85c608",
+              "title": "臺北市公有場地租用：臺北田徑場舞蹈教室",
+              "publishedAt": null,
+              "asOf": null,
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "現行頁列鏡面木地板教室，自115年7月1日至116年6月30日非營利練舞免費；租用導向體育局場地租借網站。",
+              "locator": "收費及繳費方式、租用及使用規範",
+              "sourceType": "official_service",
+              "limitations": "現行頁核讀日不是發布日期；未登入或提交實際預約。",
+              "verifiedThisRound": true,
+              "dateNote": "現行服務頁未標統計或更新日；checkedAt僅為查閱日"
+            },
+            {
+              "id": "dance-zhongzheng",
+              "url": "https://service.gov.taipei/rental/VenueDetail/210a2646aef2",
+              "title": "臺北市公有場地租用：中正運動中心街舞廣場",
+              "publishedAt": null,
+              "asOf": null,
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "現行頁雖列「線上租借」，租用說明仍要求電話或現場詢問、勘場及確認時段後繳費。",
+              "locator": "租用及使用規範、線上租借說明",
+              "sourceType": "official_service",
+              "limitations": "這一據點流程不能代表全平台完全不能線上預約。",
+              "verifiedThisRound": true,
+              "dateNote": "現行服務頁未標統計或更新日；checkedAt僅為查閱日"
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p1",
+          "county": "臺北市",
+          "label": "內湖流浪動物之家儘速動工",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2024-08-01",
+            "basis": "milestone",
+            "reason": "主體建築已於2024年8月1日開工，符合原動詞「動工」；2026年5月工程23.96%僅為後續施工背景。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2024-08-01",
+            "basis": "milestone",
+            "reason": "官方年度回顧確認動物之家於2024年8月1日開工，符合動工承諾。建築尚未完工應另列工程進度，不改寫為整棟100。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "pet-progress",
+              "url": "https://tct.gov.taipei/News_Content.aspx?n=B4C9AF5D5D4BF947&s=A0B17C7FB6033C18&sms=72544237BBE4C5F6",
+              "title": "臺北市動物保護3年有成 動物友善服務再升級",
+              "publishedAt": "2025-12-24",
+              "asOf": "2025-11-30至2025年底",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "動物之家113年8月1日開工；1959及LINE通報累計處理5,202件、救援23,720隻，與20家醫院合作；每年至少200場校園生命教育或飼主責任課程；近3年311場免費狂犬病注射。",
+              "locator": "動物福利、動物保護、動物教育與防疫段落",
+              "sourceType": "official_news",
+              "limitations": "200場混合校園及飼主課程，沒有全校覆蓋分母。地方政府自報成果，非獨立成效評鑑；不引用廣告性全國排名。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p2",
+          "county": "臺北市",
+          "label": "全面啟動校園生命教育課程",
+          "before": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "已有學校講座及教材措施，但原文「全面」需要所有學校課程覆蓋證據；7校講座不能代替全面覆蓋。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_2",
+            "partId": "p2",
+            "percent": 50,
+            "stage": "implementing",
+            "reason": "階段估分50%：白皮書已記錄2026年7所學校動保講座及教學活動，屬部分學校實施；沒有全校覆蓋資料，按部分實施估分，不是官方實際完成百分比。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "官方回顧已列每年至少200場校園生命教育或飼主責任課程，能證明持續辦理。數字混合校園與飼主課程，仍無全校覆蓋分母，維持估50。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_2",
+            "partId": "p2",
+            "reason": "官方回顧已列每年至少200場校園生命教育或飼主責任課程，能證明持續辦理。數字混合校園與飼主課程，仍無全校覆蓋分母，維持估50。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "add_historical_evidence_no_score_change",
+          "sources": [
+            {
+              "id": "pet-progress",
+              "url": "https://tct.gov.taipei/News_Content.aspx?n=B4C9AF5D5D4BF947&s=A0B17C7FB6033C18&sms=72544237BBE4C5F6",
+              "title": "臺北市動物保護3年有成 動物友善服務再升級",
+              "publishedAt": "2025-12-24",
+              "asOf": "2025-11-30至2025年底",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "動物之家113年8月1日開工；1959及LINE通報累計處理5,202件、救援23,720隻，與20家醫院合作；每年至少200場校園生命教育或飼主責任課程；近3年311場免費狂犬病注射。",
+              "locator": "動物福利、動物保護、動物教育與防疫段落",
+              "sourceType": "official_news",
+              "limitations": "200場混合校園及飼主課程，沒有全校覆蓋分母。地方政府自報成果，非獨立成效評鑑；不引用廣告性全國排名。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p3",
+          "county": "臺北市",
+          "label": "公私協力建立不當飼養案件調查、送醫救治機制",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2025-12-24（案例截至11月30日）",
+            "basis": "milestone",
+            "reason": "已建立1959及LINE通報、24小時案件救援保護與20間民間動物醫院合作機制，且有實際通報及救援紀錄；符合本分項「公私協力建立調查、送醫救治機制」里程碑。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2025-12-24（案例截至11月30日）",
+            "basis": "milestone",
+            "reason": "官方回顧確認1959及LINE通報、實際案件處理與救援，並與20家動物醫院合作。可維持機制建立100，不代表每案救援結果都成功。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "pet-progress",
+              "url": "https://tct.gov.taipei/News_Content.aspx?n=B4C9AF5D5D4BF947&s=A0B17C7FB6033C18&sms=72544237BBE4C5F6",
+              "title": "臺北市動物保護3年有成 動物友善服務再升級",
+              "publishedAt": "2025-12-24",
+              "asOf": "2025-11-30至2025年底",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "動物之家113年8月1日開工；1959及LINE通報累計處理5,202件、救援23,720隻，與20家醫院合作；每年至少200場校園生命教育或飼主責任課程；近3年311場免費狂犬病注射。",
+              "locator": "動物福利、動物保護、動物教育與防疫段落",
+              "sourceType": "official_news",
+              "limitations": "200場混合校園及飼主課程，沒有全校覆蓋分母。地方政府自報成果，非獨立成效評鑑；不引用廣告性全國排名。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p4",
+          "county": "臺北市",
+          "label": "推廣動物保險",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-09-08",
+            "basis": "milestone",
+            "reason": "2026年寵物保險補助已擴大到非認養犬貓並實際受理，8月部分經費用罄、9月仍公告其他適用類別申請，確認「推廣動物保險」措施已實施。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-09-08",
+            "basis": "milestone",
+            "reason": "動保處已有補助條件、申請管道及投保資訊，115年還擴大對象。可維持推廣措施100，但當年度經費用罄會停止受理。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "pet-insurance",
+              "url": "https://www.tcapo.gov.taipei/cp.aspx?n=007412e5c1da2716&s=8CFA1E719164F841",
+              "title": "動物保護處：我要申請寵物保險補助",
+              "publishedAt": null,
+              "asOf": "2026-02-24",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "115年擴大補助對象，最高3,000元；明列資格、條件、線上/臨櫃/郵寄申請及年度預算用罄截止規定，並提供投保資訊。",
+              "locator": "申請資格、金額、申請方式",
+              "sourceType": "official_service",
+              "limitations": "本輪沒有重新確認各補助類別餘額，不聲稱現在所有類別仍受理。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p5",
+          "county": "臺北市",
+          "label": "補助動物預防針",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-06-30",
+            "basis": "milestone",
+            "reason": "已實施免費動物狂犬病預防注射，符合補助預防針的措施；範圍為官方免費巡迴疫苗，不宣稱所有私人診所疫苗均補助。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-06-30",
+            "basis": "milestone",
+            "reason": "官方回顧記錄近3年311場免費狂犬病預防注射，補助預防針措施確有辦理。此100只涵蓋已提供免費疫苗服務，不是全部動物醫療免費。"
+          },
+          "afterEstimate": null,
+          "decision": "corroborate_no_score_change",
+          "sources": [
+            {
+              "id": "pet-progress",
+              "url": "https://tct.gov.taipei/News_Content.aspx?n=B4C9AF5D5D4BF947&s=A0B17C7FB6033C18&sms=72544237BBE4C5F6",
+              "title": "臺北市動物保護3年有成 動物友善服務再升級",
+              "publishedAt": "2025-12-24",
+              "asOf": "2025-11-30至2025年底",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "動物之家113年8月1日開工；1959及LINE通報累計處理5,202件、救援23,720隻，與20家醫院合作；每年至少200場校園生命教育或飼主責任課程；近3年311場免費狂犬病注射。",
+              "locator": "動物福利、動物保護、動物教育與防疫段落",
+              "sourceType": "official_news",
+              "limitations": "200場混合校園及飼主課程，沒有全校覆蓋分母。地方政府自報成果，非獨立成效評鑑；不引用廣告性全國排名。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p7",
+          "county": "臺北市",
+          "label": "增設捷運寵物車廂",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-04-11",
+            "basis": "milestone",
+            "reason": "已實際增開寵物列車／車廂，符合原文增設服務里程碑；目前證據是特定活動日服務，非每日常態車廂。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-04-11",
+            "basis": "unquantified",
+            "reason": "北捷確實辦過寵物列車，但2026年紀錄明稱單日限定活動，活動後列車恢復一般載客。建議100改為部分實施估50，尚缺固定寵物車廂服務證據。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_2",
+            "partId": "p7",
+            "reason": "北捷確實辦過寵物列車，但2026年紀錄明稱單日限定活動，活動後列車恢復一般載客。建議100改為部分實施估50，尚缺固定寵物車廂服務證據。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "downgrade_scope_mismatch",
+          "sources": [
+            {
+              "id": "pet-metro",
+              "url": "https://www.metro.taipei/News_Content.aspx?n=30CCEFD2A45592BF&s=FD2B8ACE04ECF77A&sms=72544237BBE4C5F6",
+              "title": "狗狗春遊趣圓滿結束 狗狗友善列車皆已完成清消作業",
+              "publishedAt": "2026-04-12",
+              "asOf": "2026-04-11",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "北捷明稱限定活動：4月11日淡水信義線4部列車、16班、278隻犬；活動後送機廠消毒再回一般載客，後續仍蒐集意見作活動規劃。",
+              "locator": "本文第1–3段",
+              "sourceType": "official_operator",
+              "limitations": "已發生活動可認列部分實施；這份文件不能證明固定寵物車廂服務。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_4",
+          "partId": "p1",
+          "county": "臺北市",
+          "label": "市民享有三個月內免費12次的運動體驗",
+          "before": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2023-09-07",
+            "basis": "unquantified",
+            "reason": "已核讀原始U-Sport試辦辦法：限量1500點及12次集點獎勵，不能直接等同原文所有市民三個月12次免費。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_4",
+            "partId": "p1",
+            "percent": 50,
+            "stage": "implementing",
+            "reason": "階段估分50%：最新可得的同方案實施資料為2023年U-Sport三個月限量試辦，已提供1500U幣及12次集點獎勵；沒有中斷紀錄，但仍未證明每位市民皆可免費12次，按部分試辦估分。這是依2023年已知階段評估，不是2026年實測完成率。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-07-17",
+            "basis": "unquantified",
+            "reason": "2026年仍有U-Sport，但1,500元抵用金限定23至64歲登記；全市民可集點不等於所有人都有12次免費。維持部分實施估50，證據日期更新至2026。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_4",
+            "partId": "p1",
+            "reason": "2026年仍有U-Sport，但1,500元抵用金限定23至64歲登記；全市民可集點不等於所有人都有12次免費。維持部分實施估50，證據日期更新至2026。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "refresh_evidence_no_score_change",
+          "sources": [
+            {
+              "id": "usport-who",
+              "url": "https://sports.gov.taipei/News_Content.aspx?n=30346D17ED329AC1&s=11157213712BE1E1&sms=87415A8B9CE81B16",
+              "title": "體育局FAQ：誰可以參加U-Sport臺北樂運動計畫？",
+              "publishedAt": null,
+              "asOf": "2026-07-17",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "設籍臺北市民皆可運動集U幣，但只有23至64歲市民可額外登記領1,500元運動抵用金。",
+              "locator": "答覆全文",
+              "sourceType": "official_service",
+              "limitations": "資格不是每位申請人保證取得12次免費體驗。",
+              "verifiedThisRound": true
+            },
+            {
+              "id": "usport-how",
+              "url": "https://sports.gov.taipei/News_Content.aspx?n=30346D17ED329AC1&s=EED556CA3867D21A&sms=87415A8B9CE81B16",
+              "title": "體育局FAQ：如何參加U-Sport臺北樂運動計畫？",
+              "publishedAt": null,
+              "asOf": "2026-07-17",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "115年11月30日前下載並註冊U-Sport App，可至合作場館運動累積U幣。",
+              "locator": "答覆全文",
+              "sourceType": "official_service",
+              "limitations": "",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_4",
+          "partId": "p2",
+          "county": "臺北市",
+          "label": "透過APP累積健康紅利點數",
+          "before": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2023-09-07",
+            "basis": "milestone",
+            "reason": "U-Sport已運作且完成12次集點另送60U幣，確認運動集點制度已開辦。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "completed",
+            "percent": 100,
+            "asOf": "2026-07-17",
+            "basis": "milestone",
+            "reason": "體育局2026年FAQ明載下載、註冊App後可到合作場館累積U幣，制度持續提供，可維持100。"
+          },
+          "afterEstimate": null,
+          "decision": "refresh_evidence_no_score_change",
+          "sources": [
+            {
+              "id": "usport-how",
+              "url": "https://sports.gov.taipei/News_Content.aspx?n=30346D17ED329AC1&s=EED556CA3867D21A&sms=87415A8B9CE81B16",
+              "title": "體育局FAQ：如何參加U-Sport臺北樂運動計畫？",
+              "publishedAt": null,
+              "asOf": "2026-07-17",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "115年11月30日前下載並註冊U-Sport App，可至合作場館運動累積U幣。",
+              "locator": "答覆全文",
+              "sourceType": "official_service",
+              "limitations": "",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taipei_2_4",
+          "partId": "p3",
+          "county": "臺北市",
+          "label": "兌換交通票券、藝文展演門票等各項生活消費折扣",
+          "before": {
+            "status": "unknown",
+            "percent": null,
+            "asOf": "2026-06-30",
+            "basis": "unquantified",
+            "reason": "交通儲值金已落實，但完整分項同列藝文展演門票，尚欠兌換清單與實際可用證據。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taipei_2_4",
+            "partId": "p3",
+            "percent": 50,
+            "stage": "implementing",
+            "reason": "階段估分50%：白皮書確認U幣可換悠遊卡儲值金及運動賽事票券，惟藝文展演門票仍缺，按部分兌換類別已實施估分，不是官方實際完成百分比。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-07-17",
+            "basis": "unquantified",
+            "reason": "U幣已能在運動中心或捷運加值機換悠遊卡儲值金，交通用途有明確操作說明。藝文展演門票兌換仍未核得，維持估50。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "kind": "editorial_estimate",
+            "id": "bulletin_2022_taipei_2_4",
+            "partId": "p3",
+            "reason": "U幣已能在運動中心或捷運加值機換悠遊卡儲值金，交通用途有明確操作說明。藝文展演門票兌換仍未核得，維持估50。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "clarify_partial_status_no_score_change",
+          "sources": [
+            {
+              "id": "usport-easycard",
+              "url": "https://sports.gov.taipei/News_Content.aspx?n=30346D17ED329AC1&s=8CA1422346A30713&sms=87415A8B9CE81B16",
+              "title": "體育局FAQ：U幣如何轉換為悠遊卡儲值金？",
+              "publishedAt": null,
+              "asOf": "2026-07-17",
+              "checkedAt": "2026-10-23",
+              "readMethod": "web open: actual source body",
+              "evidence": "12區運動中心可由櫃台協助轉儲，亦可在APP綁定悠遊卡後至捷運GAVM加值機加值。",
+              "locator": "答覆步驟",
+              "sourceType": "official_service",
+              "limitations": "未查得藝文展演門票兌換機制，不能以交通加值推定其他類別也已完成。",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p2",
+          "county": "高雄市",
+          "label": "岡山路竹延伸線",
+          "before": {
+            "status": "in_progress",
+            "percent": 28.53,
+            "asOf": "2026-07-15",
+            "basis": "reported",
+            "reason": "捷運局2026年7月22日原稿明列岡山路竹延伸線截至7月15日的整體施工進度為28.53%；採官方整體值，舊機電單標另保留。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "現行頁未標統計日；圖檔版本2026-09",
+            "basis": "unquantified",
+            "reason": "一期已通車，後續路段仍在施工與設計。官方各期分開公布，沒有可核對的全線總百分比，先按部分實施估50%。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "assessedAt": "2026-10-23",
+            "reason": "一期已通車、二期仍施工及設計，但缺涵蓋所有階段的官方加權總比例；按部分實施估50%，不是實際工程完成率。",
+            "id": "bulletin_2022_kaohsiung_7",
+            "partId": "p2"
+          },
+          "decision": "correct_scope_and_estimate",
+          "sources": [
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/ProjectProgress.html",
+              "title": "高雄市政府捷運工程局－各線計畫進度",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "官方「各線計畫進度累計百分比」圖片替代文字載：岡山第一期100%、第二期42.13%、小港林園16.20%、黃線15.12%。正文未另標統計截止日。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true,
+              "dateLimitation": "圖檔路徑為202609捷運興建中路網-各線.jpg，可識別版本月份，但不將檔名或全站頁尾更新日當正式統計截止日。",
+              "imageUrl": "https://mtbu.kcg.gov.tw/uploads/original/202609捷運興建中路網-各線.jpg?r=dm9mn3touuzdb8lc",
+              "readScope": "已核讀正文及該圖alt/title；原圖經web.run載入逾時，未宣稱視覺核圖。"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/Luzhu02B/Luzhu02B03.html",
+              "title": "高雄捷運岡山路竹第二B階段－辦理情形",
+              "publishedAt": null,
+              "asOf": "2026-09",
+              "evidence": "第二B階段土建細部設計實際62.09%，機電仍設計；它是設計標進度，不是全線施工率。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/Activities/C002100?CategoryID=ee7b8b6d-03c0-4e8f-b133-e0a7c97fa933&Keyword=&PageNumber=3&PageType=1&id=53936f27-6a09-4f57-b9a2-e57676c1e34e",
+              "title": "捷運黃線工程超前！林欽榮視察嘉勉團隊",
+              "publishedAt": "2026-07-22",
+              "asOf": "2026-07-15",
+              "evidence": "正文列黃線12.76、岡山路竹28.53、小港林園15.46之整體施工數字；未定義岡山路竹計算涵蓋的期別，且另提RK1已通車。",
+              "readMethod": "web.run open核讀官方正文",
+              "verifiedThisRound": true,
+              "checkedAt": "2026-10-23"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/CompletedRoutes/Luzhu01/Luzhu0101.html",
+              "title": "岡山路竹延伸線第一階段－路線說明",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "一期從R24至台鐵岡山車站，1.46公里，RK1一站；網站歸類已通車。",
+              "readMethod": "web.run open核讀官方正文",
+              "verifiedThisRound": true,
+              "checkedAt": "2026-10-23"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/Luzhu02A/Luzhu02A01.html",
+              "title": "岡山路竹延伸線第二A階段－路線說明",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "後續路線銜接第一期岡山站至大湖；其中第二A為RK2到RK6，共五站、約7.75公里。",
+              "readMethod": "web.run open核讀官方正文",
+              "verifiedThisRound": true,
+              "checkedAt": "2026-10-23"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/Luzhu02B/Luzhu02B01.html",
+              "title": "岡山路竹延伸線第二B階段－路線說明",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "第二B為RK7到RK8，共兩站、約3.87公里，並非第一階段已通車範圍。",
+              "readMethod": "web.run open核讀官方正文",
+              "verifiedThisRound": true,
+              "checkedAt": "2026-10-23"
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p3",
+          "county": "高雄市",
+          "label": "小港林園線",
+          "before": {
+            "status": "in_progress",
+            "percent": 15.46,
+            "asOf": "2026-07-15",
+            "basis": "reported",
+            "reason": "捷運局2026年7月22日原稿明列小港林園線截至7月15日的整體施工進度為15.46%；採官方整體值，舊機電單標另保留。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "in_progress",
+            "percent": 16.2,
+            "asOf": "現行頁未標統計日；圖檔版本2026-09",
+            "basis": "reported",
+            "reason": "官方各線計畫進度圖列小港林園線16.20%；這是全線計畫進度，不是純土建施工率，尚未通車。圖檔為2026-09版，正文未明示統計截止日。"
+          },
+          "afterEstimate": null,
+          "decision": "update_main_reported_percent",
+          "sources": [
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/ProjectProgress.html",
+              "title": "高雄市政府捷運工程局－各線計畫進度",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "官方「各線計畫進度累計百分比」圖片替代文字載：岡山第一期100%、第二期42.13%、小港林園16.20%、黃線15.12%。正文未另標統計截止日。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true,
+              "dateLimitation": "圖檔路徑為202609捷運興建中路網-各線.jpg，可識別版本月份，但不將檔名或全站頁尾更新日當正式統計截止日。",
+              "imageUrl": "https://mtbu.kcg.gov.tw/uploads/original/202609捷運興建中路網-各線.jpg?r=dm9mn3touuzdb8lc",
+              "readScope": "已核讀正文及該圖alt/title；原圖經web.run載入逾時，未宣稱視覺核圖。"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/Linyuan/Linyuan03.html",
+              "title": "高雄捷運小港林園線－工程進度",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "正文分列RLC01、RLC02、RLM01等標；RL1/RL2管線試挖、通風井地盤改良與機電設計仍在辦理。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p4",
+          "county": "高雄市",
+          "label": "捷運黃線",
+          "before": {
+            "status": "in_progress",
+            "percent": 12.76,
+            "asOf": "2026-07-15",
+            "basis": "reported",
+            "reason": "捷運局2026年7月22日原稿明列捷運黃線截至7月15日的整體施工進度為12.76%；採官方整體值，舊機電單標另保留。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "in_progress",
+            "percent": 15.12,
+            "asOf": "現行頁未標統計日；圖檔版本2026-09",
+            "basis": "reported",
+            "reason": "官方各線計畫進度圖列捷運黃線15.12%；這是全線計畫進度，不是純土建施工率，尚未通車。圖檔為2026-09版，正文未明示統計截止日。"
+          },
+          "afterEstimate": null,
+          "decision": "update_main_reported_percent",
+          "sources": [
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/ProjectProgress.html",
+              "title": "高雄市政府捷運工程局－各線計畫進度",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "官方「各線計畫進度累計百分比」圖片替代文字載：岡山第一期100%、第二期42.13%、小港林園16.20%、黃線15.12%。正文未另標統計截止日。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true,
+              "dateLimitation": "圖檔路徑為202609捷運興建中路網-各線.jpg，可識別版本月份，但不將檔名或全站頁尾更新日當正式統計截止日。",
+              "imageUrl": "https://mtbu.kcg.gov.tw/uploads/original/202609捷運興建中路網-各線.jpg?r=dm9mn3touuzdb8lc",
+              "readScope": "已核讀正文及該圖alt/title；原圖經web.run載入逾時，未宣稱視覺核圖。"
+            },
+            {
+              "url": "https://mtbu.kcg.gov.tw/KaohsiungMetro/ApprovedRoutes/yellow/yellow03.html",
+              "title": "高雄捷運黃線－工程進度",
+              "publishedAt": null,
+              "asOf": null,
+              "evidence": "YC01至YC03已有管線、連續壁等施作；YC04第三次公告截止日為10月28日，YC05/YC06仍有設計公開閱覽，與全線未完成一致。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taoyuan_1_3",
+          "partId": "p5",
+          "county": "桃園市",
+          "label": "構建國道與地區客運轉運站",
+          "before": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-01-31",
+            "basis": "unquantified",
+            "reason": "已完成部分轉運設施，新增兩站的3月報告是施工；搜尋找到龍潭最新啟用標題但本次開頁回傳舊索引，暫不把預計日期當成全項完成。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taoyuan_1_3",
+            "partId": "p5",
+            "percent": 50,
+            "stage": "implementing",
+            "reason": "階段估分50%：經國、長庚及八德轉運站已設，大溪埔頂與龍潭尚有施工資料；按部分設施完工及部分施工估分，不採未核讀啟用標題，不是官方實際完成百分比。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-09-27",
+            "basis": "unquantified",
+            "reason": "龍潭轉運站已辦開幕啟用典禮，但埔頂轉運站仍在建設。可證新增一站已完成開幕，不能把所有轉運站一起給100%。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "id": "bulletin_2022_taoyuan_1_3",
+            "partId": "p5",
+            "reason": "龍潭轉運站已辦開幕啟用典禮，但埔頂轉運站仍在建設。可證新增一站已完成開幕，不能把所有轉運站一起給100%。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "update_evidence_keep_estimate",
+          "sources": [
+            {
+              "url": "https://news.tycg.gov.tw/News_Content.aspx?n=5016&s=1883683",
+              "title": "龍潭轉運站9月30日啟用",
+              "publishedAt": "2026-09-27",
+              "asOf": "2026-09-27",
+              "evidence": "9月27日已舉行開幕啟用典禮，排定9月30日路線進駐；設6個月台，整合國道與市區客運。",
+              "readMethod": "web.run搜尋後curl取得官方HTML全文，核讀正文及上版日期；web.run重開逾時",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            },
+            {
+              "url": "https://news.tycg.gov.tw/News_Content.aspx?n=5016&s=1870300",
+              "title": "大溪區115年市政說明會",
+              "publishedAt": "2026-09-11",
+              "asOf": "2026-09-11",
+              "evidence": "埔頂轉運站仍預計2027年3月完工，規劃8月台、202汽車位、210機車位；尚非實際交付。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_taoyuan_1_3",
+          "partId": "p3",
+          "county": "桃園市",
+          "label": "幸福里程：公車免費",
+          "before": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-01-31",
+            "basis": "unquantified",
+            "reason": "已核讀當期票價方案與桃小巴實施；原文公車免費尚未全面適用，部分免費與月票不能當成同一方案100%，也不能將歷史0%冒充2026現況。"
+          },
+          "beforeEstimate": {
+            "id": "bulletin_2022_taoyuan_1_3",
+            "partId": "p3",
+            "percent": 50,
+            "stage": "implementing",
+            "reason": "階段估分50%：桃小巴已採市民卡免費模式，一般公車仍有付費TPASS；按部分公車免費的實施階段估分，不當作全市皆免費，不是官方實際完成百分比。"
+          },
+          "after": {
+            "status": "in_progress",
+            "percent": null,
+            "asOf": "2026-09-27",
+            "basis": "unquantified",
+            "reason": "免費搭乘已有桃小巴等路線實施，龍潭新增路線也有首年免費安排。一般公車仍採折抵，不能說全市公車都免費。"
+          },
+          "afterEstimate": {
+            "percent": 50,
+            "stage": "implementing",
+            "id": "bulletin_2022_taoyuan_1_3",
+            "partId": "p3",
+            "reason": "免費搭乘已有桃小巴等路線實施，龍潭新增路線也有首年免費安排。一般公車仍採折抵，不能說全市公車都免費。",
+            "assessedAt": "2026-10-23"
+          },
+          "decision": "update_evidence_keep_estimate",
+          "sources": [
+            {
+              "url": "https://news.tycg.gov.tw/News_Content.aspx?n=5016&s=1844323&sms=7885",
+              "title": "桃園公車改革再升級",
+              "publishedAt": "2026-08-26",
+              "asOf": "2026-08-26",
+              "evidence": "桃小巴持市民卡免費；一般公車推出依身分折抵5、7、9元，仍非全面免費。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            },
+            {
+              "url": "https://news.tycg.gov.tw/News_Content.aspx?n=5016&s=1883683",
+              "title": "龍潭轉運站9月30日啟用",
+              "publishedAt": "2026-09-27",
+              "asOf": "2026-09-27",
+              "evidence": "9月27日已舉行開幕啟用典禮，排定9月30日路線進駐；設6個月台，整合國道與市區客運。",
+              "readMethod": "web.run搜尋後curl取得官方HTML全文，核讀正文及上版日期；web.run重開逾時",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            }
+          ]
+        },
+        {
+          "id": "bulletin_2022_tainan_3_2",
+          "partId": "p1",
+          "county": "臺南市",
+          "label": "傳統藝術傳習保存中心工程",
+          "before": {
+            "status": "in_progress",
+            "percent": 13,
+            "asOf": "2026-05-31",
+            "basis": "reported",
+            "reason": "2026年5月底傳統藝術傳習保存中心工程13%；未把預計2028年完工當成果。"
+          },
+          "beforeEstimate": null,
+          "after": {
+            "status": "in_progress",
+            "percent": 13,
+            "asOf": "2026-05-31",
+            "basis": "reported",
+            "reason": "新找到的官方35.33%只指第一期教學大樓，二、三期還在爭取補助。原承諾是整個傳承基地，兩個百分比的範圍不同，不能直接換成較大數字。"
+          },
+          "afterEstimate": null,
+          "decision": "supporting_metric_and_scope_review",
+          "sources": [
+            {
+              "url": "https://origin-www.tainan.gov.tw/News_Content.aspx?n=13370&s=8816610",
+              "title": "臺南市政府回應5月28日議員總質詢－傳統藝術保存中心",
+              "publishedAt": "2026-05-28",
+              "asOf": "2026-05-28",
+              "evidence": "第一期教學大樓整建實際35.33%，因變更設計和風災追加補強；二、三期仍爭取補助。",
+              "readMethod": "curl取得官方HTML全文，核讀正文及刊登/修改日期；另開新聞處同稿",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            },
+            {
+              "url": "https://info.tainan.gov.tw/News_Content.aspx?n=25742&s=8816610",
+              "title": "臺南新聞及國際關係處－回應今(28)日議員總質詢議題",
+              "publishedAt": "2026-05-28",
+              "asOf": "2026-05-28",
+              "evidence": "新聞處刊同一則回應，非獨立第二份證據。",
+              "readMethod": "web.run open，核讀正文",
+              "checkedAt": "2026-10-23",
+              "verifiedThisRound": true
+            }
+          ]
+        }
+      ],
+      "reviewedParts": 25,
+      "scoreChanges": [
+        {
+          "id": "bulletin_2022_taipei_2_1",
+          "partId": "p5",
+          "before": 0,
+          "after": 50
+        },
+        {
+          "id": "bulletin_2022_taipei_2_2",
+          "partId": "p7",
+          "before": 100,
+          "after": 50
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p2",
+          "before": 28.53,
+          "after": 50
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p3",
+          "before": 15.46,
+          "after": 16.2
+        },
+        {
+          "id": "bulletin_2022_kaohsiung_7",
+          "partId": "p4",
+          "before": 12.76,
+          "after": 15.12
+        }
+      ],
+      "uniqueSourceUrls": 28
+    }
+  ]
+}

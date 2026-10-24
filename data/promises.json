@@ -1,0 +1,3835 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "dataVersion": "2026-10-20-source-comparability-v5",
+    "observedOn": "2026-10-20",
+    "title": "2022–2026 縣市政見證據",
+    "jurisdictionCount": 22,
+    "selectedPledgeCount": 46,
+    "rankingEnabled": false,
+    "rankingStatus": "尚未具備可比較的總達成率，22 縣市均暫不排名。",
+    "coverageWarning": "選取 46 項承諾，不是完整政見母體，也不是 46 項成果已驗證。",
+    "displayRules": [
+      "名次與總分為 null；不得補成 0，也不得按收錄數或證據數排名。",
+      "採固定名冊順序顯示，不使用獎牌或暗示排名的序號。",
+      "limitedMetric 僅為兩項限定指標，不是承諾整項或首長達成率；顯示時必須同時顯示 label 與 limitations。",
+      "原承諾、政策存在、工程階段、實際營運及社會成效分開呈現。",
+      "查閱日期不等於資料期間；官方自述不等於獨立查核。",
+      "electionParty 只代表 2022 推薦政黨；代理首長及在職異動按 currentHeadNote 呈現。"
+    ]
+  },
+  "cities": [
+    {
+      "id": "city-01",
+      "name": "臺北市",
+      "displayOrder": 1,
+      "electedHead": "蔣萬安",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "蔣萬安",
+      "currentHeadNote": "現任；2026-09-24市府新聞記載",
+      "currentHeadSource": "https://sec.gov.taipei/News_Content.aspx?n=49B4C3242CB7658C&s=80FFC04524DC46A6&sms=72544237BBE4C5F6",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/臺北市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 3,
+      "pledges": [
+        {
+          "id": "TPE-2022-001",
+          "quote": "恢復YouBike前30分鐘免費",
+          "summary": "恢復公共自行車前30分鐘免費措施。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://www.cna.com.tw/news/aipl/202211080376.aspx",
+              "title": "同時期訪談報導，非完整競選原始錄影",
+              "type": "同期新聞",
+              "dateLabel": "2022-11-08",
+              "role": "同時期訪談報導，非完整競選原始錄影"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所列原始來源未明訂完成日期；不自動把本屆任期終點視為明訂期限",
+          "metricDefinition": "指定車型及會員資格下，臺北市租借前30分鐘的應付費用",
+          "target": {
+            "value": 0,
+            "unit": "新臺幣元／前30分鐘"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "note": "當時原費率待補正式歷史費率表，不以恢復一詞當作數據"
+          },
+          "status": "已實施（限適用範圍）",
+          "current": {
+            "value": 0,
+            "unit": "新臺幣元／前30分鐘",
+            "dateLabel": "2026-10-20",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "政策已實施",
+            "scope": "註冊會員在臺北市租借YouBike 2.0；單次租車臨時會員不適用",
+            "sources": [
+              {
+                "url": "https://www.youbike.com.tw/region/taipei/news/service/65dc48e2b507cedede07c6e2/",
+                "title": "實施公告",
+                "type": "營運商一手公告",
+                "dateLabel": "2024-02-27",
+                "role": "實施公告"
+              },
+              {
+                "url": "https://www.youbike.com.tw/region/taipei/rate/",
+                "title": "現行收費方式",
+                "type": "營運商現行規則",
+                "dateLabel": "2026-10-20",
+                "role": "現行收費方式"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "不推論所有車型與所有使用者免費。",
+            "政策上路不等於減碳或公共運輸轉移效果已實現。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "TPE-2022-002",
+          "quote": "生育獎勵金翻倍",
+          "summary": "提高生育獎勵金第一胎為4萬元、第二胎4.5萬元、第三胎5萬元。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://www.cna.com.tw/news/aipl/202208250082.aspx",
+              "title": "同時期記者會報導",
+              "type": "同期新聞",
+              "dateLabel": "2022-08-25",
+              "role": "同時期記者會報導"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所列原始來源未明訂完成日期；不自動把本屆任期終點視為明訂期限",
+          "metricDefinition": "法規所定新生兒名次別生育補助金額",
+          "target": {
+            "first": 40000,
+            "second": 45000,
+            "third_and_later": 50000,
+            "unit": "新臺幣元／名"
+          },
+          "baseline": {
+            "first": 20000,
+            "second": 25000,
+            "third": 30000,
+            "date": "2022-08-25",
+            "source": "同期報導所載當時標準"
+          },
+          "status": "金額標準已實施",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": "2026-09-03",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "法規標準已實施",
+            "scope": "依現行辦法新生兒名次及設籍、申請資格；不是按生產事件次數",
+            "sources": [
+              {
+                "url": "https://laws.gov.taipei/Law/LawSearch/LawArticleAmend/FL081869",
+                "title": "現行辦法第7條",
+                "type": "官方法規",
+                "dateLabel": "2026-09-03",
+                "role": "現行辦法第7條"
+              },
+              {
+                "url": "https://laws.gov.taipei/Law/LawSearch/LawArticleAmend/FL081869?date=20230327",
+                "title": "最初加碼施行版本",
+                "type": "官方歷史法規",
+                "dateLabel": "2023-03-27",
+                "role": "最初加碼施行版本"
+              },
+              {
+                "url": "https://laws.gov.taipei/law/LawSearch/LawExport/FL081869?date=20230726&type=0",
+                "title": "回溯適用修正版本",
+                "type": "官方歷史法規",
+                "dateLabel": "2023-07-26",
+                "role": "回溯適用修正版本"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "所稱翻倍不能按每一名次都精確乘2解讀；實際第二、三名金額依明訂數字核對。",
+            "不是領取率，亦不是生育率或人口效果的完成率。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "TPE-2022-003",
+          "quote": "五萬戶社會住宅來持續推動",
+          "summary": "延續市府5萬戶社宅目標；非已核實的四年內完工保證。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://ours.org.tw/2022/10/27/111-10-06/",
+              "title": "2022-10-06會談回應摘要；報告方法稱摘要經團隊確認",
+              "type": "倡議團體直接會談紀錄",
+              "dateLabel": "2022-10-27",
+              "role": "2022-10-06會談回應摘要；報告方法稱摘要經團隊確認"
+            },
+            {
+              "url": "https://ours.org.tw/2022election_socialhousing/",
+              "title": "候選人團隊確認說明",
+              "type": "倡議團體方法說明",
+              "dateLabel": "2022",
+              "role": "候選人團隊確認說明"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所列原始來源未明訂完成日期；不自動把本屆任期終點視為明訂期限",
+          "metricDefinition": "社會住宅興辦各階段存量，須分中央、地方與計入條件",
+          "target": {
+            "value": 50000,
+            "unit": "戶",
+            "scope": "原摘要未拆中央地方責任，也未明訂完工／興辦口徑"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022-12-31",
+            "note": "當日完整逐階段基準表待補；OURs同口徑差分稱地方興辦淨增1720戶"
+          },
+          "status": "持續推動／原承諾期限與分母未明",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": "2026-09-30",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "持續推動，口徑差異待逐案對照",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://pip.moi.gov.tw/V3/b/SCRB0501.aspx?mode=7",
+                "title": "內政部階段統計；直接讀頁曾遭Request Rejected，索引及交叉資料可讀",
+                "type": "官方統計",
+                "dateLabel": "2026-09-30",
+                "role": "內政部階段統計；直接讀頁曾遭Request Rejected，索引及交叉資料可讀"
+              },
+              {
+                "url": "https://ours.org.tw/2026/10/19/2022-2026-social-housing-mayors-performance/",
+                "title": "同口徑差分與官方統計交叉",
+                "type": "倡議團體分析",
+                "dateLabel": "2026-10-19",
+                "role": "同口徑差分與官方統計交叉"
+              },
+              {
+                "url": "https://udd.gov.taipei/events/fhqekzq-21413",
+                "title": "市府較廣盤點與未提報基地說明",
+                "type": "行政機關自述",
+                "dateLabel": "2026-10-19",
+                "role": "市府較廣盤點與未提報基地說明"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "不可用26881÷50000或36974÷50000稱本屆履約率。",
+            "全市累計完工不等於本屆新增，更不等於入住。",
+            "兩套地方總量差10093戶，尚無逐案差額表，不能稱已完全解釋。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-02",
+      "name": "新北市",
+      "displayOrder": 2,
+      "electedHead": "侯友宜",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "侯友宜",
+      "currentHeadNote": "已核對現任市長頁，尚未逐日查核請假代理紀錄。",
+      "currentHeadSource": "https://www.ntpc.gov.tw/ch/home.jsp?id=5de1e44dcb4cd218",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/新北市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "new_taipei_2022_diverse_social_housing",
+          "quote": "建構多元社宅，增加租屋供給",
+          "summary": "建構多元社會住宅並增加租屋供給",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "PDF 第1頁，上半部市長候選人2號侯友宜右側政見欄，左下「居 韌性宜居」第一句；已視覺核對整頁姓名、號次、政黨及政見裁圖。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/新北市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前承諾",
+              "strength": "一手選舉公報，可證實候選人原始承諾；不能證明後續完成。"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所選原句未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "原句沒有戶數、增幅或供給類型定義；不將其他候選人的「2萬戶」或後續施政數字移入本承諾。",
+          "target": {
+            "value": null,
+            "unit": "多元社宅與租屋供給",
+            "scope": "原句沒有戶數、增幅或供給類型定義；不將其他候選人的「2萬戶」或後續施政數字移入本承諾。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "unit": "多元社宅與租屋供給",
+            "note": "本輪選錄原始承諾，未核對2022年末同口徑基準；不把未知寫成零。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": "多元社宅與租屋供給",
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "待核對",
+            "scope": "本輪尚未取得足以判定原承諾現況的同口徑資料。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原文是方向性供給改善，沒有可作分母的戶數或增幅目標，不能計達成率。",
+            "社宅興建、包租代管、租金補助、實際入住及青年銀共居不是同一統計；須先定義多元社宅涵蓋範圍。",
+            "不能以本次未查現況推定承諾未履行；未核對項目是否為前期續辦或本任新增。"
+          ],
+          "nextEvidenceNeeded": "先找2022同時期對「多元社宅」的候選人詳細定義，再與市府分項興建、出租及入住名冊核對；原文無量值時不計百分比。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "new_taipei_community_care_100",
+          "quote": "完成百家社區長照機構",
+          "summary": "百家社區長照機構",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/新北市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "社區長照機構；原句以2030年百萬銀髮人口作背景，非明確完工期限",
+          "target": {
+            "value": 100,
+            "unit": "家",
+            "scope": "社區長照機構；原句以2030年百萬銀髮人口作背景，非明確完工期限"
+          },
+          "baseline": {
+            "value": 70,
+            "unit": "家日照中心",
+            "date": "2022-12-26",
+            "source": "https://www.sanchong.ntpc.gov.tw/home.jsp?act=be4f48068b2b0031&dataserno=b1150dd94b3288f3f9d814d1fffb2e0a&id=aa967983e02a861f&mclassno=7e34084c236516547f230ae9c11f9f61",
+            "note": "就職次日的年末近似基準，不是2022-12-24精確存量。"
+          },
+          "status": "有達到百家規模的官方證據；原文機構口徑待對齊",
+          "current": {
+            "value": 130,
+            "unit": "家日照中心",
+            "dateLabel": "2026-07",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "已設立",
+            "scope": "採已完整讀取的7月數值；搜尋片段曾出現較新135，未據此升級。",
+            "sources": [
+              {
+                "url": "https://wedid.ntpc.gov.tw/governance/detail/3adMvGzGlmx1",
+                "title": "新北市日照中心施政成果",
+                "type": "官方原始資料",
+                "dateLabel": "2026-07"
+              },
+              {
+                "url": "https://www.sanchong.ntpc.gov.tw/home.jsp?act=be4f48068b2b0031&dataserno=b1150dd94b3288f3f9d814d1fffb2e0a&id=aa967983e02a861f&mclassno=7e34084c236516547f230ae9c11f9f61",
+                "title": "70家日照中心達標",
+                "type": "官方原始資料",
+                "dateLabel": "2022-12-26"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "日照是社區長照服務類型，但本次未取得原承諾「社區長照機構」與統計「日照中心」的完整分類對照，故不計130%達成率。70到130為累計存量淨差60，不代表60家全由本任期起案；5587為容量，不是實際使用人數。",
+            "須核對社區式長照機構名冊分類及2022年末逐機構基準",
+            "須補最新月份、實際收托人數與利用率",
+            "公報2030是人口背景，不擅自判為承諾截止日"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-03",
+      "name": "桃園市",
+      "displayOrder": 3,
+      "electedHead": "張善政",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "張善政",
+      "currentHeadNote": "2026-10-20 市府首頁新聞仍稱桃園市長張善政。",
+      "currentHeadSource": "https://www.tycg.gov.tw/",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://eebulletin.cec.gov.tw/111/04桃園市/01市長/桃園市第3屆市長選舉選舉公報.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "taoyuan_2022_taoyouth_investment_fund",
+          "quote": "成立桃青基金投資新創",
+          "summary": "成立桃青基金，以投資方式支持新創事業",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF 第1頁，市長候選人1號張善政第一列右側政見欄；「青年的安家立業基地」第3項「創業不愁錢」第一子句；已視覺核對整頁與政見裁圖。",
+          "originalSources": [
+            {
+              "url": "https://eebulletin.cec.gov.tw/111/04桃園市/01市長/桃園市第3屆市長選舉選舉公報.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前承諾",
+              "strength": "一手選舉公報，可證實候選人原始承諾；不能證明後續完成。"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所選原句未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "公報點名成立桃青基金及投資新創，未訂基金規模、政府出資比率、投資件數或成立日期。",
+          "target": {
+            "value": null,
+            "unit": "桃青基金成立及投資新創機制",
+            "scope": "公報點名成立桃青基金及投資新創，未訂基金規模、政府出資比率、投資件數或成立日期。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "unit": "桃青基金成立及投資新創機制",
+            "note": "本輪選錄原始承諾，未核對2022年末同口徑基準；不把未知寫成零。"
+          },
+          "status": "原始具名承諾已核；創投聯盟機制有官方說明，實際成立與投資里程碑待核",
+          "current": {
+            "value": null,
+            "unit": "桃青基金成立及投資新創機制",
+            "dateLabel": "2026-09-21",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "官方已說明創投聯盟運作機制；基金設立與實際投資成果尚待核對",
+            "scope": "市府質詢回應正文稱由創投聯盟投入資金，市府扮演協助推動角色；此證據不等於已核對獨立基金法律設立、實際撥資或受投資企業。",
+            "sources": [
+              {
+                "url": "https://news.tycg.gov.tw/News_Content.aspx?n=5016&s=1877201",
+                "title": "9月21日市政總質詢：余信憲議員",
+                "type": "桃園市政府新聞處質詢回應新聞",
+                "dateLabel": "2026-09-21",
+                "period": "2026-09-21質詢回應所述機制；未公布本次可用的完整投資期間及件數",
+                "locator": "正文倒數第2段，以「關於桃青基金，張市長指出」開頭。",
+                "strength": "一手官方自述，非基金成立文件、投資契約或審計結果"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "公報沒有基金金額與投資件數，不能拿後來的創投家數當完成比例分母或分子。",
+            "2026官方說明為民間創投聯盟資金、市府協助，不宜直接改寫原文成「市府出資基金」，也不能未查設立文件即斷言原基金未成立。",
+            "須區分聯盟成立、投資媒合、個別創投承諾投資與實際撥資；官方質詢說明不足以核實實際受投資戶與成果。"
+          ],
+          "nextEvidenceNeeded": "取得桃青基金／創投聯盟的設立或合作規範、資金治理方式、已投資新創及實際撥資紀錄，再判定原承諾與執行方式是否對應。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "taoyuan_happy_mileage",
+          "quote": "推動公車加YouBike免費「幸福里程」",
+          "summary": "公車與YouBike免費幸福里程",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://eebulletin.cec.gov.tw/111/04桃園市/01市長/桃園市第3屆市長選舉選舉公報.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "公車及YouBike兩個組件；公報本句沒有30公里等數字",
+          "target": {
+            "value": null,
+            "unit": "免費里程/優惠條件",
+            "scope": "公車及YouBike兩個組件；公報本句沒有30公里等數字"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "unit": "既有優惠條件",
+            "note": "尚未核對2022完整費率及補助適用對象"
+          },
+          "status": "部分施行已證實；整項尚不可判定",
+          "current": {
+            "value": 60,
+            "unit": "YouBike前分鐘免費",
+            "dateLabel": "2026-05",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "單車優惠已施行",
+            "scope": "官方永續網2026年5月資料仍載前60分鐘免費。公車組件仍需核對。",
+            "sources": [
+              {
+                "url": "https://sdgs.tycg.gov.tw/News_Content.aspx?n=17865&s=1256039",
+                "title": "推動共享及電動運具",
+                "type": "官方原始資料",
+                "dateLabel": "2026-05"
+              },
+              {
+                "url": "https://gazette.tycg.gov.tw/TYBulletin/Home/ViewMain/479",
+                "title": "第411次市政會議紀錄",
+                "type": "官方原始資料",
+                "dateLabel": "2023-03-08"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "免費單車60分鐘與原文免費公車加單車不是同一範圍。TPASS付費月票、部分免費公車路線不能直接替代原承諾。政策存在不證明使用率或減碳因果成效。",
+            "待補2022詳細政見對象/里程數與公車政策對照",
+            "需補2022優惠基準、現行電輔車除外條款",
+            "不使用官方頁疑似異常的累計12億租借數"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-04",
+      "name": "臺中市",
+      "displayOrder": 4,
+      "electedHead": "盧秀燕",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "盧秀燕",
+      "currentHeadNote": "現任；2026-10-10市府新聞記載",
+      "currentHeadSource": "https://www.taichung.gov.tw/3389320/post",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/臺中市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 3,
+      "pledges": [
+        {
+          "id": "TXG-2022-001",
+          "quote": "社會住宅",
+          "summary": "公報設定社宅累計合計1.8萬戶，其中地方1萬戶、中央8千戶。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/臺中市市長.pdf",
+              "title": "公報盧秀燕欄第1項，已視覺核對",
+              "type": "官方選舉公報",
+              "dateLabel": "2022",
+              "role": "公報盧秀燕欄第1項，已視覺核對"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原公報未明訂日期；後續2023施政說明將第二階段列為112–115年（2023–2026），須與原始承諾分列。",
+          "metricDefinition": "地方自辦累計興辦戶數，不是全市完工或入住戶數",
+          "target": {
+            "local": 10000,
+            "central": 8000,
+            "combined": 18000,
+            "unit": "戶"
+          },
+          "baseline": {
+            "value": 7146,
+            "date": "2022選舉公報時點",
+            "scope": "地方已興辦累計",
+            "note": "不是2022-12-31基準"
+          },
+          "status": "地方興辦子目標達量；整項尚不判定完成",
+          "current": {
+            "value": 10716,
+            "unit": "地方已完工加興辦中戶數",
+            "dateLabel": "2026-10-19",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "地方興辦子目標達量，完工未等同達量",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.taichung.gov.tw/3395316/post",
+                "title": "最新地方累計興辦量",
+                "type": "行政機關自述",
+                "dateLabel": "2026-10-19",
+                "role": "最新地方累計興辦量"
+              },
+              {
+                "url": "https://www.taichung.gov.tw/2379824/post",
+                "title": "第二階段112–115年規劃",
+                "type": "行政機關規劃",
+                "dateLabel": "2023",
+                "role": "第二階段112–115年規劃"
+              },
+              {
+                "url": "https://ours.org.tw/2026socialhousing/",
+                "title": "較早六都住宅部門提供分階段數",
+                "type": "官方資料之民間彙整",
+                "dateLabel": "2026-03",
+                "role": "較早六都住宅部門提供分階段數"
+              }
+            ]
+          },
+          "limitedMetric": {
+            "eligible": true,
+            "numerator": 10716,
+            "denominator": 10000,
+            "percent": 107.16,
+            "label": "地方自辦累計興辦量／地方子目標",
+            "not_total_pledge_completion": true
+          },
+          "limitations": [
+            "107.16%只描述地方興辦子目標。",
+            "1.8萬戶非本屆新增目標，亦不等於完工或入住。",
+            "3月完工數不可冒稱10月最新數。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "TXG-2022-002",
+          "quote": "捷運藍線動工",
+          "summary": "達成藍線開工里程碑，不是承諾任內通車。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/臺中市市長.pdf",
+              "title": "公報盧秀燕欄第5項，已視覺核對",
+              "type": "官方選舉公報",
+              "dateLabel": "2022",
+              "role": "公報盧秀燕欄第5項，已視覺核對"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所列原始來源未明訂完成日期；不自動把本屆任期終點視為明訂期限",
+          "metricDefinition": "至少正式工程標啟動的動工里程碑",
+          "target": {
+            "milestone": "動工"
+          },
+          "baseline": {
+            "stage": "尚未動工",
+            "date": "2022",
+            "note": "建設計畫於2024-01-29獲核定"
+          },
+          "status": "動工里程碑已達；全線未完成",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": "2026-09-30",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "部分標段已開工，其餘仍發包／招標／施工準備",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.taichung.gov.tw/8868/8872/9962/3380520",
+                "title": "最新工程分階段說明",
+                "type": "行政機關進度",
+                "dateLabel": "2026-09-30",
+                "role": "最新工程分階段說明"
+              },
+              {
+                "url": "https://tcrt.taichung.gov.tw/latestevent/Details?Parser=9,4,160,,,,1613",
+                "title": "動工與後續工序",
+                "type": "主管機關進度",
+                "dateLabel": "2026",
+                "role": "動工與後續工序"
+              },
+              {
+                "url": "https://news.pts.org.tw/article/825857",
+                "title": "動工事件交叉",
+                "type": "公共媒體報導",
+                "dateLabel": "2026-09-07",
+                "role": "動工事件交叉"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "不給100%工程完成率。",
+            "不能把動工判斷延伸為全線完工或通車。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "TXG-2022-003",
+          "quote": "推動區區有親子館",
+          "summary": "以29個行政區均有正式親子館為覆蓋目標。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/臺中市市長.pdf",
+              "title": "公報盧秀燕欄第9項，已視覺核對",
+              "type": "官方選舉公報",
+              "dateLabel": "2022",
+              "role": "公報盧秀燕欄第9項，已視覺核對"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所列原始來源未明訂完成日期；不自動把本屆任期終點視為明訂期限",
+          "metricDefinition": "有正式親子館的不同行政區數／29區",
+          "target": {
+            "covered_districts": 29,
+            "unit": "行政區"
+          },
+          "baseline": {
+            "formal_centers": 12,
+            "date": "2022年末",
+            "covered_districts": null,
+            "source_url": "https://www.economic.taichung.gov.tw/2226656/post",
+            "note": "館數非區數，不可用12直接算區覆蓋差分"
+          },
+          "status": "部分行政區已覆蓋，持續推動",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": "2026-10-20",
+            "dateMeaning": "查閱現行名冊",
+            "stage": "持續布建，尚未全部行政區開辦正式館",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.society.taichung.gov.tw/2348092/post",
+                "title": "現行正式館布建名冊；頁面更新日期與內容有落差",
+                "type": "主管機關名冊",
+                "dateLabel": "2026-10-20",
+                "role": "現行正式館布建名冊；頁面更新日期與內容有落差"
+              },
+              {
+                "url": "https://www.taichung.gov.tw/3382576/post",
+                "title": "西區美村園區2026-09-03開館佐證",
+                "type": "行政機關公告",
+                "dateLabel": "2026-10-02",
+                "role": "西區美村園區2026-09-03開館佐證"
+              },
+              {
+                "url": "https://www.cna.com.tw/news/aloc/202610010209.aspx",
+                "title": "東區預計12月開館的議會答詢",
+                "type": "同期新聞",
+                "dateLabel": "2026-10-01",
+                "role": "東區預計12月開館的議會答詢"
+              }
+            ]
+          },
+          "limitedMetric": {
+            "eligible": true,
+            "numerator": 26,
+            "denominator": 29,
+            "percent": 89.7,
+            "label": "正式親子館行政區覆蓋率",
+            "not_total_pledge_completion": true
+          },
+          "limitations": [
+            "太平區有兩間，27館只覆蓋26區。",
+            "西區Mini館位於已覆蓋區，不增加覆蓋數。",
+            "名冊最後異動顯示2026-08-06但含9月開館內容，僅用查閱日標示觀察。",
+            "原公報未明訂期限，不稱任期已滿跳票。"
+          ],
+          "nextEvidenceNeeded": "依本筆限制補強原始全文、同口徑基準與最新執行證據；未取到資料不標失敗",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-05",
+      "name": "臺南市",
+      "displayOrder": 5,
+      "electedHead": "黃偉哲",
+      "electionParty": "民主進步黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "黃偉哲",
+      "currentHeadNote": "最近已核對官方報導仍以該人為首長；未聲稱已窮盡代理歷程。",
+      "currentHeadSource": "https://www.tainan.gov.tw/News_Content.aspx?n=1963&s=8831570",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/台南市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "tainan_2022_resource_recycling_rate",
+          "quote": "力拚資源回收率提升到7成",
+          "summary": "資源回收率提升至7成",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/台南市市長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": "原承諾僅稱資源回收率，無公式。中央一般廢棄物回收率、市府垃圾回收率及市府資源回收率確有差異，分開記錄。",
+          "target": {
+            "value": 70,
+            "unit": "百分比",
+            "scope": "原公報未定義計算公式、廢棄物範圍或統計期間"
+          },
+          "baseline": {
+            "value": null,
+            "data_date": "2022",
+            "same_formula_confirmed": false,
+            "candidate_value": 63.05,
+            "candidate_metric": "市府管考資源回收率",
+            "candidate_source_urls": [
+              "https://service.cca.gov.tw/File/Get/cca/zh-tw/6o6g8Z2y97wxtvT",
+              "https://auditreport.audit.gov.tw/ServerFile/Get/638257947358259185d0580c7de8974f60807c7728adfb41e5"
+            ],
+            "note": "已找到2022資源回收率63.05%的官方圖表與審計報告記載；但未取得該年度與2026發言相同公式的分子、分母，故嚴格同口徑基期仍不填定值。不同指標的一般廢棄物回收率2022為62.14%。"
+          },
+          "status": "官方稱達標；已找到口徑差異，仍缺同口徑當期表佐證，暫不認定",
+          "current": {
+            "value": null,
+            "unit": "資源回收率",
+            "dateLabel": "2026-08-18會議發言，實際統計期間未明",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "已用中央年度/月度表與市府管考圖交叉比對，但未找到可支持此次七成說法的同口徑當期統計表；保留為官方自述，不認定達標或跳票。",
+            "sources": [
+              {
+                "url": "https://www.tainan.gov.tw/News_Content.aspx?n=1963&s=8831570",
+                "title": "2026-08-18市政會議紀錄",
+                "type": "官方一手資料",
+                "dateLabel": "2026-08-18"
+              },
+              {
+                "url": "https://w3fs.tainan.gov.tw/Download.ashx?icon=..pdf&n=MTE1MDgxOOW4guaUv%2Bacg%2BitsOWwiOahiOWgseWRii3lnoPlnL7omZXnkIbmlL%2FnrZblj4ros4fmlLbmiJDmnpwucGRm&u=LzAwMi9GUzAxLzEvcmVsZmlsZS8yMDg2Ni84ODMxMzI5LzI2NGFmMmZkLWJiNjUtNGFhNi1iYTY0LTcxMGRjMTc3YTI5Ny5wZGY%3D",
+                "title": "1150818市政會議專案報告：垃圾處理政策及資收成果",
+                "type": "官方簡報",
+                "dateLabel": "2026-08-18"
+              },
+              {
+                "url": "https://service.moenv.gov.tw/File/Get/moenv/zh-tw/yVLxagtZKB6gMCz",
+                "title": "環境部115年環境統計年報，表4-1一般廢棄物清理概況",
+                "type": "中央正式統計表",
+                "dateLabel": "2026-08-24",
+                "period": "2025-01-01/2025-12-31"
+              },
+              {
+                "url": "https://service.moenv.gov.tw/File/Get/moenv/zh-tw/RHmfluHlYtawYkA",
+                "title": "環境部115年9月版第453期環境統計月報，表5-1",
+                "type": "中央正式統計表",
+                "dateLabel": "2026-10-05",
+                "period": "2026-06-01/2026-06-30"
+              },
+              {
+                "url": "https://w3fs.tainan.gov.tw/Download.ashx?icon=.pdf&n=MTEz5bm057Wx6KiI5bm05aCxLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMTU5L2NrZmlsZS80Y2I4ZWEyOS00MzJhLTQxYTctOThjZi1kNTk0NTlmODQwNzQucGRm",
+                "title": "臺南市113年環境保護統計年報，表4-1",
+                "type": "市府正式統計年報，資料來源列環境部",
+                "dateLabel": "2025-08",
+                "period": "2020/2024"
+              },
+              {
+                "url": "https://service.cca.gov.tw/File/Get/cca/zh-tw/6o6g8Z2y97wxtvT",
+                "title": "臺南市溫室氣體減量執行成果文件之現況分析，圖1-10",
+                "type": "市府管考資料，氣候變遷署官方存放",
+                "period": "2019/2023-07"
+              },
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Get/638257947358259185d0580c7de8974f60807c7728adfb41e5",
+                "title": "審計部111年度施政計畫實施之考核，環境保護段",
+                "type": "審計機關報告中的施政成果記載",
+                "period": "2022"
+              },
+              {
+                "url": "https://w3fs.tainan.gov.tw/Download.ashx?icon=.pdf&n=MTA35bm06Ie65Y2X5biC55Kw5aKD5L%2Bd6K235qaC5rOB5YiG5p6QLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMi9ja2ZpbGUvYmQzOTIxZTMtZGMyOS00ZjdkLTgyYTYtZDRhNzYzNTMxMmVhLnBkZg%3D%3D",
+                "title": "107年臺南市環境保護概況分析，表16",
+                "type": "市府歷史統計分析",
+                "period": "2012/2018"
+              },
+              {
+                "url": "https://air.moenv.gov.tw/EnvDownload/AirQuality/%E7%A9%BA%E6%B1%A1%E5%9F%BA%E9%87%91113%E5%B9%B4%E5%BA%A6%E6%B1%BA%E7%AE%97%E4%B8%8A%E7%B6%B2%E8%B3%87%E6%96%99/%E8%87%BA%E5%8D%97%E5%B8%82113%E5%B9%B4%E5%BA%A6%E7%A9%BA%E6%B0%A3%E6%B1%A1%E6%9F%93%E9%98%B2%E5%88%B6%E5%9F%BA%E9%87%91%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf",
+                "title": "臺南市113年度空氣污染防制基金決算書，環保局總說明",
+                "type": "市府決算書施政成果自述",
+                "period": "2024"
+              },
+              {
+                "url": "https://web.tainan.gov.tw/EPB/News_Content.aspx?n=15914&s=8709828",
+                "title": "環保施政有成 南市展現永續發展實力",
+                "type": "環保局官方新聞稿",
+                "dateLabel": "2024-12-09",
+                "period": "2022/2023"
+              },
+              {
+                "url": "https://service.moenv.gov.tw/File/Get/moenv/zh-tw/ZBnE7zGIby0rMrO",
+                "title": "環境部115年年報，表4-3執行機關資源回收成果",
+                "type": "中央統計表定義補充",
+                "dateLabel": "2026-08-24",
+                "period": "2025"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原公報未定義公式或統計期間；市政會議的突破七成也未交代分子、分母與年份。",
+            "市府2022圖表同時列資源回收率63.05%與垃圾回收率70.61%，兩者不可互換；不能因垃圾回收率早已超七成就判此承諾完成。",
+            "環境部一般廢棄物回收率公式為（資源垃圾回收量＋廚餘回收量）／一般廢棄物產生量×100%。其2022全年62.14%、2025全年61.18%可作該指標的年度對照，但不能直接當原承諾的同口徑數值。",
+            "中央2026-10-05發布月報的縣市數據是2026年6月單月，臺南59.20%；不可寫成2026全年或2026年9月回收率。",
+            "市府歷史表的垃圾回收率分母曾排除事業員工生活垃圾，分子另列巨大垃圾、廚餘與資源回收。此為已證實的歷史口徑差異，尚未確認是否全數延續至2022與2026。",
+            "環境部中央表資源垃圾量仍取自地方環保機關；表值可重算不等於第三方重新秤重或完整獨立查核。",
+            "回收率分子使用實際回收量，不是廚餘產生量；中央資源回收成果的其他項已含巨大垃圾再利用，不能重複加總。",
+            "同日簡報125萬噸一般廢棄物與72萬噸資源再利用是概述量，不能逕算72/125判承諾；本次正式表亦顯示一般廢棄物回收率包含廚餘回收。",
+            "不混用事業廢棄物再利用率、南科園區回收率、焚化能量或垃圾妥善處理率；原公報無明確期限，不以任期尚未結束時的資料判定跳票。"
+          ],
+          "nextEvidenceNeeded": "若續查，優先取得市府資源回收管考系統2022及2025/2026同一公式的年度或累計表，並核對2026-08-18突破七成所指期間；不再以近似名稱統計補代。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "tainan_2022_third_municipal_hospital_planning",
+          "quote": "規劃第三處市立醫院",
+          "summary": "規劃臺南第三處市立醫院；原文沒有承諾本屆完工或開院。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁；號次5黃偉哲；左下候選人區塊、政見內容三欄中的中欄上端；「二、活力臺南，全齡照顧」第（六）項末句。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/台南市市長.pdf",
+              "title": "111年臺南市首長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": 1,
+              "strength": "選前原始文件，當選候選人親填政見；證明承諾內容，不證明後續履約。",
+              "role": "選前原始承諾"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本子承諾未明示完成日期；不把2026任期終點或泛稱再拚四年回填為明訂期限。",
+          "metricDefinition": "第三處市立醫院規劃程序的可核驗里程碑，例如可行性評估、選址、核定或正式政策處置；不把規劃等同興建或啟用。",
+          "target": {
+            "value": null,
+            "unit": "第三處市立醫院規劃里程碑",
+            "scope": "「第三處」為所指設施序位，並非承諾新增3所或完成3所。"
+          },
+          "baseline": {
+            "value": null,
+            "data_date": null,
+            "note": "尚未核得2022同口徑基期，不假設選前為零。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "現況尚待核對",
+            "scope": null,
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "承諾動詞為規劃，不能僅憑未開院就判未履約，也不能僅憑曾有研究就認定2022承諾已完成。",
+            "需區分本屆與前任期已完成的可行性研究，並核對選後是否採納、更新或正式終止規劃。",
+            "選後市長政見一覽表可用於責任機關對照，但不能反向添加選前未載的預算、時程、院址或床數。"
+          ],
+          "nextEvidenceNeeded": "查市府衛生局／市長政見辦理表與可行性研究、選址評估、核定或終止文件，先確認規劃階段與跨任期沿革。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-06",
+      "name": "高雄市",
+      "displayOrder": 6,
+      "electedHead": "陳其邁",
+      "electionParty": "民主進步黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "陳其邁",
+      "currentHeadNote": "官方具日期頁面或索引載明在職；原文可讀性另見證據註記。",
+      "currentHeadSource": "https://wwwap.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=288E7F327B8F1D55",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/高雄市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "kaohsiung_2022_circular_light_rail",
+          "quote": "輕軌成圓",
+          "summary": "輕軌成圓",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/高雄市市長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": "拆出原文四線齊發的輕軌子項，不代表其餘捷運線完工",
+          "target": {
+            "value": 1,
+            "unit": "全環線通車",
+            "scope": "拆出原文四線齊發的輕軌子項，不代表其餘捷運線完工"
+          },
+          "baseline": {
+            "value": null,
+            "unit": "部分路段已營運，尚未成圓",
+            "date": "2022-12-25",
+            "note": "C20至C24於2022-10-05通車；環線為跨任期工程，本屆不能攬計所有里程。",
+            "source_url": "https://mtbu.kcg.gov.tw/FileContent/GetDownloadFile?fileCaption=高雄市政府捷運工程局113年度統計年報&fileDictionary=FileUpload&fileFormat=.pdf&fileId=785b08f8-8052-4a8e-89c9-fbeeb4973e77&fileName=20250604093650268.pdf"
+          },
+          "status": "輕軌成圓通車子項已完成",
+          "current": {
+            "value": 1,
+            "unit": "全環線已通車",
+            "dateLabel": "2024-01-01",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/412/relfile/74414/484270/46514ed2-e20a-4da8-9182-217397217272.pdf",
+                "title": "高雄市113年度施政成果：輕軌成圓",
+                "type": "官方一手資料",
+                "dateLabel": "2024"
+              },
+              {
+                "url": "https://mtbu.kcg.gov.tw/FileContent/GetDownloadFile?fileCaption=高雄市政府捷運工程局113年度統計年報&fileDictionary=FileUpload&fileFormat=.pdf&fileId=785b08f8-8052-4a8e-89c9-fbeeb4973e77&fileName=20250604093650268.pdf",
+                "title": "捷運工程局113年度統計年報，路段通車時序",
+                "type": "官方一手資料",
+                "dateLabel": "2025-06"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2024-01-01為全環線試營運通車，不等同所有工程帳務結算日。",
+            "不以全環線22.1公里當本屆新增里程，不把運量變化全部歸因市長或單一工程。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "kaohsiung_2022_daycare_each_school_district",
+          "quote": "完成一學區一日照中心目標",
+          "summary": "使每個學區都有日照中心；原公報未列學區總數與營運認定方式。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF第1頁（印刷第1頁，共2頁）；號次4陳其邁；最下列右側政見欄；第十一項「持續佈建長照幼托據點」末句。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/111年/高雄市市長.pdf",
+              "title": "111年高雄市首長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": 1,
+              "strength": "選前原始文件，當選候選人親填政見；證明承諾內容，不證明後續履約。",
+              "role": "選前原始承諾"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本子承諾未明示完成日期；不把2026任期終點或泛稱再拚四年回填為明訂期限。",
+          "metricDefinition": "有日照中心的學區覆蓋，需依學區逐一去重並區分規劃、籌設、布建、核准營運及實際提供服務；不是全市中心總家數。",
+          "target": {
+            "value": 1,
+            "unit": "日照中心／學區",
+            "scope": "每一學區的完整覆蓋；原文未指定學區層級或總數。選後官方將政策解釋為一國中學區一日照，所報91學區不倒寫進原始承諾。"
+          },
+          "baseline": {
+            "value": null,
+            "data_date": null,
+            "note": "尚未核得2022同口徑基期，不假設選前為零。"
+          },
+          "status": "已核原始承諾及機構/服務量底層證據；同日營運學區覆蓋與完成判定仍待對照",
+          "current": {
+            "value": null,
+            "unit": "已實際提供日照服務的學區",
+            "dateLabel": "2026-07（部署）；2026-07-03（服務量表）；2026-10-06（機構名冊）",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "部署進度、機構清冊與服務量欄位可核；同日實際營運學區覆蓋仍缺對照",
+            "scope": "保留2026年7月已布建81學區與規劃布建率100%的不同階段自述。新增2026-10-06逐機構行政清冊及2026-07-03收托/收案資料，但清冊含停業、終止特約及尚未特約註記，未完成機構狀態、類型、地址到政策學區的同日對照，不能直接填實際服務覆蓋分子。",
+            "sources": [
+              {
+                "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=288E7F327B8F1D55",
+                "title": "任內最後一次施政報告 盤點17項「六都第一」陳其邁：高雄一定會更好",
+                "type": "高雄市政府新聞局官方新聞，施政自述",
+                "dateLabel": "2026-08-31",
+                "period": "截至2026年7月",
+                "locator": "正文「幸福高雄方面」段，長照部分截至115年7月。",
+                "strength": "政府一手自述；非獨立稽核，階段用語不可互換。",
+                "role": "近期部署與規劃階段"
+              },
+              {
+                "url": "https://health.kcg.gov.tw/News_Content.aspx?n=A354A5298C8A4AA8&s=FE139F94B5F81B0C&sms=26BD5515159837CE",
+                "title": "高雄日照中心服務創新，導入智能復能設備 規劃布建率達100%，首創校園日照中心共7家全國最多",
+                "type": "高雄市政府衛生局官方新聞",
+                "period": "2025年文內現況；人口段截至8月，日照數字未另標統計日",
+                "locator": "正文第4段，以「依中央一國中學區一日照政策」起首；其前為田寮及美濃服務創新段，其後為「衛生局強調」段。",
+                "strength": "主管機關一手自述，能證明階段定義；發布日欄與正文日數有差異。",
+                "role": "學區口徑及規劃／已布建差別"
+              },
+              {
+                "url": "https://ltc.kchb.gov.tw/public/images/upload/files/1151006%20%E9%AB%98%E9%9B%84%E5%B8%82%E7%A4%BE%E5%8D%80%E5%BC%8F(%E6%97%A5%E9%96%93%E7%85%A7%E9%A1%A7%E3%80%81%E5%B0%8F%E8%A6%8F%E6%A8%A1%E5%A4%9A%E6%A9%9F%E8%83%BD)%E9%95%B7%E7%85%A7%E6%A9%9F%E6%A7%8B%E7%89%B9%E7%B4%84BD03%E4%B8%8A%E7%B6%B2%E5%85%AC%E5%91%8A%E7%89%88-166%E5%AE%B6.pdf",
+                "title": "高雄市社區式（日間照顧、小規模多機能）服務類長期照顧服務機構一覽表（115年10月6日）",
+                "type": "高雄市政府衛生局長期照顧中心原始行政清冊",
+                "dateLabel": "2026-10-06",
+                "period": "資料統計：115年10月06日",
+                "locator": "PDF第1頁表頭；第10頁序號72（代號10-5）；第19頁序號130（代號19-6）及131（代號19-7）",
+                "strength": "主管機關直接原始名冊，對機構地址、類型與所列異動優於新聞摘要；不是同日逐學區營運稽核。",
+                "role": "現行逐機構行政清冊及營運狀態例外"
+              },
+              {
+                "url": "https://docs.google.com/spreadsheets/d/1ZxuZwvnnRN8ZWILQSj04PQnBgrcLj3o1cNdcCecfhT8/edit?usp=sharing",
+                "title": "1150703 高雄市社區式長照機構(日照、家托)特約及團體家屋名冊",
+                "type": "高雄市立聯合醫院官方頁公開連結之行政名冊",
+                "dateLabel": "2026-07-03",
+                "period": "表內資料統計：115年07月03日",
+                "locator": "首表第1至3列；日照/小規模多機能名冊表頭及資料列",
+                "strength": "經公立醫院官網連結的底層服務名冊，屬行政資料轉載；不是獨立現場查核，也不證明每家目前有服務。",
+                "role": "與收托資料同日的機構識別及地址名冊"
+              },
+              {
+                "url": "https://docs.google.com/spreadsheets/d/1c-R9fOX7hHPJo1e8JIYwJWagXnyLBnZiT_YqrMoYpek/edit?usp=sharing",
+                "title": "1150703 社區式長照機構開放收托數及收案數",
+                "type": "高雄市立聯合醫院官方頁公開連結之行政服務量表",
+                "dateLabel": "2026-07-03",
+                "period": "表名及第1列標示1150703",
+                "locator": "首表第1至2列表頭；第3列代號1-2；第27列代號2-9",
+                "strength": "較新聞更直接的服務量行政表；官方頁提供來源鏈，尚未獨立核驗各機構現場或全市完整性。",
+                "role": "實際服務量欄位及與機構名冊的連結鍵"
+              },
+              {
+                "url": "https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/10/RelFile/7330/514384/00ef66e4-072e-452b-8fc8-c40e4b365425.pdf",
+                "title": "高雄市115學年度國民中學學區劃分一覽表",
+                "type": "高雄市教育行政公文附件，政府網站公開PDF",
+                "dateLabel": "2026-01-09",
+                "period": "115學年度",
+                "locator": "PDF第1頁表頭及鹽埕/前金/壽山自由學區列；第14頁編號90至93及註記",
+                "strength": "正式教育學區文件，適合後續地址對照；本輪非日照政策同日分母認定文件。",
+                "role": "學區地理映射來源及分母不可直接取校數的證據"
+              },
+              {
+                "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=56565&pid=261510",
+                "title": "迄113年底，「一國中學區一日照」政策未達標（衛生福利部主管非營業基金及財團法人國家衛生研究院113年度決算評估報告）",
+                "type": "立法院預算中心決算評估；底層資料由長照基金提供",
+                "dateLabel": "2026-03-01",
+                "period": "截至2024年底（113年底）",
+                "locator": "表1高雄市列；表下說明1及資料來源；正文(一)政策沿革",
+                "strength": "市府以外之立法院預算中心評估，可揭露統計口徑；行政底層仍來自長照基金，非獨立現場查證高雄各學區營運。",
+                "role": "不同政府統計完成布建口徑的外部機關評估"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2026市府新聞的規劃布建率100%與已布建81學區為不同階段，不能把100%標成已營運覆蓋或完成率。",
+            "2025衛生局明載91個國中學區，76已布建、15籌設；此為選後定義及歷史資料，不能未核對2026學區邊界即跨期相除。",
+            "布建一詞是否一律代表已營運尚未以逐區名冊核對；145家中心也不能當作145個已覆蓋學區。",
+            "新聞屬政府施政自述，不是獨立查核；數據截至2026年7月，不是2026-10-20即時狀態。",
+            "原公報沒有明訂完成日；查核時點尚在任期中，不能把待完成或未核對直接定性為跳票。",
+            "最新2026-10-06清冊雖表頭報166家，但含日照及小規模多機能，並列停業中機構；不得把清冊總數當成全數營運的日照中心，更不可當覆蓋學區數。終止特約與尚未特約也不可自行等同停業。",
+            "2026-07-03核定收托、開放收托與收案數是不同量；有地址及機構代號但無國中學區，仍須處理停復業、服務類型及去重。零收案不必然等於未營運。",
+            "115學年度教育學區表有自由學區及依招生辦法入學之學校，末號93不是已核實的日照政策分母；2026年7月、10月資料須各自配對當時有效的政策學區版本。",
+            "立法院2026年3月評估所列2024年底高雄91/91的100%採寬口徑，含籌設許可、核定補助、工程已發包及替代家托；市府外部機關評估不等於獨立現場證實全部學區已營運。",
+            "日照政策自2019年中央與地方共同推動，累積機構家數及布建率不可全數歸因2022當選首長本任；2022同口徑基期仍缺。"
+          ],
+          "nextEvidenceNeeded": "以2026-10-06原始清冊為起點，取得同日開放營運/停復業與服務量名冊，以及衛生局日照政策學區名單與學區邊界版本；依機構代號核狀態、服務類型和地址，再按國中政策學區去重，另核自由學區及特殊招生學校計數規則。不得直接沿用91或教育表末號93；補2022同口徑基期。完成率保留空值。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-07",
+      "name": "基隆市",
+      "displayOrder": 7,
+      "electedHead": "謝國樑",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "謝國樑",
+      "currentHeadNote": "已核對現任市長介紹；2026-08-05 公托新聞仍稱市長謝國樑。",
+      "currentHeadSource": "https://www.klcg.gov.tw/tw/klcg1/3176.html",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/基隆市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "keelung_indoor_playgrounds",
+          "quote": "發展「一區一特色」室內親子遊樂空間",
+          "summary": "一區一特色室內親子空間",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/基隆市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "7區為研究者按行政區數轉換，原文未直接寫7座",
+          "target": {
+            "value": 7,
+            "unit": "行政區",
+            "scope": "7區為研究者按行政區數轉換，原文未直接寫7座"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "unit": "有特色室內兒童樂園之區數",
+            "note": "尚無同分類2022全市清冊，不推定為零"
+          },
+          "status": "設置及區域覆蓋有完成證據",
+          "current": {
+            "value": 7,
+            "unit": "處，涵蓋7區",
+            "dateLabel": "2024-12-17",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "最後一處正式開放；2026報告續載完成7處",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.klcg.gov.tw/tw/children/4249-295657.html",
+                "title": "暖暖室內兒童樂園盛大開幕",
+                "type": "官方原始資料",
+                "dateLabel": "2024-12-17"
+              },
+              {
+                "url": "https://www.klcg.gov.tw/wSite/public/Attachment/01704/f1777860999910.pdf",
+                "title": "第20屆第7次定期會施政總報告",
+                "type": "官方原始資料",
+                "dateLabel": "2026-04"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2026報告印刷頁8重申2024年12月已完成7處。設施完成不等於服務品質、使用率或親子福祉改善；未用滿意度宣傳數值評估。",
+            "待補7區逐館名冊與2022基線",
+            "有無維修暫停服務須另查"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "keelung_public_nursery_double",
+          "quote": "落實公托倍增",
+          "summary": "公托倍增",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/基隆市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "公報未說明以據點數或收托容量為倍增分母；兩者分列",
+          "target": {
+            "value": 2,
+            "unit": "倍",
+            "scope": "公報未說明以據點數或收托容量為倍增分母；兩者分列"
+          },
+          "baseline": {
+            "value": 3,
+            "unit": "處營運公托",
+            "date": "2022",
+            "capacity": 102,
+            "capacity_unit": "可收托名額",
+            "source": "https://www.klcg.gov.tw/wSite/public/Attachment/01704/f1777860999910.pdf",
+            "locator": "PDF第15頁／印刷頁6表1"
+          },
+          "status": "據點數已超過兩倍；容量與利用率分別待核",
+          "current": {
+            "value": 8,
+            "unit": "處已營運公托",
+            "dateLabel": "2026-08-03",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "正式啟用收托",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.klcg.gov.tw/tw/klcg1/3168-320538.html",
+                "title": "基隆再添2處公托",
+                "type": "官方原始資料",
+                "dateLabel": "2026-08-05"
+              },
+              {
+                "url": "https://www.klcg.gov.tw/wSite/public/Attachment/01704/f1777860999910.pdf",
+                "title": "第20屆第7次定期會施政總報告",
+                "type": "官方原始資料",
+                "dateLabel": "2026-04-10"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "3→8為增加5處、總量約2.67倍，可支持以據點衡量的倍增。2026施政報告的11處/288人是全年預計，不能當成已完成；原公報未指定分母，所以不無條件判整項完全達成。",
+            "補2026年全市核定收托容量與實際入住/候補數",
+            "分母若以容量則需同口徑完整資料"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-08",
+      "name": "宜蘭縣",
+      "displayOrder": 8,
+      "electedHead": "林姿妙",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "林茂盛",
+      "currentHeadNote": "代理",
+      "currentHeadSource": "https://www.e-land.gov.tw/cp.aspx?n=2700",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/宜蘭縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "yilan_2022_route62_toucheng_extension",
+          "quote": "打造台62線延伸頭城濱海希望公路",
+          "summary": "推動台62線延伸至宜蘭頭城的具名道路建設；不把後續規劃里程、通車年或經費倒填為2022承諾。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁（紙本第一頁），左上第1號林姿妙候選人欄，政見第一項。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/宜蘭縣縣長.pdf",
+              "title": "111年宜蘭縣縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前候選人政見",
+              "strength": "一手原始承諾：CEC所載候選人本人填報；強於新聞轉述，但不是執行證明。",
+              "role": "2022選前候選人本人填報政見原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆所引2022原文未明訂完成日期；不把任期終點自動當作承諾期限。",
+          "metricDefinition": "台62線延伸頭城道路計畫的規劃、核定、施工及通車階段，分別記錄。",
+          "target": {
+            "value": null,
+            "unit": "項具名道路建設",
+            "metric": "台62線延伸頭城道路計畫的規劃、核定、施工及通車階段，分別記錄。",
+            "deadline": null,
+            "note": "原文指名建設，但沒有約定公里數、完成日期或各階段權重；規劃、核定、動工及通車不能任意換算完成率。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "note": "尚未核對2022同口徑基線；不得把未取得當作0。"
+          },
+          "status": "原承諾已收錄；2026-05已有綜規／環評委託證據，2026-10當期現況待核，不評任滿成敗。",
+          "current": {
+            "value": null,
+            "unit": "項具名道路建設",
+            "dateLabel": "2026-05-07",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "截至2026-05-07官方進度為已委託綜合規劃及環評；非完工通車證明。",
+            "scope": "台62線瑞濱延伸至宜蘭頭城；正文稱2026年3月委託。2026-10當期狀態未補核。",
+            "sources": [
+              {
+                "url": "https://www.ey.gov.tw/Page/448DE008087A1971/60154b23-fc62-47ec-b95e-38c5ae83e696",
+                "title": "台61線改善新建及南延計畫與台62線延伸新建計畫 公路局加速建構完整高快速公路網",
+                "type": "行政院院會議案／交通部進度說明",
+                "dateLabel": "2026-05-07",
+                "period": "2026-03委託，2026-05-07院會報告所述進度",
+                "locator": "正文第三段（以「至於台62線快速公路」起首）",
+                "strength": "官方一手進度說明；足以確認綜規與環評委託階段，不是通車驗收證明。",
+                "role": "中央機關進度證據，非縣府完工自評"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "本筆只收錄台62延伸頭城，不連帶判定緩解塞車、暢通物流與帶動鄉鎮發展均已實現。",
+            "2026年來源屬中央主管機關進度說明，不將中央核定或規劃成果全歸縣長。",
+            "2026年資料所述約45公里、8座隧道是當期規劃內容，並非2022原始數值目標。"
+          ],
+          "nextEvidenceNeeded": "下一輪核對公路局該延伸線正式計畫、環評及工程狀態；優先確認2026-10是否仍在綜規，不以規劃進度作通車成果。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "yilan_pet_friendly_park",
+          "quote": "設立寵物友善公園",
+          "summary": "設立寵物友善公園",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "第1頁，林姿妙候選人欄，第8項之獨立子承諾",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/宜蘭縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原文無指定處數、地點或期限。",
+          "metricDefinition": "新增且啟用的寵物友善公園",
+          "target": {
+            "metric": "新增且啟用的寵物友善公園",
+            "value": null,
+            "unit": "處",
+            "deadline": null,
+            "note": "原文無指定處數、地點或期限。"
+          },
+          "baseline": {
+            "date": "2022-12-25",
+            "value": null,
+            "note": "未查得2022年底全縣同定義設施清冊；不能假定全縣原有0處。"
+          },
+          "status": "已找到本任期內一處啟用證據；可支持「設立」子承諾，非全縣服務成效評分。",
+          "current": {
+            "value": 1,
+            "unit": "處",
+            "dateLabel": "2024-12-28",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "啟用典禮已舉行；不是僅宣布或動工",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.yuanshan.gov.tw/News_Photo_Content.aspx?n=9780&s=239993",
+                "title": "金山公園內寵物公園啓用典禮",
+                "type": "官方一手資料",
+                "dateLabel": "2024-12-28"
+              },
+              {
+                "url": "https://www.ilepb.gov.tw/PubNews/PubNewsContent.aspx?id=3582&p=7",
+                "title": "環保局金山公園相關介紹",
+                "type": "官方一手資料",
+                "dateLabel": "2025"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原承諾同項的殯葬服務未在此列判定。",
+            "未核得2026年使用人次、持續營運與犬隻安全結果。",
+            "員山鄉公所及縣環保局資料證明設施存在；縣府與鄉公所經費責任仍待拆分。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-09",
+      "name": "新竹縣",
+      "displayOrder": 9,
+      "electedHead": "楊文科",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "楊文科",
+      "currentHeadNote": "已核對縣長介紹與 2026 縣府活動。",
+      "currentHeadSource": "https://www.hsinchu.gov.tw/cp.aspx?n=134",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/新竹縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "hsinchu_county_2022_zhubei_household_office",
+          "quote": "新建竹北戶政事務所",
+          "summary": "新建竹北戶政事務所，改善戶政服務設施",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF 第1頁，縣長候選人4號楊文科第四列右側政見欄，第十項「新建竹北戶政事務所，提高為民服務品質與效率。」；已視覺核對整頁與政見裁圖。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/新竹縣縣長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前承諾",
+              "strength": "一手選舉公報，可證實候選人原始承諾；不能證明後續完成。"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所選原句未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "原文為具名設施新建，不包含明示完工日、規模或後來聯合辦公大樓的工程期程。",
+          "target": {
+            "value": null,
+            "unit": "竹北戶政事務所新建設施",
+            "scope": "原文為具名設施新建，不包含明示完工日、規模或後來聯合辦公大樓的工程期程。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "unit": "竹北戶政事務所新建設施",
+            "note": "本輪選錄原始承諾，未核對2022年末同口徑基準；不把未知寫成零。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": "竹北戶政事務所新建設施",
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "待核對",
+            "scope": "本輪尚未取得足以判定原承諾現況的同口徑資料。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "新建工程的規劃、招標、決標、動工、完工驗收、戶政服務啟用須分階段，不能互代。",
+            "初查官方搜尋索引出現2025招標及2026質詢答覆；直接開啟均逾時，未將搜尋可讀的規劃說明升級為已完工或正式啟用證據。",
+            "後續聯合辦公大樓包含戶政與地政，且可能保留原西區戶政服務；原句沒有要求拆除或搬遷原所。",
+            "公報沒有時程與數量型分母，故百分比為空。"
+          ],
+          "nextEvidenceNeeded": "優先直接核對竹北地政、戶政聯合辦公大樓的決標、施工、驗收及戶政服務啟用公告；搜尋線索為縣府2026-02-06質詢辦理頁 https://www.hsinchu.gov.tw/News_Content.aspx?n=3175&s=279888 。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "hsinchu_county_township_parks",
+          "quote": "一鄉鎮至少設置一處特色公園",
+          "summary": "每鄉鎮至少一座特色公園",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/新竹縣縣長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "13為新竹縣行政區數；每區至少一處，不是全縣總數13座",
+          "target": {
+            "value": 13,
+            "unit": "鄉鎮市",
+            "scope": "13為新竹縣行政區數；每區至少一處，不是全縣總數13座"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "unit": "覆蓋鄉鎮市數",
+            "note": "2023完成之竹北、芎林21座含前任期規劃建設，未取得2022基線"
+          },
+          "status": "至少9個鄉鎮已證實；全縣覆蓋未證實",
+          "current": {
+            "value": 9,
+            "unit": "有已完成特色公園的鄉鎮市",
+            "dateLabel": "2026-06-11",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "已啟用/完成",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://information.hsinchu.gov.tw/News_Content.aspx?n=2203&s=311438",
+                "title": "關西鳴鳳公園化身親子共融遊憩新亮點",
+                "type": "官方原始資料",
+                "dateLabel": "2026-06-11"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "9由官方逐年完成地點去重計算，是證據下限，不等於全縣只有9區。總園數多於13不代表13區全覆蓋。關西2026-05-14竣工、6月11日啟用。",
+            "需補橫山、北埔、五峰及寶山逐區最新名冊",
+            "需核對一鄉鎮政策是否含竹北市及原有特色公園",
+            "2022基準與本期新增/承接工程分列"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-10",
+      "name": "新竹市",
+      "displayOrder": 10,
+      "electedHead": "高虹安",
+      "electionParty": "台灣民眾黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "高虹安",
+      "currentHeadNote": "內政部2026-01-04正式說明：2024-07-26停職，2025-12-17發文同意復職。邱臣遠代理開始/交接結束的精確日期尚待官方人事令；不得將整任期全算本人直接在職。2026年市府仍以高虹安為現任市長。",
+      "currentHeadSource": "https://icity.hccg.gov.tw/cityland/app/data/view?id=10&module=municipalnews&serno=9f6565a4-1645-4935-ae60-1d3b1def5811",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://eebulletin.cec.gov.tw/111/22新竹市/01市長/新竹市市長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "hsinchu_city_2022_hsinchu_pass_app",
+          "quote": "以新竹通APP整合市民服務",
+          "summary": "以新竹通 APP 整合市民服務",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF 第1頁，右半部第三列市長候選人6號高虹安政見欄，右下「開放對話」第4項「引入智慧城市科技，以新竹通APP整合市民服務」；已視覺核對整頁與政見裁圖。",
+          "originalSources": [
+            {
+              "url": "https://eebulletin.cec.gov.tw/111/22新竹市/01市長/新竹市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前承諾",
+              "strength": "一手選舉公報，可證實候選人原始承諾；不能證明後續完成。"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所選原句未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "公報點名新竹通APP，未列應整合的全部服務、項目數、使用率或服務品質門檻。",
+          "target": {
+            "value": null,
+            "unit": "新竹通APP市民服務整合",
+            "scope": "公報點名新竹通APP，未列應整合的全部服務、項目數、使用率或服務品質門檻。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "unit": "新竹通APP市民服務整合",
+            "note": "本輪選錄原始承諾，未核對2022年末同口徑基準；不把未知寫成零。"
+          },
+          "status": "具名APP已有具體服務整合的一手證據；完整整合範圍及成效未核",
+          "current": {
+            "value": null,
+            "unit": "新竹通APP市民服務整合",
+            "dateLabel": "2026-06-30",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "至少停車服務整合已有官方運作證據",
+            "scope": "交通處公告正文已說明原「新竹市好停車」APP功能整合至新竹通；這可證明具體服務整合，但未核實全部市政服務、實際可用性或使用成效。",
+            "sources": [
+              {
+                "url": "https://hispark.hccg.gov.tw/news.php?action=view&id=36",
+                "title": "「新竹市好停車」APP 將於115年8月1日下架，服務升級請改下載「新竹通」APP！",
+                "type": "新竹市政府交通處停管科服務移轉公告",
+                "dateLabel": "2026-06-30",
+                "period": "2026-06-30公告時已整合的停車功能；2026-08-01為公告所述未來下架日期",
+                "locator": "公告第2個條列項，句子的主詞為原「新竹市好停車」APP。",
+                "strength": "一手主管機關服務公告；未以獨立操作測試或審計驗證"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原承諾無完整服務清單、數量、使用率及品質門檻；一項服務整合不等於所有市民服務完成整合。",
+            "官方已整合公告證明一項執行里程碑，不等同獨立測試全部功能、使用者覆蓋率或便民成效。",
+            "原APP預定下架日不是新竹通上線日；未以兩者互代。",
+            "試營運新聞頁搜尋索引可讀但直接開啟回403，本筆採可直接閱讀的交通處公告，不據未成功開啟的新聞頁認定完整成果。",
+            "本任市府工作包含代理期間，不能把整項成果無條件歸為個人直接執行。"
+          ],
+          "nextEvidenceNeeded": "取得新竹通歷年服務清單、正式運作公告、可用性及使用統計，分別核實整合範圍與成效；沒有原定分母不計達成率。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "hsinchu_city_guangpu_bridges",
+          "quote": "興建光埔全區空橋",
+          "summary": "光埔全區空橋",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://eebulletin.cec.gov.tw/111/22新竹市/01市長/新竹市市長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "公報沒有橋數、明示日期；後續預算計畫12座不是原文數字",
+          "target": {
+            "value": null,
+            "unit": "全區空橋",
+            "scope": "公報沒有橋數、明示日期；後續預算計畫12座不是原文數字"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "unit": "已通行空橋數",
+            "note": "尚未核對2022逐橋狀態"
+          },
+          "status": "進行中有證據；全區完成未證實",
+          "current": {
+            "value": null,
+            "unit": "完成且可通行橋數",
+            "dateLabel": "2026-09-10",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "工程推進中",
+            "scope": "官方施政報告新聞仍記載慈雲空橋將陸續完工，尚無完整全區已通行數。",
+            "sources": [
+              {
+                "url": "https://icity.hccg.gov.tw/cityland/app/data/view?id=10&module=municipalnews&serno=9f6565a4-1645-4935-ae60-1d3b1def5811",
+                "title": "高虹安市長赴議會報告施政成果",
+                "type": "官方原始資料",
+                "dateLabel": "2026-09-10"
+              },
+              {
+                "url": "https://dep-auditing.hccg.gov.tw/uploaddowndoc?file=totalbudget%2F202510171432460.pdf&filedisplay=01+%E7%B8%BD%E9%A0%90%E7%AE%97%28%E6%A1%88%29.pdf&flag=doc",
+                "title": "115年度總預算案",
+                "type": "官方PDF搜尋索引全文片段",
+                "dateLabel": "2025-10"
+              },
+              {
+                "url": "https://dep-publicwork.hccg.gov.tw/ch/home.jsp?dataserno=4abf30b8-d611-4724-b2e1-52975debfa30&id=16&mcustomize=municipalnews_view.jsp&mserno=201601300036&parentpath=0%2C4&t=MunicipalNews&toolsflag=Y",
+                "title": "光埔7號空橋開工官方新聞",
+                "type": "官方原始來源搜尋索引",
+                "dateLabel": "2026-05-07"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2026預算計畫列全區12座，分期至2027，並有未獲認養橋梁。開工、合龍、主體吊裝與正式開放不同；不把任何一項當全區完成。停職代理期的市府工作需另列治理時間，不全算個人直接執行。",
+            "缺2022完整範圍圖及逐橋基準",
+            "缺2026-10-20前逐橋驗收/通行表",
+            "未確認媒體所稱2025截止為原候選人原始承諾，不採用"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-11",
+      "name": "苗栗縣",
+      "displayOrder": 11,
+      "electedHead": "鍾東錦",
+      "electionParty": "無推薦政黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "鍾東錦",
+      "currentHeadNote": "2026 國民黨官方提名名單列現任鍾東錦；不得把 2022 無推薦政黨回填為國民黨。",
+      "currentHeadSource": "https://www.miaoli.gov.tw/cp.aspx?n=265",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/苗栗縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "miaoli_child_allowance_2000",
+          "quote": "育兒津貼加碼2000元",
+          "summary": "育兒津貼加碼2000元",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF第1頁，1號候選人鍾東錦政見欄，「6項福利措施」之育兒津貼加碼2000元。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/苗栗縣縣長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "CEC短句未列年齡、資格、頻率；就職日官網補述自行帶養每月加2000",
+          "target": {
+            "value": 2000,
+            "unit": "新臺幣元",
+            "scope": "CEC短句未列年齡、資格、頻率；就職日官網補述自行帶養每月加2000"
+          },
+          "baseline": {
+            "value": null,
+            "unit": "縣府另行加碼育兒津貼，新臺幣元／月",
+            "note": "尚未取得原承諾地方加碼的完整基準與適用資格。下列是選前已存在的中央基本方案，不能冒充地方新增成果。",
+            "central_program_context": {
+              "published_date": "2022-08-08",
+              "effective_period": "2022-08起",
+              "age_scope": "2至未滿5歲",
+              "first_child_twd_per_month": 5000,
+              "second_child_twd_per_month": 6000,
+              "third_and_later_twd_per_month": 7000,
+              "source_url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=553926",
+              "eligibility_note": "當時包含所得稅率等限制；不可直接與後期受益人數比較。"
+            }
+          },
+          "status": "已核中央基本津貼標準；本項地方額外2000元尚缺實施證據，不判定已完成或未履行",
+          "current": {
+            "value": null,
+            "unit": "縣府另行加碼育兒津貼，新臺幣元／月",
+            "dateLabel": "2026-07-02公布115學年度說明；2026-10-20查閱",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "中央基本方案持續可核；地方額外加碼尚無本輪取得的實施規則或支出證據",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=553926",
+                "title": "苗栗縣二至未滿五歲育兒津貼，111年8月起再加碼",
+                "type": "縣府政策公告",
+                "dateLabel": "2022-08-08",
+                "period": "2022-08起",
+                "locator": "正文第1段及申請資格段"
+              },
+              {
+                "url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=971155",
+                "title": "115學年度苗栗縣2至未滿5歲幼兒學前就學補助",
+                "type": "縣府政策公告",
+                "dateLabel": "2026-07-02",
+                "period": "115學年度",
+                "locator": "正文第3段「此外」之育兒津貼說明"
+              },
+              {
+                "url": "https://www.miaoli.gov.tw/cp.aspx?n=265",
+                "title": "苗栗縣長簡介所列福利政見",
+                "type": "選後官方刊載政見重申",
+                "dateLabel": "2022-12-25",
+                "locator": "福利政見第六項「加碼育兒津貼」"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2022公報短句沒有寫年齡、資格或發放頻率；選後縣長簡介才補述在家自行照顧、每月加碼及保母訓練條件。",
+            "2022及2026官方說明的5,000／6,000／7,000元是配合中央政策的基本方案，早於本任即有，不能當成本任地方額外加碼成果。",
+            "本輪同口徑可讀的基本方案限2至未滿5歲，不擴稱已核全部0至6歲。",
+            "育兒津貼的每月加碼、一次性生育津貼、送托機構的托育補助是不同制度，金額或名稱相近也不互換。",
+            "2026政策公告未提額外2000元不是不存在的充分證據。仍需地方實施要點、預算科目及實際支出資料，完成率留空。",
+            "所得限制等資格曾調整，基本金額相同也不代表受益人口或實際給付總額相同。"
+          ],
+          "nextEvidenceNeeded": "後續優先查縣府地方加碼實施要點、對應預算與給付支出，不再用基本津貼或一次性生育禮金補代。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "miaoli_school_meal_upgrade",
+          "quote": "苗栗校園餐點質量升級",
+          "summary": "校園餐點質量升級",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "PDF 第1頁，當選人政見欄；已視覺核對",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/苗栗縣縣長.pdf",
+              "title": "中央選舉委員會2022年選舉公報",
+              "type": "中央選舉委員會2022年選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "公報未明示完成日期；不自動把任期結束當原文明定截止日。",
+          "metricDefinition": "CEC沒有數量門檻；2022-12-25官方縣長政見補述為每餐加碼10元，單獨標示來源",
+          "target": {
+            "value": null,
+            "unit": "餐點質量",
+            "scope": "CEC沒有數量門檻；2022-12-25官方縣長政見補述為每餐加碼10元，單獨標示來源"
+          },
+          "baseline": {
+            "value": null,
+            "date": "2022",
+            "unit": "元/餐及營養品質",
+            "note": "2022各校餐價與營養基線未取得"
+          },
+          "status": "補助增加已施行；質量結果尚未量化",
+          "current": {
+            "value": 10,
+            "unit": "新臺幣元/餐加碼",
+            "dateLabel": "2024-01-15",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "已施行",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.miaoli.gov.tw/cp.aspx?n=265",
+                "title": "縣長介紹與施政願景",
+                "type": "官方原始資料",
+                "dateLabel": "2022-12-25"
+              },
+              {
+                "url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=725071",
+                "title": "午餐加碼10元，縣長視察國小營養午餐",
+                "type": "官方原始資料",
+                "dateLabel": "2024-01-15"
+              },
+              {
+                "url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=989187&sms=9462",
+                "title": "115年第32次縣務會議",
+                "type": "官方原始資料",
+                "dateLabel": "2026-09-01"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2024官方記錄加碼10元與每週增2次牛乳。金額增加/免費不直接證明營養品質改善；60元是最新餐費，不得說較2022增加60元。",
+            "補2022餐價、實際菜單營養及抽驗/剩食/滿意度同口徑指標",
+            "補每餐加10元之選前本人原始詳細政見，避免將就職後補述誤標為CEC原文"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-12",
+      "name": "彰化縣",
+      "displayOrder": 12,
+      "electedHead": "王惠美",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "王惠美",
+      "currentHeadNote": "最近已核對官方報導仍以該人為首長；未聲稱已窮盡代理歷程。",
+      "currentHeadSource": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=423981",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/彰化縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "changhua_2022_public_childcare",
+          "quote": "0至2歲公托倍增計劃",
+          "summary": "0至2歲公共托育倍增",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/彰化縣縣長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": "公托；原文未界定基期與中心數或名額",
+          "target": {
+            "value": 2,
+            "unit": "基期倍數",
+            "scope": "公托；原文未界定基期與中心數或名額"
+          },
+          "baseline": {
+            "value": null,
+            "note": "競選公報未定義倍增基期。另有2022年底正式統計可補：全部43家托嬰中心均為私立、公辦民營欄「－」即此統計口徑零家。不能拿零作倍增分母，也不能把選後16／28處計畫倒填為原承諾。",
+            "context_only": {
+              "value": 0,
+              "unit": "官方統計列計的公辦民營托嬰中心",
+              "date": "2022-12-31",
+              "source_url": "https://files.chcg.gov.tw/files/16_20231110131622025_%E4%BA%BA%E5%8F%A3%E5%8F%8A%E5%AE%B6%E5%BA%AD_-_%E5%BD%B0%E5%8C%96%E7%B8%A3%E6%89%98%E5%AC%B0%E4%B8%AD%E5%BF%83%E6%A6%82%E6%B3%81(112%E5%B9%B411%E6%9C%88%E7%99%BC%E5%B8%83).pdf",
+              "not_pledge_denominator": true
+            },
+            "first_centre_milestones": {
+              "name": "和美公設民營托嬰中心",
+              "opening_ceremony_date": "2022-12-27",
+              "formal_care_start_date": "2023-02-01",
+              "formal_care_start_date_basis": "官方收托計畫第4頁第十一項",
+              "note": "計畫載正式收托日；2023年6月統計另確認已實收39名。"
+            }
+          },
+          "status": "已見公共托育擴充；原始倍增基期未明，不能判定達標或計完成率",
+          "current": {
+            "value": 11,
+            "unit": "網站列載公設民營托嬰中心",
+            "dateLabel": "2026-10-20觀測；頁尾網站更新2026-10-19，非明確資料統計日",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.chcg.gov.tw/DTO/social/07other/other01_con.aspx?cate_id=3302&data_id=24680&topsn=1755",
+                "title": "社會處：公設民營托嬰中心資訊",
+                "type": "官方一手資料"
+              },
+              {
+                "url": "https://files.chcg.gov.tw/files/11_20230502120540803_第20屆第1次定期會施政報告-14-1.pdf",
+                "title": "2023第20屆第1次定期會施政報告，頁58",
+                "type": "官方一手資料",
+                "dateLabel": "2023-05"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=423981",
+                "title": "介壽公托啟用，第10家",
+                "type": "官方一手資料",
+                "dateLabel": "2026-01-16"
+              },
+              {
+                "url": "https://files.chcg.gov.tw/files/16_20231110131622025_%E4%BA%BA%E5%8F%A3%E5%8F%8A%E5%AE%B6%E5%BA%AD_-_%E5%BD%B0%E5%8C%96%E7%B8%A3%E6%89%98%E5%AC%B0%E4%B8%AD%E5%BF%83%E6%A6%82%E6%B3%81(112%E5%B9%B411%E6%9C%88%E7%99%BC%E5%B8%83).pdf",
+                "title": "彰化縣托嬰中心概況（112年11月縣政統計通報）",
+                "type": "彰化縣政府主計處官方統計通報",
+                "dateLabel": "2023-11",
+                "locator": "第2頁表1、第3頁表2"
+              },
+              {
+                "url": "https://social.chcg.gov.tw/files/8_20221224110312667_%E5%BD%B0%E5%8C%96%E7%B8%A3%E5%92%8C%E7%BE%8E%E5%85%AC%E8%A8%AD%E6%B0%91%E7%87%9F%E6%89%98%E5%AC%B0%E4%B8%AD%E5%BF%83%E6%94%B6%E6%89%98%E8%A8%88%E7%95%AB-_2025.pdf",
+                "title": "彰化縣和美公設民營托嬰中心收托計畫",
+                "type": "彰化縣政府社會處官方招生／收托計畫",
+                "locator": "第4頁第十一項；第1頁招生時程"
+              },
+              {
+                "url": "https://ctrl.chcg.gov.tw/main/main_act3/main.aspx?act_id=408&main_id=41716",
+                "title": "新建公設民營托嬰中心（施政成果）",
+                "type": "彰化縣政府官方施政成果網頁",
+                "dateLabel": "2024-05-16"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/DTO/social/03bulletin/bulletin03_con.aspx?bull_id=436287",
+                "title": "115/8/21–115/9/17彰化縣鹿港公設民營托嬰中心報名開始囉！",
+                "type": "彰化縣政府社會處官方招生公告",
+                "dateLabel": "2026-08-17"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "統計表以2022年底公辦民營零家、2023年6月底4家列計；和美2022-12-27開幕，但收托計畫明定2023-02-01正式收托。剪綵、列冊、開放報名、正式收托須分開。",
+            "2026現況11處只是官方名冊列載。新增列載鹿港的實際開托日待補；不能因目前日期已過預定時間就視為已營運。",
+            "408為名冊欄位加總，非已確認的即時實收兒童。2023年6月和美核定40名而實收39名，直接證明容量和實收不可互換。",
+            "11處包括中央衛福部彰化醫院員工子女中心，與純縣府自建／一般公開收托口徑須分開。",
+            "2023報告16處及2024成果頁28處屬選後計畫，不倒寫為2022原承諾，不列為完工或營運數。",
+            "仍未取得2026各中心實收、去重候補、地區送托可及性及原競選倍增分母。缺資料不等於未完成。"
+          ],
+          "nextEvidenceNeeded": "若後續有新公開資料，優先補鹿港正式收托公告及2026各中心核定／實收／去重候補表；原倍增定義未明前不計比例。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "changhua_2022_signature_park_each_township",
+          "quote": "一鄉鎮一特色公園",
+          "summary": "每個鄉鎮設有特色公園。",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "PDF第1頁，1號候選人王惠美政見欄，「六、樂活彰化」第一個分號前子項。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/彰化縣縣長.pdf",
+              "title": "111年彰化縣縣長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": "PDF第1頁，1號候選人王惠美政見欄，「六、樂活彰化」第一個分號前子項。",
+              "strength": "候選人於2022年填報、選舉委員會編印之一手原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆原文未明訂完成年月日，不以預定任期終點倒填為原承諾期限。",
+          "metricDefinition": "主指標仍是原承諾所指各行政區的特色公園覆蓋，不是園數。後續執行已證明納入縣轄市；仍須完整行政區母表、特色公園認定、同日啟用營運清冊及跨屆基期。另列本輪逐名確認的歷史啟用去重下限，不混作完成率。",
+          "target": {
+            "value": 1,
+            "unit": "座特色公園／每鄉鎮",
+            "scope": "原文「一鄉鎮一特色公園」；未自行換算全縣總座數或行政區分母。",
+            "coverage_target": "全部原文所指鄉鎮",
+            "denominator": null
+          },
+          "baseline": {
+            "value": null,
+            "unit": null,
+            "date": null,
+            "note": "同口徑全縣基期仍未建立，不能假定從零開始。官方動態施政成果載華陽公園2019年已開放、田中兒童及二林長青公園2020年已開放、溪湖工程2020/2021年驗收，竹塘2022年驗收並開放；員林兔馬鹿於2022年開工。這些是基期／跨屆背景，不當作完整基期數值。",
+            "sources": [
+              {
+                "url": "https://ctrl.chcg.gov.tw/main/main_act/main_print2.asp?act_id=408&main_id=28934",
+                "publication_date": null,
+                "observed_on": "2026-10-20",
+                "locator": "打造特色公園，鄉親幸福有感：成果／進度（一）、（二）、（三）、（六）、（八）、（九）"
+              }
+            ]
+          },
+          "status": "已具名確認至少7鄉鎮及2縣轄市有啟用證據；完整同日覆蓋與完成率仍待查核",
+          "current": {
+            "value": null,
+            "unit": "已符合承諾的去重鄉鎮數",
+            "dateLabel": "2026-10-15",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "保留主指標null及既有18座、8座施工資訊；新增可逐名覆核的9個行政區歷史已啟用證據下限（7鄉鎮、2縣轄市）。不將下限、累計公園座數或施工數冒充同日全鄉鎮覆蓋／本屆新增完成率。",
+            "sources": [
+              {
+                "url": "https://www.chcg.gov.tw/DTO/citytourism/03bulletin/bulletin02_con.aspx?bull_id=439836",
+                "title": "「大城追風公園」啟用 打造交通體驗共融遊戲場",
+                "type": "彰化縣政府城市暨觀光發展處官方新聞",
+                "dateLabel": "2026-10-15",
+                "period": "截至2026-10-15新聞發布當日",
+                "locator": "正文第1段（大城追風公園啟用）及第3段（18座、8座施工）。",
+                "strength": "施政機關一手公告；總數屬官方自述，未逐項審核"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=425915",
+                "title": "再創觀光遊憩新地標 八卦山天空步道延伸工程及天空遊戲場盛大啟用",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2026-02-14",
+                "period": "2026-02-14正式啟用典禮；文末回顧此前已啟用公園",
+                "locator": "正文第1、2、8段；列印版第19、20、26行",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=420808",
+                "title": "鄉鎮特色公園再添一處！500坪埤頭LOVE米「樂米公園」完工啟用",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2025-11-25",
+                "period": "2025-11-25啟用；2024-12開工、2025-09完工",
+                "locator": "正文第1及6段；列印版第19、24行",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=387648",
+                "title": "彰化縣第一座水岸遊憩公園 嬉濱海豚公園竣工啟用",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2024-03-02",
+                "period": "2024-03-02竣工啟用",
+                "locator": "正文第1、4段；列印版第19、22行",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=415357",
+                "title": "彰化高鐵特定區再添新亮點 熊趣米公園及親子公園正式啟用",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2025-08-20",
+                "period": "2025-08-20田中兩園啟用；社頭花木公園2025-05啟用",
+                "locator": "正文第1、3、5段；列印版第19、21、23行",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/DTO/citytourism/07other/other01_con.aspx?cate_id=7223&data_id=26003&topsn=6761",
+                "title": "田尾怡心園(113.01)工程成果",
+                "type": "彰化縣政府一手行政／公告資料",
+                "period": "文中明載2024-01-27竣工啟用；頁面本身發布日不明",
+                "locator": "正文第1段",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://ctrl.chcg.gov.tw/main/main_act/main_print2.asp?act_id=408&main_id=28934",
+                "title": "施政成果D2提升觀光品質：打造特色公園，鄉親幸福有感",
+                "type": "彰化縣政府一手行政／公告資料",
+                "period": "動態頁混列2019至2025工程，無一致統計截止日；本輪僅提取具明確事件年月日的歷史條目",
+                "locator": "「打造特色公園，鄉親幸福有感」目標及成果／進度（一）、（二）、（三）、（六）、（八）、（九）、（十五）",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/DTO/citytourism/03bulletin/bulletin02_con.aspx?bull_id=439693",
+                "title": "伸港公兒四公園「什股探索之森」開工 打造海線全齡共融特色遊戲場！",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2026-10-13",
+                "period": "2026-10-13開工當日；17座完成、8座既施工，加本案為第26座工程",
+                "locator": "正文第1、3段",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/ch2/print_all.aspx?bull_id=418145",
+                "title": "點亮設計展新焦點 八卦山天空遊戲場 雙十節開始試營運",
+                "type": "彰化縣政府一手行政／公告資料",
+                "dateLabel": "2025-10-09",
+                "period": "公告2025-10-10起試營運；當時尚待正式開幕",
+                "locator": "正文第1段；列印版第19行",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://park.chcg.gov.tw/overview",
+                "title": "樂遊彰化公園：公園總覽",
+                "type": "彰化縣政府一手行政／公告資料",
+                "period": "2026-10-20讀取的動態目錄；頁面無同口徑統計截止日",
+                "locator": "公園總覽第1頁，頁次／總數列",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              },
+              {
+                "url": "https://www.chcg.gov.tw/DTO/citytourism/07other/other01_list.aspx?topsn=7076",
+                "title": "城觀處業務專區：特色公園",
+                "type": "彰化縣政府一手行政／公告資料",
+                "period": "2026-10-20讀取，兩頁共11篇條目，標題成果月份2023-07至2026-02",
+                "locator": "第1頁10篇、第2頁1篇，共11筆結果",
+                "strength": "官方直接頁面；足以證明機關發布的個案啟用／工程資訊，非獨立現勘或完整營運名冊"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "已核出同區多園的直接例子：田中熊趣米與親子公園同屬田中；彰化市天空、華陽、自然生態園區不得按園數重複計行政區。18座不等於18個鄉鎮，不能以18除以26。",
+            "後續官方執行明確包括彰化市與員林市，但2022承諾的完整行政區母表、特色公園認定與完成期限仍缺；原承諾分母維持null。",
+            "本輪9個行政區是逐名官方啟用證據下限，不是完整18座清冊，也不是2026-10-15或10-20同日正常營運名冊；未查到的行政區不能判為沒有或未達成。",
+            "官方總覽181座涵蓋不同種類公園；特色公園專區11筆是文章數，並包含多園及寵物公園，不可直接作完成工程名冊。",
+            "2022年前公園已存在，且有前屆開工、本屆完工與既有公園改建；未建立相同定義的基期，不能把累積場域全算本屆新增。",
+            "天空遊戲場2025-10試營運與2026-02正式啟用屬同一工程；公報、試營運、竣工與開幕日期須分開。",
+            "2026-10-13新聞的第26座是公園工程序號，當中有施工案及同鄉鎮重複園址，不等於26鄉鎮市已覆蓋。8座施工不可併入已啟用。",
+            "各來源為機關一手自述，未取得獨立稽核之完整營運或工程驗收清冊；完整定義、所在地、啟用、停用及本屆新建／改建別仍待核實。"
+          ],
+          "nextEvidenceNeeded": "優先取得可對照2026-10-15官方18座的完整工程／營運清冊，包含每園行政區、首次與本次改建啟用日、停用狀態及計入定義；核定原承諾行政區母表及2022基期後才計覆蓋率。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-13",
+      "name": "南投縣",
+      "displayOrder": 13,
+      "electedHead": "許淑華",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "許淑華",
+      "currentHeadNote": "最近已核對官方報導仍以該人為首長；未聲稱已窮盡代理歷程。",
+      "currentHeadSource": "https://www.nantou.gov.tw/big5/news_content.php?cid=75&dptid=376480000&id=168740",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/南投縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "nantou_2022_agritech_young_farmers",
+          "quote": "農業--科技農業.青農回投",
+          "summary": "以科技農業及青年農民回到南投為農業政策方向。",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "PDF第1頁，2號候選人許淑華政見欄，左側「主軸一 領投發展」第1項（農業）。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/南投縣縣長.pdf",
+              "title": "111年南投縣縣長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": "PDF第1頁，2號候選人許淑華政見欄，左側「主軸一 領投發展」第1項（農業）。",
+              "strength": "候選人於2022年填報、選舉委員會編印之一手原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆原文未明訂完成年月日，不以預定任期終點倒填為原承諾期限。",
+          "metricDefinition": "科技農業與青農回投的方向性承諾；原文未定義科技採用率、青農年齡／返鄉口徑、受益人數或預算門檻。",
+          "target": {
+            "value": null,
+            "unit": null,
+            "scope": "科技農業、青農回投；原公報只列方向，未列量值或具名方案。"
+          },
+          "baseline": {
+            "value": null,
+            "unit": null,
+            "date": null,
+            "note": "本輪尚未核對同口徑基期，不假定從零開始。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "本輪以擴充2022原始承諾為主，尚未取得足夠同口徑現況證據。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "此項為短篇方向性標語，不可自行加入青農返鄉人數、補助額或智慧農業覆蓋率作為2022目標。",
+            "圖像式政見區未進入PDF文字層，本次依第1頁候選人欄影像放大視讀；短引文保留原文的雙連字號及句點式分隔。",
+            "如找到選後預算或計畫，只能作執行背景，不能倒填為2022原始量化門檻。",
+            "現況未核對，不標未完成，亦不從沒有數字推導無價值。"
+          ],
+          "nextEvidenceNeeded": "先找2022同時期候選人完整農業政見原件，確認是否有可追蹤子計畫，再配對同口徑農業局／處成果及預決算。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "nantou_2022_elder_denture_subsidy",
+          "quote": "提高長者假牙補助以減輕長輩負擔",
+          "summary": "提高長者假牙補助",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://www.cna.com.tw/news/aipl/202211030330.aspx",
+              "title": "許淑華赴社工師公會提出社福政見",
+              "type": "同時期新聞報導",
+              "dateLabel": "2022-11-03"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": null,
+          "target": {
+            "value": null,
+            "unit": "原選前報導未提供金額",
+            "post_election_elaboration": {
+              "value": 50000000,
+              "unit": "每年新臺幣元預算",
+              "source_url": "https://www.nantou.gov.tw/getfile.php?path=upload/TEzZ9cW1jWPUmCxF.pdf",
+              "note": "19屆縣長政見辦理表，屬選後官方重建，不能冒充2022原始公報數字。"
+            }
+          },
+          "baseline": {
+            "value": 30000000,
+            "unit": "每年新臺幣元預算",
+            "date": "許淑華上任前，原公告未明確年度",
+            "source_url": "https://www.nantou.gov.tw/big5/news_content.php?cid=75&dptid=376480000&id=168740",
+            "note": "2026縣府新聞回溯口徑，待預算決算書交叉核對"
+          },
+          "status": "方向性加碼有官方證據；選前定量目標及實際給付成效待補",
+          "current": {
+            "value": 50000000,
+            "unit": "每年新臺幣元預算",
+            "dateLabel": "2026-09-24",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "縣府稱上任後由3000萬元增為5000萬元，也承認每年經費未用完；2027擬放寬資格尚非已實施。",
+            "sources": [
+              {
+                "url": "https://www.cna.com.tw/news/aipl/202211030330.aspx",
+                "title": "2022選前長照政見報導",
+                "type": "同時期新聞報導",
+                "dateLabel": "2022-11-03"
+              },
+              {
+                "url": "https://www.nantou.gov.tw/getfile.php?path=upload/TEzZ9cW1jWPUmCxF.pdf",
+                "title": "南投縣政府19屆政見表，頁3",
+                "type": "選後官方政見重建"
+              },
+              {
+                "url": "https://www.nantou.gov.tw/big5/news_content.php?cid=75&dptid=376480000&id=168740",
+                "title": "南投老人假牙補助檢討放寬",
+                "type": "官方一手資料",
+                "dateLabel": "2026-09-24"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2022公報視讀只有十大方向，本筆選前承諾來自2022-11-03中央社現場報導，不是原始競選文件。",
+            "預算額不是決算支出、受益人數或口腔健康成效，不據此判定整體目標完成。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-14",
+      "name": "雲林縣",
+      "displayOrder": 14,
+      "electedHead": "張麗善",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "張麗善",
+      "currentHeadNote": "最近已核對官方報導仍以該人為首長；未聲稱已窮盡代理歷程。",
+      "currentHeadSource": "https://sport114.yunlin.gov.tw/Module/News/Detail.php?ID=1387",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/雲林縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "yunlin_2022_east_west_national_scenic_areas",
+          "quote": "爭取設立雲東和雲西國家風景區",
+          "summary": "爭取設立雲東與雲西國家風景區。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁，1號候選人張麗善政見欄，左半部「未來四年我們將加速前進，讓雲林脫胎換骨。」標題後第一段末句；該段未另編項次。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/雲林縣縣長.pdf",
+              "title": "111年雲林縣縣長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": "PDF第1頁，1號候選人張麗善政見欄，左半部「未來四年我們將加速前進，讓雲林脫胎換骨。」標題後第一段末句；該段未另編項次。",
+              "strength": "候選人於2022年填報、選舉委員會編印之一手原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "所屬政見整段以「未來四年」作展望；保留為時間脈絡，但本子項未另明訂完成申請或核定設立的日期。",
+          "metricDefinition": "原動詞為「爭取設立」：先追蹤縣府提出之倡議／申請與具體程序，再分列是否核定設立，不把兩者混成同一結果。",
+          "target": {
+            "value": null,
+            "unit": "具名國家風景區設立倡議",
+            "scope": "雲東與雲西兩個具名方向；原文沒有把「爭取」量化成申請次數或正式核定數。",
+            "named_targets": [
+              "雲東國家風景區",
+              "雲西國家風景區"
+            ]
+          },
+          "baseline": {
+            "value": null,
+            "unit": null,
+            "date": null,
+            "note": "本輪尚未核對同口徑基期，不假定從零開始。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "本輪以擴充2022原始承諾為主，尚未取得足夠同口徑現況證據。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原動詞為爭取，不等於縣府承諾自行核定成立；倡議、提案、可行性評估、核定與營運須分層。",
+            "不能把現有國家風景區擴編、觀光廊帶、休閒農業區或森林療癒基地自動認成兩個具名新設國家風景區。",
+            "同段114年全國運動會另有舊筆；本筆為不同觀光政策，不重複計算賽會或高鐵體育園區。",
+            "公報圖像區的「未來四年」為整段展望；本子項未另訂申請或核定年月日，亦未承諾2030年一定設立。",
+            "本輪未完整核對選後爭取及中央程序；現況不明不是失敗判定。"
+          ],
+          "nextEvidenceNeeded": "優先查縣府正式提案、交通部／觀光署回覆或國家風景區範圍公告，並將雲東、雲西的申請與核定各自列明。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "yunlin_2022_national_games_2025",
+          "quote": "籌辦114年全國運動會",
+          "summary": "辦理114年全國運動會",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/雲林縣縣長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": "2025年（原文114年）",
+          "deadlineNote": null,
+          "metricDefinition": "由雲林主辦的賽會，與高鐵體育園區全案建設分列",
+          "target": {
+            "value": 1,
+            "unit": "114年全國運動會",
+            "scope": "由雲林主辦的賽會，與高鐵體育園區全案建設分列"
+          },
+          "baseline": {
+            "value": 0,
+            "unit": "該屆賽會已舉行次數",
+            "date": "2022選前",
+            "note": "2021-12-30教育部已核定雲林承辦，本屆承接既定計畫。",
+            "source_url": "https://sport114.yunlin.gov.tw/Module/Pages/Index.php?ID=219"
+          },
+          "status": "賽會舉辦子項已完成",
+          "current": {
+            "value": 1,
+            "unit": "已辦理並閉幕的114年全國運動會",
+            "dateLabel": "2025-10-23",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://sport114.yunlin.gov.tw/Module/News/Detail.php?ID=1387",
+                "title": "114全國運官方：閉幕最終日",
+                "type": "官方一手資料",
+                "dateLabel": "2025-10-23"
+              },
+              {
+                "url": "https://sport114.yunlin.gov.tw/Module/Pages/Index.php?ID=219",
+                "title": "114全國運官方招商贊助說明：2021年已核定承辦",
+                "type": "官方一手資料"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "只認定2025賽會辦理，未判定高鐵體育園區全案完工或經濟效益。",
+            "原公報同句另稱興建高鐵體育園區，不能因賽會閉幕便全句標完成。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-15",
+      "name": "嘉義縣",
+      "displayOrder": 15,
+      "electedHead": "翁章梁",
+      "electionParty": "民主進步黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "翁章梁",
+      "currentHeadNote": "具日期官方報導已直接取得並確認在職稱謂。",
+      "currentHeadSource": "https://www.moi.gov.tw/News_Content.aspx?n=337&s=340592&sms=9520",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "chiayi_county_2022_childcare_centres",
+          "quote": "設置4處托嬰中心及9處托育中心",
+          "summary": "設置4處托嬰中心及9處托育中心",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義縣縣長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": "原承諾4處托嬰中心與9處托育中心分列；現況公共托嬰中心／社區公共托育家園兩類已可拆分，但仍未證明原文「托育中心」等同家園。",
+          "target": {
+            "components": [
+              {
+                "value": 4,
+                "unit": "托嬰中心"
+              },
+              {
+                "value": 9,
+                "unit": "托育中心"
+              }
+            ],
+            "scope": "兩類設施須分列"
+          },
+          "baseline": {
+            "value": null,
+            "note": "尚無2022年底完整同口徑清冊。2022-09-16政策稿已確認大林及朴子兩處家園營運，水上僅預定10月3日；現存9處不能全算本屆新增。",
+            "partial_pre_election_evidence": {
+              "date": "2022-09-16",
+              "operating_sites_confirmed": [
+                "大林社區公共托育家園",
+                "朴子社區公共托育家園"
+              ],
+              "planned_not_counted": [
+                "水上社區公共托育家園"
+              ],
+              "source_url": "https://www.cna.com.tw/postwrite/chi/324159"
+            }
+          },
+          "status": "已確認有擴充及改制進度；原承諾類型尚未完全對齊，暫不判定達標",
+          "current": {
+            "value": 9,
+            "unit": "已報導營運的公共托育據點",
+            "dateLabel": "2026-09-16",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.cna.com.tw/postwrite/chi/431263",
+                "title": "公托、保母雙軌並行，在嘉育兒好安心",
+                "type": "中央社訊息平台政策新聞稿",
+                "dateLabel": "2026-04-20"
+              },
+              {
+                "url": "https://www.cyscc.gov.tw/News_Content/114/17157/",
+                "title": "第20屆第5次定期會乙06：建請縣府研議在鹿草鄉設置公托家園或托嬰中心",
+                "type": "嘉義縣議會議員提案原文，不等同縣府核定統計",
+                "dateLabel": "2025-05至2025-06會期"
+              },
+              {
+                "url": "https://www.cna.com.tw/postwrite/chi/440559",
+                "title": "嘉義縣公共托嬰、公托家園首屆聯合畢業典禮",
+                "type": "中央社訊息平台政策新聞稿，非中央社獨立採訪",
+                "dateLabel": "2026-08-01"
+              },
+              {
+                "url": "https://newsday.tw/news/570048",
+                "title": "大林如親公共托嬰中心揭牌，收托名額增至52名",
+                "type": "地方媒體刊載縣府政策內容，非已直接讀取的縣府原文",
+                "dateLabel": "2026-09-16"
+              },
+              {
+                "url": "https://www.cyhg.gov.tw/News_Content.aspx?n=16&s=257347",
+                "title": "大林如親公共托嬰中心揭牌，收托名額增至52名（已定位官方原稿）",
+                "type": "嘉義縣政府原站連結，正文未讀成功",
+                "dateLabel": "2026-09-16"
+              },
+              {
+                "url": "https://ws.cyscc.gov.tw/001/Upload/1/relfile/99/335/997051e7-59bc-4446-ab98-26176a3f4f82.pdf",
+                "title": "嘉義縣議會第20屆第5次定期會議事日程表",
+                "type": "嘉義縣議會官方會期日程",
+                "dateLabel": "2025-05至2025-06"
+              },
+              {
+                "url": "https://www.cna.com.tw/postwrite/chi/324159",
+                "title": "建構完善育兒環境，完備準公共化托育制度",
+                "type": "中央社訊息平台政策新聞稿，非中央社獨立採訪",
+                "dateLabel": "2022-09-16"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "現況9處已可拆分3處公共托嬰中心與6處社區公共托育家園；原公報的9處「托育中心」是否即家園未取得明確對照，仍不能算9/13。",
+            "大林由家園改制為托嬰中心，據點總數不變但容量增40名。中心種類變化不可當作新地點增加，原4＋9類別構成也不可直接跨年相比。",
+            "選前至少大林、朴子家園已營運；本屆新增淨額及2022年底完整清單未核齊。",
+            "2025年第20屆第5次定期會乙06議員提案稱9處約實收152名、額滿且候排約362名；這是歷史提案陳述，非2026即時統計，候補去重方式未明。",
+            "2026年9月縣府原稿正文仍因連線逾時未直接查得；僅核實官方入口。已讀轉載及訊息平台不得標成中央社獨立採訪或已直接讀取縣府原文。",
+            "月底／年底預計開辦及未來500名收容量均不計入當期已營運、實收或履約成果。"
+          ],
+          "nextEvidenceNeeded": "等待可直接取得的縣府同口徑清冊／施政表，補原4＋9與現行分類對照、2022完整基期及2026年新開辦實際日期；保留完成率為空。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "chiayi_county_2022_engineering_aesthetics_office",
+          "quote": "成立工程美學專案辦公室",
+          "summary": "設立以工程美學為任務的專案辦公室。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁；號次2翁章梁；右側政見欄「農工大縣、正在實現」第5項首句。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義縣縣長.pdf",
+              "title": "111年嘉義縣首長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": 1,
+              "strength": "選前原始文件，當選候選人親填政見；證明承諾內容，不證明後續履約。",
+              "role": "選前原始承諾"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本子承諾未明示完成日期；不把2026任期終點或泛稱再拚四年回填為明訂期限。",
+          "metricDefinition": "工程美學專案辦公室是否有可核驗的成立文件、職掌與運作紀錄；不是景觀工程數或美學獎項數。",
+          "target": {
+            "value": null,
+            "unit": "工程美學專案辦公室成立里程碑",
+            "scope": "設置該專案辦公室；原文未定編制、人數或成立日。"
+          },
+          "baseline": {
+            "value": null,
+            "data_date": null,
+            "note": "尚未核得2022同口徑基期，不假設選前為零。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "現況尚待核對",
+            "scope": null,
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "同項後續的研定都市美學法規與打造城鄉美學品牌是不同成果，不能以辦公室成立認定整項完成。",
+            "僅查無同名搜尋結果不能證明未成立；也不能以其他設計中心、美學計畫或工程得獎替代成立證據。",
+            "機構或任務編組里程碑不適合用預算執行比例代替完成率。"
+          ],
+          "nextEvidenceNeeded": "優先查縣府成立公文、組織職掌或施政管考表，確認是否以不同名稱成立同職能編組及其日期。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-16",
+      "name": "嘉義市",
+      "displayOrder": 16,
+      "electedHead": "黃敏惠",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "黃敏惠",
+      "currentHeadNote": "具日期官方報導已直接取得並確認在職稱謂。",
+      "currentHeadSource": "https://www.chiayi.gov.tw/News_Content.aspx?n=454&s=956417&sms=9149",
+      "electionSource": "https://web.cec.gov.tw/api/file/41fea04d-8eee-4f1d-a7b3-c92566cbf78f.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義市市長重行選舉.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "chiayi_city_2022_design_centre",
+          "quote": "擴大協助青年創業：成立設計中心",
+          "summary": "成立設計中心，作為擴大協助青年創業政策的一項行動。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁，1號候選人黃敏惠政見欄，第7項「擴大協助青年創業」冒號後第一個子項。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義市市長重行選舉.pdf",
+              "title": "111年嘉義市第11屆市長重行選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": "PDF第1頁，1號候選人黃敏惠政見欄，第7項「擴大協助青年創業」冒號後第一個子項。",
+              "strength": "候選人於2022年填報、選舉委員會編印之一手原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆原文未明訂完成年月日，不以預定任期終點倒填為原承諾期限。",
+          "metricDefinition": "設計中心成立／啟用的具名機構里程碑；不以揭牌代替青年創業、就業、設計產業或城市治理成效。",
+          "target": {
+            "value": 1,
+            "unit": "個設計中心成立里程碑",
+            "scope": "原文「成立設計中心」的單一具名行動；1僅是里程碑計數，不是原文另報的量化績效門檻。"
+          },
+          "baseline": {
+            "value": null,
+            "unit": null,
+            "date": null,
+            "note": "本輪尚未核對同口徑基期，不假定從零開始。"
+          },
+          "status": "設計中心成立／啟用子項已有官方直接證據；創業與就業成效未判定",
+          "current": {
+            "value": 1,
+            "unit": "已正式揭牌啟用的嘉義市區域設計中心",
+            "dateLabel": "2026-06-11",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": "只確認中心成立／啟用子項；不將活動或揭牌轉譯成全項政策成效。",
+            "sources": [
+              {
+                "url": "https://www.chiayi.gov.tw/News_Content.aspx?n=455&s=941418",
+                "title": "嘉義市區域設計中心舊菸葉廠一號倉庫正式揭牌啟用 嘉義市設計周串聯國際同步登場",
+                "type": "嘉義市政府文化局／觀光新聞處官方原稿",
+                "dateLabel": "2026-06-11",
+                "period": "2026-06-11揭牌啟用；同文活動期2026-06-11至2026-06-21",
+                "locator": "正文第1段（當日揭牌啟用）；第4段（中心定位及所在地）；後段活動資訊。",
+                "strength": "市府一手事件公告；非獨立成效審核"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "此筆只判讀第7項內成立設計中心，不把同項扶植團隊、數位轉型、創業基地及促進就業全部標完成。",
+            "原文未指定中心地點或正式名稱；選後「嘉義市區域設計中心」與2022設計中心承諾的對應須保留名稱差異。",
+            "官方成立及揭牌公告足以支持該窄里程碑，卻不能證明長期營運穩定、服務量、青年創業／就業成果；此輪沒有獨立績效審核。",
+            "基期未另外查核，不能宣稱本屆從零創造所有設計能量或把既有2021設計展成績歸入此筆。"
+          ],
+          "nextEvidenceNeeded": "如要追蹤後續效果，另補中心營運委託／預決算、服務與青年參與資料，不把揭牌換算整項青年創業政策完成率。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "chiayi_city_2022_sustainability_ordinance",
+          "quote": "以2050年淨零排放為目標，推動永續發展自治條例",
+          "summary": "推動永續發展自治條例",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/嘉義市市長重行選舉.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": null,
+          "target": {
+            "value": 1,
+            "unit": "永續發展自治條例",
+            "separate_longterm_target": "2050年淨零排放，不與立法完成混同"
+          },
+          "baseline": {
+            "value": 0,
+            "unit": "本條例已生效件數",
+            "date": "2022選前",
+            "note": "依2024公布/2025施行時序判斷，非排放量基線。"
+          },
+          "status": "立法及施行子項已完成；淨零成效未判定",
+          "current": {
+            "value": 1,
+            "unit": "已公布並施行條例",
+            "dateLabel": "2025-01-16",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Get/638890584215082837bd63914cd0fe46fc8b629999e96335b8",
+                "title": "113年度嘉義市總決算審核報告前言，第3頁",
+                "type": "審計一手報告",
+                "dateLabel": "2025"
+              },
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Download/638890580892446667dd80d7158a924376947301f7fc36d397?isPaging=False",
+                "title": "113年度嘉義市總決算審核報告，乙38",
+                "type": "審計一手報告",
+                "dateLabel": "2025"
+              },
+              {
+                "url": "https://www.audit.gov.tw/p/405-1000-11108%2Cc496.php?Lang=zh-tw",
+                "title": "審計機關追蹤校園零排放接送區",
+                "type": "審計一手報告",
+                "dateLabel": "2025-11-13"
+              },
+              {
+                "url": "https://ncsd.ndc.gov.tw/_ofu/VLR/ca84da29-1cdb-4245-a8b0-d0bca80836b2/VLR.pdf?9f35e1b7-473f-4ed2-83ae-282121da47a4=",
+                "title": "嘉義市2025永續發展自願檢視報告",
+                "type": "官方一手資料",
+                "dateLabel": "2025"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原競選名稱為永續發展自治條例；實際制定名稱為嘉義市淨零排放永續管理自治條例。對照淨零/永續立法行動，而非宣稱逐字同名。",
+            "審計資料確認條例公布及施行；2025追蹤顯示校園零排放接送區仍曾有執行缺口，不以法律存在代替減排成果。",
+            "未蒐集可比較2022與最新全市溫室氣體盤查數據，不評2050目標進度。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-17",
+      "name": "屏東縣",
+      "displayOrder": 17,
+      "electedHead": "周春米",
+      "electionParty": "民主進步黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "周春米",
+      "currentHeadNote": "2026-10-20讀取官方首頁明載「縣長周春米」；非具日期個別文章，當日報導頁抓取逾時，未視為成功。",
+      "currentHeadSource": "https://www.pthg.gov.tw/Default.aspx",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/屏東縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "pingtung_2022_green_energy_industry_plan",
+          "quote": "制定綠能產業發展計畫",
+          "summary": "制定屏東綠能產業發展計畫，以環境永續為政策目標。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁；號次3周春米；下方右側政見欄；「五大核心產業」第④項「綠能產業」末句。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/屏東縣縣長.pdf",
+              "title": "111年屏東縣首長選舉公報",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022",
+              "locator": 1,
+              "strength": "選前原始文件，當選候選人親填政見；證明承諾內容，不證明後續履約。",
+              "role": "選前原始承諾"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本子承諾未明示完成日期；不把2026任期終點或泛稱再拚四年回填為明訂期限。",
+          "metricDefinition": "綠能產業發展計畫是否正式制定，以及計畫主體、核定日期及範圍是否可與原承諾對應；不是再生能源裝置容量或發電量。",
+          "target": {
+            "value": null,
+            "unit": "綠能產業發展計畫制定里程碑",
+            "scope": "原文提日照、風與沼氣為發展條件，沒有設定容量、發電占比或減碳數值。"
+          },
+          "baseline": {
+            "value": null,
+            "data_date": null,
+            "note": "尚未核得2022同口徑基期，不假設選前為零。"
+          },
+          "status": "已收錄原始承諾；現況尚待核對",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "現況尚待核對",
+            "scope": null,
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "同頁其他候選人的量化減碳承諾不能混入周春米欄位。",
+            "光電案場增加、綠能招商、中央計畫或單一產業補助不能單獨證明縣府已制定所承諾的整體計畫。",
+            "即使正式計畫存在，也不代表全部措施執行或環境永續結果已達成；現況資料未取得不代表失敗。"
+          ],
+          "nextEvidenceNeeded": "查縣府城鄉發展與產業主管機關的正式計畫、核定函或施政管考表，確認是否以同名或等價計畫制定。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "pingtung_2022_longterm_care_coverage",
+          "quote": "提供全縣33鄉鎮市長照服務",
+          "summary": "全33鄉鎮市提供長照服務",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": null,
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/屏東縣縣長.pdf",
+              "title": "111年選舉公報，第1頁當選候選人政見欄",
+              "type": "中選會原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": null,
+          "metricDefinition": "服務涵蓋，不是每鄉鎮建置一座機構",
+          "target": {
+            "value": 33,
+            "unit": "鄉鎮市",
+            "scope": "服務涵蓋，不是每鄉鎮建置一座機構"
+          },
+          "baseline": {
+            "value": null,
+            "note": "2022同類長照服務涵蓋基期未取得，不認定本屆才首次涵蓋。"
+          },
+          "status": "居家護理專業服務涵蓋33鄉鎮有官方證據；整體長照供需目標仍待核對",
+          "current": {
+            "value": 33,
+            "unit": "居家護理長照專業服務涵蓋鄉鎮市",
+            "dateLabel": "2024-11-26",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": null,
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.cna.com.tw/postwrite/chi/388354",
+                "title": "屏東長照不間斷：居家護理把專業服務帶進家裡",
+                "type": "屏東縣政府供稿，中央社訊息平台",
+                "dateLabel": "2024-11-26"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "原承諾長照服務廣於居家護理，此筆只證明一類服務的地理涵蓋。",
+            "服務涵蓋不代表每鄉都有實體機構，也不代表所有需求已滿足、等候時間縮短或品質改善。",
+            "最新可讀相關數據為2024年，未冒稱2026即時狀況。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-18",
+      "name": "花蓮縣",
+      "displayOrder": 18,
+      "electedHead": "徐榛蔚",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "徐榛蔚",
+      "currentHeadNote": "在職",
+      "currentHeadSource": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=231731",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/花蓮縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "hualien_public_sports_center",
+          "quote": "建設全民運動館",
+          "summary": "建設全民運動館",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "第1頁，徐榛蔚候選人欄，第3項之獨立子承諾",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/花蓮縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原文無指定完成日期；選定全民運動館，不涵蓋同項兒少家庭中心等。",
+          "metricDefinition": "全民運動館建置",
+          "target": {
+            "metric": "全民運動館建置",
+            "value": null,
+            "unit": "館",
+            "deadline": null,
+            "note": "原文無指定完成日期；選定全民運動館，不涵蓋同項兒少家庭中心等。"
+          },
+          "baseline": {
+            "date": "2022-12-25",
+            "value": null,
+            "note": "未取得本任就任日工程進度；2024年官方資料才載開工，2022原始計畫與核定階段待補。"
+          },
+          "status": "官方已宣布完工啟用，有較動工更進一步證據；實際啟用日期及服務人次待核。",
+          "current": {
+            "value": 1,
+            "unit": "館",
+            "dateLabel": "2026-10-05",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "縣府施政報告新聞稿稱已完工啟用",
+            "scope": "官方施政自述；尚未另核工程驗收及營運統計",
+            "sources": [
+              {
+                "url": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=170254",
+                "title": "花蓮縣政府：2024年度施政成果",
+                "type": "官方一手資料",
+                "dateLabel": "2024-12-23"
+              },
+              {
+                "url": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=231731",
+                "title": "徐榛蔚115年最後一次施政報告",
+                "type": "官方一手資料",
+                "dateLabel": "2026-10-05"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2024-12-23新聞稿曾預計2026上半年完工；不是2022原承諾期限。",
+            "2026報導混述八年施政成果，本列僅使用該具名館舍本任期施工及完成資訊，不計全部八年成果。",
+            "完工、驗收、開放營業、實際使用效益分開。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "hualien_yuli_arts_renovation",
+          "quote": "完善玉里藝文中心整修",
+          "summary": "完善玉里藝文中心整修",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "第1頁，徐榛蔚候選人欄，第7項之獨立子承諾",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/花蓮縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原文沒有完成日期。",
+          "metricDefinition": "玉里藝文中心整修完成並啟用",
+          "target": {
+            "metric": "玉里藝文中心整修完成並啟用",
+            "value": 1,
+            "unit": "項",
+            "deadline": null,
+            "note": "原文沒有完成日期。"
+          },
+          "baseline": {
+            "date": "2023-04-24",
+            "value": "既有場館整修規劃完成，準備招標",
+            "note": "為舊場館改造而非新增一座全新藝文中心；6100萬元整修計畫。"
+          },
+          "status": "選定的玉里整修子承諾有完成及啟用證據。",
+          "current": {
+            "value": 1,
+            "unit": "項",
+            "dateLabel": "2024-10-21",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "完工並舉行啟用活動",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=123984",
+                "title": "玉里藝文中心改造計畫",
+                "type": "官方一手資料",
+                "dateLabel": "2023-04-24"
+              },
+              {
+                "url": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=166744",
+                "title": "玉里藝文中心整修完成啟用",
+                "type": "官方一手資料",
+                "dateLabel": "2024-10-21"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "不能連帶判定同項鳳林、豐濱藝文表演中心承諾完成。",
+            "2023年另提2024年內完工屬執行期時程，不倒寫成2022承諾期限。",
+            "未以開幕代表觀眾使用率或文化效益。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-19",
+      "name": "臺東縣",
+      "displayOrder": 19,
+      "electedHead": "饒慶鈴",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "饒慶鈴",
+      "currentHeadNote": "在職",
+      "currentHeadSource": "https://tth.taitung.gov.tw/news/detail/5JCH38XVLG",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/臺東縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "taitung_child_family_center",
+          "quote": "新建兒少家庭福利館",
+          "summary": "新建兒少家庭福利館",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "第1頁，饒慶鈴候選人欄，社福類第6項之獨立子承諾",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/臺東縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原文未載床位、收托人數或完成期限。",
+          "metricDefinition": "臺東市兒少家庭福利館建置並啟用",
+          "target": {
+            "metric": "臺東市兒少家庭福利館建置並啟用",
+            "value": 1,
+            "unit": "館",
+            "deadline": null,
+            "note": "原文未載床位、收托人數或完成期限。"
+          },
+          "baseline": {
+            "date": "2022-07-22",
+            "value": "已動工",
+            "note": "本任開始及選舉前已開工，屬前一任期啟動、中央補助5000萬元的延續工程。"
+          },
+          "status": "本任完成啟用；建設起點早於本任，不能算全程從零新增。",
+          "current": {
+            "value": 1,
+            "unit": "館",
+            "dateLabel": "2025-07-19",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "啟用；官網列出服務及開放時間",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.ly.gov.tw/EngPages/Detail.aspx?nodeid=38917&pid=220005",
+                "title": "立法院發布臺東兒少館動工消息",
+                "type": "官方網站刊載立委新聞稿",
+                "dateLabel": "2022-07-22"
+              },
+              {
+                "url": "https://ttbaby.taitung.gov.tw/articles/433/",
+                "title": "臺東育見幸福：兒少家庭福利館啟用",
+                "type": "官方一手資料",
+                "dateLabel": "2025-07-21"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "只評兒少家庭福利館，不連帶評同句青少年福利中心、社福樂齡大樓。",
+            "32名是服務容量，未取得實際收托、候補或家庭負擔改善統計。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "taitung_water_coverage",
+          "quote": "持續提升全縣自來水普及率",
+          "summary": "持續提升全縣自來水普及率",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "第1頁，饒慶鈴候選人欄，第二類第6項",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/臺東縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "未設數值或期限，不能自行設定100%。",
+          "metricDefinition": "全縣自來水供水普及率",
+          "target": {
+            "metric": "全縣自來水供水普及率",
+            "direction": "提高",
+            "value": null,
+            "unit": "%",
+            "deadline": null,
+            "note": "未設數值或期限，不能自行設定100%。"
+          },
+          "baseline": {
+            "date": "2022-12-31",
+            "value": 85.51,
+            "unit": "%",
+            "administrative_population": 212551,
+            "actually_supplied_population": 181758,
+            "definition": "實際供水人口／行政區域人口×100",
+            "note": "任期開始後6日的年底數作鄰近基線，不是任職當日數。"
+          },
+          "status": "同表2022–2024淨下降0.46個百分點，未呈現持續提升；尚不能據此判定任滿失敗。",
+          "current": {
+            "value": 85.05,
+            "unit": "%",
+            "dateLabel": "2024-12-31",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "最新已核讀年份為2024，並非2026即時現況",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www-ws.wra.gov.tw/Download.ashx?n=5q235bm05ZCE57ij5biC5L6b5rC05pmu5Y%2BK546HODctMTEzLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAxL3JlbGZpbGUvOTAyOS8xNDIzL2Q0MWMzMzA1LTBjNzUtNGRkNC1hMTE4LTIzNDYxYWY5NzkwZC5wZGY%3D",
+                "title": "水利署：歷年各縣市自來水供水普及率87–113年",
+                "type": "中央官方統計表",
+                "dateLabel": "2024-12-31"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "尚未核得2025或2026同口徑表，資料有時間落差。",
+            "分母人口變動、實際供水人口修訂及統計調整原因未拆解；不把變動全數歸因縣長。",
+            "下載連結目前本地直連回404、網頁工具仍可讀官方PDF索引全文；數值已逐列讀取但未完成原檔保存及圖像複核。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-20",
+      "name": "澎湖縣",
+      "displayOrder": 20,
+      "electedHead": "陳光復",
+      "electionParty": "民主進步黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "林皆興",
+      "currentHeadNote": "代理",
+      "currentHeadSource": "https://www.phc.moj.gov.tw/292419/292497/820131/1437132/post",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/澎湖縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "penghu_2022_waian_ice_factory",
+          "quote": "加速建造外垵製冰廠",
+          "summary": "加速建造西嶼外垵製冰廠；將其與其他地點製冰廠、外垵碎冰機／儲冰庫分開查核。",
+          "targetType": "具名政策、設施或活動里程碑",
+          "originalLocator": "PDF第1頁，第1號陳光復候選人欄，政見【產發】第(5)項首句。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/澎湖縣縣長.pdf",
+              "title": "111年澎湖縣縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前候選人政見",
+              "strength": "一手原始承諾：CEC所載候選人本人填報；強於新聞轉述，但不是執行證明。",
+              "role": "2022選前候選人本人填報政見原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆所引2022原文未明訂完成日期；不把任期終點自動當作承諾期限。",
+          "metricDefinition": "外垵製冰廠的建設與營運階段；製冰、碎冰及儲冰功能須分別辨認。",
+          "target": {
+            "value": null,
+            "unit": "項具名設施",
+            "metric": "外垵製冰廠的建設與營運階段；製冰、碎冰及儲冰功能須分別辨認。",
+            "deadline": null,
+            "note": "原文未列產能、容量、期限或工程基線；且後續有替代方案，不能以儲冰容量或替代工程進度換算原製冰廠完成率。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "note": "尚未核對2022同口徑基線；不得把未取得當作0。"
+          },
+          "status": "2024外垵碎冰／儲冰替代方案已確認；已查至2026年9月官方施政報告，原製冰廠及替代設施的2026核定／施工／啟用現況仍未證實。",
+          "current": {
+            "value": null,
+            "unit": "項具名設施",
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "最新明確的一手外垵用冰方案為2024-11-07提出籌設簡易碎冰機及儲冰庫；已查閱至2026-09-09施政報告，仍未核得替代方案的核定、採購、施工或啟用階段。",
+            "scope": "只查核2022外垵製冰廠承諾及其碎冰／儲冰替代服務。2026報告未提及本案不是停止或失敗證據；七美製冰廠不得計入。",
+            "sources": [
+              {
+                "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33%2F202411071156490.pdf&filedisplay=11311-2004%E6%96%BD%E6%94%BF%E5%A0%B1%E5%91%8A.pdf&flag=doc",
+                "title": "第20屆第4次定期會施政報告",
+                "type": "澎湖縣政府向議會提出之施政報告",
+                "dateLabel": "2024-11-07",
+                "period": "2024年11月第20屆第4次定期會報告時的方案",
+                "locator": "印刷第25頁（PDF第25頁），「2.籌設西嶼鄉漁業用冰儲冰庫」",
+                "strength": "官方原始報告，可確認報告時的方案調整；未附工程驗收／營運證明。",
+                "role": "中期替代方案一手記錄，不是2026現況證據"
+              },
+              {
+                "url": "https://www.penghu.gov.tw/uploaddowndoc?file=bulletin33/202609091130091.pdf&filedisplay=%E7%AC%AC20%E5%B1%86%E7%AC%AC8%E6%AC%A1%E5%AE%9A%E6%9C%9F%E6%9C%83%E6%96%BD%E6%94%BF%E5%A0%B1%E5%91%8A%28final%29.pdf&flag=doc",
+                "title": "第20屆第8次定期會施政報告（發布頁所附 final PDF）",
+                "type": "澎湖縣政府向議會提出之施政報告",
+                "dateLabel": "2026-09-09",
+                "period": "2026年9月第20屆第8次定期會報告；多項內容回顧112至115年，個別事項資料截止日不一。",
+                "locator": "final版印刷第82頁（PDF第84頁）首段，承接前頁「完善冷鏈建設，培育漁業專業人才」；另一版相應段落為印刷／PDF第81頁。",
+                "strength": "一手施政報告；僅用來界定截至本次查閱未找到新的外垵具名執行證據，不把報告未提及當停止、未執行或失敗。",
+                "role": "最新報告查閱範圍及同名設施排除依據；不是外垵施工／啟用證據"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "「加速」未給原進度或時程，不能直接量測加速幅度。",
+            "原承諾為外垵製冰廠，不是七美製冰廠，也不能以馬公製冰廠完工替代。",
+            "已核對的2024文件提出碎冰機及儲冰庫替代；這是中期方案變更證據，不證明2026仍同狀態，更不證明原製冰廠已建成。",
+            "2026-09-09報告的冷鏈建設段落明指七美鄉製冰廠，不可挪作外垵承諾執行證據。",
+            "最新報告未提及不等於停止或無進展；2024地方溝通共識也不等於替代方案正式核定或已啟用。"
+          ],
+          "nextEvidenceNeeded": "只在取得具名外垵方案的核定函／對應預算、招決標或驗收營運文件時再更新階段；目前保留2024規劃紀錄及具體缺口，不以缺資料判失敗或計分。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "penghu_senior_denture_subsidy",
+          "quote": "補助65歲以上長者假牙，全口四萬，半口兩萬",
+          "summary": "補助65歲以上長者假牙，全口四萬，半口兩萬",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "第1頁，陳光復候選人欄，醫療照顧第3項",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/澎湖縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "原文未明列設籍年限、殘存牙數、核銷條件或生效期限。",
+          "metricDefinition": "65歲以上假牙補助上限",
+          "target": {
+            "metric": "65歲以上假牙補助上限",
+            "value": {
+              "全口": 40000,
+              "半口": 20000
+            },
+            "unit": "新臺幣元",
+            "deadline": null,
+            "note": "原文未明列設籍年限、殘存牙數、核銷條件或生效期限。"
+          },
+          "baseline": {
+            "date": "2022-12-25",
+            "value": "原先有中低收入老人假牙補助；一般65歲以上擴大方案尚未上路",
+            "note": "以2023-03-23官方說明回溯，不能寫成此前完全無補助。"
+          },
+          "status": "現行補助額度高於原承諾（各高25%）；已確認制度，不據此判定所有長者均受益。",
+          "current": {
+            "value": {
+              "全口": 50000,
+              "半口": 25000
+            },
+            "unit": "新臺幣元",
+            "dateLabel": "2026-06-09",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "補助制度已施行",
+            "scope": null,
+            "sources": [
+              {
+                "url": "https://www.penghu.gov.tw/ch/home.jsp?act=view&dataserno=11203230002&id=10088",
+                "title": "縣府：老人免費假牙擴大補助4月1日上路",
+                "type": "官方一手資料",
+                "dateLabel": "2023-03-23"
+              },
+              {
+                "url": "https://www.penghu.gov.tw/phchb/home.jsp?id=432",
+                "title": "衛生局：老人假牙補助",
+                "type": "官方一手資料",
+                "dateLabel": "2026-06-09"
+              },
+              {
+                "url": "https://www.phchb.gov.tw/home.jsp?act=view&dataserno=11403130013&id=23",
+                "title": "衛生局：長者假牙補助說明",
+                "type": "官方一手資料",
+                "dateLabel": "2025-03-13"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "2023-04-01上路，原採更嚴格殘牙門檻；2023-09-01放寬至每顎殘存牙0至6顆。",
+            "補助上限不等於每人實領額，尚缺2026合資格人數、核付受益人數及未滿足需求。",
+            "官方現行補助網頁已另以直接HTTP讀取並保存，核對2026-06-09更新日期及完整適用條件。"
+          ],
+          "nextEvidenceNeeded": "依限制欄補核同口徑資料與原始證據；缺資料不判未完成。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-21",
+      "name": "金門縣",
+      "displayOrder": 21,
+      "electedHead": "陳福海",
+      "electionParty": "無推薦政黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "陳福海",
+      "currentHeadNote": "在職",
+      "currentHeadSource": "https://www.kinmen.gov.tw/cp.aspx?n=ADFC186F490AC26E",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/金門縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "kinmen_2022_preserve_pension_welfare",
+          "quote": "年金福利不縮水，男女老幼一樣好",
+          "summary": "維持年金與福利不縮減，並表達男女老幼均受照顧的方向；原文未列具體方案、給付基準或資格。",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "PDF第1頁（紙本第1頁），第5號陳福海候選人欄，「二、三大保證」第2項。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/金門縣縣長.pdf",
+              "title": "111年金門縣縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前候選人政見",
+              "strength": "一手原始承諾：CEC所載候選人本人填報；強於新聞轉述，但不是執行證明。",
+              "role": "2022選前候選人本人填報政見原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆所引2022原文未明訂完成日期；不把任期終點自動當作承諾期限。",
+          "metricDefinition": "需先列明承諾涵蓋的各項年金福利，逐項比較2022與2026給付金額、資格和涵蓋範圍；不是單一福利支出總額。",
+          "target": {
+            "value": null,
+            "unit": null,
+            "metric": "需先列明承諾涵蓋的各項年金福利，逐項比較2022與2026給付金額、資格和涵蓋範圍；不是單一福利支出總額。",
+            "deadline": null,
+            "note": "「不縮水」是維持方向，但原文未界定福利項目、給付基準或名目／實質口徑；不能直接設定數值或以福利預算成長算完成率。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "note": "尚未核對2022同口徑基線；不得把未取得當作0。"
+          },
+          "status": "原承諾已收錄、現況待核",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "現況待核",
+            "scope": "尚未核得與2022原承諾同口徑之2026-10當期資料。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "未把「男女老幼一樣好」詮釋成人人領取相同金額或全部福利均無資格限制。",
+            "需分開中央年金及縣府福利，不能把全國法定年金調整全歸縣長。",
+            "總支出可受人口與資格人數影響，不能取代每人給付標準及服務權益比較。"
+          ],
+          "nextEvidenceNeeded": "下一輪先尋選前配套說明以界定「年金福利」範圍，再配對2022與2026地方福利辦法，避免先挑有利項目代替整體承諾。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "kinmen_county_treasury_10bn",
+          "quote": "拯救縣府財政，四年縣庫達100億",
+          "summary": "拯救縣府財政，四年縣庫達100億",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "第1頁，陳福海候選人欄，三大保證第3項",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/金門縣縣長.pdf",
+              "title": "111年縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022"
+            }
+          ],
+          "deadline": "四年",
+          "deadlineNote": "按2022-12-25開始任期推算至2026-12-24；原文未寫日曆日期。",
+          "metricDefinition": "縣庫金額",
+          "target": {
+            "metric": "縣庫金額",
+            "value": 10000000000,
+            "unit": "新臺幣元",
+            "deadline": "四年",
+            "deadline_interpretation": "按2022-12-25開始任期推算至2026-12-24；原文未寫日曆日期。",
+            "note": "原承諾沒有界定縣庫現金、可用資金、含不含特種基金等會計口徑。"
+          },
+          "baseline": {
+            "date": "2022-12-31",
+            "value": 7265580020,
+            "unit": "新臺幣元",
+            "metric": "公庫年度出納終結之縣庫結存數",
+            "source_id": "kinmen_audit_112",
+            "note": "就任後6日之年底鄰近基線，非2022-12-25當日；是審計報告明確口徑，不代表候選人當時已採同一定義。"
+          },
+          "status": "2025年底審計核得公庫結存77.12億元；2026年9月縣營媒體標題另稱重回百億，但缺當期同口徑表，仍待核驗，不能直接判已完成或判宣稱不實。",
+          "current": {
+            "value": null,
+            "unit": "新臺幣元",
+            "dateLabel": "2026-09-25",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "百億標題未獲同日同口徑會計資料核驗",
+            "scope": "標題宣稱，正文沒有當日庫款表或清楚的百億實績數",
+            "sources": [
+              {
+                "url": "https://www.kmdn.gov.tw/1117/1271/1272/590453/",
+                "title": "金門日報：陳福海稱縣庫財政重回百億",
+                "type": "縣營媒體標題宣稱",
+                "dateLabel": "2026-09-25"
+              },
+              {
+                "url": "https://www.kmcc.gov.tw/8844/8847/8850/59090/",
+                "title": "金門縣議會2022至2025縣庫資料提案線索",
+                "type": "官方一手資料",
+                "dateLabel": "2025"
+              },
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Download/6385700727819956476c2bcf0355474324be9806365b9b4018?isPaging=False",
+                "title": "112年度金門縣總決算審核報告",
+                "type": "獨立審計機關審核報告",
+                "dateLabel": "2024",
+                "locator": "戊－1、戊－5至6；PDF檔案第189、193–194頁"
+              },
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Download/6392030851657583865ea0bebcdd574df3b6f043271e844246?isPaging=True",
+                "title": "114年度金門縣總決算審核報告",
+                "type": "獨立審計機關審核報告",
+                "dateLabel": "2026",
+                "locator": "戊－1、戊－5至6、戊－8及戊－10；PDF檔案第212、216–217、219、221頁"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "該報導內的116年度收入188億元、支出167億元及21億元歲計賸餘是預算數，不能拿來替代縣庫現金。",
+            "中央財劃法挹注、基金調撥與本任自有收入效果須分開；不能把庫款增加全歸單一首長。",
+            "2022年底鄰近基線約72.66億，至2025年底約77.12億，增加約4.47億；不是從回溯談話40億直接起算。",
+            "2025審計時點早於2026百億標題約9個月，時間不同不構成直接矛盾。",
+            "平衡表現金88.34億、流動資產104.94億，均非公庫結存77.12億；原承諾未指定會計科目，禁止挑高值套用。"
+          ],
+          "nextEvidenceNeeded": "若繼續查核，優先取得2026年9月或最近月縣公庫收支表及百億宣稱的科目對照；官方已指引112年後移至縣統計資訊服務網。本輪保留精確入口與未取到的缺口，不將預算或單位月報替代。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "city-22",
+      "name": "連江縣",
+      "displayOrder": 22,
+      "electedHead": "王忠銘",
+      "electionParty": "中國國民黨",
+      "partyLabel": "2022 選舉推薦政黨，非現任黨籍",
+      "currentHead": "王忠銘",
+      "currentHeadNote": "在職",
+      "currentHeadSource": "https://www.matsu-news.gov.tw/news/article/242944",
+      "electionSource": "https://web.cec.gov.tw/api/file/b2c01618-b11d-429b-9fa9-51b65a107c03.pdf",
+      "bulletinSource": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/連江縣縣長.pdf",
+      "termStart": "2022-12-25",
+      "scheduledTermEnd": "2026-12-24",
+      "rank": null,
+      "score": null,
+      "rankingEligible": false,
+      "rankingReason": "僅選取 2–3 項承諾，尚無完整納入母體及可比較分母。",
+      "selectedPledgeCount": 2,
+      "pledges": [
+        {
+          "id": "lienchiang_2022_convenient_transport_network",
+          "quote": "建構健全與便利之交通網絡",
+          "summary": "改善馬祖交通網絡的健全性與便利性；公報本項未指定航線、船班、班次、運能、票價或完工日期。",
+          "targetType": "方向性改善，未明訂量值門檻",
+          "originalLocator": "PDF第1頁（紙本第1頁），第3號王忠銘候選人欄，政見第二項。",
+          "originalSources": [
+            {
+              "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/111年/01紙本公報/連江縣縣長.pdf",
+              "title": "111年連江縣縣長選舉公報",
+              "type": "CEC原始選舉公報",
+              "dateLabel": "2022",
+              "period": "2022年選前候選人政見",
+              "strength": "一手原始承諾：CEC所載候選人本人填報；強於新聞轉述，但不是執行證明。",
+              "role": "2022選前候選人本人填報政見原件"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "本筆所引2022原文未明訂完成日期；不把任期終點自動當作承諾期限。",
+          "metricDefinition": "須先取得同一2022承諾的具體化說明，才能選定可比較的航班、船班、可靠度、運能或可及性指標。",
+          "target": {
+            "value": null,
+            "unit": null,
+            "metric": "須先取得同一2022承諾的具體化說明，才能選定可比較的航班、船班、可靠度、運能或可及性指標。",
+            "deadline": null,
+            "note": "原文只有「健全與便利」，沒有數字、全區覆蓋分母或具名工程，無法正當定義單一完成率。"
+          },
+          "baseline": {
+            "value": null,
+            "date": null,
+            "note": "尚未核對2022同口徑基線；不得把未取得當作0。"
+          },
+          "status": "原承諾已收錄、現況待核",
+          "current": {
+            "value": null,
+            "unit": null,
+            "dateLabel": null,
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "現況待核",
+            "scope": "尚未核得與2022原承諾同口徑之2026-10當期資料。",
+            "sources": []
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "不把同頁第2號曹爾元列出的雙向夜航、兩家航空、票價六折等內容移植給第3號王忠銘。",
+            "不以單艘新船、單一航線或單一交通補助即代表整個交通網絡承諾完成。",
+            "與既有公托零排隊記錄分屬不同政策，沒有改寫或替換既有原始來源。"
+          ],
+          "nextEvidenceNeeded": "下一輪查核王忠銘2022本人政見會或競選原頁的交通細目，再查官方同口徑交通資料；沒有細目就保留方向性分類。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        },
+        {
+          "id": "lienchiang_zero_childcare_queue",
+          "quote": "公托零排隊",
+          "summary": "公托零排隊",
+          "targetType": "數字、倍數、全區覆蓋或零候補目標",
+          "originalLocator": "王忠銘YouTube原影片展開說明第六段，幼兒教育；頁面顯示2022-11-21，標題為2022-11-22第二階段政見發表。",
+          "originalSources": [
+            {
+              "url": "https://www.youtube.com/watch?v=T7RU6x7nWxQ",
+              "title": "王忠銘第二階段政見發表｜連江縣第八屆縣長選舉",
+              "type": "候選人本人命名頻道發布的選前影片及說明文字",
+              "dateLabel": "2022-11-21",
+              "locator": "影片展開說明文字，第六段幼兒教育；頻道王忠銘 @Chung-Ming-Wang"
+            },
+            {
+              "url": "https://www.matsu-news.gov.tw/news/article/206309",
+              "title": "我將無我 無負鄉親／連江縣長王忠銘就職文",
+              "type": "官方刊載本人原文",
+              "dateLabel": "2022-12-26"
+            }
+          ],
+          "deadline": null,
+          "deadlineNote": "該公托段沒有單獨列出明確日期；全篇末段對20項政見概括提出給予四年完成。沒有每島、年齡、設籍與申請資格的完整分母定義。",
+          "metricDefinition": "公共托育中心及社區公共托育家園的合資格候補人數，包含公設民營服務；不誤寫為僅公立托嬰機構。",
+          "target": {
+            "metric": "公共托育候補人數",
+            "value": 0,
+            "unit": "人",
+            "deadline": null,
+            "note": "公托涵蓋公設民營中心與社區公共托育家園。原公托段未明列每島、年齡、設籍與申請資格分母，也沒有單獨明確完成日期。"
+          },
+          "baseline": {
+            "date": "2022-11",
+            "value": null,
+            "candidate_claim": {
+              "南竿": "30幾位",
+              "東引": 8
+            },
+            "unit": "候補人",
+            "source_id": "lienchiang_campaign_original",
+            "note": "數字已在候選人原頻道說明核到，但屬候選人當時自述，不是行政名冊；不相加成精確全縣基線。"
+          },
+          "status": "已核到選前候選人頻道原頁承諾文字；2024-10-30有營運方當日清空南竿候補的具體證據。2026官方仍稱達成，但全縣逐島持續零候補尚待統計核驗。",
+          "current": {
+            "value": null,
+            "unit": "候補人（官方自述，非名冊核算）",
+            "dateLabel": "2026-09-17",
+            "dateMeaning": "依原資料標示；可能為資料截點、事件日期或查閱日，詳見來源。",
+            "stage": "聲稱達成，待逐島候補名冊與收托／容量統計確認",
+            "scope": "官方施政自評",
+            "sources": [
+              {
+                "url": "https://www.matsu-news.gov.tw/news/article/244469",
+                "title": "縣府施政自評包含公托零排隊",
+                "type": "縣營媒體刊載施政自評",
+                "dateLabel": "2026-09-17"
+              },
+              {
+                "url": "https://www.matsu.idv.tw/topicdetail.php?f=211&p=1&t=271351",
+                "title": "王忠銘政見會演說轉錄",
+                "type": "同期非官方論壇轉錄，用於交叉核對選前內容",
+                "dateLabel": "2022-11-22"
+              },
+              {
+                "url": "https://www.nankan.gov.tw/Chhtml/Detail/2221?mcid=113765",
+                "title": "南竿鄉公所公托報導",
+                "type": "官方轉載／自評",
+                "dateLabel": "2026-10"
+              },
+              {
+                "url": "https://www.rocdown-syndrome.org.tw/news_detail/736",
+                "title": "唐氏症基金會：連江縣公托零排隊正式達標",
+                "type": "服務營運承辦單位第一手報告，非獨立審計",
+                "dateLabel": "2024-10-30",
+                "locator": "日期30OCT.2024；第1、4、5段"
+              },
+              {
+                "url": "https://www.matsu-news.gov.tw/news/article/226766",
+                "title": "馬祖日報：公托零排隊當日達標報導",
+                "type": "縣營媒體現場報導",
+                "dateLabel": "2024-10-30",
+                "locator": "首段及末段"
+              },
+              {
+                "url": "https://auditreport.audit.gov.tw/ServerFile/Download/6392342250552509911925a00290574a929d81e8463667c2aa?isPaging=True",
+                "title": "114年度連江縣總決算審核報告",
+                "type": "獨立審計機關審核報告",
+                "dateLabel": "2026",
+                "locator": "乙－33至34；PDF檔案第76–77頁，民政社會處重要審核意見"
+              },
+              {
+                "url": "https://www.matsu-news.gov.tw/news/article/245103",
+                "title": "南竿公托迎雙十報導",
+                "type": "縣營媒體現況宣稱",
+                "dateLabel": "2026-10-09",
+                "locator": "末段"
+              },
+              {
+                "url": "https://www.matsu-news.gov.tw/news/article/243309",
+                "title": "南竿公托第10屆畢業典禮報導",
+                "type": "縣營媒體轉述營運方",
+                "dateLabel": "2026-08-07",
+                "locator": "唐氏症基金會執行長談話段落"
+              }
+            ]
+          },
+          "limitedMetric": null,
+          "limitations": [
+            "CEC公報沒有公托零排隊具體字樣，原始承諾改採候選人YouTube說明文字，不偽稱出自公報。",
+            "本人命名頻道原頁上傳日期在投票前，但現行說明可後改；同時期論壇轉錄相符。已核影片頁面文字，未逐句聽核音軌，且無可匯出的字幕。",
+            "南竿2024年9月開館即有報導稱達成，但2024-10-06仍稱預定10月30日才收最後候補；以10月30日實際營運報告為里程碑，不以開館即等同無人排隊。",
+            "2024-10-06預估第41位入托，10月30日實際為第40位；保留差異，不自行推定少1人的原因。",
+            "場地容量70人不等於實收40人；規劃4班不等於當日營運3班。",
+            "島島有公托於前任時已逐步建置，本任主要增量包括南竿擴充；不將全縣5處全算本任新建。",
+            "2025審計品質缺失與2026候補數分開，且改善回覆已列入；不能選擇性只報缺失。"
+          ],
+          "nextEvidenceNeeded": "若繼續查核，取南竿、北竿、東引、東莒、西莒同一日期之核定容量、實收、合資格候補及師資人數；候補只需彙總，不需兒童姓名。",
+          "observedOn": "2026-10-20",
+          "rankingEligible": false,
+          "score": null
+        }
+      ]
+    }
+  ]
+}

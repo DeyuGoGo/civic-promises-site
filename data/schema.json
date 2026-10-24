@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "政見有據簡式資料格式 v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "updatedAt",
+    "promises"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "description": {
+      "type": "string"
+    },
+    "promises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "county",
+          "title",
+          "originalQuote",
+          "target",
+          "deadline",
+          "actualProgress",
+          "uncertainty",
+          "official",
+          "term",
+          "stage",
+          "asOf",
+          "evidenceStatus",
+          "sources",
+          "metric"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "county": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "originalQuote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "deadline": {
+            "type": "string",
+            "minLength": 1
+          },
+          "actualProgress": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uncertainty": {
+            "type": "string",
+            "minLength": 1
+          },
+          "official": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "term": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stage": {
+            "enum": [
+              "unknown",
+              "planning",
+              "construction",
+              "completed",
+              "operating",
+              "ongoing",
+              "paused"
+            ]
+          },
+          "asOf": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "evidenceStatus": {
+            "enum": [
+              "unverified",
+              "partial",
+              "verified",
+              "disputed"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "title",
+                "url",
+                "type",
+                "publishedAt"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "url": {
+                  "type": "string",
+                  "pattern": "^https?://"
+                },
+                "type": {
+                  "enum": [
+                    "promise",
+                    "progress",
+                    "context"
+                  ]
+                },
+                "publishedAt": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date"
+                }
+              }
+            }
+          },
+          "metric": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "label",
+                  "current",
+                  "target",
+                  "unit",
+                  "basis"
+                ],
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "current": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "target": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "unit": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "basis": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
