@@ -19,12 +19,36 @@ let data={schemaVersion:1,updatedAt:null,promises:[]};let baseData=null;let sour
 let selectedCounty=null,detailCounty=null,countyTrigger=null,countyTriggerIsMap=false;
 let detailTrigger=null,detailSheetScroll=0;
 let selectedTopic='';
+let lastStaticData=null,dataLoading=false;
 let activePolicyId=null,detailReturnHash='#home',countyReturnHash='#home',loadComplete=false;
 let skipDetailClose=0,skipCountyClose=0;
-function pushDialogRoute(hash,parent){globalThis.history?.pushState?.({civicDialog:true,civicParent:parent},'',hash);}
+let currentPage='home';
+function focusSelector(trigger){
+ for(const [key,attribute] of [['detail','data-detail'],['city','data-city'],['mapCity','data-map-city'],['county','data-county']]){
+  if(trigger?.dataset?.[key])return `[${attribute}="${String(trigger.dataset[key]).replace(/[\\"]/g,'\\$&')}"]`;
+ }
+ return null;
+}
+function pushDialogRoute(hash,parent,trigger){
+ if(!globalThis.history?.pushState)return;
+ const view={left:globalThis.scrollX||0,top:globalThis.scrollY||0,focus:focusSelector(trigger),sheetTop:$('city-sheet').open?$('city-sheet').scrollTop||0:0};
+ globalThis.history.replaceState?.({...globalThis.history.state,civicView:view},'',parent);
+ globalThis.history.pushState({civicDialog:true,civicParent:parent,civicPage:currentPage},'',hash);
+}
 function returnDialogRoute(fallback){
- if(globalThis.history?.state?.civicDialog&&globalThis.history.state.civicParent===fallback){globalThis.history.back();return;}
- if(globalThis.history?.replaceState){globalThis.history.replaceState(null,'',fallback);route();}
+ if(globalThis.history?.state?.civicDialog&&globalThis.history.state.civicParent===fallback){globalThis.history.back();return true;}
+ if(globalThis.history?.replaceState){globalThis.history.replaceState(null,'',fallback);route();return true;}
+ return false;
+}
+function restoreRouteView(view,page){
+ if(view&&typeof view==='object'){
+  if($('city-sheet').open)$('city-sheet').scrollTop=Number.isFinite(view.sheetTop)?view.sheetTop:0;
+  const target=typeof view.focus==='string'?($('city-sheet').open?$('city-content'):$(page)).querySelector?.(view.focus):null;
+  (target||$(page)).focus?.({preventScroll:true});
+  globalThis.scrollTo?.({left:Number.isFinite(view.left)?view.left:0,top:Number.isFinite(view.top)?view.top:0,behavior:'instant'});
+ }else if(!$('detail').open&&!$('city-sheet').open){
+  $(page).focus({preventScroll:true});globalThis.scrollTo?.({top:0,behavior:'instant'});
+ }
 }
 function policyDatesMarkup(p,progress){const dates=policyDateSummary(p,progress);return `<div class="policy-dates"><span>${escape(dates.checkedLabel)}</span><span>${escape(dates.evidenceLabel)}</span></div>`;}
 const shortParty=label=>({'中國國民黨':'國民黨','民主進步黨':'民進黨','台灣民眾黨':'民眾黨','無推薦政黨':'無推薦政黨'}[label]||label);
@@ -47,7 +71,7 @@ function renderMethod(summaries){
 function openCounty(name,trigger,{fromRoute=false}={}){
  if(!COUNTIES.includes(name))return;
  countyReturnHash=fromRoute?(globalThis.history?.state?.civicParent||'#home'):(globalThis.location?.hash||'#home');
- if(!fromRoute)pushDialogRoute(makeCountyHash(name),countyReturnHash);
+ if(!fromRoute)pushDialogRoute(makeCountyHash(name),countyReturnHash,trigger);
  selectedCounty=name;if(trigger){countyTrigger=trigger;countyTriggerIsMap=!!trigger.dataset?.mapCity;}
  const city=data.cities?.find(c=>c.name===name),pledges=data.promises.filter(p=>p.county===name);
  const categories=OVERVIEW_TOPICS.map(topic=>({...topic,policies:pledges.filter(p=>topicFor(p)===topic.id)})).filter(topic=>topic.policies.length);
@@ -85,14 +109,21 @@ function closeDataDialogs(){
  if($('city-sheet').open){skipCountyClose++;$('city-sheet').close();}
 }
 function route(){
- const current=readRoute(globalThis.location?.hash),page=current.page;
+ const current=readRoute(globalThis.location?.hash),isDialog=!!(current.policyId||current.county);
+ const page=isDialog&&globalThis.history?.state?.civicDialog?readRoute(globalThis.history.state.civicPage).page:current.page;
+ const hadCounty=selectedCounty!==null;
  closeDataDialogs();
+ if(hadCounty&&loadComplete)renderDirectory();
+ currentPage=page;
  $('home-status').textContent='';
  for(const id of ['home','ranking','promises','attainment','bulletins','method','data-tools'])$(id).hidden=id!==page;
  $('search-tools').hidden=!['ranking','promises','attainment'].includes(page);
  document.title=({home:'2026 縣市首長 政策執行率',ranking:'排行榜',attainment:'進度紀錄',promises:'主要議題',bulletins:'選舉公報全文',method:'評分方法','data-tools':'資料下載'}[page])+(page==='home'?'':'｜2026 縣市首長 政策執行率');
- $(page).setAttribute('tabindex','-1');$(page).focus({preventScroll:true});
- globalThis.scrollTo?.({top:0,behavior:'instant'});
+ for(const link of document.querySelectorAll('header nav a')){
+  if(link.getAttribute('href')==='#'+page)link.setAttribute('aria-current','page');
+  else link.removeAttribute('aria-current');
+ }
+ $(page).setAttribute('tabindex','-1');
  if(!loadComplete)return;
  if(current.policyId){
   const policy=data.promises.find(p=>p.id===current.policyId);
@@ -105,9 +136,12 @@ function route(){
   if(COUNTIES.includes(current.county))openCounty(current.county,null,{fromRoute:true});
   else status('找不到這個縣市，請從縣市列表查找。','error');
  }
+ restoreRouteView(isDialog&&current.policyId?null:globalThis.history?.state?.civicView,page);
 }
 
 globalThis.addEventListener?.('hashchange',route);
+const skipLink=document.querySelector?.('.skip');
+if(skipLink)skipLink.onclick=e=>{e.preventDefault();$(currentPage).focus({preventScroll:true});$(currentPage).scrollIntoView({block:'start',behavior:'instant'});};
 $('taiwan-map').onclick=e=>{const btn=e.target.closest('[data-map-city]');if(btn)openCounty(btn.dataset.mapCity,btn);};
 $('taiwan-map').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const btn=e.target.closest('[data-map-city]');if(btn){e.preventDefault();openCounty(btn.dataset.mapCity,btn);}}};
 $('county-directory').onclick=e=>{const btn=e.target.closest('[data-city]');if(btn)openCounty(btn.dataset.city,btn);};
@@ -116,17 +150,18 @@ $('city-sheet').addEventListener('close',()=>{
  if(skipCountyClose){skipCountyClose--;return;}
  if($('detail').open)return;
  const current=readRoute(globalThis.location?.hash);
- if(current.county)returnDialogRoute(countyReturnHash);
+ if(current.county&&returnDialogRoute(countyReturnHash))return;
+ const closedCounty=selectedCounty;selectedCounty=null;renderDirectory();
  const page=pageFromHash(countyReturnHash);
- if(!['home','ranking'].includes(page))return;
- const selector=page==='home'?`[${countyTriggerIsMap?'data-map-city':'data-city'}="${selectedCounty}"]`:`[data-county="${selectedCounty}"]`;
- (document.querySelector?.(selector)||countyTrigger)?.focus();
+ if(!['home','ranking'].includes(page)||current.page!==page)return;
+ const selector=page==='home'?`[${countyTriggerIsMap?'data-map-city':'data-city'}="${closedCounty}"]`:`[data-county="${closedCounty}"]`;
+ (document.querySelector?.(selector)||countyTrigger)?.focus({preventScroll:true});
 });
 $('detail').addEventListener('close',()=>{
  if(skipDetailClose){skipDetailClose--;return;}
  activePolicyId=null;
+ if(readRoute(globalThis.location?.hash).policyId&&returnDialogRoute(detailReturnHash)){detailTrigger=null;return;}
  if(detailCounty){detailCounty=null;$('city-sheet').showModal();$('city-sheet').scrollTop=detailSheetScroll;}
- if(readRoute(globalThis.location?.hash).policyId)returnDialogRoute(detailReturnHash);
  detailTrigger?.focus?.({preventScroll:true});detailTrigger=null;
 });
 $('detail-back').onclick=()=>$('detail').close();
@@ -154,7 +189,7 @@ $('county').insertAdjacentHTML('beforeend',COUNTIES.map(c=>`<option>${c}</option
 $('stage').insertAdjacentHTML('beforeend',Object.entries(STAGES).map(([v,t])=>`<option value="${v}">${t}</option>`).join(''));
 const filters=()=>({query:$('query').value,county:$('county').value,stage:$('stage').value});
 function render(){
- renderDirectory();renderBulletins();
+ if(lastStaticData!==data){renderDirectory();renderBulletins();lastStaticData=data;}
  const f=filters(),rows=countyRows(data.promises,f),ps=selectPromises(data.promises,f);
  renderAttainment();
  if(data.cities)rows.sort((a,b)=>(data.cities.find(c=>c.name===a.county)?.displayOrder??99)-(data.cities.find(c=>c.name===b.county)?.displayOrder??99));
@@ -183,8 +218,9 @@ function renderTopics(ps){
   const m=attainmentFor(p),a=m.assessment?m:null;
   return `<article class="promise-card"><div class="card-top"><span>${escape(p.county)} · ${escape(p.official||'首長待確認')}</span><span class="pill">${escape(a?.label||(p.raw?'階段見證據':STAGES[p.stage]))}</span></div><h3>${escape(p.title)}</h3><p>${escape(a?.scope||p.actualProgress)}</p>${p.raw?'':`<p>單項數值：${escape(metricLabel(p.metric))}</p>`}<div class="card-bottom"><span>${a?(a.kind==='unknown'?'已追查，證據待補':'已有查核記錄'):evidenceLabels[p.evidenceStatus]} · ${escape(a?.date||p.asOf||'統計日期待確認')}</span><button class="row-link" data-detail="${escape(p.id)}">查看證據 ↗</button></div></article>`;
  }).join('')}</div></section>`).join('');
- $('promise-empty').hidden=count>0;
- if(!count)$('promise-empty').innerHTML=data.promises.length?'<h3>沒有符合條件的政見。</h3>':'<h3>目前沒有可顯示的政見資料。</h3>';
+ $('promise-empty').hidden=count>0||!loadComplete;
+ if(!count)$('promise-empty-message').textContent=data.promises.length?'沒有符合條件的政見。':'目前沒有可顯示的政見資料。';
+ $('promise-empty-reset').hidden=!data.promises.length;
 }
 function auditSources(a){return a?.sources?.map(s=>`<article class="source"><a href="${escape(safeUrl(s.url)||'#')}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><p>${escape(s.publishedAt||'發布日期未列')} · ${escape(s.sourceType)}${s.verifiedThisRound===false?' · 未完整核讀':''}</p><p>${escape(s.evidence)}</p></article>`).join('')||'';}
 function researchTrail(entries){return entries.map(v=>{
@@ -240,20 +276,21 @@ function renderAttainment(){
  const priority=({p,m})=>isFollowUp(m)?-2:progressRecords(m).some(v=>v.kind!=='context')?-1:m.kind==='limited'&&m.basis==='reported'&&m.percent<100?0:m.kind==='zero'?1:m.kind==='limited'&&m.percent<100?2:m.kind==='observed'?3:m.kind==='progress'?4:m.kind==='milestone'?5:m.kind==='limited'?6:p.raw?.collectionSource==='expansion'?8:7;
  const items=assessed.filter(({p,m})=>!kind||(kind==='new'?isNew(p):kind==='followup'?isFollowUp(m):kind==='updates'?progressRecords(m).length>0:kind==='progress'?hasKnownProgress(m):kind==='rechecked'?isRechecked(m):kind==='completed'?m.percent===100&&m.verdict==='implemented':kind==='measurable'?hasPercentage(m):kind==='zero'?hasZeroEvidence(m):kind==='unknown'?!hasKnownProgress(m):m.kind===kind)).sort((a,b)=>priority(a)-priority(b)||((progressRecords(b.m).find(v=>v.kind!=='context')?.date||'').localeCompare(progressRecords(a.m).find(v=>v.kind!=='context')?.date||'')));
  $('attainment-result').textContent=`顯示 ${items.length} / ${summary.total} 項已收錄政見`;
- $('attainment-empty').hidden=items.length>0;
- if(!items.length)$('attainment-empty').textContent=kind==='zero'?'目前沒有確認未實施的紀錄。':'沒有符合條件的項目，請調整篩選。';
+ $('attainment-empty').hidden=items.length>0||!loadComplete;
+ if(!items.length)$('attainment-empty-message').textContent=kind==='zero'?'目前沒有確認未實施的紀錄。':'沒有符合條件的項目。';
+ $('attainment-empty-reset').hidden=!data.promises.length;
  $('attainment-list').innerHTML=items.map(({p,m})=>`<article class="attainment-card ${m.kind}"><div class="attainment-card-top"><span>${escape(p.county)} · ${escape(p.official||'首長待確認')}</span><span class="pill">${{limited:m.basis==='reported'?(m.reportedLabel?'官方公布進度':'工程進度'):'量化子指標',milestone:'政策／里程碑',zero:m.historical?'歷史未實施':'未實施',observed:'現況數值',progress:'有進度紀錄',unknown:hasKnownProgress(m)?'有階段紀錄':p.raw?.collectionSource==='expansion'&&!m.assessment?'新增收錄':'證據待補'}[m.kind]}</span></div><p class="bulletin-locator">${escape(p.raw?.originalLocator||'')}</p>${p.raw?.collectionSource==='complete-bulletin'?`<h3>${escape(p.originalQuote.length>64?p.originalQuote.slice(0,64)+'…':p.originalQuote)}</h3><details class="original-quote"><summary>公報原文</summary><p>${escape(p.originalQuote)}</p></details>`:`<h3>${escape(p.originalQuote||p.title)}</h3>`}${attainmentEvidenceMarkup(p,m)}<button class="row-link" data-detail="${escape(p.id)}">查看承諾與證據 ↗</button></article>`).join('');
 }
 function showDetail(id,trigger,{fromRoute=false}={}){
  const p=data.promises.find(p=>p.id===id);if(!p)return;
  activePolicyId=id;
  detailReturnHash=fromRoute?(globalThis.history?.state?.civicParent||makeCountyHash(p.county)):(globalThis.location?.hash||'#home');
- if(!fromRoute)pushDialogRoute(makePolicyHash(id),detailReturnHash);
+ if(!fromRoute)pushDialogRoute(makePolicyHash(id),detailReturnHash,trigger);
  document.title=`${bulletinPolicyTitle(p).slice(0,70)}｜${p.county}｜2026 縣市首長 政策執行率`;
  $('copy-policy-link').hidden=data!==baseData;
  $('policy-share-url').hidden=true;$('policy-share-status').textContent='';
  detailTrigger=trigger||null;
- if($('city-sheet').open){detailCounty=selectedCounty;detailSheetScroll=$('city-sheet').scrollTop;$('city-sheet').close();}else detailCounty=null;
+ if($('city-sheet').open){detailCounty=selectedCounty;detailSheetScroll=$('city-sheet').scrollTop;skipCountyClose++;$('city-sheet').close();}else detailCounty=null;
  $('detail-back').textContent=detailCounty?'← 返回政策列表':'← 返回項目';
  if(p.raw){showResearchDetail(p);return;}
  const field=(label,value)=>`<dl><dt>${label}</dt><dd>${escape(value)}</dd></dl>`;
@@ -273,10 +310,31 @@ $('home-topics').onclick=e=>{const btn=e.target.closest('[data-home-topic]');if(
 for(const d of document.querySelectorAll('dialog')){d.querySelector('.close').onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d){const b=d.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)d.close();}});}
 function status(message,kind=''){$('home-status').textContent=kind?message:'';$('load-status').textContent=message;$('load-status').className=`load-status ${kind}`;}
 function resetFilters(){$('query').value='';$('county').value='';$('stage').value='';$('attainment-kind').value='';selectedTopic='';}
-$('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;const version=++sourceVersion;try{if(file.size>5*1024*1024)throw Error('檔案大小不得超過 5 MB。');const imported=ingest(JSON.parse(await file.text()));if(version!==sourceVersion)return;data=imported;closeDataDialogs();resetFilters();render();status(`已匯入 ${file.name}（${data.promises.length} 項）；未經本站查核，未上傳或儲存。`,'preview-mode');}catch(error){status(`匯入失敗，保留原有資料：${error.message}`,'error');}finally{e.target.value='';}};
-$('restore').onclick=()=>{if(!baseData){status('網站資料尚未載入成功，請重新整理後重試。','error');return;}sourceVersion++;data=baseData;closeDataDialogs();resetFilters();render();status('已恢復網站資料。');};
+for(const [button,result] of [['promise-empty-reset','promise-result'],['attainment-empty-reset','attainment-result']])$(button).onclick=()=>{resetFilters();render();$(result).setAttribute('tabindex','-1');$(result).focus({preventScroll:true});};
+function datasetStatus(state){
+ $('main').setAttribute('data-ready',String(loadComplete));
+ $('dataset-status').hidden=state==='ready';
+ $('dataset-message').textContent=state==='loading'?'正在載入政策資料…':state==='error'?'資料暫時無法載入，請重試。':'';
+ $('retry-data').hidden=state!=='error';$('retry-data').disabled=state==='loading';
+ $('main').setAttribute('aria-busy',String(state==='loading'));
+}
+$('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;const version=++sourceVersion;try{if(file.size>5*1024*1024)throw Error('檔案大小不得超過 5 MB。');const imported=ingest(JSON.parse(await file.text()));if(version!==sourceVersion)return;data=imported;loadComplete=true;datasetStatus('ready');closeDataDialogs();resetFilters();render();status(`已匯入 ${file.name}（${data.promises.length} 項）；未經本站查核，未上傳或儲存。`,'preview-mode');}catch(error){status(`匯入失敗，保留原有資料：${error.message}`,'error');}finally{e.target.value='';}};
+$('restore').onclick=()=>{if(!baseData){datasetStatus('error');status('網站資料尚未載入成功，請重新載入。','error');return;}sourceVersion++;data=baseData;loadComplete=true;datasetStatus('ready');closeDataDialogs();resetFilters();render();status('已恢復網站資料。');};
+async function loadSiteData(){
+ if(dataLoading)return;
+ dataLoading=true;const version=sourceVersion;datasetStatus('loading');
+ try{
+  const response=await fetch('./data/promises.json',{cache:'no-store'});
+  if(!response.ok)throw Error(`HTTP ${response.status}`);
+  const shipped=await response.json();
+  baseData=shipped?.cities?attachAssessments(ingest(completeBulletinResearch(shipped)),bulletinAssessments()):attachAssessments(ingest(shipped));
+  if(version===sourceVersion||!loadComplete){data=baseData;loadComplete=true;datasetStatus('ready');render();status('');route();}
+ }catch{if(version===sourceVersion||!loadComplete)datasetStatus('error');}
+ finally{dataLoading=false;if(version!==sourceVersion&&loadComplete)datasetStatus('ready');$('retry-data').disabled=false;}
+}
+$('retry-data').onclick=loadSiteData;
 route();render();
-try{const response=await fetch('./data/promises.json',{cache:'no-store'});if(!response.ok)throw Error(`HTTP ${response.status}`);const shipped=await response.json();baseData=shipped?.cities?attachAssessments(ingest(completeBulletinResearch(shipped)),bulletinAssessments()):attachAssessments(ingest(shipped));if(sourceVersion===0){data=baseData;loadComplete=true;render();status('');route();}}catch(e){status(`資料載入失敗，請重新整理。（${e.message}）`,'error');}
+await loadSiteData();
 
 function readable(value){
  if(value===null||value===undefined)return '<span class="muted">未提供／待核對</span>';
