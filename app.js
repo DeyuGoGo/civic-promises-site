@@ -1,4 +1,6 @@
 import {SCORING_RESEARCH} from './scoring-research-data.js';
+import {readRoute,makePolicyHash,makeCountyHash,policyShareUrl} from './navigation.js';
+import {estimateCoverage,policyDateSummary} from './presentation.js';
 import {policyScoreExplanation} from './policy-explanation.js';
 import {policyProgress,countyPolicyProgress,formatPolicyPercent,policyScoreLabel} from './policy-progress.js';
 import {OVERVIEW_TOPICS,topicFor} from './overview.js';
@@ -17,6 +19,14 @@ let data={schemaVersion:1,updatedAt:null,promises:[]};let baseData=null;let sour
 let selectedCounty=null,detailCounty=null,countyTrigger=null,countyTriggerIsMap=false;
 let detailTrigger=null,detailSheetScroll=0;
 let selectedTopic='';
+let activePolicyId=null,detailReturnHash='#home',countyReturnHash='#home',loadComplete=false;
+let skipDetailClose=0,skipCountyClose=0;
+function pushDialogRoute(hash,parent){globalThis.history?.pushState?.({civicDialog:true,civicParent:parent},'',hash);}
+function returnDialogRoute(fallback){
+ if(globalThis.history?.state?.civicDialog&&globalThis.history.state.civicParent===fallback){globalThis.history.back();return;}
+ if(globalThis.history?.replaceState){globalThis.history.replaceState(null,'',fallback);route();}
+}
+function policyDatesMarkup(p,progress){const dates=policyDateSummary(p,progress);return `<div class="policy-dates"><span>${escape(dates.checkedLabel)}</span><span>${escape(dates.evidenceLabel)}</span></div>`;}
 const shortParty=label=>({'中國國民黨':'國民黨','民主進步黨':'民進黨','台灣民眾黨':'民眾黨','無推薦政黨':'無推薦政黨'}[label]||label);
 const completionLabel=progress=>policyScoreLabel(progress?.score);
 function renderMap(summaries){
@@ -24,7 +34,7 @@ function renderMap(summaries){
 }
 function renderDirectory(){
  const summaries=countyPolicyProgress(data.promises);renderMap(summaries);renderMethod(summaries);
- $('county-directory').innerHTML=COUNTY_GROUPS.map(([region,names])=>`<section class="county-region" aria-label="${escape(region)}"><h3>${escape(region)}</h3><div class="region-counties">${names.map(name=>{const summary=summaries.find(c=>c.county===name),party=partyStyle(data.cities?.find(c=>c.name===name)),rate=completionLabel(summary);return `<button class="county-rate ${party.className}" type="button" data-city="${name}" aria-haspopup="dialog" aria-pressed="${selectedCounty===name}" title="${summary?.eligible?`${summary.applicable} 個分項；${summary.score.estimated} 項採保守估分`:'查核資料未齊'}" aria-label="${name}，政策平均完成度（含保守估分）${escape(rate)}，${summary?.eligible?`${summary.applicable} 個分項，${summary.score.estimated} 項估分，`: ''}2022當選時推薦政黨：${escape(party.label)}，查看政策列表"><span>${name}</span><strong>${escape(rate).replace('%','<small>%</small>')}</strong><small class="county-party"><i class="party-dot" aria-hidden="true"></i>${escape(shortParty(party.label))}</small><small class="county-coverage">${summary?.eligible?`${summary.applicable} 分項 · ${summary.score.estimated} 項估分`:'無可用平均'}</small></button>`;}).join('')}</div></section>`).join('');
+ $('county-directory').innerHTML=COUNTY_GROUPS.map(([region,names])=>`<section class="county-region" aria-label="${escape(region)}"><h3>${escape(region)}</h3><div class="region-counties">${names.map(name=>{const summary=summaries.find(c=>c.county===name),party=partyStyle(data.cities?.find(c=>c.name===name)),rate=completionLabel(summary);return `<button class="county-rate ${party.className}" type="button" data-city="${name}" aria-haspopup="dialog" aria-pressed="${selectedCounty===name}" title="${summary?.eligible?`${summary.applicable} 個分項；${summary.score.estimated} 項採保守估分`:'查核資料未齊'}" aria-label="${name}，政策平均完成度（含保守估分）${escape(rate)}，${summary?.eligible?`${summary.applicable} 個分項，${summary.score.estimated} 項估分，`: ''}2022當選時推薦政黨：${escape(party.label)}，查看政策列表"><span>${name}</span><strong>${escape(rate).replace('%','<small>%</small>')}</strong><small class="county-party"><i class="party-dot" aria-hidden="true"></i>${escape(shortParty(party.label))}</small><small class="county-coverage">${summary?.eligible?escape(estimateCoverage(summary.score)):'資料待齊'}</small></button>`;}).join('')}</div></section>`).join('');
 }
 function renderMethod(summaries){
  const eligible=summaries.length===22&&summaries.every(c=>c.eligible);
@@ -34,7 +44,10 @@ function renderMethod(summaries){
  $('method-data-summary').textContent=total?`${count(total.originals)} 條政見 · ${count(total.applicable)} 適用分項 · ${count(total.measured)} 直接計分 · ${count(total.estimated)} 估分 · ${count(total.excluded)} 不適用`:'目前載入資料不完整，無法顯示全體計分項數；匯入資料不會自動沿用原資料的百分比。';
  $('method-research').innerHTML=`<ol class="method-research-list">${SCORING_RESEARCH.sources.map(s=>`<li><a href="${escape(safeUrl(s.url)||'#')}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><small>${escape(s.sourceRole)} · ${escape(s.evidencePeriod||s.sourceDate||'來源未標日期')}</small></li>`).join('')}</ol>`;
 }
-function openCounty(name,trigger){
+function openCounty(name,trigger,{fromRoute=false}={}){
+ if(!COUNTIES.includes(name))return;
+ countyReturnHash=fromRoute?(globalThis.history?.state?.civicParent||'#home'):(globalThis.location?.hash||'#home');
+ if(!fromRoute)pushDialogRoute(makeCountyHash(name),countyReturnHash);
  selectedCounty=name;if(trigger){countyTrigger=trigger;countyTriggerIsMap=!!trigger.dataset?.mapCity;}
  const city=data.cities?.find(c=>c.name===name),pledges=data.promises.filter(p=>p.county===name);
  const categories=OVERVIEW_TOPICS.map(topic=>({...topic,policies:pledges.filter(p=>topicFor(p)===topic.id)})).filter(topic=>topic.policies.length);
@@ -66,25 +79,76 @@ function policyPartsMarkup(p){
   return `<li class="policy-part"><div class="part-heading"><h4>${escape(part.label)}</h4><strong class="overview-tone ${tone}">${escape(value)}</strong></div>${part.estimate?`<p class="estimate-basis"><strong>估分理由：</strong>${escape(part.estimate.reason)}</p><p class="part-factual-state">查核狀態：${escape(factualValue)}</p>`:''}<p>${escape(part.reason)}</p>${part.supportingMetrics?.length?`<div class="part-evidence-metrics"><span>局部進度紀錄 · 未當作整項百分比</span>${part.supportingMetrics.map(v=>`<p><strong>${escape(v.label)} · ${v.lowerBound?'至少 ':''}${escape(v.percent)}%</strong><small>${escape(v.asOf)}</small>${v.sources?.map((source,i)=>` <a href="${escape(safeUrl(source.url)||'#')}" target="_blank" rel="noopener noreferrer">來源 ${i+1} ↗</a>`).join('')||''}</p>`).join('')}</div>`:''}<p class="part-date">${part.asOf?'證據日期：'+escape(part.asOf):'來源未提供明確資料日期'}${part.historical?' · 僅歷史狀態，未採為目前百分比':''}${part.lastCheckedAt?' · 逐項查核：'+escape(part.lastCheckedAt):''}</p>${policyHistoryMarkup(part)}<details><summary>判準與來源</summary><blockquote>${escape(part.quoteAnchor)}</blockquote>${part.fulfillmentCriterion?`<p>完成標準：${escape(part.fulfillmentCriterion)}</p>`:''}${part.calculation?`<p>計算依據：${escape(`${part.calculation.baseline!==undefined?'（'+part.calculation.current+'−'+part.calculation.baseline+'）÷（'+part.calculation.target+'−'+part.calculation.baseline+'）':part.calculation.numerator+' ÷ '+part.calculation.denominator} × 100`)}</p>`:''}${part.limitations.length?`<ul>${part.limitations.map(l=>`<li>${escape(l)}</li>`).join('')}</ul>`:''}${part.sources.length?part.sources.map(source=>`<article class="source"><a href="${escape(safeUrl(source.url)||'#')}" target="_blank" rel="noopener noreferrer">${escape(source.title)} ↗</a><p>${escape(source.evidence)}</p>${source.publishedAt||source.asOf?`<small>資料日期：${escape(source.publishedAt||source.asOf)}</small>`:''}${source.verifiedThisRound===false?'<small>未完整核讀全文；未作百分比依據。</small>':''}</article>`).join(''):'<p>缺少直接證據；未填0%。</p>'}</details></li>`;
  }).join('')}</ol>`;
 }
-function closeDataDialogs(){detailCounty=null;selectedCounty=null;$('detail').close();$('city-sheet').close();}
+function closeDataDialogs(){
+ detailCounty=null;selectedCounty=null;activePolicyId=null;
+ if($('detail').open){skipDetailClose++;$('detail').close();}
+ if($('city-sheet').open){skipCountyClose++;$('city-sheet').close();}
+}
 function route(){
- const page=pageFromHash(globalThis.location?.hash);
+ const current=readRoute(globalThis.location?.hash),page=current.page;
+ closeDataDialogs();
+ $('home-status').textContent='';
  for(const id of ['home','ranking','promises','attainment','bulletins','method','data-tools'])$(id).hidden=id!==page;
  $('search-tools').hidden=!['ranking','promises','attainment'].includes(page);
- if($('city-sheet').open)$('city-sheet').close();
- document.title=({home:'2026 縣市首長 政策執行率',ranking:'排行榜',attainment:'政見達成率',promises:'主要議題',bulletins:'選舉公報全文',method:'評分方法','data-tools':'資料與匯入'}[page])+(page==='home'?'':'｜2026 縣市首長 政策執行率');
- // Move focus to the destination, but never animate focus or scroll for reduced motion.
+ document.title=({home:'2026 縣市首長 政策執行率',ranking:'排行榜',attainment:'進度紀錄',promises:'主要議題',bulletins:'選舉公報全文',method:'評分方法','data-tools':'資料下載'}[page])+(page==='home'?'':'｜2026 縣市首長 政策執行率');
  $(page).setAttribute('tabindex','-1');$(page).focus({preventScroll:true});
  globalThis.scrollTo?.({top:0,behavior:'instant'});
+ if(!loadComplete)return;
+ if(current.policyId){
+  const policy=data.promises.find(p=>p.id===current.policyId);
+  if(policy){
+   const parent=globalThis.history?.state?.civicParent;
+   if(!parent||readRoute(parent).county)openCounty(policy.county,null,{fromRoute:true});
+   showDetail(policy.id,null,{fromRoute:true});
+  }else status('找不到這條政策，請從縣市或主要議題查找。','error');
+ }else if(current.county){
+  if(COUNTIES.includes(current.county))openCounty(current.county,null,{fromRoute:true});
+  else status('找不到這個縣市，請從縣市列表查找。','error');
+ }
 }
+
 globalThis.addEventListener?.('hashchange',route);
 $('taiwan-map').onclick=e=>{const btn=e.target.closest('[data-map-city]');if(btn)openCounty(btn.dataset.mapCity,btn);};
 $('taiwan-map').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const btn=e.target.closest('[data-map-city]');if(btn){e.preventDefault();openCounty(btn.dataset.mapCity,btn);}}};
 $('county-directory').onclick=e=>{const btn=e.target.closest('[data-city]');if(btn)openCounty(btn.dataset.city,btn);};
 $('city-content').onclick=e=>{const btn=e.target.closest('[data-detail]');if(btn)showDetail(btn.dataset.detail,btn);};
-$('city-sheet').addEventListener('close',()=>{if(!$('detail').open){const page=pageFromHash(globalThis.location?.hash);if(!['home','ranking'].includes(page))return;const selector=page==='home'?`[${countyTriggerIsMap?'data-map-city':'data-city'}="${selectedCounty}"]`:`[data-county="${selectedCounty}"]`;const button=document.querySelector?.(selector);(button||countyTrigger)?.focus();}});
-$('detail').addEventListener('close',()=>{if(detailCounty){detailCounty=null;$('city-sheet').showModal();$('city-sheet').scrollTop=detailSheetScroll;}detailTrigger?.focus?.({preventScroll:true});detailTrigger=null;});
+$('city-sheet').addEventListener('close',()=>{
+ if(skipCountyClose){skipCountyClose--;return;}
+ if($('detail').open)return;
+ const current=readRoute(globalThis.location?.hash);
+ if(current.county)returnDialogRoute(countyReturnHash);
+ const page=pageFromHash(countyReturnHash);
+ if(!['home','ranking'].includes(page))return;
+ const selector=page==='home'?`[${countyTriggerIsMap?'data-map-city':'data-city'}="${selectedCounty}"]`:`[data-county="${selectedCounty}"]`;
+ (document.querySelector?.(selector)||countyTrigger)?.focus();
+});
+$('detail').addEventListener('close',()=>{
+ if(skipDetailClose){skipDetailClose--;return;}
+ activePolicyId=null;
+ if(detailCounty){detailCounty=null;$('city-sheet').showModal();$('city-sheet').scrollTop=detailSheetScroll;}
+ if(readRoute(globalThis.location?.hash).policyId)returnDialogRoute(detailReturnHash);
+ detailTrigger?.focus?.({preventScroll:true});detailTrigger=null;
+});
 $('detail-back').onclick=()=>$('detail').close();
+$('copy-policy-link').onclick=async()=>{
+ if(!activePolicyId||data!==baseData)return;
+ const copiedPolicy=activePolicyId;
+ try{
+  const base=/^https?:/.test(globalThis.location?.href||'')?globalThis.location.href:'https://deyugogo.github.io/civic-promises-site/';
+  const url=policyShareUrl(base,copiedPolicy);
+  $('policy-share-url').value=url;
+  if(!globalThis.navigator?.clipboard?.writeText)throw Error('clipboard unavailable');
+  await globalThis.navigator.clipboard.writeText(url);
+  if(activePolicyId===copiedPolicy)$('policy-share-status').textContent='已複製政策連結';
+ }catch{
+  if(activePolicyId!==copiedPolicy)return;
+  $('policy-share-url').hidden=false;$('policy-share-url').focus();$('policy-share-url').select?.();
+  $('policy-share-status').textContent='請複製下方連結';
+ }
+};
+for(const [button,target] of [['jump-counties','county-directory'],['jump-topics','home-topics']])$(button).onclick=()=>{$(target).scrollIntoView({block:'start',behavior:'instant'});$(target).focus({preventScroll:true});};
+const homeMapMedia=globalThis.matchMedia?.('(max-width:600px)');
+if(homeMapMedia){const syncMap=()=>{$('home-map-toggle').open=!homeMapMedia.matches;};syncMap();homeMapMedia.addEventListener?.('change',syncMap);}
 $('import-trigger').onclick=()=>$('import-file').click();
 $('county').insertAdjacentHTML('beforeend',COUNTIES.map(c=>`<option>${c}</option>`).join(''));
 $('stage').insertAdjacentHTML('beforeend',Object.entries(STAGES).map(([v,t])=>`<option value="${v}">${t}</option>`).join(''));
@@ -101,7 +165,7 @@ function render(){
  $('county-rows').innerHTML=rows.map(r=>`<tr><td aria-label="暫不排名">—</td><td>${r.county}${data.cities?`<small class="head-name">2022 當選：${escape(data.cities.find(c=>c.name===r.county)?.electedHead||'待確認')}</small>`:''}</td><td>尚無法計算</td><td><span class="pill">未提供排名</span></td><td>${r.loaded} 項</td><td><button class="row-link" data-county="${r.county}" aria-label="查看${r.county}政見">查看政見 ↗</button></td></tr>`).join('');
  $('county-empty').hidden=rows.length>0;$('county-rows').closest('.table-wrap').hidden=!rows.length;
  renderTopics(ps);
- $('updated-at').textContent=`資料${data.research?'查閱':'整理'}日期：${data.updatedAt??'尚未提供'}`;
+ $('updated-at').textContent=data.research?.metadata.completeBulletins?`查核紀錄更新：${SCORING_RESEARCH.followup.checkedAt}`:`資料${data.research?'查閱':'整理'}日期：${data.updatedAt??'尚未提供'}`;
 }
 function renderTopics(ps){
  const groups=OVERVIEW_TOPICS.map(topic=>({...topic,policies:ps.filter(p=>topicFor(p)===topic.id)}));
@@ -141,7 +205,7 @@ function metricMarkup(m,compact=false,wholeProgress=null){
  const formula=m.numerator!==undefined?`${m.numerator.toLocaleString('zh-TW')} ÷ ${m.denominator.toLocaleString('zh-TW')} × 100${m.capAtTarget?' · 達標率封頂100%':''}`:m.kind==='milestone'?'僅限此里程碑':m.kind==='zero'?(m.historical?'歷史時點確認未實施':'已確認未實施'):m.reportedLabel||'官方公布工程進度';
  let main;
  if(m.kind==='observed')main=`<p class="metric-scope">${escape(m.observation.label)} · 現況數值</p><div class="rate-line observation-value"><strong>${escape(m.observation.valueLabel??m.observation.value)}<small>${escape(m.observation.unit)}</small></strong></div><p class="observation-change">${escape(m.observation.changeLabel||'僅此地點與日期；不換算達成率')}</p>`;
- else if(m.percent===100&&wholeProgress&&!wholeProgress.isComplete)main=`<p class="metric-scope">${escape(m.label)}</p><p class="stage-result">部分里程碑已實施</p><p class="rate-meaning">此舊紀錄只涵蓋部分措施；整條完成度未能確定，分項證據另列。</p>`;
+ else if(m.percent===100&&wholeProgress&&!wholeProgress.isComplete)main=`<p class="metric-scope">${escape(m.label)}</p><p class="stage-result">部分里程碑已實施</p><p class="rate-meaning">此紀錄只涵蓋部分措施；整條完成度依適用分項平均。</p>`;
  else if(m.kind==='milestone')main=`<p class="metric-scope">${escape(m.label)}</p><div class="milestone-result"><strong>100<small>%</small></strong><span>已執行完成</span></div>`;
  else if(hasPercent)main=`<p class="metric-scope">${escape(m.label)}</p><div class="rate-line"><strong>${m.lowerBound?'<em>'+escape(m.boundLabel||'至少')+'</em>':''}${m.percent.toLocaleString('zh-TW',{maximumFractionDigits:2})}<small>%</small></strong><span>${escape(formula)}</span></div><div class="rate-track" aria-hidden="true"><i style="width:${m.barPercent}%"></i></div>`;
  else main=progressRecords(m).length?'':`<p class="stage-result">${escape(m.label)}</p>`;
@@ -150,6 +214,12 @@ function metricMarkup(m,compact=false,wholeProgress=null){
  const latest=m.latestCount!==undefined?`<p class="latest-count">最新數量：${escape(m.latestCount)}學區（${escape(m.latestCountAsOf)}）；當期分母待核。</p>`:'';
  const secondary=m.supplementaryMetrics?.length?`<details class="subitem-progress" ${!hasPercent?'open':''}><summary>分項進度（${m.supplementaryMetrics.length}）</summary>${m.supplementaryMetrics.map(v=>`<p><strong>${escape(v.label)}：${Number.isFinite(v.percent)?(v.lowerBound?escape(v.boundLabel||'至少'):'')+escape(v.percent)+'%':escape(v.value??'見資料')}${Number.isFinite(v.numerator)&&Number.isFinite(v.denominator)?'（'+escape(v.numerator)+'／'+escape(v.denominator)+'）':''}</strong>${v.asOf?'<br>資料日期：'+escape(v.asOf):''}<br>${escape(v.scope)}</p>`).join('')}</details>`:'';
  return `${m.historical?`<p class="historical-marker">歷史紀錄 · ${escape(m.date)}<br>不代表目前狀態</p>`:''}${main}${compact&&progressRecords(m).length?'':`<p class="rate-meaning">${escape(brief)}${m.percent>100?' 數值超過目標，圖條上限100%。':''}</p>`}${progressMarkup(m,compact)}${latest}${secondary}<p class="attainment-date">${progressRecords(m).length?'整條判讀截至':'資料日期'}：${escape(m.date)}${m.observedOn?' · 查閱 '+escape(m.observedOn):''}</p><details class="metric-limits"><summary>查核紀錄與來源${m.sources?'（'+m.sources.length+'）':''}</summary>${m.reason?`<p>${escape(m.reason)}</p>`:''}${m.researchLog?.length?`<h4>追查紀錄</h4><ul>${researchTrail(m.researchLog)}</ul>`:''}<ul>${m.limitations.map(l=>`<li>${escape(l)}</li>`).join('')}</ul>${auditSources(m)}</details>`;
+}
+function attainmentEvidenceMarkup(p,m){
+ const progress=policyProgress(p);
+ const record=m.assessment||Number.isFinite(m.percent)?metricMarkup(m,true,progress):`<p class="pending-rate">— <span>${p.raw?.collectionSource==='expansion'?'原文已核讀，執行進度待查':escape(m.reason)}</span></p><details class="metric-limits"><summary>目前資料與待查項目</summary><p>${escape(p.actualProgress)}</p><p>${escape(m.next)}</p></details>`;
+ if(!progress)return record;
+ return `<div class="overall-policy-score"><span>整條政策完成度</span><strong>${escape(policyScoreLabel(progress.score))}</strong><small>${escape(estimateCoverage(progress.score))}</small></div>${policyDatesMarkup(p,progress)}<section class="record-metric" aria-label="分項與歷史進度"><h4>分項與歷史進度</h4>${record}</section>`;
 }
 const hasPercentage=m=>Number.isFinite(m.percent)||m.supplementaryMetrics?.some(v=>Number.isFinite(v.percent));
 const hasZeroEvidence=m=>m.kind==='zero'||m.supplementaryMetrics?.some(v=>v.percent===0&&v.explicitNonImplementation===true);
@@ -172,10 +242,16 @@ function renderAttainment(){
  $('attainment-result').textContent=`顯示 ${items.length} / ${summary.total} 項已收錄政見`;
  $('attainment-empty').hidden=items.length>0;
  if(!items.length)$('attainment-empty').textContent=kind==='zero'?'目前沒有確認未實施的紀錄。':'沒有符合條件的項目，請調整篩選。';
- $('attainment-list').innerHTML=items.map(({p,m})=>`<article class="attainment-card ${m.kind}"><div class="attainment-card-top"><span>${escape(p.county)} · ${escape(p.official||'首長待確認')}</span><span class="pill">${{limited:m.basis==='reported'?(m.reportedLabel?'官方公布進度':'工程進度'):'量化子指標',milestone:'政策／里程碑',zero:m.historical?'歷史未實施':'未實施',observed:'現況數值',progress:'有進度紀錄',unknown:hasKnownProgress(m)?'有階段紀錄':p.raw?.collectionSource==='expansion'&&!m.assessment?'新增收錄':'證據待補'}[m.kind]}</span></div><p class="bulletin-locator">${escape(p.raw?.originalLocator||'')}</p>${p.raw?.collectionSource==='complete-bulletin'?`<h3>${escape(p.originalQuote.length>64?p.originalQuote.slice(0,64)+'…':p.originalQuote)}</h3><details class="original-quote"><summary>公報原文</summary><p>${escape(p.originalQuote)}</p></details>`:`<h3>${escape(p.originalQuote||p.title)}</h3>`}${m.assessment||Number.isFinite(m.percent)?metricMarkup(m,true,policyProgress(p)):`<p class="pending-rate">— <span>${p.raw?.collectionSource==='expansion'?'原文已核讀，執行進度待查':escape(m.reason)}</span></p><details class="metric-limits"><summary>目前資料與待查項目</summary><p>${escape(p.actualProgress)}</p><p>${escape(m.next)}</p></details>`}<button class="row-link" data-detail="${escape(p.id)}">查看承諾與證據 ↗</button></article>`).join('');
+ $('attainment-list').innerHTML=items.map(({p,m})=>`<article class="attainment-card ${m.kind}"><div class="attainment-card-top"><span>${escape(p.county)} · ${escape(p.official||'首長待確認')}</span><span class="pill">${{limited:m.basis==='reported'?(m.reportedLabel?'官方公布進度':'工程進度'):'量化子指標',milestone:'政策／里程碑',zero:m.historical?'歷史未實施':'未實施',observed:'現況數值',progress:'有進度紀錄',unknown:hasKnownProgress(m)?'有階段紀錄':p.raw?.collectionSource==='expansion'&&!m.assessment?'新增收錄':'證據待補'}[m.kind]}</span></div><p class="bulletin-locator">${escape(p.raw?.originalLocator||'')}</p>${p.raw?.collectionSource==='complete-bulletin'?`<h3>${escape(p.originalQuote.length>64?p.originalQuote.slice(0,64)+'…':p.originalQuote)}</h3><details class="original-quote"><summary>公報原文</summary><p>${escape(p.originalQuote)}</p></details>`:`<h3>${escape(p.originalQuote||p.title)}</h3>`}${attainmentEvidenceMarkup(p,m)}<button class="row-link" data-detail="${escape(p.id)}">查看承諾與證據 ↗</button></article>`).join('');
 }
-function showDetail(id,trigger){
+function showDetail(id,trigger,{fromRoute=false}={}){
  const p=data.promises.find(p=>p.id===id);if(!p)return;
+ activePolicyId=id;
+ detailReturnHash=fromRoute?(globalThis.history?.state?.civicParent||makeCountyHash(p.county)):(globalThis.location?.hash||'#home');
+ if(!fromRoute)pushDialogRoute(makePolicyHash(id),detailReturnHash);
+ document.title=`${bulletinPolicyTitle(p).slice(0,70)}｜${p.county}｜2026 縣市首長 政策執行率`;
+ $('copy-policy-link').hidden=data!==baseData;
+ $('policy-share-url').hidden=true;$('policy-share-status').textContent='';
  detailTrigger=trigger||null;
  if($('city-sheet').open){detailCounty=selectedCounty;detailSheetScroll=$('city-sheet').scrollTop;$('city-sheet').close();}else detailCounty=null;
  $('detail-back').textContent=detailCounty?'← 返回政策列表':'← 返回項目';
@@ -200,7 +276,7 @@ function resetFilters(){$('query').value='';$('county').value='';$('stage').valu
 $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;const version=++sourceVersion;try{if(file.size>5*1024*1024)throw Error('檔案大小不得超過 5 MB。');const imported=ingest(JSON.parse(await file.text()));if(version!==sourceVersion)return;data=imported;closeDataDialogs();resetFilters();render();status(`已匯入 ${file.name}（${data.promises.length} 項）；未經本站查核，未上傳或儲存。`,'preview-mode');}catch(error){status(`匯入失敗，保留原有資料：${error.message}`,'error');}finally{e.target.value='';}};
 $('restore').onclick=()=>{if(!baseData){status('網站資料尚未載入成功，請重新整理後重試。','error');return;}sourceVersion++;data=baseData;closeDataDialogs();resetFilters();render();status('已恢復網站資料。');};
 route();render();
-try{const response=await fetch('./data/promises.json',{cache:'no-store'});if(!response.ok)throw Error(`HTTP ${response.status}`);const shipped=await response.json();baseData=shipped?.cities?attachAssessments(ingest(completeBulletinResearch(shipped)),bulletinAssessments()):attachAssessments(ingest(shipped));if(sourceVersion===0){data=baseData;render();status('');}}catch(e){status(`資料載入失敗，請重新整理。（${e.message}）`,'error');}
+try{const response=await fetch('./data/promises.json',{cache:'no-store'});if(!response.ok)throw Error(`HTTP ${response.status}`);const shipped=await response.json();baseData=shipped?.cities?attachAssessments(ingest(completeBulletinResearch(shipped)),bulletinAssessments()):attachAssessments(ingest(shipped));if(sourceVersion===0){data=baseData;loadComplete=true;render();status('');route();}}catch(e){status(`資料載入失敗，請重新整理。（${e.message}）`,'error');}
 
 function readable(value){
  if(value===null||value===undefined)return '<span class="muted">未提供／待核對</span>';
@@ -216,7 +292,7 @@ function showResearchDetail(p){const r=p.raw,c=p.city,m=attainmentFor(p);
  if(r.collectionSource==='complete-bulletin'){
   const topic=OVERVIEW_TOPICS.find(t=>t.id===topicFor(p)),progress=policyProgress(p),explanation=policyScoreExplanation(progress);
   $('detail-content').innerHTML=`<p class="detail-crumb">${escape(c.name)} / ${escape(topic?.label||'其他／跨領域')}</p><h2 id="detail-title">${escape(bulletinPolicyTitle(p))}</h2>
-  <section class="policy-verdict" aria-label="給分理由"><div class="verdict-score"><strong>${escape(policyScoreLabel(progress?.score))}</strong><span>GPT6協助評分 · ${progress?.score?.estimated?'含估分':'依已核對進度'}</span></div><h3>給分理由</h3><p class="verdict-summary">${escape(explanation.summary)}</p>${explanation.reasons.length?`<div class="verdict-reasons">${explanation.reasons.map(reason=>`<p>${escape(reason)}</p>`).join('')}</div>`:''}</section>
+  <section class="policy-verdict" aria-label="給分理由"><div class="verdict-score"><strong>${escape(policyScoreLabel(progress?.score))}</strong><span>GPT6協助評分 · ${progress?.score?.estimated?'含估分':'依已核對進度'}</span></div>${policyDatesMarkup(p,progress)}<h3>給分理由</h3><p class="verdict-summary">${escape(explanation.summary)}</p>${explanation.reasons.length?`<div class="verdict-reasons">${explanation.reasons.map(reason=>`<p>${escape(reason)}</p>`).join('')}</div>`:''}</section>
   <details class="detail-section full-evidence"><summary>分項計算與來源</summary><section class="detail-current"><h3>逐項核對政策進度</h3>${policyPartsMarkup(p)}</section></details>
   <details class="detail-section archive-evidence"><summary>公報原文與完整查核</summary><details class="detail-section"><summary>查核紀錄</summary>${m.assessment?metricMarkup(m,false,policyProgress(p)):`<p>${escape(r.status)}</p>`}</details><details class="detail-section"><summary>當時承諾了什麼？</summary><blockquote>${escape(r.quote)}</blockquote><p class="muted">${escape(r.originalLocator||'原件位置待補')}</p><h3>原承諾來源</h3>${sourceGroup(r.originalSources)}</details><details class="detail-section"><summary>後續證據與背景（${r.current.sources.length}）</summary>${sourceGroup(r.current.sources)}</details><details class="detail-section"><summary>範圍與期限</summary><h3>目標與定義</h3><p>${escape(r.metricDefinition||'原文未明訂量化定義')}</p>${readable(r.target)}<h3>期限與基期</h3><p>${escape(r.deadline||'原文未明訂期限')}</p>${readable(r.baseline)}<h3>進度與資料期間</h3><p>${escape(r.status)}</p><p>資料日期：${escape(r.current.dateLabel||'未提供')}</p><p>階段：${escape(r.current.stage||'待核對')}</p><dl class="nested-data"><dt>當期數值（非整項完成率）</dt><dd>${readable(r.current.value)} ${escape(r.current.unit||'')}</dd><dt>適用範圍</dt><dd>${escape(r.current.scope||'待核對')}</dd></dl><h3>不確定性與判讀限制</h3><ul>${r.limitations.map(v=>`<li>${escape(v)}</li>`).join('')}</ul><p>${escape(r.nextEvidenceNeeded||'')}</p><p class="muted">資料編號：${escape(r.id)}</p></details><details class="detail-section"><summary>首長在職資訊與責任歸屬</summary><p>現任／代理：${escape(c.currentHead)} · ${escape(c.currentHeadNote)}</p><p>${escape(c.partyLabel)}：${escape(c.electionParty)}</p><p>任期：${escape(p.term)}</p>${sourceGroup([{url:c.currentHeadSource,title:'首長在職資訊來源',type:'研究資料所列來源'},{url:c.electionSource,title:'2022 選舉結果來源',type:'中選會'}])}</details></details>`;
   $('detail').showModal();$('detail').scrollTop=0;return;
