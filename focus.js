@@ -29,8 +29,12 @@ function personMeta(){
 }
 function renderProfiles(){
  const t=focusData.taipei,l=focusData.legislature;
- byId('profile-cards').innerHTML=`<a class="profile-card mayor-card" href="#mayor"><span class="profile-role">臺北市長 · 施政完成度</span><h2 class="profile-name">蔣萬安</h2><p class="profile-description">對照 2022 選舉公報，追蹤任內政策執行。</p><div class="profile-meta"><strong>${t.summary.policyCount} 條 2022 公報政見</strong><span>${t.summary.partCount} 個分項 · 含估分</span><span>查核紀錄更新 ${html(t.checkedAt)}</span></div><span class="profile-action">查看施政完成度 <span aria-hidden="true">↗</span></span></a><a class="profile-card legislator-card" href="#legislator"><span class="profile-role">立法委員 · 國會工作紀錄</span><h2 class="profile-name">沈伯洋</h2><p class="profile-description">追蹤法律提案、質詢發言與委員會工作。</p><div class="profile-meta"><strong>已收錄 ${l.records.length} 筆官方紀錄</strong><span>依本人角色與議事程序整理</span><span>來源核讀 ${html(l.checkedAt)}</span></div><span class="profile-action">查看立委成績單 <span aria-hidden="true">↗</span></span></a>`;
- byId('home-coverage').textContent='目前收錄蔣萬安市政承諾與沈伯洋國會紀錄，依各自職務呈現。';
+ const identity=name=>{
+  const candidate=focusData.election.candidates.find(c=>c.name===name);
+  return candidate?`<div class="duel-meta"><span class="ballot-number">${html(candidate.ballotNumber)} 號</span><span class="profile-party">${html(candidate.party)}推薦</span></div>`:'';
+ };
+ byId('profile-cards').innerHTML=`<a class="profile-card mayor-card" href="#mayor" aria-label="蔣萬安，查看施政完成度">${identity('蔣萬安')}<h3 class="profile-name">蔣萬安</h3><span class="profile-role">臺北市長</span><p class="profile-description">施政完成度</p><div class="profile-meta"><strong>${t.summary.policyCount} 條 2022 公報政見</strong><span>${t.summary.partCount} 個分項 · 含估分</span><span>查核更新 ${html(t.checkedAt)}</span></div><span class="profile-action">查看施政完成度 <span aria-hidden="true">↗</span></span></a><a class="profile-card legislator-card" href="#legislator" aria-label="沈伯洋，查看立委成績單">${identity('沈伯洋')}<h3 class="profile-name">沈伯洋</h3><span class="profile-role">第 11 屆立法委員</span><p class="profile-description">立委成績單</p><div class="profile-meta"><strong>已收錄 ${l.records.length} 筆官方紀錄</strong><span>選錄資料 · 非全任期</span><span>來源核讀 ${html(l.checkedAt)}</span></div><span class="profile-action">查看立委成績單 <span aria-hidden="true">↗</span></span></a>`;
+ byId('home-coverage').textContent='市政承諾與國會紀錄，依各自職務呈現。';
 }
 function renderElection(){
  const e=focusData.election,v=e.voting,t=focusData.taipei;

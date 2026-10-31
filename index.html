@@ -42,21 +42,24 @@
       <h1 id="home-title">2026 臺北市長選舉</h1>
       <p class="page-lead">選舉資訊、市政議題與人物履職紀錄</p>
     </div>
-    <div id="election-info" class="election-info"></div>
-    <section class="home-section candidate-section" aria-labelledby="candidates-title">
-      <h2 id="candidates-title">本屆參選名單</h2>
-      <p id="candidate-list-meta" class="section-meta"></p>
-      <div id="election-candidates" class="candidate-grid"></div>
-    </section>
-    <section class="home-section home-profiles" aria-labelledby="profiles-title">
-      <h2 id="profiles-title">人物履職紀錄</h2>
-      <div id="profile-cards" class="profile-grid" aria-label="選擇人物履職紀錄"></div>
+    <section class="home-section matchup-section" aria-labelledby="profiles-title">
+      <h2 id="profiles-title">焦點對決</h2>
+      <div class="matchup-stage">
+        <div id="profile-cards" class="profile-grid matchup-grid" aria-label="選擇人物履職紀錄"></div>
+        <div class="matchup-versus" aria-hidden="true">VS</div>
+      </div>
       <div id="home-coverage" class="coverage-note home-coverage"></div>
     </section>
+    <div id="election-info" class="election-info"></div>
     <section class="home-section home-issues" aria-labelledby="issues-title">
       <h2 id="issues-title">臺北市政議題</h2>
       <p class="section-meta">從 2022 市長公報承諾，查看臺北市政履行紀錄。</p>
       <div id="election-topics" class="topic-grid"></div>
+    </section>
+    <section class="home-section candidate-section" aria-labelledby="candidates-title">
+      <h2 id="candidates-title">全部 6 位參選人</h2>
+      <p id="candidate-list-meta" class="section-meta"></p>
+      <div id="election-candidates" class="candidate-grid"></div>
     </section>
   </section>
 

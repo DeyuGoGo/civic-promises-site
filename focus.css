@@ -50,8 +50,9 @@ main { width: min(100%, 1248px); min-height: calc(100dvh - 190px); margin: auto;
 main:focus, .page[tabindex="-1"]:focus { outline: none; }
 .page { padding: 34px 0 48px; }
 .home-page { padding-top: 42px; }
-.home-heading { margin-bottom: 24px; }
-.home-heading h1 { font-size: clamp(32px, 4vw, 50px); letter-spacing: -.04em; line-height: 1.35; margin-bottom: 10px; }
+.home-heading { margin-bottom: 22px; }
+.home-heading h1 { font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -.035em; line-height: 1.4; margin-bottom: 5px; }
+.home-heading .page-lead { font-size: 13px; }
 .election-info { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .election-info:empty, .section-meta:empty { display: none; }
 .election-info > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 12px; min-width: 0; }
@@ -103,9 +104,36 @@ main:focus, .page[tabindex="-1"]:focus { outline: none; }
 .profile-meta > strong { color: var(--ink); font-size: 14px; font-weight: 650; }
 .profile-action { display: flex; align-items: center; justify-content: space-between; align-self: stretch; gap: 12px; margin-top: auto; padding-top: 15px; border-top: 1px solid #c8c0b4; font-size: 14px; font-weight: 650; line-height: 1.6; }
 .profile-action svg, .profile-action .arrow { flex: none; }
+.matchup-section { margin-top: 0; margin-bottom: 26px; }
+.matchup-section > h2 { margin: 0 0 13px; font-size: 12px; font-weight: 650; letter-spacing: .18em; color: var(--muted); }
+.matchup-stage { position: relative; isolation: isolate; }
+.matchup-stage::before { content: ""; position: absolute; z-index: -1; top: 12px; bottom: 12px; left: 50%; width: 1px; background: var(--line-strong); transform: skewX(-5deg); pointer-events: none; }
+.matchup-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; align-items: stretch; }
+.matchup-grid .profile-card { min-height: 420px; padding: 30px 40px 25px; border: 1px solid var(--line); border-top: 1px solid var(--line); border-radius: 3px; background: var(--surface-raised); }
+.matchup-grid .profile-card::before { content: ""; position: absolute; top: -1px; width: 64px; height: 4px; background: var(--identity); }
+.matchup-grid .profile-card:hover { border-color: var(--line-strong); background: #f7f3ed; }
+.matchup-grid .profile-card:first-child { align-items: flex-end; padding-right: 64px; text-align: right; }
+.matchup-grid .profile-card:first-child::before { right: 64px; }
+.matchup-grid .profile-card:last-child { align-items: flex-start; padding-left: 64px; text-align: left; }
+.matchup-grid .profile-card:last-child::before { left: 64px; }
+.duel-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 16px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.ballot-number { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; color: var(--ink); font-size: 15px; line-height: 1.4; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ballot-number::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--identity, var(--strong)); }
+.profile-party { display: block; max-width: 100%; overflow-wrap: anywhere; }
+.matchup-grid .profile-card:first-child .duel-meta { justify-content: flex-end; }
+.matchup-grid .profile-role { margin: 0 0 12px; font-size: 13px; line-height: 1.7; }
+.matchup-grid .profile-name { width: 100%; margin: 0 0 21px; font-size: clamp(64px, 6.7vw, 90px); font-weight: 800; line-height: 1.15; letter-spacing: -.055em; white-space: nowrap; }
+.matchup-grid .profile-description { max-width: 350px; margin: 0 0 20px; font-size: 14px; line-height: 1.85; }
+.matchup-grid .profile-meta { margin: 0 0 24px; font-size: 12px; line-height: 1.8; }
+.matchup-grid .profile-meta > strong { font-size: 14px; font-weight: 650; }
+.matchup-grid .profile-action { min-height: 48px; padding-top: 15px; gap: 10px; border-top-color: var(--line); font-size: 14px; }
+.matchup-grid .profile-card:first-child .profile-action { flex-direction: row-reverse; }
+.matchup-grid .profile-action > span[aria-hidden] { flex: none; font-size: 17px; }
+.matchup-versus { position: absolute; z-index: 1; top: 43%; left: 50%; display: flex; align-items: center; justify-content: center; width: 66px; height: 66px; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--strong); color: var(--surface-raised); font: italic 800 27px/1 Arial, sans-serif; letter-spacing: -.06em; transform: translate(-50%, -50%) rotate(-5deg); pointer-events: none; }
+.matchup-stage:has(.matchup-grid:empty)::before, .matchup-stage:has(.matchup-grid:empty) .matchup-versus { display: none; }
 .coverage-note { padding: 16px 18px; margin: 20px 0; border-left: 3px solid #9b8d79; background: #ded7cb; color: #5b5143; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
 .coverage-note p:last-child { margin-bottom: 0; }
-.home-coverage { border: 0; border-top: 1px solid var(--line); background: none; margin-top: 26px; padding: 18px 0 0; }
+.home-coverage { border: 0; background: none; margin: 12px 0 0; padding: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 12px; margin: 0 0 24px; }
 .stat-card { display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 112px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .stat-value { display: block; font-size: 34px; font-weight: 700; line-height: 1.2; letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: var(--ink); }
@@ -229,6 +257,7 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .main-nav { gap: 3px; }.main-nav a { padding: 8px 12px; font-size: 13px; }
   main { padding: 0 24px; }.home-page { padding-top: 32px; }
   .profile-card { padding: 24px; min-height: 242px; }.profile-name { font-size: 31px; }
+  .matchup-grid { gap: 28px; }.matchup-grid .profile-card { min-height: 390px; padding: 25px 24px 22px; }.matchup-grid .profile-card:first-child { padding-right: 36px; }.matchup-grid .profile-card:last-child { padding-left: 36px; }.matchup-grid .profile-card:first-child::before { right: 36px; }.matchup-grid .profile-card:last-child::before { left: 36px; }.matchup-grid .profile-name { font-size: clamp(45px, 7.2vw, 64px); }.matchup-grid .profile-role { font-size: 12px; }.matchup-versus { width: 54px; height: 54px; font-size: 23px; }
   .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.topic-card { min-height: 145px; }
   .candidate-card { padding: 15px; gap: 3px 8px; }.candidate-record { grid-column: 1 / -1; grid-row: 3; justify-self: start; margin-top: 3px; }
   .record-list { grid-template-columns: 1fr; }.record-card { padding: 20px 22px; }
@@ -241,8 +270,8 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .main-nav { flex-basis: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
   .main-nav a { min-height: 44px; padding: 8px 4px; font-size: 12px; }
   main { padding: 0 16px; min-height: calc(100dvh - 210px); }
-  .page, .home-page { padding: 25px 0 32px; }.home-heading { margin-bottom: 20px; }
-  h1 { font-size: 29px; line-height: 1.4; letter-spacing: -.03em; }.home-heading h1 { font-size: 31px; line-height: 1.4; }
+  .page, .home-page { padding: 25px 0 32px; }.home-heading { margin-bottom: 18px; }
+  h1 { font-size: 29px; line-height: 1.4; letter-spacing: -.03em; }.home-heading h1 { font-size: 24px; line-height: 1.4; }.home-heading .page-lead { font-size: 12px; }
   .election-info { padding: 13px 15px; gap: 2px 14px; }.election-info > div:first-child { gap: 3px 8px; }.election-date, .election-date strong, .election-date time { font-size: 21px; }.election-source { font-size: 12px; }.election-meta { font-size: 11px; }
   .home-section { margin-top: 25px; }.home-section > h2 { margin-bottom: 12px; font-size: 20px; }.section-meta { margin-top: -5px; margin-bottom: 12px; font-size: 11px; }
   .candidate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }.candidate-card { padding: 13px 14px; }.candidate-name { font-size: 18px; }.candidate-party, .candidate-record { font-size: 11px; }.candidate-number { font-size: 11px; }
@@ -251,7 +280,8 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .page-meta { display: grid; grid-template-columns: 8px minmax(0, 1fr); gap: 0 8px; align-items: baseline; }.page-meta > .identity-dot { align-self: start; margin-top: 7px; }.page-meta > .source-link { grid-column: 2; margin-left: 0; justify-self: start; }
   .profile-grid { grid-template-columns: 1fr; gap: 14px; }.profile-card { padding: 20px 22px 18px; min-height: 210px; }.profile-role { font-size: 12px; margin-bottom: 7px; }.profile-name { font-size: 30px; margin-bottom: 9px; }.profile-meta { font-size: 13px; margin-bottom: 15px; }.profile-action { font-size: 14px; padding-top: 12px; }
   .profile-description { margin-bottom: 12px; font-size: 13px; }.profile-meta { gap: 2px; }.profile-meta > strong { font-size: 13px; }
-  .coverage-note { margin: 16px 0; padding: 13px 14px; font-size: 12px; }.home-coverage { margin-top: 20px; padding: 15px 0 0; }
+  .matchup-section { margin-top: 0; margin-bottom: 20px; }.matchup-section > h2 { margin-bottom: 10px; font-size: 11px; }.matchup-stage::before { top: 8px; bottom: 8px; transform: none; }.matchup-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }.matchup-grid .profile-card { min-height: 330px; padding: 18px 14px 15px; }.matchup-grid .profile-card:first-child { padding-right: 19px; }.matchup-grid .profile-card:last-child { padding-left: 19px; }.matchup-grid .profile-card::before { width: 36px; height: 3px; }.matchup-grid .profile-card:first-child::before { right: 19px; }.matchup-grid .profile-card:last-child::before { left: 19px; }.duel-meta { gap: 5px 7px; margin-bottom: 13px; font-size: 11px; }.ballot-number { min-height: 25px; gap: 5px; font-size: 13px; }.ballot-number::before { width: 7px; height: 7px; }.matchup-grid .profile-role { margin-bottom: 6px; font-size: 11px; line-height: 1.7; }.matchup-grid .profile-name { margin-bottom: 10px; font-size: clamp(28px, 8.5vw, 36px); letter-spacing: -.055em; line-height: 1.2; }.matchup-grid .profile-description { display: block; margin-bottom: 15px; color: var(--ink); font-size: 13px; font-weight: 650; line-height: 1.7; }.matchup-grid .profile-meta { gap: 5px; margin-bottom: 17px; font-size: 11px; line-height: 1.75; }.matchup-grid .profile-meta > strong { font-size: 12px; line-height: 1.7; }.matchup-grid .profile-action { min-height: 50px; gap: 5px; padding-top: 10px; font-size: 12px; line-height: 1.65; }.matchup-grid .profile-action > span[aria-hidden] { font-size: 14px; }.matchup-versus { top: 43%; width: 36px; height: 38px; font-size: 17px; }
+  .coverage-note { margin: 16px 0; padding: 13px 14px; font-size: 12px; }.home-coverage { margin: 10px 0 0; padding: 0; font-size: 11px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-bottom: 18px; }.stat-card { min-height: 94px; padding: 14px 15px; gap: 5px; }.stat-value { font-size: 29px; }.stat-label { font-size: 11px; }.stat-card > small { font-size: 11px; }
   .filters-panel { padding: 14px; gap: 14px; margin-bottom: 16px; }.filter-list { gap: 6px; }.filter-chip { min-height: 44px; padding: 8px 10px; font-size: 12px; }.filter-chip small { font-size: 10px; }.search-field > span { font-size: 12px; }
   input, select { font-size: 16px; }.result-count { font-size: 12px; margin: 14px 0 11px; }
@@ -267,7 +297,7 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .evidence-section { margin-top: 22px; padding-top: 17px; }.evidence-section > h2, .evidence-section > h3 { font-size: 18px; }.evidence-section > p { font-size: 14px; }.evidence-item { font-size: 14px; padding: 14px 0; }.evidence-item h3, .evidence-item h4 { font-size: 15px; }blockquote { padding: 14px 15px; font-size: 14px; }
 }
 @media (max-width: 360px) {
-  .site-header { padding-right: 14px; padding-left: 14px; }.main-nav a { font-size: 11px; }main { padding: 0 13px; }.home-heading h1 { font-size: 29px; }h1 { font-size: 26px; }.profile-card { padding: 18px; }.stat-card { padding: 13px; }.stat-value { font-size: 26px; }.record-card { padding: 16px; }.record-dialog { padding-right: 16px; padding-left: 16px; }#record-title { font-size: 21px; }.site-footer { width: calc(100% - 26px); }
+  .site-header { padding-right: 14px; padding-left: 14px; }.main-nav a { font-size: 11px; }main { padding: 0 13px; }.home-heading h1 { font-size: 22px; }h1 { font-size: 26px; }.profile-card { padding: 18px; }.matchup-grid { gap: 18px; }.matchup-grid .profile-card { padding: 16px 11px 13px; }.matchup-grid .profile-card:first-child { padding-right: 16px; }.matchup-grid .profile-card:last-child { padding-left: 16px; }.matchup-grid .profile-card:first-child::before { right: 16px; }.matchup-grid .profile-card:last-child::before { left: 16px; }.matchup-grid .profile-name { font-size: 28px; }.matchup-grid .profile-meta { font-size: 11px; }.matchup-grid .profile-action { font-size: 11px; }.matchup-versus { width: 32px; height: 35px; font-size: 15px; }.stat-card { padding: 13px; }.stat-value { font-size: 26px; }.record-card { padding: 16px; }.record-dialog { padding-right: 16px; padding-left: 16px; }#record-title { font-size: 21px; }.site-footer { width: calc(100% - 26px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }*, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
