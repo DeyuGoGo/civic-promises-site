@@ -31,7 +31,7 @@ h1 { margin-bottom: 12px; font-size: clamp(30px, 3.5vw, 44px); font-weight: 750;
 h2 { margin-bottom: 12px; font-size: 23px; font-weight: 700; line-height: 1.5; }
 h3 { font-size: 18px; font-weight: 650; line-height: 1.6; }
 p { margin-bottom: 14px; }
-button, input, select, .profile-card, .record-card { min-width: 0; }
+button, input, select, .profile-card, .record-card, .candidate-card, .topic-card { min-width: 0; }
 input, select { width: 100%; padding: 10px 13px; border: 1px solid var(--line-strong); border-radius: 5px; color: var(--ink); background: var(--surface-raised); font-size: 16px; }
 input::placeholder { color: #756d62; opacity: 1; }
 input[readonly] { color: var(--muted); }
@@ -50,9 +50,35 @@ main { width: min(100%, 1248px); min-height: calc(100dvh - 190px); margin: auto;
 main:focus, .page[tabindex="-1"]:focus { outline: none; }
 .page { padding: 34px 0 48px; }
 .home-page { padding-top: 42px; }
-.home-heading { margin-bottom: 28px; }
-.home-heading h1 { font-size: clamp(34px, 4.6vw, 58px); letter-spacing: -.04em; line-height: 1.3; margin-bottom: 12px; }
-.title-divider { color: #918879; font-weight: 400; padding: 0 .12em; }
+.home-heading { margin-bottom: 24px; }
+.home-heading h1 { font-size: clamp(32px, 4vw, 50px); letter-spacing: -.04em; line-height: 1.35; margin-bottom: 10px; }
+.election-info { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.election-info:empty, .section-meta:empty { display: none; }
+.election-info > div:first-child { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 12px; min-width: 0; }
+.election-date { display: block; min-width: 0; margin: 0; color: var(--ink); font-size: 23px; font-weight: 650; line-height: 1.7; font-variant-numeric: tabular-nums; }
+.election-date strong, .election-date time { color: var(--ink); font-size: 23px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.election-source { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; min-height: 44px; margin: 0; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.election-source a, a.election-source { min-height: 44px; align-content: center; }
+.election-meta { min-width: 0; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.election-info > .election-meta { flex-basis: 100%; }
+.home-section { margin-top: 32px; }
+.home-section > h2 { margin-bottom: 14px; font-size: 22px; }
+.section-meta { margin: -5px 0 14px; color: var(--muted); font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.section-meta a { display: inline-block; min-height: 44px; align-content: center; }
+.candidate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.candidate-card { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: start; align-items: baseline; gap: 2px 12px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); overflow-wrap: anywhere; }
+.candidate-name { grid-column: 1; color: var(--ink); font-size: 20px; line-height: 1.5; font-weight: 650; }
+.candidate-party { grid-column: 1; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.candidate-number { grid-column: 2; grid-row: 1; align-self: center; color: var(--muted); font-size: 12px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.candidate-record { grid-column: 2; grid-row: 1 / 3; align-self: center; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; line-height: 1.6; text-underline-offset: .25em; }
+.candidate-card:has(.candidate-number) .candidate-record { grid-column: 1 / -1; grid-row: 3; justify-self: start; margin-top: 3px; }
+.topic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.topic-card { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-height: 160px; padding: 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); text-decoration: none; overflow-wrap: anywhere; transition: background .15s ease, border-color .15s ease; }
+.topic-card:hover { background: var(--surface-raised); border-color: var(--line-strong); }
+.topic-title { display: block; margin: 0; color: var(--ink); font-size: 18px; font-weight: 650; line-height: 1.6; }
+.topic-summary { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.topic-count { color: var(--muted); font-size: 12px; line-height: 1.7; font-variant-numeric: tabular-nums; }
+.topic-action { display: flex; align-items: center; justify-content: space-between; align-self: stretch; gap: 8px; margin-top: auto; padding-top: 8px; color: var(--ink); font-size: 13px; line-height: 1.7; font-weight: 600; }
 .eyebrow { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .12em; line-height: 1.6; margin-bottom: 12px; }
 .page-lead { max-width: 720px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .page-heading { margin-bottom: 24px; }
@@ -203,6 +229,8 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .main-nav { gap: 3px; }.main-nav a { padding: 8px 12px; font-size: 13px; }
   main { padding: 0 24px; }.home-page { padding-top: 32px; }
   .profile-card { padding: 24px; min-height: 242px; }.profile-name { font-size: 31px; }
+  .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.topic-card { min-height: 145px; }
+  .candidate-card { padding: 15px; gap: 3px 8px; }.candidate-record { grid-column: 1 / -1; grid-row: 3; justify-self: start; margin-top: 3px; }
   .record-list { grid-template-columns: 1fr; }.record-card { padding: 20px 22px; }
   .method-grid { gap: 16px; }.method-card { padding: 20px; }.method-card h2 { font-size: 20px; }
   .site-footer { width: calc(100% - 48px); }
@@ -214,7 +242,11 @@ dl { margin: 16px 0; }dt { color: var(--muted); font-size: 12px; margin-top: 12p
   .main-nav a { min-height: 44px; padding: 8px 4px; font-size: 12px; }
   main { padding: 0 16px; min-height: calc(100dvh - 210px); }
   .page, .home-page { padding: 25px 0 32px; }.home-heading { margin-bottom: 20px; }
-  h1 { font-size: 29px; line-height: 1.4; letter-spacing: -.03em; }.home-heading h1 { font-size: 33px; line-height: 1.35; }.title-divider { padding: 0; }
+  h1 { font-size: 29px; line-height: 1.4; letter-spacing: -.03em; }.home-heading h1 { font-size: 31px; line-height: 1.4; }
+  .election-info { padding: 13px 15px; gap: 2px 14px; }.election-info > div:first-child { gap: 3px 8px; }.election-date, .election-date strong, .election-date time { font-size: 21px; }.election-source { font-size: 12px; }.election-meta { font-size: 11px; }
+  .home-section { margin-top: 25px; }.home-section > h2 { margin-bottom: 12px; font-size: 20px; }.section-meta { margin-top: -5px; margin-bottom: 12px; font-size: 11px; }
+  .candidate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }.candidate-card { padding: 13px 14px; }.candidate-name { font-size: 18px; }.candidate-party, .candidate-record { font-size: 11px; }.candidate-number { font-size: 11px; }
+  .topic-grid { gap: 10px; }.topic-card { min-height: 140px; padding: 15px; gap: 6px; }.topic-title { font-size: 16px; }.topic-summary, .topic-action { font-size: 12px; }.topic-count { font-size: 11px; }
   .eyebrow { font-size: 11px; margin-bottom: 8px; letter-spacing: .08em; }.page-lead { font-size: 14px; }.page-heading { margin-bottom: 19px; }.page-meta { font-size: 12px; }
   .page-meta { display: grid; grid-template-columns: 8px minmax(0, 1fr); gap: 0 8px; align-items: baseline; }.page-meta > .identity-dot { align-self: start; margin-top: 7px; }.page-meta > .source-link { grid-column: 2; margin-left: 0; justify-self: start; }
   .profile-grid { grid-template-columns: 1fr; gap: 14px; }.profile-card { padding: 20px 22px 18px; min-height: 210px; }.profile-role { font-size: 12px; margin-bottom: 7px; }.profile-name { font-size: 30px; margin-bottom: 9px; }.profile-meta { font-size: 13px; margin-bottom: 15px; }.profile-action { font-size: 14px; padding-top: 12px; }

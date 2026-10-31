@@ -5,7 +5,7 @@ export function readFocusRoute(hash=''){
  const value=String(hash).replace(/^#/,'');
  if(FOCUS_PAGES.has(value))return {page:value,kind:null,id:null};
  if(FOCUS_ALIASES[value])return {page:FOCUS_ALIASES[value],kind:null,id:null};
- const match=value.match(/^(policy|record|county)\/([^/#?]+)$/);
+ const match=value.match(/^(policy|record|county|issue)\/([^/#?]+)$/);
  if(match){
   try{
    const id=decodeURIComponent(match[2]);

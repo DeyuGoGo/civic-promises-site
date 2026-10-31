@@ -2,7 +2,7 @@ import {readFocusRoute,focusRecordHash,focusShareUrl,selectFocusPolicies,selectF
 
 const byId=id=>document.getElementById(id);
 const html=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const publicTitle='蔣萬安・沈伯洋｜公職成績單';
+const publicTitle='2026 臺北市長選舉｜北市選舉';
 const categoryNames={bill:'法律提案與連署',video:'會議發言',speech:'質詢與發言',committee:'委員會工作',oversight:'監督與審查'};
 let focusData=null,focusLoading=false,topicFilter='',recordFilter='',activeRecord=null,skipModalClose=0,currentFocusPage='home';
 const dialog=byId('record-dialog');
@@ -18,7 +18,7 @@ function stat(value,label,note=''){
 }
 function setFocusLoad(state){
  byId('load-state').hidden=state==='ready';
- byId('load-message').textContent=state==='loading'?'正在載入工作紀錄…':'資料暫時無法載入，請重試。';
+ byId('load-message').textContent=state==='loading'?'正在載入選舉資料…':'資料暫時無法載入，請重試。';
  byId('retry-load').hidden=state!=='error';byId('retry-load').disabled=state==='loading';
  byId('main').setAttribute('aria-busy',String(state==='loading'));
 }
@@ -29,12 +29,24 @@ function personMeta(){
 }
 function renderProfiles(){
  const t=focusData.taipei,l=focusData.legislature;
- byId('profile-cards').innerHTML=`<a class="profile-card mayor-card" href="#mayor"><span class="profile-role">臺北市長 · 施政完成度</span><h2 class="profile-name">蔣萬安</h2><p class="profile-description">從選舉公報承諾，追蹤政策執行與證據。</p><div class="profile-meta"><strong>${t.summary.policyCount} 條公報政見</strong><span>${t.summary.partCount} 個分項 · 含估分</span><span>查核紀錄更新 ${html(t.checkedAt)}</span></div><span class="profile-action">查看施政完成度 <span aria-hidden="true">↗</span></span></a><a class="profile-card legislator-card" href="#legislator"><span class="profile-role">立法委員 · 國會工作紀錄</span><h2 class="profile-name">沈伯洋</h2><p class="profile-description">追蹤法律提案、質詢發言與委員會工作。</p><div class="profile-meta"><strong>已收錄 ${l.records.length} 筆官方紀錄</strong><span>依本人角色與議事程序整理</span><span>來源核讀 ${html(l.checkedAt)}</span></div><span class="profile-action">查看立委成績單 <span aria-hidden="true">↗</span></span></a>`;
- byId('home-coverage').textContent='市政看承諾執行，國會看立法與監督紀錄。各項附來源與日期。';
+ byId('profile-cards').innerHTML=`<a class="profile-card mayor-card" href="#mayor"><span class="profile-role">臺北市長 · 施政完成度</span><h2 class="profile-name">蔣萬安</h2><p class="profile-description">對照 2022 選舉公報，追蹤任內政策執行。</p><div class="profile-meta"><strong>${t.summary.policyCount} 條 2022 公報政見</strong><span>${t.summary.partCount} 個分項 · 含估分</span><span>查核紀錄更新 ${html(t.checkedAt)}</span></div><span class="profile-action">查看施政完成度 <span aria-hidden="true">↗</span></span></a><a class="profile-card legislator-card" href="#legislator"><span class="profile-role">立法委員 · 國會工作紀錄</span><h2 class="profile-name">沈伯洋</h2><p class="profile-description">追蹤法律提案、質詢發言與委員會工作。</p><div class="profile-meta"><strong>已收錄 ${l.records.length} 筆官方紀錄</strong><span>依本人角色與議事程序整理</span><span>來源核讀 ${html(l.checkedAt)}</span></div><span class="profile-action">查看立委成績單 <span aria-hidden="true">↗</span></span></a>`;
+ byId('home-coverage').textContent='目前收錄蔣萬安市政承諾與沈伯洋國會紀錄，依各自職務呈現。';
+}
+function renderElection(){
+ const e=focusData.election,v=e.voting,t=focusData.taipei;
+ const rosterSource=e.candidateList.sources.find(s=>s.id==='taipei-mayor-ballot-register')||e.candidateList.sources[0];
+ const commission=e.sources.find(s=>/\/mect\/?$/.test(s.url));
+ byId('election-info').innerHTML=`<div><span class="election-meta">投票日</span><strong class="election-date">${html(v.date.replaceAll('-','.'))}</strong><span class="election-meta">${html(v.startTime)}–${html(v.endTime)}</span></div><div class="election-source">${sourceLink(v.sources[0],'官方投票資訊')}${commission?sourceLink(commission,'臺北市選委會'):''}</div>`;
+ byId('candidate-list-meta').innerHTML=`${html(e.candidateList.statusAsOf)} 抽籤結果 · 政黨欄為推薦政黨 · 核讀 ${html(e.checkedAt)} ${sourceLink(rosterSource,'官方號次表')}`;
+ byId('election-candidates').innerHTML=[...e.candidates].sort((a,b)=>a.ballotNumber-b.ballotNumber).map(c=>{
+  const record=c.name==='蔣萬安'?'mayor':c.name==='沈伯洋'?'legislator':null;
+  return `<article class="candidate-card">${c.ballotNumber?`<span class="candidate-number" aria-label="${html(c.ballotNumber)} 號">${html(c.ballotNumber)}</span>`:''}<strong class="candidate-name">${html(c.name)}</strong>${c.party?`<span class="candidate-party">${html(c.party==='無'?'無政黨推薦':c.party)}</span>`:''}${record?`<a class="candidate-record" href="#${record}" aria-label="查看${html(c.name)}的履職紀錄">履職紀錄 <span aria-hidden="true">↗</span></a>`:''}</article>`;
+ }).join('');
+ byId('election-topics').innerHTML=t.topics.filter(topic=>topic.count>0).map(topic=>`<a class="topic-card" href="#issue/${html(topic.id)}"><span class="topic-count">${topic.count} 條市政承諾</span><h3 class="topic-title">${html(topic.label)}</h3><p class="topic-summary">${html(topic.description)}</p><span class="topic-action">查看履行紀錄 <span aria-hidden="true">↗</span></span></a>`).join('');
 }
 function renderMayor(){
  const t=focusData.taipei,s=t.summary;
- byId('mayor-stats').innerHTML=stat(s.scoreLabel,'公報承諾平均完成度','按適用分項等權平均 · 含估分')+stat(s.policyCount,'條公報政見',`${s.partCount} 個分項`)+stat(`${s.measuredCount} / ${s.applicablePartCount}`,'直接計分分項')+stat(`${s.estimatedCount} / ${s.applicablePartCount}`,'估分分項');
+ byId('mayor-stats').innerHTML=stat(s.scoreLabel,'2022 公報承諾平均完成度','按適用分項等權平均 · 含估分')+stat(s.policyCount,'條公報政見',`${s.partCount} 個分項`)+stat(`${s.measuredCount} / ${s.applicablePartCount}`,'直接計分分項')+stat(`${s.estimatedCount} / ${s.applicablePartCount}`,'估分分項');
  byId('mayor-topic-filters').innerHTML=`<button class="filter-chip" type="button" data-focus-topic="" aria-pressed="${!topicFilter}">全部 <span>${t.policies.length}</span></button>`+t.topics.filter(item=>item.count>0).map(item=>`<button class="filter-chip" type="button" data-focus-topic="${html(item.id)}" aria-pressed="${topicFilter===item.id}">${html(item.label)} <span>${item.count}</span></button>`).join('');
  renderPolicyList();
 }
@@ -60,9 +72,9 @@ function renderLegislativeList(){
  byId('legislator-list').innerHTML=rows.map(r=>`<article class="record-card legislative-record"><div class="record-top"><span class="record-role">${html(categoryNames[r.category]||r.category)} · ${html(r.roleLabel)}</span><span class="record-date">${html(r.date)}</span></div><h2 class="record-title"><button class="record-link" type="button" data-record="${html(r.id)}">${html(r.title)} <span aria-hidden="true">↗</span></button></h2><p class="record-summary">${html(r.summary)}</p><div class="record-meta"><span class="status-pill">${html(r.status)}</span><span>紀錄截至 ${html(r.statusAsOf||r.date)}</span></div></article>`).join('');
 }
 function renderSources(){
- const t=focusData.taipei,l=focusData.legislature;
- const sources=[{url:t.bulletinSource,title:'2022 臺北市長選舉公報'},{url:t.profileSource,title:'臺北市政府職務資料'},...(l.profile.sources||[])];
- byId('method-sources').innerHTML=`<div class="source-list">${sources.map(source=>`<p>${sourceLink(source)}</p>`).join('')}</div><p>市政資料查核紀錄更新：${html(t.checkedAt)}；國會來源核讀：${html(l.checkedAt)}。每筆證據另保留原資料日期。</p>`;
+ const t=focusData.taipei,l=focusData.legislature,e=focusData.election;
+ const sources=[...e.sources,{url:t.bulletinSource,title:'2022 臺北市長選舉公報'},{url:t.profileSource,title:'臺北市政府職務資料'},...(l.profile.sources||[])];
+ byId('method-sources').innerHTML=`<p>本頁依 ${html(e.candidateList.statusAsOf)} 官方抽籤結果列名；工作程序表預定 ${html(e.candidateList.formalAnnouncementDate)} 公告候選人名單。</p><div class="source-list">${sources.map(source=>`<p>${sourceLink(source)}</p>`).join('')}</div><p>選舉資料核讀：${html(e.checkedAt)}；市政資料查核紀錄更新：${html(t.checkedAt)}；國會來源核讀：${html(l.checkedAt)}。每筆證據另保留原資料日期。</p>`;
 }
 function sourceDetails(sources=[]){
  const reused=s=>s.verifiedThisRound===false&&s.reusedVerifiedEvidence===true;
@@ -109,6 +121,10 @@ function applyFocusRoute(){
  }
  document.title=({home:'',mayor:'蔣萬安的施政完成度｜',legislator:'沈伯洋的立委成績單｜',method:'方法與來源｜'}[route.page])+publicTitle;
  if(!focusData)return;
+ if(route.kind==='issue'){
+  topicFilter=focusData.taipei.topics.some(topic=>topic.id===route.id&&topic.count>0)?route.id:'';
+  byId('mayor-query').value='';renderMayor();
+ }
  if(['policy','record'].includes(route.kind)){showFocusRecord(route.kind,route.id);return;}
  const view=history.state?.focusView;
  const target=view?.key?byId(route.page).querySelector(`[data-${view.kind}="${CSS.escape(view.key)}"]`):null;
@@ -125,6 +141,9 @@ function returnFocusRecord(){
  const fallback=activeRecord?.kind==='record'?'#legislator':'#mayor';
  history.replaceState(null,'',fallback);applyFocusRoute();
 }
+function leaveIssueRoute(){
+ if(readFocusRoute(location.hash).kind==='issue')history.replaceState(null,'','#mayor');
+}
 dialog.addEventListener('close',()=>{if(skipModalClose){skipModalClose--;return;}returnFocusRecord();});
 dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();});
 byId('record-back').onclick=()=>dialog.close();byId('record-close').onclick=()=>dialog.close();
@@ -137,11 +156,11 @@ byId('share-record').onclick=async()=>{
 };
 byId('mayor-list').onclick=event=>{const button=event.target.closest('[data-policy]');if(button)openFocusRecord('policy',button.dataset.policy,button);};
 byId('legislator-list').onclick=event=>{const button=event.target.closest('[data-record]');if(button)openFocusRecord('record',button.dataset.record,button);};
-byId('mayor-topic-filters').onclick=event=>{const button=event.target.closest('[data-focus-topic]');if(!button||!focusData)return;topicFilter=button.dataset.focusTopic;renderMayor();byId('mayor-topic-filters').querySelector(`[data-focus-topic="${CSS.escape(topicFilter)}"]`).focus({preventScroll:true});};
+byId('mayor-topic-filters').onclick=event=>{const button=event.target.closest('[data-focus-topic]');if(!button||!focusData)return;leaveIssueRoute();topicFilter=button.dataset.focusTopic;renderMayor();byId('mayor-topic-filters').querySelector(`[data-focus-topic="${CSS.escape(topicFilter)}"]`).focus({preventScroll:true});};
 byId('legislator-filters').onclick=event=>{const button=event.target.closest('[data-focus-category]');if(!button||!focusData)return;recordFilter=button.dataset.focusCategory;renderLegislator();byId('legislator-filters').querySelector(`[data-focus-category="${CSS.escape(recordFilter)}"]`).focus({preventScroll:true});};
-byId('mayor-query').oninput=()=>focusData&&renderPolicyList();
+byId('mayor-query').oninput=()=>{if(focusData){leaveIssueRoute();renderPolicyList();}};
 byId('legislator-query').oninput=()=>focusData&&renderLegislativeList();
-byId('mayor-clear').onclick=()=>{topicFilter='';byId('mayor-query').value='';renderMayor();byId('mayor-result').setAttribute('tabindex','-1');byId('mayor-result').focus({preventScroll:true});};
+byId('mayor-clear').onclick=()=>{leaveIssueRoute();topicFilter='';byId('mayor-query').value='';renderMayor();byId('mayor-result').setAttribute('tabindex','-1');byId('mayor-result').focus({preventScroll:true});};
 byId('legislator-clear').onclick=()=>{recordFilter='';byId('legislator-query').value='';renderLegislator();byId('legislator-result').setAttribute('tabindex','-1');byId('legislator-result').focus({preventScroll:true});};
 document.querySelector('.skip-link').onclick=event=>{event.preventDefault();byId(currentFocusPage).focus({preventScroll:true});byId(currentFocusPage).scrollIntoView({block:'start',behavior:'instant'});};
 addEventListener('hashchange',applyFocusRoute);
@@ -151,8 +170,8 @@ async function loadFocusData(){
   const response=await fetch('./data/focus.json',{cache:'no-store'});
   if(!response.ok)throw Error('Unavailable data');
   const loaded=await response.json();
-  if(loaded.schemaVersion!==1||!Array.isArray(loaded.taipei?.policies)||!Array.isArray(loaded.legislature?.records))throw Error('Invalid data');
-  focusData=loaded;renderProfiles();personMeta();renderMayor();renderLegislator();renderSources();setFocusLoad('ready');applyFocusRoute();
+  if(loaded.schemaVersion!==1||!Array.isArray(loaded.taipei?.policies)||!Array.isArray(loaded.legislature?.records)||!Array.isArray(loaded.election?.candidates))throw Error('Invalid data');
+  focusData=loaded;renderElection();renderProfiles();personMeta();renderMayor();renderLegislator();renderSources();setFocusLoad('ready');applyFocusRoute();
  }catch{setFocusLoad('error');}finally{focusLoading=false;byId('retry-load').disabled=false;}
 }
 byId('retry-load').onclick=loadFocusData;

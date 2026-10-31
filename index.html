@@ -4,28 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#e5e1da">
-<meta name="description" content="整理蔣萬安的臺北市政承諾進度與沈伯洋的立法院工作紀錄，公開資料範圍、來源與查核日期。">
-<title>蔣萬安・沈伯洋｜公職成績單</title>
+<meta name="description" content="查看 2026 臺北市長選舉資訊、臺北市政議題與人物履職紀錄，逐項核對官方來源與資料日期。">
+<title>2026 臺北市長選舉｜北市選舉</title>
 <link rel="canonical" href="https://deyugogo.github.io/civic-promises-site/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:site_name" content="公職成績單">
-<meta property="og:title" content="蔣萬安・沈伯洋｜公職成績單">
-<meta property="og:description" content="查看市政承諾進度與立法監督紀錄，逐項核對來源、角色與日期。">
+<meta property="og:site_name" content="北市選舉">
+<meta property="og:title" content="2026 臺北市長選舉｜北市選舉">
+<meta property="og:description" content="查看 2026 臺北市長選舉資訊、臺北市政議題與人物履職紀錄，逐項核對官方來源與資料日期。">
 <meta property="og:url" content="https://deyugogo.github.io/civic-promises-site/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蔣萬安・沈伯洋｜公職成績單">
-<meta name="twitter:description" content="查看市政承諾進度與立法監督紀錄，逐項核對來源、角色與日期。">
+<meta name="twitter:title" content="2026 臺北市長選舉｜北市選舉">
+<meta name="twitter:description" content="查看 2026 臺北市長選舉資訊、臺北市政議題與人物履職紀錄，逐項核對官方來源與資料日期。">
 <link rel="stylesheet" href="./focus.css">
 <script type="module" src="./focus.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
 <header class="site-header">
-  <a class="brand" href="#home" aria-label="公職成績單，回總覽"><span>公職成績單</span><small>2026</small></a>
+  <a class="brand" href="#home" aria-label="北市選舉，回選舉總覽"><span>北市選舉</span><small>2026</small></a>
   <nav class="main-nav" aria-label="主要導覽">
-    <a href="#home" aria-current="page">總覽</a>
+    <a href="#home" aria-current="page">選舉總覽</a>
     <a href="#mayor">蔣萬安</a>
     <a href="#legislator">沈伯洋</a>
     <a href="#method">方法與來源</a>
@@ -39,12 +39,25 @@
 
   <section id="home" class="page home-page" aria-labelledby="home-title">
     <div class="home-heading">
-      <p class="eyebrow">公職履職紀錄</p>
-      <h1 id="home-title">蔣萬安 <span class="title-divider">×</span> 沈伯洋</h1>
-      <p class="page-lead">市政承諾與國會工作紀錄</p>
+      <h1 id="home-title">2026 臺北市長選舉</h1>
+      <p class="page-lead">選舉資訊、市政議題與人物履職紀錄</p>
     </div>
-    <div id="profile-cards" class="profile-grid" aria-label="選擇人物"></div>
-    <div id="home-coverage" class="coverage-note home-coverage"></div>
+    <div id="election-info" class="election-info"></div>
+    <section class="home-section candidate-section" aria-labelledby="candidates-title">
+      <h2 id="candidates-title">本屆參選名單</h2>
+      <p id="candidate-list-meta" class="section-meta"></p>
+      <div id="election-candidates" class="candidate-grid"></div>
+    </section>
+    <section class="home-section home-profiles" aria-labelledby="profiles-title">
+      <h2 id="profiles-title">人物履職紀錄</h2>
+      <div id="profile-cards" class="profile-grid" aria-label="選擇人物履職紀錄"></div>
+      <div id="home-coverage" class="coverage-note home-coverage"></div>
+    </section>
+    <section class="home-section home-issues" aria-labelledby="issues-title">
+      <h2 id="issues-title">臺北市政議題</h2>
+      <p class="section-meta">從 2022 市長公報承諾，查看臺北市政履行紀錄。</p>
+      <div id="election-topics" class="topic-grid"></div>
+    </section>
   </section>
 
   <section id="mayor" class="page" hidden aria-labelledby="mayor-title">
@@ -93,6 +106,7 @@
       <h1 id="method-title">方法與來源</h1>
       <p class="page-lead">依不同職權，分別呈現承諾進度與工作紀錄。</p>
     </div>
+    <p class="coverage-note election-method-note">選舉資訊以選委會公告為準；履職紀錄按原職務呈現。</p>
     <div class="method-grid">
       <article class="method-card">
         <p class="profile-role">市政承諾</p>
@@ -117,7 +131,7 @@
   </section>
 </main>
 <footer class="site-footer">
-  <span>公職成績單</span>
+  <span>北市選舉 · 2026</span>
   <div><a href="#method">方法與來源</a><a href="./counties.html">原 22 縣市資料 <span aria-hidden="true">↗</span></a></div>
 </footer>
 <dialog id="record-dialog" class="record-dialog" aria-labelledby="record-title">
@@ -132,6 +146,6 @@
   </div>
   <div id="record-content"></div>
 </dialog>
-<noscript><p class="noscript-note">請啟用 JavaScript 以瀏覽人物紀錄與來源。</p></noscript>
+<noscript><p class="noscript-note">請啟用 JavaScript 以瀏覽選舉資訊、人物紀錄與來源。</p></noscript>
 </body>
 </html>

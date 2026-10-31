@@ -1,7 +1,398 @@
 {
   "schemaVersion": 1,
-  "title": "蔣萬安・沈伯洋｜公職成績單",
+  "title": "2026 臺北市長選舉｜北市選舉",
   "builtAt": "2026-10-31",
+  "election": {
+    "schemaVersion": 1,
+    "checkedAt": "2026-10-31",
+    "electionTitle": "2026 臺北市長選舉",
+    "scope": "臺北市第 9 屆市長選舉；本份不涵蓋市議員與里長候選人",
+    "voting": {
+      "date": "2026-11-28",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "timezone": "Asia/Taipei",
+      "sources": [
+        {
+          "id": "cec-election-announcement",
+          "title": "中選會公告：115 年直轄市長、縣（市）長及議員選舉",
+          "url": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+          "readScope": "第 1 頁載投票日期、08:00–16:00 時段及臺北市第 9 屆市長選舉；第 2 頁載臺北市應選 1 人。",
+          "publishedAt": "2026-08-20",
+          "checkedAt": "2026-10-31",
+          "authority": "election_commission"
+        }
+      ]
+    },
+    "candidateList": {
+      "status": "6 人列入官方候選人登記冊，抽籤號次已公布",
+      "statusAsOf": "2026-10-27",
+      "count": 6,
+      "formalAnnouncementDate": "2026-11-12",
+      "formalAnnouncementStatus": "依官方工作程序表預定公告；截至本次查核尚未到該日期",
+      "partyFieldMeaning": "candidates.party 為官方登記冊的「推薦之政黨」，不是另行查核的現有黨籍；「無」表示無政黨推薦。",
+      "limitations": [
+        "本清單依 10 月 27 日官方抽籤結果整理，與 11 月 12 日預定的候選人名單公告分開標示。",
+        "政黨提名、受理登記、資格審定與名單公告是不同程序，提名紀錄不取代選舉委員會資料。",
+        "完整名單有 6 人；本站若另有蔣萬安或沈伯洋履職資料，不表示選舉只有兩名候選人。",
+        "候選人履職紀錄與本屆競選政見分開呈現，不將過往任內事項改稱 2026 年競選承諾。"
+      ],
+      "sources": [
+        {
+          "id": "taipei-ballot-results",
+          "title": "臺北市選舉委員會：市長、議員及里長候選人姓名號次抽籤結果",
+          "url": "https://web.cec.gov.tw/mect/article/65401",
+          "readScope": "已核讀公告頁及市長登記冊附件；發布日期取自臺北市選舉委員會首頁。",
+          "publishedAt": "2026-10-27",
+          "checkedAt": "2026-10-31",
+          "authority": "election_commission"
+        },
+        {
+          "id": "taipei-mayor-ballot-register",
+          "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+          "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+          "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+          "publishedAt": "2026-10-27",
+          "checkedAt": "2026-10-31",
+          "authority": "election_commission"
+        },
+        {
+          "id": "taipei-timetable",
+          "title": "臺北市第 9 屆市長、第 15 屆議員及里長選舉工作進行程序表",
+          "url": "https://web.cec.gov.tw/api/file/ae5afeb2-03b0-4616-b934-80ea020c1ac0.pdf",
+          "readScope": "第 10–11 頁：預定 11 月 12 日公告市長候選人名單；11 月 13–27 日為市長競選活動期間。文件未標本版發布日期。",
+          "publishedAt": null,
+          "checkedAt": "2026-10-31",
+          "authority": "election_commission"
+        }
+      ]
+    },
+    "candidates": [
+      {
+        "name": "郭璽",
+        "party": "台灣麻將最大黨",
+        "ballotNumber": 1,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      },
+      {
+        "name": "林志成",
+        "party": "無",
+        "ballotNumber": 2,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      },
+      {
+        "name": "沈伯洋",
+        "party": "民主進步黨",
+        "ballotNumber": 3,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      },
+      {
+        "name": "蕭文乾",
+        "party": "臺灣SoR無法黨",
+        "ballotNumber": 4,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      },
+      {
+        "name": "蔣萬安",
+        "party": "中國國民黨",
+        "ballotNumber": 5,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      },
+      {
+        "name": "唐新民",
+        "party": "三勢團結促進聯盟",
+        "ballotNumber": 6,
+        "status": "官方登記冊列名，已公布抽籤號次",
+        "statusAsOf": "2026-10-27",
+        "sources": [
+          {
+            "id": "taipei-mayor-ballot-register",
+            "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+            "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+            "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+            "publishedAt": "2026-10-27",
+            "checkedAt": "2026-10-31",
+            "authority": "election_commission"
+          }
+        ]
+      }
+    ],
+    "personStatuses": [
+      {
+        "name": "蔣萬安",
+        "nomination": {
+          "date": "2026-07-22",
+          "party": "中國國民黨",
+          "status": "中常會徵召參選臺北市長",
+          "sources": [
+            {
+              "id": "kmt-chiang-nomination",
+              "title": "中國國民黨：2026 地方選舉縣市長候選人總名單",
+              "url": "https://knowledge.kmt.org.tw/articles/17434e09-e380-4b24-bba1-bfa6df889e6b/",
+              "readScope": "核讀台北市列：蔣萬安，中常會徵召日期 2026-07-22；本整理頁發布及更新日期為 2026-10-08。僅證明政黨提名紀錄。",
+              "publishedAt": "2026-10-08",
+              "checkedAt": "2026-10-31",
+              "authority": "party"
+            }
+          ]
+        },
+        "registration": {
+          "date": null,
+          "status": "已列入官方候選人登記冊；本份未另核實個別登記日",
+          "statusAsOf": "2026-10-27",
+          "sources": [
+            {
+              "id": "taipei-mayor-ballot-register",
+              "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+              "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+              "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+              "publishedAt": "2026-10-27",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        },
+        "qualification": {
+          "date": "2026-10-16",
+          "status": "中選會審查通過名單列名",
+          "sources": [
+            {
+              "id": "cec-qualification",
+              "title": "中選會審定 115 年直轄市長、議員及縣市長候選人資格",
+              "url": "https://web.cec.gov.tw/central/article/65212",
+              "readScope": "核讀搜尋工具擷取的官方新聞稿文字，列臺北市 6 人資格通過；直接頁面正文擷取逾時，另以 10 月 27 日官方有號次登記冊交叉核對六人姓名。",
+              "publishedAt": "2026-10-16",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        },
+        "officialBallot": {
+          "number": 5,
+          "statusAsOf": "2026-10-27",
+          "sources": [
+            {
+              "id": "taipei-mayor-ballot-register",
+              "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+              "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+              "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+              "publishedAt": "2026-10-27",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        }
+      },
+      {
+        "name": "沈伯洋",
+        "nomination": {
+          "date": "2026-05-13",
+          "party": "民主進步黨",
+          "status": "中執會通過提名參選臺北市長",
+          "sources": [
+            {
+              "id": "dpp-shen-nomination",
+              "title": "民進黨：提名沈伯洋參選台北市長",
+              "url": "https://www.dpp.org.tw/content_print/media/11580",
+              "readScope": "僅核對 2026-05-13 中執會後正式提名沈伯洋參選台北市長的事實；未採用文中競選主張或人物評價。",
+              "publishedAt": "2026-05-13",
+              "checkedAt": "2026-10-31",
+              "authority": "party"
+            }
+          ]
+        },
+        "registration": {
+          "date": null,
+          "status": "已列入官方候選人登記冊；本份未另核實個別登記日",
+          "statusAsOf": "2026-10-27",
+          "sources": [
+            {
+              "id": "taipei-mayor-ballot-register",
+              "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+              "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+              "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+              "publishedAt": "2026-10-27",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        },
+        "qualification": {
+          "date": "2026-10-16",
+          "status": "中選會審查通過名單列名",
+          "sources": [
+            {
+              "id": "cec-qualification",
+              "title": "中選會審定 115 年直轄市長、議員及縣市長候選人資格",
+              "url": "https://web.cec.gov.tw/central/article/65212",
+              "readScope": "核讀搜尋工具擷取的官方新聞稿文字，列臺北市 6 人資格通過；直接頁面正文擷取逾時，另以 10 月 27 日官方有號次登記冊交叉核對六人姓名。",
+              "publishedAt": "2026-10-16",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        },
+        "officialBallot": {
+          "number": 3,
+          "statusAsOf": "2026-10-27",
+          "sources": [
+            {
+              "id": "taipei-mayor-ballot-register",
+              "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+              "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+              "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+              "publishedAt": "2026-10-27",
+              "checkedAt": "2026-10-31",
+              "authority": "election_commission"
+            }
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "cec-election-announcement",
+        "title": "中選會公告：115 年直轄市長、縣（市）長及議員選舉",
+        "url": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+        "readScope": "第 1 頁載投票日期、08:00–16:00 時段及臺北市第 9 屆市長選舉；第 2 頁載臺北市應選 1 人。",
+        "publishedAt": "2026-08-20",
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "taipei-ballot-results",
+        "title": "臺北市選舉委員會：市長、議員及里長候選人姓名號次抽籤結果",
+        "url": "https://web.cec.gov.tw/mect/article/65401",
+        "readScope": "已核讀公告頁及市長登記冊附件；發布日期取自臺北市選舉委員會首頁。",
+        "publishedAt": "2026-10-27",
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "taipei-mayor-ballot-register",
+        "title": "115 年直轄市長選舉候選人登記冊：臺北市（有號次）",
+        "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+        "readScope": "完整單頁；製表日期 2026-10-27，列印 6 筆，核對姓名、推薦之政黨與抽籤號次。",
+        "publishedAt": "2026-10-27",
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "taipei-timetable",
+        "title": "臺北市第 9 屆市長、第 15 屆議員及里長選舉工作進行程序表",
+        "url": "https://web.cec.gov.tw/api/file/ae5afeb2-03b0-4616-b934-80ea020c1ac0.pdf",
+        "readScope": "第 10–11 頁：預定 11 月 12 日公告市長候選人名單；11 月 13–27 日為市長競選活動期間。文件未標本版發布日期。",
+        "publishedAt": null,
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "taipei-registration",
+        "title": "臺北市第 9 屆市長選舉候選人登記情形",
+        "url": "https://web.cec.gov.tw/mect/article/64442",
+        "readScope": "已核讀公告頁及登記每日統計附件；9 月 4 日統計為 6 人，未由登記順序推定抽籤號次。",
+        "publishedAt": "2026-09-04",
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "cec-qualification",
+        "title": "中選會審定 115 年直轄市長、議員及縣市長候選人資格",
+        "url": "https://web.cec.gov.tw/central/article/65212",
+        "readScope": "核讀搜尋工具擷取的官方新聞稿文字，列臺北市 6 人資格通過；直接頁面正文擷取逾時，另以 10 月 27 日官方有號次登記冊交叉核對六人姓名。",
+        "publishedAt": "2026-10-16",
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "taipei-election-office",
+        "title": "臺北市選舉委員會",
+        "url": "https://web.cec.gov.tw/mect",
+        "readScope": "核讀首頁 9 月 4 日登記情形及 10 月 27 日號次抽籤結果入口；此為持續更新的官方入口。",
+        "publishedAt": null,
+        "checkedAt": "2026-10-31",
+        "authority": "election_commission"
+      },
+      {
+        "id": "dpp-shen-nomination",
+        "title": "民進黨：提名沈伯洋參選台北市長",
+        "url": "https://www.dpp.org.tw/content_print/media/11580",
+        "readScope": "僅核對 2026-05-13 中執會後正式提名沈伯洋參選台北市長的事實；未採用文中競選主張或人物評價。",
+        "publishedAt": "2026-05-13",
+        "checkedAt": "2026-10-31",
+        "authority": "party"
+      },
+      {
+        "id": "kmt-chiang-nomination",
+        "title": "中國國民黨：2026 地方選舉縣市長候選人總名單",
+        "url": "https://knowledge.kmt.org.tw/articles/17434e09-e380-4b24-bba1-bfa6df889e6b/",
+        "readScope": "核讀台北市列：蔣萬安，中常會徵召日期 2026-07-22；本整理頁發布及更新日期為 2026-10-08。僅證明政黨提名紀錄。",
+        "publishedAt": "2026-10-08",
+        "checkedAt": "2026-10-31",
+        "authority": "party"
+      }
+    ]
+  },
   "taipei": {
     "person": "蔣萬安",
     "role": "臺北市長",
@@ -37,36 +428,43 @@
       {
         "id": "transport",
         "label": "交通建設",
+        "description": "道路、軌道、公共運輸與通行",
         "count": 1
       },
       {
         "id": "education",
         "label": "育兒教育",
+        "description": "托育、學校、青年學習與人才培育",
         "count": 2
       },
       {
         "id": "care",
         "label": "醫療照顧",
+        "description": "醫療、長照、健康與社會照顧",
         "count": 0
       },
       {
         "id": "living",
         "label": "居住生活",
+        "description": "住宅、生活空間、文化與運動",
         "count": 5
       },
       {
         "id": "economy",
         "label": "產業觀光",
+        "description": "就業、產業、農漁業與觀光",
         "count": 3
       },
       {
         "id": "governance",
         "label": "治理永續",
+        "description": "政府治理、環境、能源與防災",
         "count": 0
       },
       {
         "id": "other",
         "label": "其他／跨領域",
+        "description": "原文未能明確歸入單一主題",
         "count": 0
       }
     ],
