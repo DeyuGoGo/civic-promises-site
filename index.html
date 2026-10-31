@@ -1,61 +1,137 @@
 <!doctype html>
-<html lang="zh-Hant"><head>
+<html lang="zh-Hant">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#e5e1da">
-<meta name="description" content="查看台灣 22 縣市、348 條公報政見的執行進度，公開分項證據、估分與查核日期。">
-<title>2026 縣市首長 政策執行率</title>
+<meta name="description" content="整理蔣萬安的臺北市政承諾進度與沈伯洋的立法院工作紀錄，公開資料範圍、來源與查核日期。">
+<title>蔣萬安・沈伯洋｜公職成績單</title>
 <link rel="canonical" href="https://deyugogo.github.io/civic-promises-site/">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:site_name" content="2026 縣市首長 政策執行率">
-<meta property="og:title" content="2026 縣市首長 政策執行率">
-<meta property="og:description" content="查看台灣 22 縣市、348 條公報政見的執行進度，公開分項證據、估分與查核日期。">
+<meta property="og:site_name" content="公職成績單">
+<meta property="og:title" content="蔣萬安・沈伯洋｜公職成績單">
+<meta property="og:description" content="查看市政承諾進度與立法監督紀錄，逐項核對來源、角色與日期。">
 <meta property="og:url" content="https://deyugogo.github.io/civic-promises-site/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2026 縣市首長 政策執行率">
-<meta name="twitter:description" content="查看台灣 22 縣市、348 條公報政見的執行進度，公開分項證據、估分與查核日期。">
-<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+<meta name="twitter:title" content="蔣萬安・沈伯洋｜公職成績單">
+<meta name="twitter:description" content="查看市政承諾進度與立法監督紀錄，逐項核對來源、角色與日期。">
+<link rel="stylesheet" href="./focus.css">
+<script type="module" src="./focus.js"></script>
 </head>
-<body><a class="skip" href="#main">跳至主要內容</a>
-<header><a class="brand" href="#home" aria-label="2026 縣市首長 政策執行率，回首頁"><span>2026 縣市首長 政策執行率</span></a><nav aria-label="主要導覽"><a href="#home">縣市總覽</a><a href="#attainment">進度紀錄</a><a href="#bulletins">公報全文</a><a href="#promises">主要議題</a><a href="#method">評分方法</a></nav></header>
-<main id="main" aria-busy="true" data-ready="false"><div id="dataset-status" class="dataset-status" role="status"><span id="dataset-message">正在載入政策資料…</span><button id="retry-data" class="secondary" type="button" hidden>重新載入</button></div><section id="home" class="home-view completion-home" aria-labelledby="home-title">
-<div class="home-jumps" role="group" aria-label="首頁快速選擇"><button id="jump-counties" type="button" aria-controls="county-directory">選縣市 <span aria-hidden="true">↓</span></button><button id="jump-topics" type="button" aria-controls="home-topics">選議題 <span aria-hidden="true">↓</span></button></div>
-<div id="home-data-summary" class="home-data-summary" aria-label="目前資料收錄範圍"></div>
-<div id="home-topics" class="home-topics" tabindex="-1" aria-label="主要議題"><h2>主要議題</h2><button type="button" class="home-topic" data-home-topic="transport">交通建設 <span aria-hidden="true">↗</span></button><button type="button" class="home-topic" data-home-topic="education">育兒教育 <span aria-hidden="true">↗</span></button><button type="button" class="home-topic" data-home-topic="care">醫療照顧 <span aria-hidden="true">↗</span></button><button type="button" class="home-topic" data-home-topic="living">居住生活 <span aria-hidden="true">↗</span></button><button type="button" class="home-topic" data-home-topic="economy">產業觀光 <span aria-hidden="true">↗</span></button><button type="button" class="home-topic" data-home-topic="governance">治理永續 <span aria-hidden="true">↗</span></button></div>
-<div class="completion-atlas"><div class="completion-map"><div class="atlas-heading"><div><h1 id="home-title">縣市政策平均完成度</h1><p>含估分</p></div></div><details id="home-map-toggle" class="home-map-toggle" open><summary><span>縣市地圖</span><span class="map-toggle-open" aria-hidden="true">展開 ＋</span><span class="map-toggle-close" aria-hidden="true">收合 −</span></summary><div class="home-map-content"><div id="taiwan-map" class="taiwan-map" aria-label="各縣市政策平均完成度（含保守估分）地圖"></div><div class="map-key" aria-label="2022 當選時推薦政黨圖例"><span class="party-kmt"><i class="party-dot" aria-hidden="true"></i>國民黨</span><span class="party-dpp"><i class="party-dot" aria-hidden="true"></i>民進黨</span><span class="party-tpp"><i class="party-dot" aria-hidden="true"></i>民眾黨</span><span class="party-none"><i class="party-dot" aria-hidden="true"></i>無推薦政黨</span></div><p class="completion-map-note">2022 當選時推薦政黨 · 歷史簡化邊界，離島另框</p></div></details></div><div class="county-panel"><p class="directory-intro">縣市列表</p><div id="county-directory" class="completion-counties" tabindex="-1" aria-label="22縣市政策平均完成度（含保守估分）"></div></div></div>
-<p id="home-status" class="home-status" role="status"></p></section>
-<section id="search-tools" class="search-tools" hidden><p class="muted">共 <span id="loaded-count">—</span> 條政見</p><form id="filters" class="filters" role="search"><label class="search-label"><span>搜尋縣市、政見或首長</span><input id="query" type="search" placeholder="例如：臺南、社會住宅、交通…" autocomplete="off"></label><label><span>縣市篩選</span><select id="county"><option value="">全部 22 縣市</option></select></label><button class="reset" type="reset">清除篩選</button></form></section><section id="ranking" class="section" hidden><div class="section-heading"><div><p class="eyebrow">RANKING / 達成率排行</p><h2>達成率排行榜</h2></div><a class="small-link" href="#method">評分方法 ↗</a></div>
-<p id="coverage-warning" class="muted">未提供縣市排名。</p>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="公職成績單，回總覽"><span>公職成績單</span><small>2026</small></a>
+  <nav class="main-nav" aria-label="主要導覽">
+    <a href="#home" aria-current="page">總覽</a>
+    <a href="#mayor">蔣萬安</a>
+    <a href="#legislator">沈伯洋</a>
+    <a href="#method">方法與來源</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <div id="load-state" class="load-state" role="status" aria-live="polite">
+    <span id="load-message">正在載入資料…</span>
+    <button id="retry-load" class="secondary-button" type="button" hidden>重新載入</button>
+  </div>
 
-<div class="list-caption"><span id="county-result" aria-live="polite"></span><span>固定顯示順序，非成績排序</span></div>
-<div class="table-wrap"><table><caption class="sr-only">各縣市政見追蹤狀態，目前不提供成績排名</caption><thead><tr><th scope="col">名次</th><th scope="col">縣市</th><th scope="col">總體完成率</th><th scope="col">資料狀態</th><th scope="col">收錄政見</th><th scope="col"><span class="sr-only">查看資料</span></th></tr></thead><tbody id="county-rows"></tbody></table></div><div id="county-empty" class="empty" hidden>找不到符合條件的縣市，請調整關鍵字或清除篩選。</div>
-</section>
-<section id="promises" class="section topics-view" hidden aria-labelledby="topics-title"><div class="section-heading"><h2 id="topics-title">主要議題</h2><button id="topic-all" class="topic-all" type="button" aria-pressed="true" aria-controls="promise-list">全部議題</button></div><div id="topic-filters" class="topic-filters" role="group" aria-label="議題篩選"></div><div class="list-caption topic-results-caption"><span id="promise-result" aria-live="polite"></span><label class="stage-label" id="stage-filter">執行階段 <select id="stage"><option value="">全部階段</option></select></label><span id="updated-at">統計日期：尚未提供</span></div><div id="promise-list" class="topic-groups"></div><div id="promise-empty" class="empty"><span id="promise-empty-message">目前沒有可顯示的政見資料。</span><button id="promise-empty-reset" class="secondary" type="button">清除篩選</button></div></section>
-<section id="attainment" class="section attainment-view" hidden aria-labelledby="attainment-title"><div class="section-heading"><div><h2 id="attainment-title">進度紀錄</h2></div><a class="small-link" href="#home">回到地圖 ↗</a></div><div class="attainment-stats" aria-label="目前搜尋範圍的資料狀態"><div><strong id="attainment-total">0</strong><span>已收錄政見</span></div><div><strong id="attainment-known">0</strong><span>進度／狀態有據</span></div><div><strong id="attainment-pending">0</strong><span>進度證據待補</span></div><div><strong id="attainment-measurable">0</strong><span>有百分比（含分項）</span></div></div><p class="collection-update" id="attainment-coverage"></p><div class="attainment-toolbar"><span id="attainment-result" role="status"></span><label for="attainment-kind">顯示 <select id="attainment-kind"><option value="">全部項目</option><option value="completed">措施／里程碑完成</option><option value="measurable">已有百分比</option><option value="followup" id="attainment-followup-option">近期查核</option><option value="rechecked">已有查核紀錄</option><option value="progress">進度／狀態有據</option><option value="updates">含日期的進度／背景</option><option value="observed">現況數值</option><option value="milestone">政策／里程碑</option><option value="limited">量化子指標</option><option value="zero">未實施 · 0%（含分項）</option><option value="unknown">進度證據待補</option></select></label></div><div id="attainment-list" class="attainment-grid"></div><div id="attainment-empty" class="empty" hidden><span id="attainment-empty-message">沒有符合條件的項目，請調整篩選。</span><button id="attainment-empty-reset" class="secondary" type="button">清除篩選</button></div></section>
-<section id="bulletins" class="section" hidden aria-labelledby="bulletin-title"><div class="section-heading"><div><h2 id="bulletin-title">選舉公報全文</h2></div><a class="small-link" href="./data/complete-bulletins.json" download>下載全文與查核 ↗</a></div><p id="bulletin-summary" class="collection-update"></p><div id="bulletin-library" class="bulletin-library"></div></section>
-<section id="method" class="section method" hidden>
-<div class="section-heading"><div><h2>評分方法</h2><p class="muted">GPT6協助判讀公開證據。</p></div><span class="version">2026-10-23</span></div>
-<div class="method-principles">
-<article><h3>依公開證據</h3><p>對照公報承諾與實際進度，各項附來源與日期。</p></article>
-<article><h3>分項等權平均</h3><p>政見與縣市分數，均以適用分項的分數加總、除以分項數。</p></article>
-<article><h3>估分標示「約」</h3><p>資料不足時採保守估分；缺證估0%不等於確認未做。</p></article>
-<article><h3>只看承諾進度</h3><p>分數不代表施政成效或滿意度，也不作人物排名。</p></article>
-</div>
-<p id="method-data-summary" class="method-data-summary"></p>
-<details><summary>計分與估分細則</summary>
-<p>完成100%；確認未實施0%；施工採同範圍的實際比例。整條政見須所有適用分項均有完成證據，才算100%。</p>
-<p>缺少可用比例時：缺證估0%、規劃10%、核定／預算／招標25%、施工或部分施行50%、主要工作完成75%。估分是本站判斷，不是官方施工率或客觀測量。</p>
-<p>局部指標不代表整項進度；比例只有下限時標示「至少」，並採下限估分。歷史施工或服務不代表現況；一次性建置、研議已完成者保留完成分，另列日期與後續狀態。</p>
-<p>資料完整度、承諾難度與拆項方式會影響平均；官方自述不等於獨立查核，跨任期及共同執行的責任另列。</p>
-</details>
-<details><summary>評分研究來源</summary><div id="method-research"></div></details>
-<p><a href="./data/policy-progress.json" download>分項資料 JSON ↗</a> · <a href="./data/scoring-research.json" download>評分研究 JSON ↗</a></p>
-<details><summary>地圖來源與配色</summary><p><a href="https://github.com/g0v/twgeojson/tree/85212c5cff73b706730e624024120b134c15f861" target="_blank" rel="noopener noreferrer">g0v / twgeojson</a>（<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>）歷史簡化邊界；離島另框縮放。配色依2022當選時推薦政黨，不代表現任黨籍或成績。</p></details></section>
-<section id="data-tools" class="section data-tools" hidden><div><h2>資料下載</h2></div><div class="data-actions"><a class="small-link" href="./data/policy-progress.json" download>下載分項進度與評分 ↗</a><a class="small-link" href="./data/collection.json" download>下載全部收錄承諾 ↗</a><a class="small-link" href="./data/complete-bulletins.json" download>下載公報原文與整條查核紀錄 ↗</a></div><details class="local-data"><summary>自訂資料</summary><p>匯入內容僅在此頁使用，不會上傳或儲存；重新整理後恢復本站資料。</p><button class="secondary" id="import-trigger" type="button">匯入 JSON</button><input id="import-file" type="file" accept="application/json,.json" class="sr-only"><button id="restore" class="secondary">恢復本站資料</button><p><a href="./data/schema.json" download>資料格式</a> · <a href="./data/empty-template.json" download>空白範本</a></p></details><p id="load-status" class="load-status" role="status"></p></section>
-</main><footer><span>2026 縣市首長 政策執行率 · 2022 年選舉公報</span><div><a href="#method">評分方法</a><a href="#data-tools">資料下載</a></div></footer>
-<dialog id="city-sheet" class="city-sheet" aria-labelledby="city-title"><div class="dialog-top"><span class="eyebrow">政策列表</span><button class="close" aria-label="關閉縣市資料">✕</button></div><div id="city-content"></div></dialog>
-<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><button id="detail-back" class="detail-back" type="button">← 返回項目</button><span class="eyebrow">政策詳情</span><button class="close" aria-label="關閉證據詳情">✕</button></div><div class="policy-share"><button id="copy-policy-link" class="secondary" type="button">複製連結</button><input id="policy-share-url" type="text" readonly hidden aria-label="此政策的分享連結"><span id="policy-share-status" role="status" aria-live="polite"></span></div><div id="detail-content"></div></dialog>
+  <section id="home" class="page home-page" aria-labelledby="home-title">
+    <div class="home-heading">
+      <p class="eyebrow">公職履職紀錄</p>
+      <h1 id="home-title">蔣萬安 <span class="title-divider">×</span> 沈伯洋</h1>
+      <p class="page-lead">市政承諾與國會工作紀錄</p>
+    </div>
+    <div id="profile-cards" class="profile-grid" aria-label="選擇人物"></div>
+    <div id="home-coverage" class="coverage-note home-coverage"></div>
+  </section>
 
-<noscript><style>#dataset-status{display:none!important}</style><p class="notice">請啟用 JavaScript 以瀏覽政見資料。</p></noscript></body></html>
+  <section id="mayor" class="page" hidden aria-labelledby="mayor-title">
+    <div class="page-heading">
+      <p class="eyebrow"><i class="identity-dot mayor-dot" aria-hidden="true"></i>臺北市政</p>
+      <h1 id="mayor-title">蔣萬安的施政完成度</h1>
+      <div id="mayor-meta" class="page-meta"></div>
+    </div>
+    <div id="mayor-stats" class="stat-grid" aria-label="市政承諾資料統計"></div>
+    <div class="filters-panel">
+      <div id="mayor-topic-filters" class="filter-list" role="group" aria-label="市政議題篩選"></div>
+      <label class="search-field" for="mayor-query"><span>搜尋政策</span><input id="mayor-query" type="search" placeholder="輸入政策或議題關鍵字" autocomplete="off"></label>
+    </div>
+    <p id="mayor-result" class="result-count" role="status" aria-live="polite"></p>
+    <div id="mayor-list" class="record-list"></div>
+    <div id="mayor-empty" class="empty-state" hidden>
+      <span id="mayor-empty-message">沒有符合條件的政策。</span>
+      <button id="mayor-clear" class="secondary-button" type="button">清除篩選</button>
+    </div>
+  </section>
+
+  <section id="legislator" class="page" hidden aria-labelledby="legislator-title">
+    <div class="page-heading">
+      <p class="eyebrow"><i class="identity-dot legislator-dot" aria-hidden="true"></i>立法與監督</p>
+      <h1 id="legislator-title">沈伯洋的立委成績單</h1>
+      <div id="legislator-meta" class="page-meta"></div>
+    </div>
+    <div id="legislator-stats" class="stat-grid" aria-label="立法院工作收錄統計"></div>
+    <div id="legislator-coverage" class="coverage-note"></div>
+    <section id="legislator-index" class="record-index" aria-label="立法院資料索引"></section>
+    <div class="filters-panel">
+      <div id="legislator-filters" class="filter-list" role="group" aria-label="國會紀錄類別篩選"></div>
+      <label class="search-field" for="legislator-query"><span>搜尋工作紀錄</span><input id="legislator-query" type="search" placeholder="輸入案件、發言或議題關鍵字" autocomplete="off"></label>
+    </div>
+    <p id="legislator-result" class="result-count" role="status" aria-live="polite"></p>
+    <div id="legislator-list" class="record-list"></div>
+    <div id="legislator-empty" class="empty-state" hidden>
+      <span id="legislator-empty-message">沒有符合條件的工作紀錄。</span>
+      <button id="legislator-clear" class="secondary-button" type="button">清除篩選</button>
+    </div>
+  </section>
+
+  <section id="method" class="page method-page" hidden aria-labelledby="method-title">
+    <div class="page-heading">
+      <p class="eyebrow">資料範圍與判讀</p>
+      <h1 id="method-title">方法與來源</h1>
+      <p class="page-lead">依不同職權，分別呈現承諾進度與工作紀錄。</p>
+    </div>
+    <div class="method-grid">
+      <article class="method-card">
+        <p class="profile-role">市政承諾</p>
+        <h2>以適用分項計算進度</h2>
+        <p>對照 2022 年臺北市長選舉公報，逐項核對承諾、完成條件與公開證據，依適用分項等權平均。</p>
+        <p>有可用比例時採實際進度；資料不足時採公開的估分規則，並標示「約」與估分占比。缺證估 0% 表示暫未給完成分，不等於確認未實施。</p>
+        <p>分數描述承諾執行進度；資料日期、分工與政策效果另列來源說明。</p>
+      </article>
+      <article class="method-card">
+        <p class="profile-role">立法與監督</p>
+        <h2>依案件、角色與程序記錄</h2>
+        <p>依公開來源整理提案、質詢與監督工作，標出主提案、共同提案及其他參與角色。</p>
+        <p>案件程序、個人行動與機關回應分別記錄。收錄件數依可核對的資料範圍計算，各項附日期與原始來源。</p>
+        <p>國會紀錄以職權和程序呈現，不套用市政完成率，也不將程序結果全數歸功於單一立委。</p>
+      </article>
+    </div>
+    <section class="sources-section" aria-labelledby="method-sources-title">
+      <div class="section-heading"><h2 id="method-sources-title">資料來源</h2><a class="download-link" href="./data/focus.json" download>下載收錄資料 JSON <span aria-hidden="true">↗</span></a></div>
+      <div id="method-sources" class="method-sources"></div>
+    </section>
+    <p class="archive-link"><a href="./counties.html">查看原 22 縣市資料 <span aria-hidden="true">↗</span></a></p>
+  </section>
+</main>
+<footer class="site-footer">
+  <span>公職成績單</span>
+  <div><a href="#method">方法與來源</a><a href="./counties.html">原 22 縣市資料 <span aria-hidden="true">↗</span></a></div>
+</footer>
+<dialog id="record-dialog" class="record-dialog" aria-labelledby="record-title">
+  <div class="dialog-toolbar">
+    <button id="record-back" class="back-button" type="button"><span aria-hidden="true">←</span> 返回列表</button>
+    <button id="record-close" class="close-button" type="button" aria-label="關閉紀錄詳情">✕</button>
+  </div>
+  <div class="share-row">
+    <button id="share-record" class="secondary-button" type="button">複製連結</button>
+    <input id="share-url" type="text" readonly hidden aria-label="此紀錄的分享連結">
+    <span id="share-status" role="status" aria-live="polite"></span>
+  </div>
+  <div id="record-content"></div>
+</dialog>
+<noscript><p class="noscript-note">請啟用 JavaScript 以瀏覽人物紀錄與來源。</p></noscript>
+</body>
+</html>
